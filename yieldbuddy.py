@@ -33,7 +33,7 @@ def update_sql(query):
 	cursor.execute(query)
 	
 		# Commit changes in the database
-	#db.commit()
+	db.commit()
 	#except:
 		# Rollback in case there is any error
 		#db.rollback()
@@ -416,7 +416,7 @@ def checkSerial():
 				print '\033[1m' #Bold
 				print("\033[19;0H[Arduino Time: " + ArduinoTime + "]------------------------[Raspberry Pi Time: " + now.strftime("%b %d %Y %I:%M:%S %p")+"]")
 				print '\033[0m' #Un-Bold
-				update_sql("UPDATE `Arduino` SET `Time` = '" + ArduinoTime + "' , Month=" + Arduino_month + ", Day=" + Arduino_day + ", Year=" + Arduino_year + ", Hour=" + Arduino_hour + ", Minute=" + Arduino_min + ", Second=" + Arduino_sec)
+				update_sql("UPDATE `Arduino` SET `Time` = '" + ArduinoTime + "' , Month= '" + Arduino_month + "' , Day = '" + Arduino_day + "', Year = '" + Arduino_year + "', Hour = '" + Arduino_hour + "', Minute = '" + Arduino_min + "', Second = '" + Arduino_sec + "'")
 		#If the 'timesync' counter value goes over 20, then update the Raspberry Pi's time to be that of the Arduino's.
 			if timesync > 20:
 				try:
@@ -466,7 +466,7 @@ def checkSerial():
 				print("\033[21;0H                                                                                                                       ")
 				print("\033[21;0H(" + now.strftime("%Y/%m/%d %H:%M:%S") + ") Relays: %s,%s,%s,%s,%s,%s,%s,%s"%(Relay1,Relay2,Relay3,Relay4,Relay5,Relay6,Relay7,Relay8))
 				#RELAYS
-				update_sql("UPDATE `Relays` SET Relay1 = '" + Relay1 + "', Relay2 = '" + Relay2 + "', Relay3 = '" + Relay3 + "', Relay4 = '" + Relay4 + "', Relay5 = '" + Relay5 + "', Relay6 = '" + Relay6 + "'" + Relay7 + "'" + Relay8 + "'")
+				update_sql("UPDATE `Relays` SET Relay1 = '" + Relay1 + "', Relay2 = '" + Relay2 + "', Relay3 = '" + Relay3 + "', Relay4 = '" + Relay4 + "', Relay5 = '" + Relay5 + "', Relay6 = '" + Relay6 + "', Relay7 = '" + Relay7 + "', Relay8= '" + Relay8 + "'")
 				db.commit()
 		elif 'Relay_isAuto' in line:
 			if oldRelay_isAuto != line:
@@ -476,7 +476,7 @@ def checkSerial():
 				Relay_isAuto = Relay_isAuto.replace("Read fail", "")
 				Relay8_isAuto = Relay8_isAuto.rstrip()
 				print("\033[22;0H                                                                                                                       ")
-				print("\033[22;0H(" + now.strftime("%Y/%m/%d %H:%M:%S") + ") Relay_isAuto: %s,%s,%s,%s,%s,%s"%(Relay1_isAuto,Relay2_isAuto,Relay3_isAuto,Relay4_isAuto,Relay5_isAuto,Relay6_isAuto,Relay7_isAuto,Relay8_isAuto))
+				print("\033[22;0H(" + now.strftime("%Y/%m/%d %H:%M:%S") + ") Relay_isAuto: %s,%s,%s,%s,%s,%s,%s,%s"%(Relay1_isAuto,Relay2_isAuto,Relay3_isAuto,Relay4_isAuto,Relay5_isAuto,Relay6_isAuto,Relay7_isAuto,Relay8_isAuto))
 				#RELAYS
 				update_sql("UPDATE `Relays` SET Relay1_isAuto = " + Relay1_isAuto + ", Relay2_isAuto = " + Relay2_isAuto + ", Relay3_isAuto = " + Relay3_isAuto + ", Relay4_isAuto = " + Relay4_isAuto + ", Relay5_isAuto =" + Relay5_isAuto + ", Relay6_isAuto =" + Relay6_isAuto + ", Relay7_isAuto =" + Relay7_isAuto + ", Relay8_isAuto =" + Relay8_isAuto)
 				db.commit()

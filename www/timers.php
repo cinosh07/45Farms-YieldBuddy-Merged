@@ -1,6 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <?php
-session_start();
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 include $_SERVER['DOCUMENT_ROOT'].'/yieldbuddy/www/sql/sql_lighting_firstrow.php';
 include $_SERVER['DOCUMENT_ROOT'].'/yieldbuddy/www/sql/sql_watering_firstrow.php';
 if(!file_exists('users/' . $_SESSION['username'] . '.xml')){
@@ -114,7 +116,9 @@ a:active {
         <td>On Time:</td>
         <td colspan="2"><select name="Light_ON_hour" id="Light_ON_hour">
           <?php
-		  session_start();
+		  if (session_status() == PHP_SESSION_NONE) {
+   		      session_start();
+		  }
 		  $Light_ON_hour=$_SESSION['Light_ON_hour'];
 		  echo "<option selected=\"selected\">";
 		  echo $Light_ON_hour;
@@ -131,7 +135,9 @@ a:active {
         </select>
           <select name="Light_ON_min" id="Light_ON_min">
             <?php
-			  session_start();
+			  if (session_status() == PHP_SESSION_NONE) {
+   			      session_start();
+			  }
 			  $Light_ON_min=$_SESSION['Light_ON_min'];
 	  		  echo "<option selected=\"selected\">";
 			  echo $Light_ON_min;
@@ -193,7 +199,9 @@ a:active {
           <td width="125">Start Pump At:</td>
           <td width="235"><select name="Pump_start_hour" id="Pump_start_hour">
             <?php
-			session_start();
+			if (session_status() == PHP_SESSION_NONE) {
+			    session_start();
+			}
 			  $Pump_start_hour=$_SESSION['Pump_start_hour'];
 	  		  echo "<option selected=\"selected\">";
 			  echo $Pump_start_hour;
@@ -209,7 +217,9 @@ a:active {
           </select>
             <select name="Pump_start_min" id="Pump_start_min">
               <?php
-			session_start();
+			if (session_status() == PHP_SESSION_NONE) {
+			    session_start();
+			}
 			  $Pump_start_min=$_SESSION['Pump_start_min'];
 	  		  echo "<option selected=\"selected\">";
 			  echo $Pump_start_min;
@@ -228,7 +238,9 @@ a:active {
           <td width="125">And Every:</td>
           <td><select name="Pump_every_hours" id="Pump_every_hours">
             <?php
-			session_start();
+			if (session_status() == PHP_SESSION_NONE) {
+			    session_start();
+			}
 			  $Pump_every_hours=$_SESSION['Pump_every_hours'];
 	  		  echo "<option selected=\"selected\">";
 			  echo $Pump_every_hours;
@@ -245,7 +257,9 @@ a:active {
             hours
             <select name="Pump_every_mins" id="Pump_every_mins">
               <?php
-			session_start();
+			if (session_status() == PHP_SESSION_NONE) {
+			    session_start();
+			}
 			  $Pump_every_mins=$_SESSION['Pump_every_mins'];
 	  		  echo "<option selected=\"selected\">";
 			  echo $Pump_every_mins;
@@ -265,7 +279,9 @@ a:active {
           <td width="125">For:</td>
           <td><select name="Pump_for" id="Pump_for">
             <?php
-			session_start();
+			if (session_status() == PHP_SESSION_NONE) {
+			    session_start();
+			}
 			  $Pump_for=$_SESSION['Pump_for'];
 	  		  echo "<option selected=\"selected\">";
 			  echo $Pump_for;
@@ -285,7 +301,9 @@ a:active {
           <td>For a Total of:</td>
           <td><select name="Pump_times" id="Pump_times">
             <?php
-			session_start();
+			if (session_status() == PHP_SESSION_NONE) {
+			    session_start();
+			}
 			  $Pump_times=$_SESSION['Pump_times'];
 	  		  echo "<option selected=\"selected\">";
 			  echo $Pump_times;

@@ -6,6 +6,6 @@ then
 else
 	echo "Not Running. Attemping to restart..."
 	cd /var/www/yieldbuddy/
-	sudo nice -n 15 sudo /var/www/yieldbuddy/yieldbuddy.py
+	sudo nice -n 15 python /var/www/yieldbuddy/yieldbuddy.py
 	exit
 fi

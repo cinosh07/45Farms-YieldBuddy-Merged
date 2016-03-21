@@ -1,5 +1,7 @@
 <?php
-session_start();
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 include($_SERVER['DOCUMENT_ROOT'].'/yieldbuddy/www/sql/new_SQLite3.php');
 $db->busyTimeout(2000);
 $results = $db->query('SELECT *	FROM Sensors_Log');
@@ -13,12 +15,12 @@ $column_to_session_value = array(
     "6" => "Sensors_TDS2",
     "7" => "Sensors_CO2",
     "8" => "Sensors_Light",
-	"9" => "Sensors_Water",
+    "9" => "Sensors_Water",
 );
 
 while ($row = $results->fetchArray()) {
 //	var_dump($row);
-	
+
 	$i=0;
 	while($i < 10){
 //	echo "<p></p>";

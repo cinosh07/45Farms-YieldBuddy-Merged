@@ -1,6 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <?php
-session_start();
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 include $_SERVER['DOCUMENT_ROOT'].'/yieldbuddy/www/sql/sql_setpoints_firstrow.php';
 if(!file_exists('users/' . $_SESSION['username'] . '.xml')){
 	header('Location: index.php');
@@ -124,7 +126,9 @@ a:active {
               <tr>
                 <form action="command.php" method="get">
                   <?php
-		session_start();
+		if (session_status() == PHP_SESSION_NONE) {
+		    session_start();
+		}
 		$pH1Value_Low=$_SESSION['pH1Value_Low'];
 		$pH1Value_High=$_SESSION['pH1Value_High'];
 		echo "<td width=\"300\"><div align=\"right\">";
@@ -149,7 +153,9 @@ a:active {
               <tr>
                 <form action="command.php" method="get">
                   <?php
-		session_start();		
+		if (session_status() == PHP_SESSION_NONE) {
+		    session_start();
+		}
 		$pH2Value_Low=$_SESSION['pH2Value_Low'];
 		$pH2Value_High=$_SESSION['pH2Value_High'];
 		echo "<td width=\"300\"><div align=\"right\">";
@@ -174,7 +180,9 @@ a:active {
               <tr>
                 <form action="command.php" method="get">
                   <?php
-		session_start();		
+		if (session_status() == PHP_SESSION_NONE) {
+		    session_start();
+		}
 		$TempValue_Low=$_SESSION['TempValue_Low'];
 		$TempValue_High=$_SESSION['TempValue_High'];
 		echo "<td width=\"300\"><div align=\"right\">";
@@ -218,7 +226,9 @@ a:active {
               <tr>
                 <form action="command.php" method="get">
                   <?php
-		session_start();
+		if (session_status() == PHP_SESSION_NONE) {
+		    session_start();
+		}
 		$RHValue_Low=$_SESSION['RHValue_Low'];
 		$RHValue_High=$_SESSION['RHValue_High'];
         echo "<td width=\"300\"><div align=\"right\">Low: &nbsp;&nbsp;&nbsp;";
@@ -262,7 +272,9 @@ a:active {
               <tr>
                 <form action="command.php" method="get">
                   <?php
-		session_start();
+		if (session_status() == PHP_SESSION_NONE) {
+		    session_start();
+		}
 		$TDS1Value_Low=$_SESSION['TDS1Value_Low'];
 		$TDS1Value_High=$_SESSION['TDS1Value_High'];
         echo "<td width=\"300\"><div align=\"right\">Low: &nbsp;&nbsp;&nbsp;";
@@ -312,7 +324,9 @@ a:active {
               <tr>
                 <form action="command.php" method="get">
                   <?php
-		session_start();
+		if (session_status() == PHP_SESSION_NONE) {
+		    session_start();
+		}
 		$TDS2Value_Low=$_SESSION['TDS2Value_Low'];
 		$TDS2Value_High=$_SESSION['TDS2Value_High'];
         echo "<td width=\"300\"><div align=\"right\">Low: &nbsp;&nbsp;&nbsp;";
@@ -362,7 +376,9 @@ a:active {
               <tr>
                 <form action="command.php" method="get">
                   <?php
-		session_start();
+		if (session_status() == PHP_SESSION_NONE) {
+		    session_start();
+		}
 		$CO2Value_Low=$_SESSION['CO2Value_Low'];
 		$CO2Value_High=$_SESSION['CO2Value_High'];
         echo "<td width=\"300\"><div align=\"right\">Low: &nbsp;&nbsp;&nbsp;";
@@ -413,7 +429,9 @@ a:active {
               <tr>
                 <form action="command.php" method="get">
                   <?php
-		session_start();
+		if (session_status() == PHP_SESSION_NONE) {
+		    session_start();
+		}
 		$LightValue_Low=$_SESSION['LightValue_Low'];
 		$LightValue_High=$_SESSION['LightValue_High'];
         echo "<td width=\"300\"><div align=\"right\">Low: &nbsp;&nbsp;&nbsp;";

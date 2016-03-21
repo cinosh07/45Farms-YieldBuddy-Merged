@@ -1,6 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <?php
-session_start();
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 include $_SERVER['DOCUMENT_ROOT'].'/yieldbuddy/www/sql/sql_alarms.php';
 if(!file_exists('users/' . $_SESSION['username'] . '.xml')){
 	header('Location: index.php');
@@ -155,7 +157,9 @@ a:active {
         </tr>
         <tr>
         <?php
-		session_start();
+		if (session_status() == PHP_SESSION_NONE) {
+		    session_start();
+		}
 		if ($_SESSION['pH1_Low_Alarm'] > 0) {
 			echo "<tr>";
 				echo "<td>";

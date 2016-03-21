@@ -1,6 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <?php
-session_start();
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 $username = $_SESSION['username'];
 if(!file_exists($_SERVER['DOCUMENT_ROOT']. '/yieldbuddy/www/users/' . $_SESSION['username']. '.xml')){
 	header('Location: index.php');
@@ -336,10 +338,13 @@ function TurnAuto(number, isAuto) {
     <td height="19" colspan="2" align="left" valign="top"><p>&nbsp;Camera</p></td>
   </tr>
   <tr>
-    <td height="77" colspan="2" align="center" valign="top"><p id="camera_applet">
+   <td height="77" colspan="2" align="center" valign="top"><p id="camera_applet">
     <?php 
 	include $_SERVER['DOCUMENT_ROOT'].'/yieldbuddy/www/sql/sql_camera_firstrow.php';
-	session_start();
+
+	if (session_status() == PHP_SESSION_NONE) {
+   	    session_start();
+	}
 	$camera_address = trim($_SESSION['camera_address']);
 	?>
      <applet code=com.charliemouse.cambozola.Viewer

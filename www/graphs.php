@@ -1,6 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <?php
-session_start();
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 if(!file_exists('users/' . $_SESSION['username'] . '.xml')){
 	header('Location: index.php');
 	die;
@@ -115,7 +117,9 @@ a:active {
   <tr>
     <td height="77" width="1170" valign="top"><div class="cssbox"><p>
       <?php
-session_start();
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 
 $db = new SQLite3($_SERVER['DOCUMENT_ROOT'].'/yieldbuddy/www/sql/yieldbuddy.sqlite3');
 $db->busyTimeout(2000);

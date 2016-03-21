@@ -1,5 +1,7 @@
 <?php
-session_start();
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 //SET MAXIMUM NUMBER OF ROWS TO QUERY HERE:
 $MaximumRows = 1;
 echo "Maximum Number of Rows: " . $MaximumRows . "<br></br>";

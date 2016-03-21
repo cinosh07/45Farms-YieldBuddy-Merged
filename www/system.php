@@ -1,6 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <?php
-session_start();
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 include $_SERVER['DOCUMENT_ROOT'].'/yieldbuddy/www/sql/sql_arduino_firstrow.php';
 include $_SERVER['DOCUMENT_ROOT'].'/yieldbuddy/www/sql/sql_email_firstrow.php';
 include $_SERVER['DOCUMENT_ROOT'].'/yieldbuddy/www/sql/sql_camera_firstrow.php';
@@ -243,7 +245,7 @@ a:active {
           <select name="Rasp_hour" id="Rasp_hour">
             <?php
 				echo "<option selected=\"selected\">";
-				echo date(H);
+				echo date("H");
 				echo "</option>";
 			  	$i = 0;
 				while ($i <= 23) {
@@ -258,7 +260,7 @@ a:active {
           <select name="Rasp_min" id="Rasp_min">
             <?php
 	  		  echo "<option selected=\"selected\">";
-			  echo date(i);
+			  echo date("i");
 			  echo "</option>";
 			  	$i = 0;
 				while ($i <= 59) {
@@ -273,7 +275,7 @@ a:active {
           <select name="Rasp_sec" id="Rasp_sec">
             <?php
 	  		  echo "<option selected=\"selected\">";
-			  echo date(s);
+			  echo date("s");
 			  echo "</option>";
 			  	$i = 0;
 				while ($i <= 59) {
@@ -431,7 +433,9 @@ a:active {
            <td width="276">SMTP Server:            </td>
            <td width="216" align="center">
            <?php
-		   session_start();
+		   if (session_status() == PHP_SESSION_NONE) {
+		       session_start();
+		   }
            echo "<input name=\"smtp_server\" type=\"text\" id=\"smtp_server\" value=" . $_SESSION['smtp_server']. " size=\"30\" />";
 		   ?>
            </td>
@@ -440,7 +444,9 @@ a:active {
            <td>SMTP Port:</td>
            <td align="center">
            <?php
-		   session_start();
+		   if (session_status() == PHP_SESSION_NONE) {
+		       session_start();
+		   }
            echo "<input name=\"smtp_port\" type=\"text\" id=\"smtp_port\" value=" . $_SESSION['smtp_port']. " size=\"30\" />";
 		   ?>
            </td>
@@ -453,7 +459,9 @@ a:active {
            <td height="25">Login Email Address:</td>
            <td align="center">
            <?php
-		   session_start();
+		   if (session_status() == PHP_SESSION_NONE) {
+		       session_start();
+		   }
            echo "<input name=\"login_email\" type=\"text\" id=\"login_email\" value=" . $_SESSION['login_email_address']. " size=\"30\" />";
 		   ?>
            </td>
@@ -462,7 +470,9 @@ a:active {
            <td>Password:</td>
            <td align="center">
            <?php
-		   session_start();
+		   if (session_status() == PHP_SESSION_NONE) {
+		       session_start();
+		   }
            echo "<input name=\"login_email_password\" type=\"password\" id=\"login_email_password\" size=\"30\" />";
 		   ?>
 		   </td>
@@ -475,7 +485,9 @@ a:active {
            <td>Email alerts to email address:            </td>
            <td align="center">
            <?php
-		   session_start();
+		   if (session_status() == PHP_SESSION_NONE) {
+		       session_start();
+		   }
            echo "<input name=\"recipient_email\" type=\"text\" id=\"recipient_email\" value=" . $_SESSION['recipient']. " size=\"30\" />";
 		   ?>
            </td>
@@ -497,7 +509,9 @@ a:active {
             <td width="299">Connect Back Address</td>
             <td width="380" align="center">
              <?php
-	  	      session_start();
+	  	      if (session_status() == PHP_SESSION_NONE) {
+		          session_start();
+		      }
               echo "<input type=\"text\" name=\"camera_address\" size=\"50\" value=\"" .$_SESSION['camera_address']. "\"/>";
 			 ?>
 			 </td>

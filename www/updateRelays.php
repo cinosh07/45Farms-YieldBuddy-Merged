@@ -42,8 +42,10 @@ alert("ok!");
 
 }
 </script>
-<?php>
+<?php
+
 session_start();
+
 include ($_SERVER['DOCUMENT_ROOT'].'/yieldbuddy/www/sql/sql_relays_firstrow.php');
 if ($_SESSION['Relay1'] > 1) {
 	exit();
