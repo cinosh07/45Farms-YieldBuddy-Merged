@@ -1,0 +1,62 @@
+#######################################
+# Syntax Coloring Map Open Aquarium
+#######################################
+
+#######################################
+# Datatypes (KEYWORD3)
+#######################################
+
+OpenAquarium	KEYWORD3
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+init	KEYWORD2
+initDS18B20	KEYWORD2
+alarm	KEYWORD2
+empty	KEYWORD2
+fadelight	KEYWORD2
+readyforfeeding	KEYWORD2
+feedfish	KEYWORD2
+fill	KEYWORD2
+initports	KEYWORD2
+leak	KEYWORD2
+initRTC	KEYWORD2
+setTime	KEYWORD2
+getTime	KEYWORD2
+printTime	KEYWORD2
+leak	KEYWORD2
+lighting	KEYWORD2
+lightON	KEYWORD2
+lightOFF	KEYWORD2
+newday	KEYWORD2
+sendPowerStrip	KEYWORD2
+openingsong	KEYWORD2
+perpumpOFF	KEYWORD2
+perpumpON	KEYWORD2
+playTone	KEYWORD2
+pumpOFF	KEYWORD2
+pumpON	KEYWORD2
+readtemperature	KEYWORD2
+readpHLevel	KEYWORD2
+readEcLevel	KEYWORD2
+tempcontrol	KEYWORD2
+waterlevel1	KEYWORD2
+waterlevel2	KEYWORD2
+readwaterlevel	KEYWORD2
+welcome		KEYWORD2
+calibratepH	KEYWORD2
+pHConversion	KEYWORD2
+readpH	KEYWORD2
+calibrateEC	KEYWORD2
+ECConversion	KEYWORD2
+readResistanceEC	KEYWORD2
+
+
+
+Payload	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
