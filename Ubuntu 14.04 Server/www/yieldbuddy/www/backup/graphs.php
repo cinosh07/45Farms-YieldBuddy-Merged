@@ -101,7 +101,6 @@ a:active {
         <td width="104" height="34" align="left" valign="bottom"><a href="overview.php">Overview</a></td>
         <td width="150" valign="bottom"><a href="timers.php">Timers</a></td>
         <td width="155" valign="bottom">Graphs</td>
-        <td width="155" valign="bottom"><a href="graphs_2.php">Graphs2</a></td>
         <td width="193" valign="bottom"><a href="setpoints.php">Set Points</a></td>
         <td width="163" valign="bottom"><a href="alarms.php">Alarms</a></td>
         <td width="150" valign="bottom"><a href="system.php">System</a></td>
@@ -138,8 +137,7 @@ while ($row = $results->fetchArray()) {
 	$TDS2_array[$rownum] = $row[6];
 	$CO2_array[$rownum] = $row[7];
 	$Light_array[$rownum] = $row[8];
-    $Water_array[$rownum] = $row[9];
-
+	
 	#echo $Time_array[$rownum];
 	$dates = explode("-",$Time_array[$rownum]);
 	#echo "</br>";
@@ -185,17 +183,17 @@ google.load('visualization', '1', {packages: ['annotatedtimeline']});
 function drawVisualization() {
   var data = new google.visualization.DataTable();
   data.addColumn('datetime', 'Date');
-  data.addColumn('number', 'Temperature');
-  data.addColumn('number', 'RH');
+  data.addColumn('number', 'pH1');
+  data.addColumn('number', 'pH2');
   
 	<?php
 	echo "data.addRows([";
 	$rownum=0;
 		while ($rownum < sizeof($Time_array)) {
 			if ($rownum == (sizeof($Time_array) - 1)) {
-				echo "[new Date('" . $parsed_year[$rownum] . "','" . ($parsed_month[$rownum] - 1) . "','" . $parsed_day[$rownum] . "','" . $parsed_hour[$rownum] . "','" . $parsed_min[$rownum] . "','" . $parsed_sec[$rownum] . "')," . $Temp_array[$rownum] . "," . $RH_array[$rownum] . "]\n";
+				echo "[new Date('" . $parsed_year[$rownum] . "','" . ($parsed_month[$rownum] - 1) . "','" . $parsed_day[$rownum] . "','" . $parsed_hour[$rownum] . "','" . $parsed_min[$rownum] . "','" . $parsed_sec[$rownum] . "')," . $pH1_array[$rownum] . "," . $pH2_array[$rownum] . "]\n";
 			} else {
-				echo "[new Date('" . $parsed_year[$rownum] . "','" . ($parsed_month[$rownum] - 1) . "','" . $parsed_day[$rownum] . "','" . $parsed_hour[$rownum] . "','" . $parsed_min[$rownum] . "','" . $parsed_sec[$rownum] . "')," . $Temp_array[$rownum] . "," . $RH_array[$rownum] . "],\n";
+				echo "[new Date('" . $parsed_year[$rownum] . "','" . ($parsed_month[$rownum] - 1) . "','" . $parsed_day[$rownum] . "','" . $parsed_hour[$rownum] . "','" . $parsed_min[$rownum] . "','" . $parsed_sec[$rownum] . "')," . $pH1_array[$rownum] . "," . $pH2_array[$rownum] . "],\n";
 			}
 			$rownum = $rownum + 1;
 		}
@@ -204,10 +202,41 @@ function drawVisualization() {
   
   var options = {
 	  title: "Test",
-      'colors': ["#6633FF", "#FF5353", "#66FF00"],
-	  'thickness': 2,
-      'zoomStartTime': new Date((new Date()).getTime() - 1 * 24 * 60 * 60 * 1000), //NOTE: month 1 = Feb (javascript to blame)
-	  'backgroundColor': '#DEB19E',
+  };
+
+  var annotatedtimeline = new google.visualization.AnnotatedTimeLine(
+	  document.getElementById('pH_Chart'));
+  annotatedtimeline.draw(data, options);
+  
+  
+}
+
+google.setOnLoadCallback(drawVisualization);
+</script>
+  
+<script type="text/javascript">
+google.load('visualization', '1', {packages: ['annotatedtimeline']});
+function drawVisualization() {
+  var data = new google.visualization.DataTable();
+  data.addColumn('datetime', 'Date');
+  data.addColumn('number', 'Temperature');
+  
+	<?php
+	echo "data.addRows([";
+	$rownum=0;
+		while ($rownum < sizeof($Time_array)) {
+			if ($rownum == (sizeof($Time_array) - 1)) {
+				echo "[new Date('" . $parsed_year[$rownum] . "','" . ($parsed_month[$rownum] - 1) . "','" . $parsed_day[$rownum] . "','" . $parsed_hour[$rownum] . "','" . $parsed_min[$rownum] . "','" . $parsed_sec[$rownum] . "')," . $Temp_array[$rownum] . "]\n";
+			} else {
+				echo "[new Date('" . $parsed_year[$rownum] . "','" . ($parsed_month[$rownum] - 1) . "','" . $parsed_day[$rownum] . "','" . $parsed_hour[$rownum] . "','" . $parsed_min[$rownum] . "','" . $parsed_sec[$rownum] . "')," . $Temp_array[$rownum] . "],\n";
+			}
+			$rownum = $rownum + 1;
+		}
+	echo "]);";
+	?>
+  
+  var options = {
+	  title: "Test",
   };
 
   var annotatedtimeline = new google.visualization.AnnotatedTimeLine(
@@ -219,12 +248,50 @@ function drawVisualization() {
 
 google.setOnLoadCallback(drawVisualization);
 </script>
-  
+
 <script type="text/javascript">
 google.load('visualization', '1', {packages: ['annotatedtimeline']});
 function drawVisualization() {
   var data = new google.visualization.DataTable();
   data.addColumn('datetime', 'Date');
+  data.addColumn('number', 'TDS1');
+  data.addColumn('number', 'TDS2');
+  
+	<?php
+	echo "data.addRows([";
+	$rownum=0;
+		while ($rownum < sizeof($Time_array)) {
+			if ($rownum == (sizeof($Time_array) - 1)) {
+				echo "[new Date('" . $parsed_year[$rownum] . "','" . ($parsed_month[$rownum] - 1) . "','" . $parsed_day[$rownum] . "','" . $parsed_hour[$rownum] . "','" . $parsed_min[$rownum] . "','" . $parsed_sec[$rownum] . "')," . $TDS1_array[$rownum] . "," . $TDS2_array[$rownum] . "]\n";
+			} else {
+				echo "[new Date('" . $parsed_year[$rownum] . "','" . ($parsed_month[$rownum] - 1) . "','" . $parsed_day[$rownum] . "','" . $parsed_hour[$rownum] . "','" . $parsed_min[$rownum] . "','" . $parsed_sec[$rownum] . "')," . $TDS1_array[$rownum] . "," . $TDS2_array[$rownum] . "],\n";
+			}
+			$rownum = $rownum + 1;
+		}
+	echo "]);";
+	?>
+  
+  var options = {
+	  title: "Test",
+  };
+
+  var annotatedtimeline = new google.visualization.AnnotatedTimeLine(
+	  document.getElementById('TDS_Chart'));
+  annotatedtimeline.draw(data, options);
+  
+  
+}
+
+google.setOnLoadCallback(drawVisualization);
+</script>
+
+<script type="text/javascript">
+google.load('visualization', '1', {packages: ['annotatedtimeline']});
+function drawVisualization() {
+  var data = new google.visualization.DataTable();
+  data.addColumn('datetime', 'Date');
+  data.addColumn('number', 'RH');
+  data.addColumn('number', 'CO2');
   data.addColumn('number', 'Light');
   
 	<?php
@@ -232,9 +299,9 @@ function drawVisualization() {
 	$rownum=0;
 		while ($rownum < sizeof($Time_array)) {
 			if ($rownum == (sizeof($Time_array) - 1)) {
-				echo "[new Date('" . $parsed_year[$rownum] . "','" . ($parsed_month[$rownum] - 1) . "','" . $parsed_day[$rownum] . "','" . $parsed_hour[$rownum] . "','" . $parsed_min[$rownum] . "','" . $parsed_sec[$rownum] . "')," . $Light_array[$rownum] . "]\n";
+				echo "[new Date('" . $parsed_year[$rownum] . "','" . ($parsed_month[$rownum] - 1) . "','" . $parsed_day[$rownum] . "','" . $parsed_hour[$rownum] . "','" . $parsed_min[$rownum] . "','" . $parsed_sec[$rownum] . "')," . $RH_array[$rownum] . "," . $CO2_array[$rownum] . "," . $Light_array[$rownum] . "]\n";
 			} else {
-				echo "[new Date('" . $parsed_year[$rownum] . "','" . ($parsed_month[$rownum] - 1) . "','" . $parsed_day[$rownum] . "','" . $parsed_hour[$rownum] . "','" . $parsed_min[$rownum] . "','" . $parsed_sec[$rownum] . "')," . $Light_array[$rownum] . "],\n";
+				echo "[new Date('" . $parsed_year[$rownum] . "','" . ($parsed_month[$rownum] - 1) . "','" . $parsed_day[$rownum] . "','" . $parsed_hour[$rownum] . "','" . $parsed_min[$rownum] . "','" . $parsed_sec[$rownum] . "')," . $RH_array[$rownum] . "," . $CO2_array[$rownum] . "," . $Light_array[$rownum] . "],\n";
 			}
 			$rownum = $rownum + 1;
 		}
@@ -243,122 +310,36 @@ function drawVisualization() {
   
   var options = {
 	  title: "Test",
-      'colors': ["#6633FF", "#FF5353", "#66FF00"],
-	  'thickness': 2,
-      'zoomStartTime': new Date((new Date()).getTime() - 1 * 24 * 60 * 60 * 1000), //NOTE: month 1 = Feb (javascript to blame)
-	  'backgroundColor': ['#DEB19E'],
   };
 
   var annotatedtimeline = new google.visualization.AnnotatedTimeLine(
-	  document.getElementById('Light_Chart'));
+	  document.getElementById('Percentage_Chart'));
   annotatedtimeline.draw(data, options);
   
   
 }
-
 google.setOnLoadCallback(drawVisualization);
 </script>
-
-<script type="text/javascript">
-google.load('visualization', '1', {packages: ['annotatedtimeline']});
-function drawVisualization() {
-  var data = new google.visualization.DataTable();
-  data.addColumn('datetime', 'Date');
-  data.addColumn('number', 'Probe1');
-
-	<?php
-	echo "data.addRows([";
-	$rownum=0;
-		while ($rownum < sizeof($Time_array)) {
-			if ($rownum == (sizeof($Time_array) - 1)) {
-				echo "[new Date('" . $parsed_year[$rownum] . "','" . ($parsed_month[$rownum] - 1) . "','" . $parsed_day[$rownum] . "','" . $parsed_hour[$rownum] . "','" . $parsed_min[$rownum] . "','" . $parsed_sec[$rownum] . "')," . $pH1_array[$rownum] . "]\n";
-			} else {
-				echo "[new Date('" . $parsed_year[$rownum] . "','" . ($parsed_month[$rownum] - 1) . "','" . $parsed_day[$rownum] . "','" . $parsed_hour[$rownum] . "','" . $parsed_min[$rownum] . "','" . $parsed_sec[$rownum] . "')," . $pH1_array[$rownum] . "],\n";
-			}
-			$rownum = $rownum + 1;
-		}
-	echo "]);";
-	?>
-  
-  var options = {
-	  title: "Test",
-      'colors': ["#6633FF", "#FF5353", "#66FF00"],
-	  'thickness': 2,
-      'zoomStartTime': new Date((new Date()).getTime() - 1 * 24 * 60 * 60 * 1000), //NOTE: month 1 = Feb (javascript to blame)
-	  'backgroundColor': '#DEB19E',
-  };
-
-  var annotatedtimeline = new google.visualization.AnnotatedTimeLine(
-	  document.getElementById('CO2_Chart'));
-  annotatedtimeline.draw(data, options);
-  
-  
-}
-
-google.setOnLoadCallback(drawVisualization);
-</script>
-
-<script type="text/javascript">
-google.load('visualization', '1', {packages: ['annotatedtimeline']});
-function drawVisualization() {
-  var data = new google.visualization.DataTable();
-  data.addColumn('datetime', 'Date');
-  data.addColumn('number', 'X');
-  data.addColumn('number', 'Y');
-  data.addColumn('number', 'Z');
-
-
-	<?php
-	echo "data.addRows([";
-	$rownum=0;
-		while ($rownum < sizeof($Time_array)) {
-			if ($rownum == (sizeof($Time_array) - 1)) {
-				echo "[new Date('" . $parsed_year[$rownum] . "','" . ($parsed_month[$rownum] - 1) . "','" . $parsed_day[$rownum] . "','" . $parsed_hour[$rownum] . "','" . $parsed_min[$rownum] . "','" . $parsed_sec[$rownum] . "')," . $TDS1_array[$rownum] . "," . $TDS2_array[$rownum] . "," . $CO2_array[$rownum] . "," . "]\n";
-			} else {
-				echo "[new Date('" . $parsed_year[$rownum] . "','" . ($parsed_month[$rownum] - 1) . "','" . $parsed_day[$rownum] . "','" . $parsed_hour[$rownum] . "','" . $parsed_min[$rownum] . "','" . $parsed_sec[$rownum] . "')," . $TDS1_array[$rownum] . "," . $TDS2_array[$rownum] . "," . $CO2_array[$rownum] . "," . "],\n";
-			}
-			$rownum = $rownum + 1;
-		}
-	echo "]);";
-	?>
-
-  var options = {
-	  title: "Test",
-      'colors': ["#6633FF", "#FF5353", "#66FF00"],
-	  'thickness': 2,
-      'zoomStartTime': new Date((new Date()).getTime() - 1 * 24 * 60 * 60 * 1000), //NOTE: month 1 = Feb (javascript to blame)
-	  'backgroundColor': '#DEB19E',
-  };
-
-  var annotatedtimeline = new google.visualization.AnnotatedTimeLine(
-	  document.getElementById('Magnometer_Chart'));
-  annotatedtimeline.draw(data, options);
-
-  
-}
-google.setOnLoadCallback(drawVisualization);
-</script>
-
+pH1 and pH2:
+<div id="pH_Chart" style="width: 1050px; height: 400px;"></div>
+</br>
+</br>
 Temperature [°C]:
+</br>
+</br>
 <div id="Temperature_Chart" style="width: 1050px; height: 400px;"></div>
 </br>
 </br>
-Light [Lumens]:
+TDS1 and TDS2:
 </br>
 </br>
-<div id="Light_Chart" style="width: 1050px; height: 400px;"></div>
+<div id="TDS_Chart" style="width: 1050px; height: 400px;"></div>
 </br>
 </br>
-Soil Wetness:
+RH, CO2, Light [%]:
 </br>
 </br>
-<div id="CO2_Chart" style="width: 1050px; height: 400px;"></div>
-</br>
-</br>
-Magnometer X,Y,Z [Gauss]:
-</br>
-</br>
-<div id="Magnometer_Chart" style="width: 1050px; height: 400px;"></div>
+<div id="Percentage_Chart" style="width: 1050px; height: 400px;"></div>
 </td>
 </body>
 </html>

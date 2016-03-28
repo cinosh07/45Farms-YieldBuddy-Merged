@@ -5,6 +5,7 @@
 #include <Wire.h>
 #include <OneWire.h>
 #include <DS1307RTC.h>
+#include <HMC5883L.h>
 #include <avr/pgmspace.h>
 #include "Arduino.h"
 
@@ -147,6 +148,10 @@ float filledvolume = 0; // amount of tank volume filled with water
 float water_litres = 0; // amount of tank volume filled in litres
 float echo = 0; // returned value in litres 
 
+
+// variables used in reading magnometer
+HMC5883L compass;
+int error = 0;
 
 //Tank 1
 String Tank1_Status = "OK";
@@ -385,6 +390,21 @@ void setup()
     int eeprom_day = EEPROM.read(3);
     int eeprom_month = EEPROM.read(4);
     int eeprom_yr = EEPROM.read(5);
+
+  compass = HMC5883L(); // Construct a new HMC5883 compass.
+
+  Serial.println("Setting scale to +/- 1.3 Ga");
+  error = compass.SetScale(5.6); // Set the scale of the compass.
+  if(error != 0) // If there is an error, print it out.
+    Serial.println(compass.GetErrorText(error));
+
+  Serial.println("Setting measurement mode to continous.");
+  error = compass.SetMeasurementMode(Measurement_Continuous); // Set the measurement mode to Continuous
+  if(error != 0) // If there is an error, print it out.
+    Serial.println(compass.GetErrorText(error));
+
+
+   
 
   //EEPROM RELAYS
   Relay1_State = 0; //EEPROM.read(6);     //Water-Pump 1

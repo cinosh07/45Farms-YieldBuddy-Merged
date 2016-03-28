@@ -199,6 +199,17 @@ void updateSensorValues() {
   else {
     my_RH_string.println("%"); 
   }
+// ******************magnometer sensor******************
+
+
+  MagnetometerScaled scaled = compass.ReadScaledAxis();
+  
+  int xAxis = scaled.XAxis;
+  int yAxis = scaled.YAxis;
+  int zAxis = scaled.ZAxis;
+
+
+//******************************************************  
   
  /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
    !!TDS1 SENSOR!!TDS1 SENSOR!!TDS1 SENSOR!!TDS1 SENSOR!!TDS1 SENSOR!!TDS1 SENSOR!!TDS1 SENSOR!!TDS1 SENSOR!!TDS1 SENSOR!!
@@ -215,8 +226,8 @@ void updateSensorValues() {
 
   TDS1RawValue = TDS1Sum/((j-1) * 2);
  // ******for testing purposes*****************
- // TDS1Value = ((TDS1RawValue * 100.0)/1024.0);
-  TDS1Value = WaterValue;
+  //TDS1Value = ((TDS1RawValue * 100.0)/1024.0);
+  TDS1Value = xAxis;
   if(isnan(TDS1Value)){
     TDS1Value = 0;        
   }
@@ -239,9 +250,9 @@ void updateSensorValues() {
   }
 
   TDS2RawValue = TDS2Sum/((j-1) * 2);
-
-  TDS2Value = ((TDS2RawValue * 100.0)/1024.0);
-  
+//******************testing******************
+  //TDS2Value = ((TDS2RawValue * 100.0)/1024.0);
+  TDS2Value = yAxis;
   if(isnan(TDS2Value)){
     TDS2Value = 0;        
   }
@@ -263,9 +274,9 @@ void updateSensorValues() {
   }
 
   CO2RawValue = CO2Sum/((j-1) * 2);
-
-  CO2Value = ((CO2RawValue * 100.0)/1024.0);
-  
+  //****************testing
+  //CO2Value = ((CO2RawValue * 100.0)/1024.0);
+  CO2Value = zAxis;
   if(isnan(CO2Value)){
     CO2Value = 0;        
   }

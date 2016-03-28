@@ -205,6 +205,7 @@ function drawVisualization() {
 	  title: "Test",
       'colors': ["#6633FF", "#FF5353", "#66FF00"],
 	  'thickness': 2,
+      'zoomStartTime': new Date((new Date()).getTime() - 1 * 24 * 60 * 60 * 1000), //NOTE: month 1 = Feb (javascript to blame)
 	  'backgroundColor': '#DEB19E',
   };
 
@@ -243,7 +244,7 @@ function drawVisualization() {
 	  title: "Test",
       'colors': ["#6633FF", "#FF5353", "#66FF00"],
 	  'thickness': 2,
-      'zoomStartTime': new Date((new Date()).getTime() - 7 * 24 * 60 * 60 * 1000), //NOTE: month 1 = Feb (javascript to blame)
+      'zoomStartTime': new Date((new Date()).getTime() - 1 * 24 * 60 * 60 * 1000), //NOTE: month 1 = Feb (javascript to blame)
 	  'backgroundColor': '#DEB19E',
   };
 
@@ -283,7 +284,7 @@ function drawVisualization() {
 	  title: "Test",
       'colors': ["#6633FF", "#FF5353", "#66FF00"],
 	  'thickness': 2,
-      'zoomStartTime': new Date((new Date()).getTime() - 7 * 24 * 60 * 60 * 1000), //NOTE: month 1 = Feb (javascript to blame)
+      'zoomStartTime': new Date((new Date()).getTime() - 1 * 24 * 60 * 60 * 1000), //NOTE: month 1 = Feb (javascript to blame)
 	  'backgroundColor': '#DEB19E',
   };
 
@@ -324,7 +325,7 @@ function drawVisualization() {
 	  title: "Test",
       'colors': ["#6633FF", "#FF5353", "#66FF00"],
 	  'thickness': 2,
-      'zoomStartTime': new Date((new Date()).getTime() - 7 * 24 * 60 * 60 * 1000), //NOTE: month 1 = Feb (javascript to blame)
+      'zoomStartTime': new Date((new Date()).getTime() - 1 * 24 * 60 * 60 * 1000), //NOTE: month 1 = Feb (javascript to blame)
 	  'backgroundColor': '#DEB19E',
   };
 

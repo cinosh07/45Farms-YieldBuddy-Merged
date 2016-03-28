@@ -1,0 +1,3 @@
+
+2016/03/27 23:17:04: Added a data point to the sensor values log.
+2016/03/27 23:19:36: Added a data point to the sensor values log.

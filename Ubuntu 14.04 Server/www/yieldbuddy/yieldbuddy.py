@@ -14,6 +14,8 @@ import socket
 import subprocess
 
 
+
+
 def drawInterface():
 	print '\033[1m' #Bold
 	print("\033[0;0H")
@@ -373,19 +375,20 @@ def checkSerial():
 				line=ser.readline()
 				if isinstance(line, basestring) == 0:
 					#print 'Expected String...  Serial Read Error?\n'
-					addMessageLog("Expected String...  Serial Read Error?")
-					printMessageLog()
+					# addMessageLog("Expected String...  Serial Read Error?")
+					# printMessageLog()
 					return 0
 			except:
 				#print "Error reading serial device."
-				addMessageLog("Error reading serial device.")
-				printMessageLog()
-				return 0
+				# addMessageLog("Error reading serial device.")
+				# printMessageLog()
+				return 1
 		else:
 			#print "Error reading serial device."
-			addMessageLog("Error reading serial device.")
-			printMessageLog()
-			return 0
+			#addMessageLog("no path to serial device.")
+			#printMessageLog()
+			return 2
+			
 		#print("\v%s"%(line))
 		print("\033[35;0H                                                                                                           ")
 		print("\033[35;0H(" + now.strftime("%Y/%m/%d %H:%M:%S") + ") Now: " + now.strftime('%s') + "  Last Data Point: " + LastDataPoint_Time.strftime('%s') + "   Next Data Point [sec]: " + str(float(now.strftime('%s')) - float(LastDataPoint_Time.strftime('%s'))) + "/" + str(TakeDataPoint_Every -  (float(now.strftime('%s')) - float(LastDataPoint_Time.strftime('%s')) )  ) + "/" + str(TakeDataPoint_Every))
@@ -693,6 +696,8 @@ def checkSerial():
 		#print "\nError: ", detail
 		addMessageLog("Error: " + str(detail))
 		printMessageLog()
+
+				
 #			time.sleep(5)
 
 #####MAIN############################################################
@@ -711,15 +716,7 @@ app_path = str( os.path.dirname(os.path.realpath(__file__)) )+"/"
 print 'Application Path: ' + app_path + '\n'
 
 
-print 'Checking For Possible Serial Devices:'
-f=os.system("ls /dev/tty*")
-
-print '\r'
-print 'Enter the path to the serial device.  (/dev/ttyAMA0):'
-#device_path=raw_input()
-device_path='/dev/ttyAMA0'    #override device_path (no user input)
-if device_path == '':
-	device_path = '/dev/ttyAMA0'
+device_path='/dev/yieldbuddytty'    #override device_path (no user input)
 device_path = device_path.strip("\n")
 try:
 	ser = serial.Serial(device_path,115200,timeout=10)
@@ -730,7 +727,7 @@ except:
 	
 
 #Insert sensors datapoint into SQL db at this interval (in seconds):
-TakeDataPoint_Every = 90   #default: 300 seconds (Every 5 minutes) (12 times per hour) --> 288 Datapoints a day
+TakeDataPoint_Every = 150   #default: 300 seconds (Every 5 minutes) (12 times per hour) --> 288 Datapoints a day
 
 #Start initial time sync counter at this number:
 timesync = 17
@@ -815,9 +812,50 @@ drawInterface()
 
 addMessageLog("Started yieldbuddy. Priority 15.")
 printMessageLog()
-
+# while !ser.isOpen()
+		# device_path='/dev/yieldbuddytty'    #override device_path (no user input)
+		# device_path = device_path.strip("\n")
+		# addMessageLog("attempting communication......")
+		# printMessageLog()
+		# try:
+			# ser = serial.Serial(device_path,115200,timeout=10)
+			# ser.flushInput()
+		# except:
+		# print 'this is the end of the first check'
+		# #sys.exit(0)
+loopcounter = 0
 while 1:
-	checkSerial()
-	global now
-	now = datetime.now()
-
+		serialerr=checkSerial()
+		if str(serialerr) != str("None"):
+			if loopcounter == 0: # log error first time
+				if str(serialerr) == str("0"):
+					addMessageLog("serialerr: " + str(serialerr) + " from serial loop")
+					printMessageLog()
+					addMessageLog("Expected String...  Serial Read Error?")
+					printMessageLog()				
+					addMessageLog("attempting to restart serial")
+					printMessageLog()
+				if str(serialerr) == str("1"):
+					addMessageLog("serialerr: " + str(serialerr) + " from serial loop")
+					printMessageLog()
+					addMessageLog("Error reading serial device.")
+					printMessageLog()				
+					addMessageLog("attempting to restart serial")
+					printMessageLog()
+				if str(serialerr) == str("2"):
+					addMessageLog("serialerr: " + str(serialerr) + " from serial loop")
+					printMessageLog()
+					addMessageLog("no path to serial device.")
+					printMessageLog()
+					addMessageLog("attempting to restart serial")
+					printMessageLog()				
+			ser.close()
+			try:
+				ser = serial.Serial(device_path,115200,timeout=10)
+				ser.flushInput()
+				loopcounter = 0 # good to go have com port clear the loop for next time
+			except:
+				loopcounter = loopcounter + 1 # don't log it again
+				#sys.exit(0)
+		global now
+		now = datetime.now()
