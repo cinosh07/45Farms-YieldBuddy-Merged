@@ -214,6 +214,74 @@ body,td,th {
 	$command="restart yieldbuddy";
 	$sec = "10";
 	}
+
+	if ($submit == "Save Water Settings"){
+	$WaterValue_Low = $_GET["WaterValue_Low"];
+	$WaterValue_High = $_GET["WaterValue_High"];
+	$command="setWater," .$WaterValue_Low. "," .$WaterValue_High;
+	}
+	
+	if ($submit == "Save TankTotal Settings"){
+	$TankTotalValue_Low = $_GET["TankTotalValue_Low"];
+	$TankTotalValue_High = $_GET["TankTotalValue_High"];
+	$command="setTankTotal," .$TankTotalValue_Low. "," .$TankTotalValue_High;
+	}
+	
+	if ($submit == "Save Tank1 Settings"){
+	$Tank1Value_Low = $_GET["Tank1Value_Low"];
+	$Tank1Value_High = $_GET["Tank1Value_High"];
+	$Tank1Pump_ON = $_GET["Tank1Pump_ON"];
+	$Tank1Pump_OFF = $_GET["Tank1Pump_OFF"];
+	$Tank1MixPump_Enabled= $_GET["Tank1MixPump_Enabled"];
+	if ($Tank1MixPump_Enabled == "True"){
+		$Tank1MixPump_Enabled = "1";
+	} else if ($Tank1MixPump_Enabled == "False") {
+		$Tank1MixPump_Enabled = "0";
+	}
+	$command="setTank1Value," .$Tank1Value_Low. "," .$Tank1Value_High. "," .$Tank1Pump_ON. "," .$Tank1Pump_OFF. "," .$Tank1MixPump_Enabled;
+	}
+	
+	if ($submit == "Save Tank2 Settings"){
+	$Tank2Value_Low = $_GET["Tank2Value_Low"];
+	$Tank2Value_High = $_GET["Tank2Value_High"];
+	$Tank2Pump_ON = $_GET["Tank2Pump_ON"];
+	$Tank2Pump_OFF = $_GET["Tank2Pump_OFF"];
+	$Tank2MixPump_Enabled= $_GET["Tank2MixPump_Enabled"];
+	if ($Tank2MixPump_Enabled == "True"){
+		$Tank2MixPump_Enabled = "1";
+	} else if ($Tank2MixPump_Enabled == "False") {
+		$Tank2MixPump_Enabled = "0";
+	}
+	$command="setTank2Value," .$Tank2Value_Low. "," .$Tank2Value_High. "," .$Tank2Pump_ON. "," .$Tank2Pump_OFF. "," .$Tank2MixPump_Enabled;
+	}	
+	
+	if ($submit == "Save Tank3 Settings"){
+	$Tank3Value_Low = $_GET["Tank3Value_Low"];
+	$Tank3Value_High = $_GET["Tank3Value_High"];
+	$Tank3Pump_ON = $_GET["Tank3Pump_ON"];
+	$Tank3Pump_OFF = $_GET["Tank3Pump_OFF"];
+	$Tank3MixPump_Enabled= $_GET["Tank3MixPump_Enabled"];
+	if ($Tank3MixPump_Enabled == "True"){
+		$Tank3MixPump_Enabled = "1";
+	} else if ($Tank3MixPump_Enabled == "False") {
+		$Tank3MixPump_Enabled = "0";
+	}
+	$command="setTank3Value," .$Tank3Value_Low. "," .$Tank3Value_High. "," .$Tank3Pump_ON. "," .$Tank3Pump_OFF. "," .$Tank3MixPump_Enabled;
+	}	
+
+	if ($submit == "Save Tank4 Settings"){
+	$Tank4Value_Low = $_GET["Tank4Value_Low"];
+	$Tank4Value_High = $_GET["Tank4Value_High"];
+	$Tank4Pump_ON = $_GET["Tank4Pump_ON"];
+	$Tank4Pump_OFF = $_GET["Tank4Pump_OFF"];
+	$Tank4MixPump_Enabled= $_GET["Tank4MixPump_Enabled"];
+	if ($Tank4MixPump_Enabled == "True"){
+		$Tank4MixPump_Enabled = "1";
+	} else if ($Tank4MixPump_Enabled == "False") {
+		$Tank4MixPump_Enabled = "0";
+	}
+	$command="setTank4Value," .$Tank4Value_Low. "," .$Tank4Value_High. "," .$Tank4Pump_ON. "," .$Tank4Pump_OFF. "," .$Tank4MixPump_Enabled;
+	}
 	
 	//SEND COMMAND
 	$myFile = $_SERVER['DOCUMENT_ROOT'] . "/yieldbuddy/Command";

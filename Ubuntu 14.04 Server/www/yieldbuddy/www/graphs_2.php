@@ -138,7 +138,15 @@ while ($row = $results->fetchArray()) {
 	$TDS2_array[$rownum] = $row[6];
 	$CO2_array[$rownum] = $row[7];
 	$Light_array[$rownum] = $row[8];
-    $Water_array[$rownum] = $row[9];
+    $Water_array[$rownum] = $row[9];	
+	$MagX_array[$rownum] = $row[10];
+	$MagY_array[$rownum] = $row[11];
+	$MagZ_array[$rownum] = $row[12];
+	$TankTotal_array[$rownum] = $row[13];
+	$Tank1_array[$rownum] = $row[14];
+	$Tank2_array[$rownum] = $row[15];
+	$Tank3_array[$rownum] = $row[16];
+	$Tank4_array[$rownum] = $row[17];
 
 	#echo $Time_array[$rownum];
 	$dates = explode("-",$Time_array[$rownum]);
@@ -186,15 +194,18 @@ function drawVisualization() {
   var data = new google.visualization.DataTable();
   data.addColumn('datetime', 'Date');
   data.addColumn('number', 'Tank1');
+  data.addColumn('number', 'Tank2');
+  data.addColumn('number', 'Tank3');  
+  data.addColumn('number', 'Tank4');   
 
 	<?php
 	echo "data.addRows([";
 	$rownum=0;
 		while ($rownum < sizeof($Time_array)) {
 			if ($rownum == (sizeof($Time_array) - 1)) {
-				echo "[new Date('" . $parsed_year[$rownum] . "','" . ($parsed_month[$rownum] - 1) . "','" . $parsed_day[$rownum] . "','" . $parsed_hour[$rownum] . "','" . $parsed_min[$rownum] . "','" . $parsed_sec[$rownum] . "')," . $Water_array[$rownum] . "," . "]\n";
+				echo "[new Date('" . $parsed_year[$rownum] . "','" . ($parsed_month[$rownum] - 1) . "','" . $parsed_day[$rownum] . "','" . $parsed_hour[$rownum] . "','" . $parsed_min[$rownum] . "','" . $parsed_sec[$rownum] . "')," . $Tank1_array[$rownum] . "," . $Tank2_array[$rownum] . "," . $Tank3_array[$rownum] . "," . $Tank4_array[$rownum] . "]\n";
 			} else {
-				echo "[new Date('" . $parsed_year[$rownum] . "','" . ($parsed_month[$rownum] - 1) . "','" . $parsed_day[$rownum] . "','" . $parsed_hour[$rownum] . "','" . $parsed_min[$rownum] . "','" . $parsed_sec[$rownum] . "')," . $Water_array[$rownum] . "," . "],\n";
+				echo "[new Date('" . $parsed_year[$rownum] . "','" . ($parsed_month[$rownum] - 1) . "','" . $parsed_day[$rownum] . "','" . $parsed_hour[$rownum] . "','" . $parsed_min[$rownum] . "','" . $parsed_sec[$rownum] . "')," . $Tank1_array[$rownum] . "," . $Tank2_array[$rownum] . "," . $Tank3_array[$rownum] . "," . $Tank4_array[$rownum] . "],\n";
 			}
 			$rownum = $rownum + 1;
 		}
@@ -231,9 +242,9 @@ function drawVisualization() {
 	$rownum=0;
 		while ($rownum < sizeof($Time_array)) {
 			if ($rownum == (sizeof($Time_array) - 1)) {
-				echo "[new Date('" . $parsed_year[$rownum] . "','" . ($parsed_month[$rownum] - 1) . "','" . $parsed_day[$rownum] . "','" . $parsed_hour[$rownum] . "','" . $parsed_min[$rownum] . "','" . $parsed_sec[$rownum] . "')," . $Water_array[$rownum] . "," . "]\n";
+				echo "[new Date('" . $parsed_year[$rownum] . "','" . ($parsed_month[$rownum] - 1) . "','" . $parsed_day[$rownum] . "','" . $parsed_hour[$rownum] . "','" . $parsed_min[$rownum] . "','" . $parsed_sec[$rownum] . "')," . $TankTotal_array[$rownum] . "," . "]\n";
 			} else {
-				echo "[new Date('" . $parsed_year[$rownum] . "','" . ($parsed_month[$rownum] - 1) . "','" . $parsed_day[$rownum] . "','" . $parsed_hour[$rownum] . "','" . $parsed_min[$rownum] . "','" . $parsed_sec[$rownum] . "')," . $Water_array[$rownum] . "," . "],\n";
+				echo "[new Date('" . $parsed_year[$rownum] . "','" . ($parsed_month[$rownum] - 1) . "','" . $parsed_day[$rownum] . "','" . $parsed_hour[$rownum] . "','" . $parsed_min[$rownum] . "','" . $parsed_sec[$rownum] . "')," . $TankTotal_array[$rownum] . "," . "],\n";
 			}
 			$rownum = $rownum + 1;
 		}

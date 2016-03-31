@@ -138,7 +138,15 @@ while ($row = $results->fetchArray()) {
 	$TDS2_array[$rownum] = $row[6];
 	$CO2_array[$rownum] = $row[7];
 	$Light_array[$rownum] = $row[8];
-    $Water_array[$rownum] = $row[9];
+    $Water_array[$rownum] = $row[9];	
+	$MagX_array[$rownum] = $row[10];
+	$MagY_array[$rownum] = $row[11];
+	$MagZ_array[$rownum] = $row[12];
+	$TankTotal_array[$rownum] = $row[13];
+	$Tank1_array[$rownum] = $row[14];
+	$Tank2_array[$rownum] = $row[15];
+	$Tank3_array[$rownum] = $row[16];
+	$Tank4_array[$rownum] = $row[17];
 
 	#echo $Time_array[$rownum];
 	$dates = explode("-",$Time_array[$rownum]);
@@ -265,15 +273,16 @@ function drawVisualization() {
   var data = new google.visualization.DataTable();
   data.addColumn('datetime', 'Date');
   data.addColumn('number', 'Probe1');
+  data.addColumn('number', 'CO2');  
 
 	<?php
 	echo "data.addRows([";
 	$rownum=0;
 		while ($rownum < sizeof($Time_array)) {
 			if ($rownum == (sizeof($Time_array) - 1)) {
-				echo "[new Date('" . $parsed_year[$rownum] . "','" . ($parsed_month[$rownum] - 1) . "','" . $parsed_day[$rownum] . "','" . $parsed_hour[$rownum] . "','" . $parsed_min[$rownum] . "','" . $parsed_sec[$rownum] . "')," . $pH1_array[$rownum] . "]\n";
+				echo "[new Date('" . $parsed_year[$rownum] . "','" . ($parsed_month[$rownum] - 1) . "','" . $parsed_day[$rownum] . "','" . $parsed_hour[$rownum] . "','" . $parsed_min[$rownum] . "','" . $parsed_sec[$rownum] . "')," . $Water_array[$rownum] . "," . $CO2_array[$rownum] . "]\n";
 			} else {
-				echo "[new Date('" . $parsed_year[$rownum] . "','" . ($parsed_month[$rownum] - 1) . "','" . $parsed_day[$rownum] . "','" . $parsed_hour[$rownum] . "','" . $parsed_min[$rownum] . "','" . $parsed_sec[$rownum] . "')," . $pH1_array[$rownum] . "],\n";
+				echo "[new Date('" . $parsed_year[$rownum] . "','" . ($parsed_month[$rownum] - 1) . "','" . $parsed_day[$rownum] . "','" . $parsed_hour[$rownum] . "','" . $parsed_min[$rownum] . "','" . $parsed_sec[$rownum] . "')," . $Water_array[$rownum] . "," . $CO2_array[$rownum] . "],\n";
 			}
 			$rownum = $rownum + 1;
 		}
@@ -313,9 +322,9 @@ function drawVisualization() {
 	$rownum=0;
 		while ($rownum < sizeof($Time_array)) {
 			if ($rownum == (sizeof($Time_array) - 1)) {
-				echo "[new Date('" . $parsed_year[$rownum] . "','" . ($parsed_month[$rownum] - 1) . "','" . $parsed_day[$rownum] . "','" . $parsed_hour[$rownum] . "','" . $parsed_min[$rownum] . "','" . $parsed_sec[$rownum] . "')," . $TDS1_array[$rownum] . "," . $TDS2_array[$rownum] . "," . $CO2_array[$rownum] . "," . "]\n";
+				echo "[new Date('" . $parsed_year[$rownum] . "','" . ($parsed_month[$rownum] - 1) . "','" . $parsed_day[$rownum] . "','" . $parsed_hour[$rownum] . "','" . $parsed_min[$rownum] . "','" . $parsed_sec[$rownum] . "')," . $MagX_array[$rownum] . "," . $MagY_array[$rownum] . "," . $MagZ_array[$rownum] . "," . "]\n";
 			} else {
-				echo "[new Date('" . $parsed_year[$rownum] . "','" . ($parsed_month[$rownum] - 1) . "','" . $parsed_day[$rownum] . "','" . $parsed_hour[$rownum] . "','" . $parsed_min[$rownum] . "','" . $parsed_sec[$rownum] . "')," . $TDS1_array[$rownum] . "," . $TDS2_array[$rownum] . "," . $CO2_array[$rownum] . "," . "],\n";
+				echo "[new Date('" . $parsed_year[$rownum] . "','" . ($parsed_month[$rownum] - 1) . "','" . $parsed_day[$rownum] . "','" . $parsed_hour[$rownum] . "','" . $parsed_min[$rownum] . "','" . $parsed_sec[$rownum] . "')," . $MagX_array[$rownum] . "," . $MagY_array[$rownum] . "," . $MagZ_array[$rownum] . "," . "],\n";
 			}
 			$rownum = $rownum + 1;
 		}
@@ -339,23 +348,23 @@ function drawVisualization() {
 google.setOnLoadCallback(drawVisualization);
 </script>
 
-Temperature [°C]:
+Temperature [°C] / Humidity :
 <div id="Temperature_Chart" style="width: 1050px; height: 400px;"></div>
 </br>
 </br>
-Light [Lumens]:
+Light [Lumens] :
 </br>
 </br>
 <div id="Light_Chart" style="width: 1050px; height: 400px;"></div>
 </br>
 </br>
-Soil Wetness:
+Soil Wetness / CO2 :
 </br>
 </br>
 <div id="CO2_Chart" style="width: 1050px; height: 400px;"></div>
 </br>
 </br>
-Magnometer X,Y,Z [Gauss]:
+Magnometer X,Y,Z [Gauss] :
 </br>
 </br>
 <div id="Magnometer_Chart" style="width: 1050px; height: 400px;"></div>

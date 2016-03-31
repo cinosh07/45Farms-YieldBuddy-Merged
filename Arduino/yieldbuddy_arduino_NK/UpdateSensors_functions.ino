@@ -123,23 +123,8 @@ void updateSensorValues() {
  /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
    !!TEMPERATURE SENSOR!!TEMPERATURE SENSOR!!TEMPERATURE SENSOR!!TEMPERATURE SENSOR!!TEMPERATURE SENSOR!!
    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-   
-//  float TempSum = 0;
-//  float TempOffset = 19;
-//  j = 0;
-//  analogRead(TempPin);  //Get ADC to switch to correct pin
-//  delay(15); //Wait for Pin to Change
-//
-//  while(j<10) {
-//    TempSum = TempSum + analogRead(TempPin);
-//    j++;
-//  }
-//
-//  TempRawValue = TempSum/((j-1) * 2);
-
- // TempValue = ((5.00 * TempRawValue * 100.0)/1024.0) + TempOffset;
-  
-  TempValue = dht.readTemperature(); //to use the DHT11
+  TempRawValue = dht.readTemperature(); //to use the DHT22
+  TempValue = TempRawValue;
   if(isnan(TempValue)){
     TempValue = 0;        
   }
@@ -147,46 +132,86 @@ void updateSensorValues() {
   my_Temp_string.print(TempValue);
   my_Temp_string.println(" C"); 
   
+ /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ !!WATER TANK LEVEL SCAN
+ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+// delays are needed for testing as i am only using 1 phsical sensor for test. Remove when 4 sensors wired
+  delay(50);
+  Tank1RawValue = (read_water_sensor(Tank1TrigPin, Tank1EchoPin));
+  delay(50);
+  Tank2RawValue = (read_water_sensor(Tank2TrigPin, Tank2EchoPin));
+  delay(50);
+  Tank3RawValue = (read_water_sensor(Tank3TrigPin, Tank3EchoPin));
+  delay(50);
+  Tank4RawValue = (read_water_sensor(Tank4TrigPin, Tank4EchoPin));
   
-   /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-   !!WATER LEVEL SENSOR! WATER LEVEL SENSOR! WATER LEVEL SENSOR! WATER LEVEL SENSOR! WATER LEVEL SENSOR! 
-   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-//  float WaterSum = 0;
-//  j = 0;
-//  analogRead(WaterPin);  //Get ADC to switch to correct pin
-//  delay(15); //Wait for Pin to Change
-//
-//  while(j<10) {
-//    WaterSum = WaterSum + analogRead(WaterPin);
-//    j++;
-//  }
-//
-//  WaterRawValue = WaterSum/((j-1) * 2);
-//  WaterValue = ((5.00 * WaterRawValue * 100.0)/1024.0);
-    WaterValue = (read_water_sensor(Tank1TrigPin, Tank1EchoPin));
-  if(isnan(WaterValue)){
-    LevelFull = 2;        
+  TankTotalRawValue = Tank1RawValue + Tank2RawValue + Tank3RawValue + Tank4RawValue;
+  
+
+  Tank1Value = Tank1RawValue;
+  PString my_Tank1_string(Tank1_char, sizeof(Tank1_char));
+  my_Tank1_string.print(Tank1Value);
+  my_Tank1_string.println("L");
+  
+  Tank2Value = Tank2RawValue;
+  PString my_Tank2_string(Tank2_char, sizeof(Tank2_char));
+  my_Tank2_string.print(Tank2Value);
+  my_Tank2_string.println("L"); 
+     
+  Tank3Value = Tank3RawValue;
+  PString my_Tank3_string(Tank3_char, sizeof(Tank3_char));
+  my_Tank3_string.print(Tank3Value);
+  my_Tank3_string.println("L");  
+  
+  Tank4Value = Tank4RawValue;
+  PString my_Tank4_string(Tank4_char, sizeof(Tank4_char));
+  my_Tank4_string.print(Tank4Value);
+  my_Tank4_string.println("L");
+      
+  TankTotalValue = TankTotalRawValue;
+  PString my_TankTotal_string(TankTotal_char, sizeof(TankTotal_char));
+  my_TankTotal_string.print(TankTotalValue);
+  my_TankTotal_string.println("L");  
+  
+  
+ /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ !!WATER LEVEL SENSOR! WATER LEVEL SENSOR! WATER LEVEL SENSOR! WATER LEVEL SENSOR! WATER LEVEL SENSOR! 
+ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+  float WaterSum = 0;
+  j = 0;
+  analogRead(WaterPin);  //Get ADC to switch to correct pin
+  delay(15); //Wait for Pin to Change
+
+  while(j<10) {
+    WaterSum = WaterSum + analogRead(WaterPin);
+    j++;
   }
-  PString my_level_string(Water_char, sizeof(Water_char));
-  my_level_string.print(WaterValue);
-  my_level_string.println("ohm"); 
-  
-  
+  WaterRawValue = WaterSum/10;
+//  WaterRawValue = WaterSum/((j-1) * 2);
+  WaterValue = ((5.00 * WaterRawValue * 100.0)/1024.0);
+ 
+  if(isnan(WaterValue)){
+    WaterValue = 0;        
+  }
+  PString my_water_string(Water_char, sizeof(Water_char));
+  my_water_string.print(WaterValue);
+  my_water_string.println("Percent"); 
+
+//  if(isnan(WaterValue)){
+    LevelFull = 2;        
+//  }
+//  PString my_level_string(Water_char, sizeof(Water_char));
+//  my_level_string.print(WaterValue);
+//  my_level_string.println("ohm"); 
+   
  /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
    !!HUMIDITY DHT11 SENSOR!!HUMIDITY DHT11 SENSOR!!HUMIDITY DHT11 SENSOR!!HUMIDITY DHT11 SENSOR!!HUMIDITY DHT11!!
    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-  //       float RHSum = 0;
-  //       j = 0;
-  //       
-  //       while(j<30) {
-  //       RHSum = RHSum + ;
-  //       j++;
-  //       delay(10);
-  //       }
-  //       RHRawValue = RHSum/30;
+
   dht.readHumidity();  //The DHT11 Sensor works differently, but for 'good measure'.
   delay(15); //Wait for Pin to Change
-  RHValue = dht.readHumidity();
+  RHRawValue = dht.readHumidity();
+  RHValue = RHRawValue;
   if (isnan(RHValue)) {
     RHValue = 0;
   } 
@@ -199,14 +224,33 @@ void updateSensorValues() {
   else {
     my_RH_string.println("%"); 
   }
-// ******************magnometer sensor******************
 
+  
+// ******************magnetometer sensor******************
 
   MagnetometerScaled scaled = compass.ReadScaledAxis();
   
-  int xAxis = scaled.XAxis;
-  int yAxis = scaled.YAxis;
-  int zAxis = scaled.ZAxis;
+  MagXRawValue = scaled.XAxis;
+  MagYRawValue = scaled.YAxis;
+  MagZRawValue = scaled.ZAxis;
+
+  MagXValue = MagXRawValue;
+  PString my_MagX_string(MagX_char, sizeof(MagX_char));
+  my_MagX_string.print(MagXValue);
+  my_MagX_string.println("Guass");
+  
+  MagYValue = MagYRawValue;
+  PString my_MagY_string(MagY_char, sizeof(MagY_char));
+  my_MagY_string.print(MagYValue);
+  my_MagY_string.println("Guass");
+    
+  MagZValue = MagZRawValue;
+  PString my_MagZ_string(MagZ_char, sizeof(MagZ_char));
+  my_MagZ_string.print(MagZValue);
+  my_MagZ_string.println("Guass");
+
+
+
 
 
 //******************************************************  
@@ -225,9 +269,8 @@ void updateSensorValues() {
   }
 
   TDS1RawValue = TDS1Sum/((j-1) * 2);
- // ******for testing purposes*****************
-  //TDS1Value = ((TDS1RawValue * 100.0)/1024.0);
-  TDS1Value = xAxis;
+  TDS1Value = ((TDS1RawValue * 100.0)/1024.0);
+
   if(isnan(TDS1Value)){
     TDS1Value = 0;        
   }
@@ -250,9 +293,8 @@ void updateSensorValues() {
   }
 
   TDS2RawValue = TDS2Sum/((j-1) * 2);
-//******************testing******************
-  //TDS2Value = ((TDS2RawValue * 100.0)/1024.0);
-  TDS2Value = yAxis;
+  TDS2Value = ((TDS2RawValue * 100.0)/1024.0);
+
   if(isnan(TDS2Value)){
     TDS2Value = 0;        
   }
@@ -274,9 +316,8 @@ void updateSensorValues() {
   }
 
   CO2RawValue = CO2Sum/((j-1) * 2);
-  //****************testing
-  //CO2Value = ((CO2RawValue * 100.0)/1024.0);
-  CO2Value = zAxis;
+  CO2Value = ((CO2RawValue * 100.0)/1024.0);
+
   if(isnan(CO2Value)){
     CO2Value = 0;        
   }
@@ -368,23 +409,34 @@ void updateSensorValues() {
 
 
    /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-   !!temp!!
+   !!level!!
    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/  
   
   //Level
-  if (WaterValue == 0){
-   Level_Status = "Low"; 
-  }
-  else if (WaterValue == 1){
-   Level_Status = "Full"; 
-  }  
-  else if (WaterValue == 2){
-   Level_Status = "Unknown"; 
+//  if (WaterValue == 0){
+//   Level_Status = "Low"; 
+//  }
+//  else if (WaterValue == 1){
+//   Level_Status = "Full"; 
+//  }  
+//  else if (WaterValue == 2){
+//   Level_Status = "Unknown"; 
+//  }
+
+  //Water
+  if (WaterValue < WaterValue_Low) {
+    Water_Status = "LOW";
+  } 
+  else if (WaterValue > WaterValue_Low && WaterValue < WaterValue_High) {
+    Water_Status = "OK";
+  } 
+  else if (WaterValue > WaterValue_High) {
+    Water_Status = "HIGH";
   }
   
 
    /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-   !!temp!!
+   !!RH!!
    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
   
@@ -400,7 +452,7 @@ void updateSensorValues() {
   }
 
     /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-   !!temp!!
+   !!TDS!!
    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/ 
   
   //TDS1
@@ -426,7 +478,7 @@ void updateSensorValues() {
   }
 
    /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-   !!temp!!
+   !!CO2!!
    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
   
   //CO2
@@ -441,7 +493,7 @@ void updateSensorValues() {
   }
 
    /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-   !!temp!!
+   !!LIGHT!!
    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
   
   //Light
@@ -453,6 +505,61 @@ void updateSensorValues() {
   } 
   else if (LightValue > LightValue_High) {
     Light_Status = "HIGH";
+  }
+
+  //TankTotal
+  if (TankTotalValue < TankTotalValue_Low) {
+    TankTotal_Status = "LOW";
+  } 
+  else if (TankTotalValue > TankTotalValue_Low && TankTotalValue < TankTotalValue_High) {
+    TankTotal_Status = "OK";
+  } 
+  else if (TankTotalValue > TankTotalValue_High) {
+    TankTotal_Status = "HIGH";
+  }
+
+  //Tank1
+  if (Tank1Value < Tank1Value_Low) {
+    Tank1_Status = "LOW";
+  } 
+  else if (Tank1Value > Tank1Value_Low && Tank1Value < Tank1Value_High) {
+    Tank1_Status = "OK";
+  } 
+  else if (Tank1Value > Tank1Value_High) {
+    Tank1_Status = "HIGH";
+  }
+
+  //Tank2
+  if (Tank2Value < Tank2Value_Low) {
+    Tank2_Status = "LOW";
+  } 
+  else if (Tank2Value > Tank2Value_Low && Tank2Value < Tank2Value_High) {
+    Tank2_Status = "OK";
+  } 
+  else if (Tank2Value > Tank2Value_High) {
+    Tank2_Status = "HIGH";
+  }
+
+  //Tank3
+  if (Tank3Value < Tank3Value_Low) {
+    Tank3_Status = "LOW";
+  } 
+  else if (Tank3Value > Tank3Value_Low && Tank3Value < Tank3Value_High) {
+    Tank3_Status = "OK";
+  } 
+  else if (Tank3Value > Tank3Value_High) {
+    Tank3_Status = "HIGH";
+  }
+
+  //Tank4
+  if (Tank4Value < Tank4Value_Low) {
+    Tank4_Status = "LOW";
+  } 
+  else if (Tank4Value > Tank4Value_Low && Tank4Value < Tank4Value_High) {
+    Tank4_Status = "OK";
+  } 
+  else if (Tank4Value > Tank4Value_High) {
+    Tank4_Status = "HIGH";
   }
 
 }

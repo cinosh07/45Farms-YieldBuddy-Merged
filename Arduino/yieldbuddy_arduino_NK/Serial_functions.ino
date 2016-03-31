@@ -3,6 +3,88 @@
  /!!SEND SERIAL MESSAGE!!!!SEND SERIAL MESSAGE!!SEND SERIAL MESSAGE!!SEND SERIAL MESSAGE!!SEND SERIAL MESSAGE!!SEND SERIAL MESSAGE!!SEND SERIAL MESSAGE!!
  /!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
  */
+void sendRelayMessages() {
+  //RELAYS
+    Serial1.print("Relays,");
+    if (digitalRead(Relay1_Pin) == LOW){
+      Serial1.print(1);
+    } 
+    else if (digitalRead(Relay1_Pin) == HIGH) {
+      Serial1.print(0);
+    }
+    Serial1.print(",");
+    if (digitalRead(Relay2_Pin) == LOW){
+      Serial1.print(1);
+    } 
+    else if (digitalRead(Relay2_Pin) == HIGH) {
+      Serial1.print(0);
+    }
+    Serial1.print(",");
+    if (digitalRead(Relay3_Pin) == LOW){
+      Serial1.print(1);
+    } 
+    else if (digitalRead(Relay3_Pin) == HIGH) {
+      Serial1.print(0);
+    }
+    Serial1.print(",");
+    if (digitalRead(Relay4_Pin) == LOW){
+      Serial1.print(1);
+    } 
+    else if (digitalRead(Relay4_Pin) == HIGH) {
+      Serial1.print(0);
+    }
+    Serial1.print(",");
+    if (digitalRead(Relay5_Pin) == LOW){
+      Serial1.print(1);
+    } 
+    else if (digitalRead(Relay5_Pin) == HIGH) {
+      Serial1.print(0);
+    }
+    Serial1.print(",");
+    if (digitalRead(Relay6_Pin) == LOW){
+      Serial1.print(1);
+    } 
+    else if (digitalRead(Relay6_Pin) == HIGH) {
+      Serial1.print(0);
+    }
+    Serial1.print(",");
+    if (digitalRead(Relay7_Pin) == LOW){
+      Serial1.print(1);
+    } 
+    else if (digitalRead(Relay7_Pin) == HIGH) {
+      Serial1.print(0);
+    }
+   Serial1.print(",");   //This Relay is opposite
+    if (digitalRead(Relay8_Pin) == LOW){
+      Serial1.println(1);
+    } 
+    else if (digitalRead(Relay8_Pin) == HIGH) {
+      Serial1.println(0);
+    }
+
+    //Relay_isAuto Values (Modes)
+    Serial1.print("Relay_isAuto,");
+    Serial1.print(Relay1_isAuto);
+    Serial1.print(",");
+    Serial1.print(Relay2_isAuto);
+    Serial1.print(",");
+    Serial1.print(Relay3_isAuto);
+    Serial1.print(",");
+    Serial1.print(Relay4_isAuto);
+    Serial1.print(",");
+    Serial1.print(Relay5_isAuto);
+    Serial1.print(",");
+    Serial1.print(Relay6_isAuto);  
+    Serial1.print(",");
+    Serial1.print(Relay7_isAuto);
+    Serial1.print(",");
+    Serial1.println(Relay8_isAuto);
+}
+
+
+
+
+ 
 void sendserialmessages(){
 
   //The purpose of 'serialcounter' is so that serial messages are not sent as one big chunk of data every 'loop()', instead they are split up
@@ -10,7 +92,7 @@ void sendserialmessages(){
   //However, Sensors and Relay values are sent every 1st and 4th messages.
 
   if (serialcounter == 1 || serialcounter == 4 || serialcounter == 7){
-    //SEND TIMESTAMP
+    //*****SEND TIMESTAMP
     updatelongdate();
     Serial1.println(); 
     Serial1.print("Time,");
@@ -27,7 +109,7 @@ void sendserialmessages(){
     Serial1.print(minute());
     Serial1.print(",");
     Serial1.println(second());  
-    //SENSOR VALUES
+    //*****SENSOR VALUES
     Serial1.print("Sensors,");
     Serial1.print(pH1Value);
     Serial1.print(",");
@@ -45,15 +127,31 @@ void sendserialmessages(){
     Serial1.print(",");
     Serial1.print(LightValue);
     Serial1.print(",");
-    Serial1.println(WaterValue);       
+    Serial1.print(WaterValue);
+    Serial1.print(",");    
+    Serial1.print(MagXValue);
+    Serial1.print(",");
+    Serial1.print(MagYValue);
+    Serial1.print(",");
+    Serial1.print(MagZValue);
+    Serial1.print(",");
+    Serial1.print(TankTotalValue);            
+    Serial1.print(",");    
+    Serial1.print(Tank1Value);
+    Serial1.print(",");
+    Serial1.print(Tank2Value);
+    Serial1.print(",");
+    Serial1.print(Tank3Value);
+    Serial1.print(",");
+    Serial1.println(Tank4Value);
     sendRelayMessages(); //<<---- Relays and Relay_isAutoMessages
     //Serial1.println();
   }
   
-  if (serialcounter == 3) { 
+  if (serialcounter == 2) { 
 
 
-    //LIGHTS
+    //*****LIGHTS
     Serial1.print("Light_Schedule,");
     Serial1.print(Light_ON_hour);
     Serial1.print(",");
@@ -62,12 +160,14 @@ void sendserialmessages(){
     Serial1.print(Light_OFF_hour);
     Serial1.print(",");
     Serial1.println(Light_OFF_min);
-    //WATERING
+    
+    //*****WATERING
     Serial1.print("Watering_Schedule,");
     Serial1.print(Pump_start_hour);
     Serial1.print(",");
     Serial1.print(Pump_start_min);
     Serial1.print(",");
+    
     if (Pump_start_isAM == true) {
       Serial1.print("1,");
     } 
@@ -82,21 +182,20 @@ void sendserialmessages(){
     Serial1.print(",");
     Serial1.println(Pump_times);
   }
-  
-  if (serialcounter == 4) { 
-    //SETPOINTS
-    //pH1
+ //******SETPOINTS****************  
+  if (serialcounter == 3) {    
+
+    //*****pH1    
     Serial1.print("SetPoint_pH1,");
     Serial1.print(pH1Value_Low);
     Serial1.print(",");
     Serial1.print(pH1Value_High);
     Serial1.print(",");
     Serial1.println(pH1_Status);
-    sendRelayMessages(); //<<---- Relays and Relay_isAutoMessages
   }
-  if (serialcounter == 5) { 
+  if (serialcounter == 4) { 
 
-    //pH2
+    //*****pH2    
     Serial1.print("SetPoint_pH2,");
     Serial1.print(pH2Value_Low);
     Serial1.print(",");
@@ -104,8 +203,9 @@ void sendserialmessages(){
     Serial1.print(",");
     Serial1.println(pH1_Status);
   }
-  if (serialcounter == 6) { 
-    //Temp
+  if (serialcounter == 5) { 
+
+    //*****Temp   
     Serial1.print("SetPoint_Temp,");
     Serial1.print(TempValue_Low);
     Serial1.print(",");
@@ -121,8 +221,9 @@ void sendserialmessages(){
     Serial1.print(",");
     Serial1.println(Temp_Status);
   } 
-  if (serialcounter == 7) { 
-    //RH
+  if (serialcounter == 6) { 
+ 
+    //*****RH    
     Serial1.print("SetPoint_RH,");
     Serial1.print(RHValue_Low);
     Serial1.print(",");
@@ -138,8 +239,9 @@ void sendserialmessages(){
     Serial1.print(",");        
     Serial1.println(RH_Status);
   }
-  if (serialcounter == 8) { 
-    //TDS1
+  if (serialcounter == 7) { 
+
+    //*****TDS1    
     Serial1.print("SetPoint_TDS1,");
     Serial1.print(TDS1Value_Low);
     Serial1.print(",");
@@ -153,8 +255,9 @@ void sendserialmessages(){
     Serial1.print(",");
     Serial1.println(TDS1_Status);
   }
-  if (serialcounter == 9) { 
-    //TDS2
+  if (serialcounter == 8) { 
+
+    //*****TDS2   
     Serial1.print("SetPoint_TDS2,");
     Serial1.print(TDS2Value_Low);
     Serial1.print(",");
@@ -168,8 +271,9 @@ void sendserialmessages(){
     Serial1.print(",");
     Serial1.println(TDS2_Status);
   }
-  if (serialcounter == 10) { 
-    //CO2
+  if (serialcounter == 9) { 
+
+   //*****CO2    
     Serial1.print("SetPoint_CO2,");
     Serial1.print(CO2Value_Low);
     Serial1.print(",");
@@ -183,8 +287,9 @@ void sendserialmessages(){
     Serial1.print(",");
     Serial1.println(CO2_Status);
   }
-  if (serialcounter == 11) { 
-    //Light
+  if (serialcounter == 10) { 
+ 
+    //*****Light   
     Serial1.print("SetPoint_Light,");
     Serial1.print(LightValue_Low);
     Serial1.print(",");
@@ -192,8 +297,92 @@ void sendserialmessages(){
     Serial1.print(",");
     Serial1.println(Light_Status); 
 
-    serialcounter = 0;
   }
+  if (serialcounter == 11) {    
+
+    //*****Water    
+    Serial1.print("SetPoint_Water,");
+    Serial1.print(WaterValue_Low);
+    Serial1.print(",");
+    Serial1.print(WaterValue_High);
+    Serial1.print(",");
+    Serial1.println(Water_Status);
+  }
+  if (serialcounter == 12) { 
+
+    //*****Tank Total    
+    Serial1.print("SetPoint_TankTotal,");
+    Serial1.print(TankTotalValue_Low);
+    Serial1.print(",");
+    Serial1.print(TankTotalValue_High);
+    Serial1.print(",");
+    Serial1.println(TankTotal_Status);
+  }
+  if (serialcounter == 13) { 
+
+    //*****Tank 1   
+    Serial1.print("SetPoint_Tank1,");
+    Serial1.print(Tank1Value_Low);
+    Serial1.print(",");
+    Serial1.print(Tank1Value_High);
+    Serial1.print(",");
+    Serial1.print(Tank1Pump_ON);
+    Serial1.print(",");
+    Serial1.print(Tank1Pump_OFF);
+    Serial1.print(",");
+    Serial1.print(Tank1MixPump_Enabled);
+    Serial1.print(",");
+    Serial1.println(Tank1_Status);
+  }
+  if (serialcounter == 14) { 
+ 
+    //*****Tank 2   
+    Serial1.print("SetPoint_Tank2,");
+    Serial1.print(Tank2Value_Low);
+    Serial1.print(",");
+    Serial1.print(Tank2Value_High);
+    Serial1.print(",");
+    Serial1.print(Tank2Pump_ON);
+    Serial1.print(",");
+    Serial1.print(Tank2Pump_OFF);
+    Serial1.print(",");
+    Serial1.print(Tank2MixPump_Enabled);
+    Serial1.print(",");
+    Serial1.println(Tank2_Status);
+  }
+  if (serialcounter == 15) { 
+
+    //*****Tank 3    
+    Serial1.print("SetPoint_Tank3,");
+    Serial1.print(Tank3Value_Low);
+    Serial1.print(",");
+    Serial1.print(Tank3Value_High);
+    Serial1.print(",");
+    Serial1.print(Tank3Pump_ON);
+    Serial1.print(",");
+    Serial1.print(Tank3Pump_OFF);
+    Serial1.print(",");
+    Serial1.print(Tank3MixPump_Enabled);
+    Serial1.print(",");
+    Serial1.println(Tank3_Status);
+  }
+  if (serialcounter == 16) { 
+
+    //*****Tank 4    
+    Serial1.print("SetPoint_Tank4,");
+    Serial1.print(Tank4Value_Low);
+    Serial1.print(",");
+    Serial1.print(Tank4Value_High);
+    Serial1.print(",");
+    Serial1.print(Tank4Pump_ON);
+    Serial1.print(",");
+    Serial1.print(Tank4Pump_OFF);
+    Serial1.print(",");
+    Serial1.print(Tank4MixPump_Enabled);
+    Serial1.print(",");
+    Serial1.println(Tank4_Status);
+    serialcounter = 0;
+  }  
   serialcounter++;
 
 }
@@ -1033,6 +1222,324 @@ void serialEvent() {
         eepromWriteFloat(232, parsed_LightValue_High);  
 
       }
+      
+      if(Serial_inString.indexOf("setTank1") >=0) {
+        char serialchar[Serial_inString.length()+1];
+        Serial_inString.toCharArray(serialchar, Serial_inString.length()+1);
+
+        int i;
+        String splitstring[6];
+        String tmpBuffer;
+        int parsecount = 0;
+        for (i=0;i<(Serial_inString.length()+1);i++){
+          if (serialchar[i] == ',') {
+            tmpBuffer.replace(",", "");
+            splitstring[parsecount] = tmpBuffer;
+            tmpBuffer = "";
+            parsecount++;
+          }
+          if (i == Serial_inString.length()){
+            tmpBuffer.replace(",", "");
+            splitstring[parsecount] = tmpBuffer;
+          }
+          tmpBuffer += serialchar[i];
+        }
+
+        char char_Tank1Value_Low[splitstring[1].length() + 1];
+        splitstring[1].toCharArray(char_Tank1Value_Low, sizeof(char_Tank1Value_Low));
+        float parsed_Tank1Value_Low = atof(char_Tank1Value_Low);
+
+        char char_Tank1Value_High[splitstring[2].length() + 1];
+        splitstring[2].toCharArray(char_Tank1Value_High, sizeof(char_Tank1Value_High));
+        float parsed_Tank1Value_High = atof(char_Tank1Value_High);
+
+        char char_Tank1Pump_ON[splitstring[3].length() + 1];
+        splitstring[3].toCharArray(char_Tank1Pump_ON, sizeof(char_Tank1Pump_ON));
+        float parsed_Tank1Pump_ON = atof(char_Tank1Pump_ON);
+
+        char char_Tank1Pump_OFF[splitstring[4].length() + 1];
+        splitstring[4].toCharArray(char_Tank1Pump_OFF, sizeof(char_Tank1Pump_OFF));
+        
+        float parsed_Tank1Pump_OFF = atof(char_Tank1Pump_OFF);
+        int parsed_Tank1MixPump_Enabled = splitstring[5].toInt();
+
+        Tank1Value_Low = parsed_Tank1Value_Low;
+        Tank1Value_High = parsed_Tank1Value_High;
+        Tank1Pump_ON = parsed_Tank1Pump_ON;
+        Tank1Pump_OFF = parsed_Tank1Pump_OFF;
+
+        if (parsed_Tank1MixPump_Enabled == 1) {
+          Tank1MixPump_Enabled = true;
+          EEPROM.write(252, 1);
+        } 
+        else if(parsed_Tank1MixPump_Enabled == 0) {
+         Tank1MixPump_Enabled = false;
+          EEPROM.write(252, 0);            
+        }
+
+        eepromWriteFloat(236, parsed_Tank1Value_Low);
+        eepromWriteFloat(240, parsed_Tank1Value_High);  
+        eepromWriteFloat(244, parsed_Tank1Pump_ON);
+        eepromWriteFloat(248, parsed_Tank1Pump_OFF);  
+
+      }
+
+      if(Serial_inString.indexOf("setTank2") >=0) {
+        char serialchar[Serial_inString.length()+1];
+        Serial_inString.toCharArray(serialchar, Serial_inString.length()+1);
+
+        int i;
+        String splitstring[6];
+        String tmpBuffer;
+        int parsecount = 0;
+        for (i=0;i<(Serial_inString.length()+1);i++){
+          if (serialchar[i] == ',') {
+            tmpBuffer.replace(",", "");
+            splitstring[parsecount] = tmpBuffer;
+            tmpBuffer = "";
+            parsecount++;
+          }
+          if (i == Serial_inString.length()){
+            tmpBuffer.replace(",", "");
+            splitstring[parsecount] = tmpBuffer;
+          }
+          tmpBuffer += serialchar[i];
+        }
+
+        char char_Tank2Value_Low[splitstring[1].length() + 1];
+        splitstring[1].toCharArray(char_Tank2Value_Low, sizeof(char_Tank2Value_Low));
+        float parsed_Tank2Value_Low = atof(char_Tank2Value_Low);
+
+        char char_Tank2Value_High[splitstring[2].length() + 1];
+        splitstring[2].toCharArray(char_Tank2Value_High, sizeof(char_Tank2Value_High));
+        float parsed_Tank2Value_High = atof(char_Tank2Value_High);
+
+        char char_Tank2Pump_ON[splitstring[3].length() + 1];
+        splitstring[3].toCharArray(char_Tank2Pump_ON, sizeof(char_Tank2Pump_ON));
+        float parsed_Tank2Pump_ON = atof(char_Tank2Pump_ON);
+
+        char char_Tank2Pump_OFF[splitstring[4].length() + 1];
+        splitstring[4].toCharArray(char_Tank2Pump_OFF, sizeof(char_Tank2Pump_OFF));
+        
+        float parsed_Tank2Pump_OFF = atof(char_Tank2Pump_OFF);
+        int parsed_Tank2MixPump_Enabled = splitstring[5].toInt();
+
+        Tank2Value_Low = parsed_Tank2Value_Low;
+        Tank2Value_High = parsed_Tank2Value_High;
+        Tank2Pump_ON = parsed_Tank2Pump_ON;
+        Tank2Pump_OFF = parsed_Tank2Pump_OFF;
+
+        if (parsed_Tank2MixPump_Enabled == 1) {
+          Tank2MixPump_Enabled = true;
+          EEPROM.write(269, 1);
+        } 
+        else if(parsed_Tank2MixPump_Enabled == 0) {
+         Tank2MixPump_Enabled = false;
+          EEPROM.write(269, 0);            
+        }
+
+        eepromWriteFloat(253, parsed_Tank2Value_Low);
+        eepromWriteFloat(257, parsed_Tank2Value_High);  
+        eepromWriteFloat(261, parsed_Tank2Pump_ON);
+        eepromWriteFloat(265, parsed_Tank2Pump_OFF);  
+
+      }
+
+      if(Serial_inString.indexOf("setTank3") >=0) {
+        char serialchar[Serial_inString.length()+1];
+        Serial_inString.toCharArray(serialchar, Serial_inString.length()+1);
+
+        int i;
+        String splitstring[6];
+        String tmpBuffer;
+        int parsecount = 0;
+        for (i=0;i<(Serial_inString.length()+1);i++){
+          if (serialchar[i] == ',') {
+            tmpBuffer.replace(",", "");
+            splitstring[parsecount] = tmpBuffer;
+            tmpBuffer = "";
+            parsecount++;
+          }
+          if (i == Serial_inString.length()){
+            tmpBuffer.replace(",", "");
+            splitstring[parsecount] = tmpBuffer;
+          }
+          tmpBuffer += serialchar[i];
+        }
+
+        char char_Tank3Value_Low[splitstring[1].length() + 1];
+        splitstring[1].toCharArray(char_Tank3Value_Low, sizeof(char_Tank3Value_Low));
+        float parsed_Tank3Value_Low = atof(char_Tank3Value_Low);
+
+        char char_Tank3Value_High[splitstring[2].length() + 1];
+        splitstring[2].toCharArray(char_Tank3Value_High, sizeof(char_Tank3Value_High));
+        float parsed_Tank3Value_High = atof(char_Tank3Value_High);
+
+        char char_Tank3Pump_ON[splitstring[3].length() + 1];
+        splitstring[3].toCharArray(char_Tank3Pump_ON, sizeof(char_Tank3Pump_ON));
+        float parsed_Tank3Pump_ON = atof(char_Tank3Pump_ON);
+
+        char char_Tank3Pump_OFF[splitstring[4].length() + 1];
+        splitstring[4].toCharArray(char_Tank3Pump_OFF, sizeof(char_Tank3Pump_OFF));
+        
+        float parsed_Tank3Pump_OFF = atof(char_Tank3Pump_OFF);
+        int parsed_Tank3MixPump_Enabled = splitstring[5].toInt();
+
+        Tank3Value_Low = parsed_Tank3Value_Low;
+        Tank3Value_High = parsed_Tank3Value_High;
+        Tank3Pump_ON = parsed_Tank3Pump_ON;
+        Tank3Pump_OFF = parsed_Tank3Pump_OFF;
+
+        if (parsed_Tank3MixPump_Enabled == 1) {
+          Tank3MixPump_Enabled = true;
+          EEPROM.write(286, 1);
+        } 
+        else if(parsed_Tank3MixPump_Enabled == 0) {
+         Tank3MixPump_Enabled = false;
+          EEPROM.write(286, 0);            
+        }
+
+        eepromWriteFloat(270, parsed_Tank3Value_Low);
+        eepromWriteFloat(274, parsed_Tank3Value_High);  
+        eepromWriteFloat(278, parsed_Tank3Pump_ON);
+        eepromWriteFloat(282, parsed_Tank3Pump_OFF);  
+
+      }
+      
+      if(Serial_inString.indexOf("setTank4") >=0) {
+        char serialchar[Serial_inString.length()+1];
+        Serial_inString.toCharArray(serialchar, Serial_inString.length()+1);
+
+        int i;
+        String splitstring[6];
+        String tmpBuffer;
+        int parsecount = 0;
+        for (i=0;i<(Serial_inString.length()+1);i++){
+          if (serialchar[i] == ',') {
+            tmpBuffer.replace(",", "");
+            splitstring[parsecount] = tmpBuffer;
+            tmpBuffer = "";
+            parsecount++;
+          }
+          if (i == Serial_inString.length()){
+            tmpBuffer.replace(",", "");
+            splitstring[parsecount] = tmpBuffer;
+          }
+          tmpBuffer += serialchar[i];
+        }
+
+        char char_Tank4Value_Low[splitstring[1].length() + 1];
+        splitstring[1].toCharArray(char_Tank4Value_Low, sizeof(char_Tank4Value_Low));
+        float parsed_Tank4Value_Low = atof(char_Tank4Value_Low);
+
+        char char_Tank4Value_High[splitstring[2].length() + 1];
+        splitstring[2].toCharArray(char_Tank4Value_High, sizeof(char_Tank4Value_High));
+        float parsed_Tank4Value_High = atof(char_Tank4Value_High);
+
+        char char_Tank4Pump_ON[splitstring[3].length() + 1];
+        splitstring[3].toCharArray(char_Tank4Pump_ON, sizeof(char_Tank4Pump_ON));
+        float parsed_Tank4Pump_ON = atof(char_Tank4Pump_ON);
+
+        char char_Tank4Pump_OFF[splitstring[4].length() + 1];
+        splitstring[4].toCharArray(char_Tank4Pump_OFF, sizeof(char_Tank4Pump_OFF));
+        
+        float parsed_Tank4Pump_OFF = atof(char_Tank4Pump_OFF);
+        int parsed_Tank4MixPump_Enabled = splitstring[5].toInt();
+
+        Tank4Value_Low = parsed_Tank4Value_Low;
+        Tank4Value_High = parsed_Tank4Value_High;
+        Tank4Pump_ON = parsed_Tank4Pump_ON;
+        Tank4Pump_OFF = parsed_Tank4Pump_OFF;
+
+        if (parsed_Tank4MixPump_Enabled == 1) {
+          Tank4MixPump_Enabled = true;
+          EEPROM.write(303, 1);
+        } 
+        else if(parsed_Tank4MixPump_Enabled == 0) {
+         Tank4MixPump_Enabled = false;
+          EEPROM.write(303, 0);            
+        }
+
+        eepromWriteFloat(287, parsed_Tank4Value_Low);
+        eepromWriteFloat(291, parsed_Tank4Value_High);  
+        eepromWriteFloat(295, parsed_Tank4Pump_ON);
+        eepromWriteFloat(299, parsed_Tank4Pump_OFF);  
+
+      }
+
+      if(Serial_inString.indexOf("setTankTotal") >=0) {
+        char serialchar[Serial_inString.length()+1];
+        Serial_inString.toCharArray(serialchar, Serial_inString.length()+1);
+
+        int i;
+        String splitstring[3];
+        String tmpBuffer;
+        int parsecount = 0;
+        for (i=0;i<(Serial_inString.length()+1);i++){
+          if (serialchar[i] == ',') {
+            tmpBuffer.replace(",", "");
+            splitstring[parsecount] = tmpBuffer;
+            tmpBuffer = "";
+            parsecount++;
+          }
+          if (i == Serial_inString.length()){
+             tmpBuffer.replace(",", "");
+            splitstring[parsecount] = tmpBuffer;
+          }
+          tmpBuffer += serialchar[i];
+        }
+        char char_TankTotalValue_Low[splitstring[1].length() + 1];
+        splitstring[1].toCharArray(char_TankTotalValue_Low, sizeof(char_TankTotalValue_Low));
+        float parsed_TankTotalValue_Low = atof(char_TankTotalValue_Low);
+
+        char char_TankTotalValue_High[splitstring[2].length() + 1];
+        splitstring[2].toCharArray(char_TankTotalValue_High, sizeof(char_TankTotalValue_High));
+        float parsed_TankTotalValue_High = atof(char_TankTotalValue_High);
+
+        TankTotalValue_Low = parsed_TankTotalValue_Low;
+        TankTotalValue_High = parsed_TankTotalValue_High;
+
+        eepromWriteFloat(304, parsed_TankTotalValue_Low);
+        eepromWriteFloat(308, parsed_TankTotalValue_High);  
+
+      }
+
+      if(Serial_inString.indexOf("setWater") >=0) {
+        char serialchar[Serial_inString.length()+1];
+        Serial_inString.toCharArray(serialchar, Serial_inString.length()+1);
+
+        int i;
+        String splitstring[3];
+        String tmpBuffer;
+        int parsecount = 0;
+        for (i=0;i<(Serial_inString.length()+1);i++){
+          if (serialchar[i] == ',') {
+            tmpBuffer.replace(",", "");
+            splitstring[parsecount] = tmpBuffer;
+            tmpBuffer = "";
+            parsecount++;
+          }
+          if (i == Serial_inString.length()){
+             tmpBuffer.replace(",", "");
+            splitstring[parsecount] = tmpBuffer;
+          }
+          tmpBuffer += serialchar[i];
+        }
+        char char_WaterValue_Low[splitstring[1].length() + 1];
+        splitstring[1].toCharArray(char_WaterValue_Low, sizeof(char_WaterValue_Low));
+        float parsed_WaterValue_Low = atof(char_WaterValue_Low);
+
+        char char_WaterValue_High[splitstring[2].length() + 1];
+        splitstring[2].toCharArray(char_WaterValue_High, sizeof(char_WaterValue_High));
+        float parsed_WaterValue_High = atof(char_WaterValue_High);
+
+        WaterValue_Low = parsed_WaterValue_Low;
+        WaterValue_High = parsed_WaterValue_High;
+
+        eepromWriteFloat(312, parsed_WaterValue_Low);
+        eepromWriteFloat(316, parsed_WaterValue_High);  
+      }
+      
       Serial_inString = "";
       serialcounter = 1;
       sendserialmessages();
@@ -1044,80 +1551,4 @@ void serialEvent() {
   }
 }
 
-void sendRelayMessages() {
-  //RELAYS
-    Serial1.print("Relays,");
-    if (digitalRead(Relay1_Pin) == LOW){
-      Serial1.print(1);
-    } 
-    else if (digitalRead(Relay1_Pin) == HIGH) {
-      Serial1.print(0);
-    }
-    Serial1.print(",");
-    if (digitalRead(Relay2_Pin) == LOW){
-      Serial1.print(1);
-    } 
-    else if (digitalRead(Relay2_Pin) == HIGH) {
-      Serial1.print(0);
-    }
-    Serial1.print(",");
-    if (digitalRead(Relay3_Pin) == LOW){
-      Serial1.print(1);
-    } 
-    else if (digitalRead(Relay3_Pin) == HIGH) {
-      Serial1.print(0);
-    }
-    Serial1.print(",");
-    if (digitalRead(Relay4_Pin) == LOW){
-      Serial1.print(1);
-    } 
-    else if (digitalRead(Relay4_Pin) == HIGH) {
-      Serial1.print(0);
-    }
-    Serial1.print(",");
-    if (digitalRead(Relay5_Pin) == LOW){
-      Serial1.print(1);
-    } 
-    else if (digitalRead(Relay5_Pin) == HIGH) {
-      Serial1.print(0);
-    }
-    Serial1.print(",");
-    if (digitalRead(Relay6_Pin) == LOW){
-      Serial1.print(1);
-    } 
-    else if (digitalRead(Relay6_Pin) == HIGH) {
-      Serial1.print(0);
-    }
-    Serial1.print(",");
-    if (digitalRead(Relay7_Pin) == LOW){
-      Serial1.print(1);
-    } 
-    else if (digitalRead(Relay7_Pin) == HIGH) {
-      Serial1.print(0);
-    }
-   Serial1.print(",");   //This Relay is opposite
-    if (digitalRead(Relay8_Pin) == LOW){
-      Serial1.println(1);
-    } 
-    else if (digitalRead(Relay8_Pin) == HIGH) {
-      Serial1.println(0);
-    }
 
-    //Relay_isAuto Values (Modes)
-    Serial1.print("Relay_isAuto,");
-    Serial1.print(Relay1_isAuto);
-    Serial1.print(",");
-    Serial1.print(Relay2_isAuto);
-    Serial1.print(",");
-    Serial1.print(Relay3_isAuto);
-    Serial1.print(",");
-    Serial1.print(Relay4_isAuto);
-    Serial1.print(",");
-    Serial1.print(Relay5_isAuto);
-    Serial1.print(",");
-    Serial1.print(Relay6_isAuto);  
-    Serial1.print(",");
-    Serial1.print(Relay7_isAuto);
-    Serial1.print(",");
-    Serial1.println(Relay8_isAuto);
-}

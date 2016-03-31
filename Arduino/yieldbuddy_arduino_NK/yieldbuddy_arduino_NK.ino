@@ -34,11 +34,17 @@ char Light_char[7] = "00.00%";
 char temp_s[8]="-000.0\0"; //dallas temp
 
 //added ulrasonic tank sensors
-char tank_1_char[8] = "0000.00";
-char tank_2_char[8] = "0000.00";
-char tank_3_char[8] = "0000.00";
-char tank_4_char[8] = "0000.00";
-char tank_total_char[8] = "0000.00";
+char Tank1_char[8] = "0000.00";
+char Tank2_char[8] = "0000.00";
+char Tank3_char[8] = "0000.00";
+char Tank4_char[8] = "0000.00";
+char TankTotal_char[8] = "0000.00";
+
+// added x,y,z for magnometer
+char MagX_char[8] = "0000.00";
+char MagY_char[8] = "0000.00";
+char MagZ_char[8] = "0000.00";
+
 
 //Temporary placeholders for Time Settings Screen
 int tmp_month;
@@ -123,6 +129,11 @@ int Tank3RawValue = 0;
 int Tank4RawValue = 0;
 int TankTotalRawValue = 0;
 
+// added x,y,z for magnometer
+int MagXRawValue = 0;
+int MagYRawValue = 0;
+int MagZRawValue = 0;
+
 //Values the humans see (after it has been calculated using raw values above ^^^ and their respected formulas)
 float pH1Value = 0;
 float pH2Value = 0;
@@ -134,12 +145,18 @@ float TDS2Value = 0;
 float CO2Value = 0;
 float LightValue = 0;
 
+
 // added ultrasonic tank sensors
 float Tank1Value = 0;
 float Tank2Value = 0;
 float Tank3Value = 0;
 float Tank4Value = 0;
 float TankTotalValue = 0;
+
+// added x,y,z for magnometer
+float MagXValue = 0;
+float MagYValue = 0;
+float MagZValue = 0;
 
 // variables used in read_water_sensor function
 long duration, distance; // Duration used to calculate distance
@@ -230,6 +247,13 @@ int LevelFull = 0; //0 = empty, 1 = full, 2 = unknown
 //Water level float
 float WaterLevel_Low = 5.00;
 float WaterLevel_High = 95.00;
+
+//Water
+//Status Indicator Values
+String Water_Status = "OK";
+float WaterValue_Low = 5.80;
+float WaterValue_High = 6.20;
+
 
 
 //Humidty(RH)
@@ -332,12 +356,22 @@ int WaterPin = A7;
 //added utlrasonic tank sensors
 int Tank1TrigPin = A8;
 int Tank1EchoPin = A9;
-int Tank2TrigPin = A10;
-int Tank2EchoPin = A11;
-int Tank3TrigPin = A12;
-int Tank3EchoPin = A13;
-int Tank4TrigPin = A14;
-int Tank4EchoPin = A15;
+//int Tank2TrigPin = A10;
+//int Tank2EchoPin = A11;
+//int Tank3TrigPin = A12;
+//int Tank3EchoPin = A13;
+//int Tank4TrigPin = A14;
+//int Tank4EchoPin = A15;
+//testing
+int Tank2TrigPin = A8;
+int Tank2EchoPin = A9;
+int Tank3TrigPin = A8;
+int Tank3EchoPin = A9;
+int Tank4TrigPin = A8;
+int Tank4EchoPin = A9;
+
+
+
 
 int Relay1_Pin = 22;  //Water Pump
 int Relay2_Pin = 23;  //Water Supply
@@ -522,6 +556,9 @@ void setup()
   LightValue_Low = eepromReadFloat(228);
   LightValue_High = eepromReadFloat(232);
 
+
+  
+
   //added ultrasonic tank sensors
   //
   //Water Tank 1
@@ -575,7 +612,10 @@ void setup()
   //Water Tank 4
   TankTotalValue_Low = eepromReadFloat(304);
   TankTotalValue_High = eepromReadFloat(308);
-  
+
+  //EEPROM Water Settings
+  WaterValue_Low = eepromReadFloat(312);
+  WaterValue_High = eepromReadFloat(316);
 //  ------------------------------------------------------------------------------
 
   //Load default time first, then try the RTC.

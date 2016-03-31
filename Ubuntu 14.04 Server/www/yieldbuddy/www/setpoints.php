@@ -130,6 +130,7 @@ a:active {
 		if (session_status() == PHP_SESSION_NONE) {
 		    session_start();
 		}
+		
 		$pH1Value_Low=$_SESSION['pH1Value_Low'];
 		$pH1Value_High=$_SESSION['pH1Value_High'];
 		echo "<td width=\"300\"><div align=\"right\">";
@@ -449,6 +450,269 @@ a:active {
                 </form>
               </tr>
             </table>
+            <br />
+            Water
+            <table width="600" border="0">
+              <tr>
+                <form action="command.php" method="get">
+                  <?php
+		if (session_status() == PHP_SESSION_NONE) {
+		    session_start();
+		}
+		$WaterValue_Low=$_SESSION['WaterValue_Low'];
+		$WaterValue_High=$_SESSION['WaterValue_High'];
+		echo "<td width=\"300\"><div align=\"right\">";
+        echo "Low: &nbsp;&nbsp;&nbsp;";
+		echo "<input type=\"text\" name=\"WaterValue_Low\" size=\"6\" value=\"" . $WaterValue_Low . "\" /></div>";
+		echo "</td>";
+		echo "<td><div align=\"right\">";
+		echo "High: &nbsp;&nbsp;&nbsp;";
+		echo "<input type=\"text\" name=\"WaterValue_High\" size=\"6\" value=\"" . $WaterValue_High . "\" /></div></td>";
+		echo "</tr>";
+		echo "<tr><td></td>";
+		echo "<td><div align=\"right\">";
+		echo "<input type=\"submit\"  name=\"submit\" value=\"Save Water Settings\" /></div></td>";
+		echo "</tr>";
+		?>
+                </form>
+              </tr>
+            </table>
+            <br />			
+            TankTotal
+            <table width="600" border="0">
+              <tr>
+                <form action="command.php" method="get">
+                  <?php
+		if (session_status() == PHP_SESSION_NONE) {
+		    session_start();
+		}
+		$TankTotalValue_Low=$_SESSION['TankTotalValue_Low'];
+		$TankTotalValue_High=$_SESSION['TankTotalValue_High'];
+		echo "<td width=\"300\"><div align=\"right\">";
+        echo "Low: &nbsp;&nbsp;&nbsp;";
+		echo "<input type=\"text\" name=\"TankTotalValue_Low\" size=\"6\" value=\"" . $TankTotalValue_Low . "\" /></div>";
+		echo "</td>";
+		echo "<td><div align=\"right\">";
+		echo "High: &nbsp;&nbsp;&nbsp;";
+		echo "<input type=\"text\" name=\"TankTotalValue_High\" size=\"6\" value=\"" . $TankTotalValue_High . "\" /></div></td>";
+		echo "</tr>";
+		echo "<tr><td></td>";
+		echo "<td><div align=\"right\">";
+		echo "<input type=\"submit\"  name=\"submit\" value=\"Save TankTotal Settings\" /></div></td>";
+		echo "</tr>";
+		?>
+                </form>
+              </tr>
+            </table>
+            <br />			
+            Tank1
+            <table width="600" border="0">
+              <tr>
+                <form action="command.php" method="get">
+                  <?php
+		if (session_status() == PHP_SESSION_NONE) {
+		    session_start();
+		}
+		$Tank1Value_Low=$_SESSION['Tank1Value_Low'];
+		$Tank1Value_High=$_SESSION['Tank1Value_High'];
+        echo "<td width=\"300\"><div align=\"right\">Low: &nbsp;&nbsp;&nbsp;";
+		echo "<input type=\"text\" name=\"Tank1Value_Low\" size=\"6\" value=\"" . $Tank1Value_Low . "\" /></div>";
+		echo "</td>";
+		echo "<td><div align=\"right\">High: &nbsp;&nbsp;&nbsp;";
+		echo "<input type=\"text\" name=\"Tank1Value_High\" size=\"6\" value=\"" . $Tank1Value_High . "\" /></div></td>";
+		
+		$Tank1Pump_ON=$_SESSION['Tank1Pump_ON'];
+		$Tank1Pump_OFF=$_SESSION['Tank1Pump_OFF'];
+		echo "<tr>";
+        echo "<td><div align=\"right\">Tank1 Pump On: &nbsp;&nbsp;&nbsp;";
+		echo "<input type=\"text\" name=\"Tank1Pump_ON\" size=\"6\" value=\"" . $Tank1Pump_ON . "\" /></div>";
+		echo "</td>";
+		echo "<td><div align=\"right\">Tank1 Pump Off: &nbsp;&nbsp;&nbsp;";
+		echo "<input type=\"text\" name=\"Tank1Pump_OFF\" size=\"6\" value=\"" . $Tank1Pump_OFF . "\" /></div></td>";
+		echo "</tr>";
+		
+		$Tank1MixPump_Enabled=$_SESSION['Tank1MixPump_Enabled'];
+		echo "<tr>";
+		echo "<td><div align=\"right\">Tank1MixPump Enabled: &nbsp;&nbsp;&nbsp;";
+		if ($Tank1MixPump_Enabled == "1"){
+	    echo "<label for=\"Tank1MixPump Enabled\"></label>";
+		echo "<select name=\"Tank1MixPump Enabled\" id=\"Tank1MixPump Enabled\">";
+		echo "<option selected=\"selected\">True</option>";
+     	echo "<option>False</option>";
+		echo "</select>";
+		} else if ($Tank1MixPump_Enabled == "0") {
+	    echo "<label for=\"Tank1MixPump Enabled\"></label>";
+		echo "<select name=\"Tank1MixPump Enabled\" id=\"Tank1MixPump Enabled\">";
+		echo "<option selected=\"selected\">False</option>";
+     	echo "<option>True</option>";
+		echo "</select>";
+		}
+		
+		echo "</tr>";
+		echo "<tr><td></td>";
+		echo "<td><div align=\"right\"><input type=\"submit\"  name=\"submit\" value=\"Save Tank1 Settings\" /></div></td>";
+		echo "</tr>";
+		?>
+                </form>
+              </tr>
+            </table>
+            <br />					
+            Tank2
+            <table width="600" border="0">
+              <tr>
+                <form action="command.php" method="get">
+                  <?php
+		if (session_status() == PHP_SESSION_NONE) {
+		    session_start();
+		}
+		$Tank2Value_Low=$_SESSION['Tank2Value_Low'];
+		$Tank2Value_High=$_SESSION['Tank2Value_High'];
+        echo "<td width=\"300\"><div align=\"right\">Low: &nbsp;&nbsp;&nbsp;";
+		echo "<input type=\"text\" name=\"Tank2Value_Low\" size=\"6\" value=\"" . $Tank2Value_Low . "\" /></div>";
+		echo "</td>";
+		echo "<td><div align=\"right\">High: &nbsp;&nbsp;&nbsp;";
+		echo "<input type=\"text\" name=\"Tank2Value_High\" size=\"6\" value=\"" . $Tank2Value_High . "\" /></div></td>";
+		
+		$Tank2Pump_ON=$_SESSION['Tank2Pump_ON'];
+		$Tank2Pump_OFF=$_SESSION['Tank2Pump_OFF'];
+		echo "<tr>";
+        echo "<td><div align=\"right\">Tank2 Pump On: &nbsp;&nbsp;&nbsp;";
+		echo "<input type=\"text\" name=\"Tank2Pump_ON\" size=\"6\" value=\"" . $Tank2Pump_ON . "\" /></div>";
+		echo "</td>";
+		echo "<td><div align=\"right\">Tank2 Pump Off: &nbsp;&nbsp;&nbsp;";
+		echo "<input type=\"text\" name=\"Tank2Pump_OFF\" size=\"6\" value=\"" . $Tank2Pump_OFF . "\" /></div></td>";
+		echo "</tr>";
+		
+		$Tank2MixPump_Enabled=$_SESSION['Tank2MixPump_Enabled'];
+		echo "<tr>";
+		echo "<td><div align=\"right\">Tank2MixPump Enabled: &nbsp;&nbsp;&nbsp;";
+		if ($Tank2MixPump_Enabled == "1"){
+	    echo "<label for=\"Tank2MixPump Enabled\"></label>";
+		echo "<select name=\"Tank2MixPump Enabled\" id=\"Tank2MixPump Enabled\">";
+		echo "<option selected=\"selected\">True</option>";
+     	echo "<option>False</option>";
+		echo "</select>";
+		} else if ($Tank2MixPump_Enabled == "0") {
+	    echo "<label for=\"Tank2MixPump Enabled\"></label>";
+		echo "<select name=\"Tank2MixPump Enabled\" id=\"Tank2MixPump Enabled\">";
+		echo "<option selected=\"selected\">False</option>";
+     	echo "<option>True</option>";
+		echo "</select>";
+		}
+		
+		echo "</tr>";
+		echo "<tr><td></td>";
+		echo "<td><div align=\"right\"><input type=\"submit\"  name=\"submit\" value=\"Save Tank2 Settings\" /></div></td>";
+		echo "</tr>";
+		?>
+                </form>
+              </tr>
+            </table>			
+            <br />			
+            Tank3
+            <table width="600" border="0">
+              <tr>
+                <form action="command.php" method="get">
+                  <?php
+		if (session_status() == PHP_SESSION_NONE) {
+		    session_start();
+		}
+		$Tank3Value_Low=$_SESSION['Tank3Value_Low'];
+		$Tank3Value_High=$_SESSION['Tank3Value_High'];
+        echo "<td width=\"300\"><div align=\"right\">Low: &nbsp;&nbsp;&nbsp;";
+		echo "<input type=\"text\" name=\"Tank3Value_Low\" size=\"6\" value=\"" . $Tank3Value_Low . "\" /></div>";
+		echo "</td>";
+		echo "<td><div align=\"right\">High: &nbsp;&nbsp;&nbsp;";
+		echo "<input type=\"text\" name=\"Tank3Value_High\" size=\"6\" value=\"" . $Tank3Value_High . "\" /></div></td>";
+		
+		$Tank3Pump_ON=$_SESSION['Tank3Pump_ON'];
+		$Tank3Pump_OFF=$_SESSION['Tank3Pump_OFF'];
+		echo "<tr>";
+        echo "<td><div align=\"right\">Tank3 Pump On: &nbsp;&nbsp;&nbsp;";
+		echo "<input type=\"text\" name=\"Tank3Pump_ON\" size=\"6\" value=\"" . $Tank3Pump_ON . "\" /></div>";
+		echo "</td>";
+		echo "<td><div align=\"right\">Tank3 Pump Off: &nbsp;&nbsp;&nbsp;";
+		echo "<input type=\"text\" name=\"Tank3Pump_OFF\" size=\"6\" value=\"" . $Tank3Pump_OFF . "\" /></div></td>";
+		echo "</tr>";
+		
+		$Tank3MixPump_Enabled=$_SESSION['Tank3MixPump_Enabled'];
+		echo "<tr>";
+		echo "<td><div align=\"right\">Tank3MixPump Enabled: &nbsp;&nbsp;&nbsp;";
+		if ($Tank3MixPump_Enabled == "1"){
+	    echo "<label for=\"Tank3MixPump Enabled\"></label>";
+		echo "<select name=\"Tank3MixPump Enabled\" id=\"Tank3MixPump Enabled\">";
+		echo "<option selected=\"selected\">True</option>";
+     	echo "<option>False</option>";
+		echo "</select>";
+		} else if ($Tank3MixPump_Enabled == "0") {
+	    echo "<label for=\"Tank3MixPump Enabled\"></label>";
+		echo "<select name=\"Tank3MixPump Enabled\" id=\"Tank3MixPump Enabled\">";
+		echo "<option selected=\"selected\">False</option>";
+     	echo "<option>True</option>";
+		echo "</select>";
+		}
+		
+		echo "</tr>";
+		echo "<tr><td></td>";
+		echo "<td><div align=\"right\"><input type=\"submit\"  name=\"submit\" value=\"Save Tank3 Settings\" /></div></td>";
+		echo "</tr>";
+		?>
+                </form>
+              </tr>
+            </table>			
+            <br />			
+            Tank4
+            <table width="600" border="0">
+              <tr>
+                <form action="command.php" method="get">
+                  <?php
+		if (session_status() == PHP_SESSION_NONE) {
+		    session_start();
+		}
+		$Tank4Value_Low=$_SESSION['Tank4Value_Low'];
+		$Tank4Value_High=$_SESSION['Tank4Value_High'];
+        echo "<td width=\"300\"><div align=\"right\">Low: &nbsp;&nbsp;&nbsp;";
+		echo "<input type=\"text\" name=\"Tank4Value_Low\" size=\"6\" value=\"" . $Tank4Value_Low . "\" /></div>";
+		echo "</td>";
+		echo "<td><div align=\"right\">High: &nbsp;&nbsp;&nbsp;";
+		echo "<input type=\"text\" name=\"Tank4Value_High\" size=\"6\" value=\"" . $Tank4Value_High . "\" /></div></td>";
+		
+		$Tank4Pump_ON=$_SESSION['Tank4Pump_ON'];
+		$Tank4Pump_OFF=$_SESSION['Tank4Pump_OFF'];
+		echo "<tr>";
+        echo "<td><div align=\"right\">Tank4 Pump On: &nbsp;&nbsp;&nbsp;";
+		echo "<input type=\"text\" name=\"Tank4Pump_ON\" size=\"6\" value=\"" . $Tank4Pump_ON . "\" /></div>";
+		echo "</td>";
+		echo "<td><div align=\"right\">Tank4 Pump Off: &nbsp;&nbsp;&nbsp;";
+		echo "<input type=\"text\" name=\"Tank4Pump_OFF\" size=\"6\" value=\"" . $Tank4Pump_OFF . "\" /></div></td>";
+		echo "</tr>";
+		
+		$Tank4MixPump_Enabled=$_SESSION['Tank4MixPump_Enabled'];
+		echo "<tr>";
+		echo "<td><div align=\"right\">Tank4MixPump Enabled: &nbsp;&nbsp;&nbsp;";
+		if ($Tank4MixPump_Enabled == "1"){
+	    echo "<label for=\"Tank4MixPump Enabled\"></label>";
+		echo "<select name=\"Tank4MixPump Enabled\" id=\"Tank4MixPump Enabled\">";
+		echo "<option selected=\"selected\">True</option>";
+     	echo "<option>False</option>";
+		echo "</select>";
+		} else if ($Tank4MixPump_Enabled == "0") {
+	    echo "<label for=\"Tank4MixPump Enabled\"></label>";
+		echo "<select name=\"Tank4MixPump Enabled\" id=\"Tank4MixPump Enabled\">";
+		echo "<option selected=\"selected\">False</option>";
+     	echo "<option>True</option>";
+		echo "</select>";
+		}
+		
+		echo "</tr>";
+		echo "<tr><td></td>";
+		echo "<td><div align=\"right\"><input type=\"submit\"  name=\"submit\" value=\"Save Tank4 Settings\" /></div></td>";
+		echo "</tr>";
+		?>
+                </form>
+              </tr>
+            </table>			
+			<br />
         </td>
         </tr>
       </table>

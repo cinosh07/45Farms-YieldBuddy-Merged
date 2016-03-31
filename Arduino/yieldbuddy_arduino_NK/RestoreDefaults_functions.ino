@@ -191,8 +191,10 @@ void RestoreDefaults() {
   LightValue_Low = 5.00;
   LightValue_High = 25000;
 
-
-
+    //PH1
+  Water_Status = "OK";
+  WaterValue_Low = 5.80;
+  WaterValue_High = 6.20;
 
   //Turn all relays off and set to manual mode by default
   //Relay_States
@@ -378,7 +380,11 @@ void RestoreDefaults() {
 
   //Tank Total
   eepromWriteFloat(304, TankTotalValue_Low);
-  eepromWriteFloat(308, TankTotalValue_High);    
+  eepromWriteFloat(308, TankTotalValue_High);
+
+  //Water
+  eepromWriteFloat(312, WaterValue_Low);
+  eepromWriteFloat(316, WaterValue_High);
 
   //Save Time Settings
   EEPROM.write(0, tmp_hour);

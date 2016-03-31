@@ -61,7 +61,7 @@ body,td,th {
   <table width=\"240\" border=\"0\">
     <tr>
       <td width=\"84\">Username</td>
-      <td width=\"147\"><input type=\"text\" value=\"username\" name=\"username\" size=\"23\" /></td>
+      <td width=\"147\"><input type=\"text\" value=\"$username\" name=\"username\" size=\"23\" /></td>
     </tr>
     <tr>
       <td>Password</td>

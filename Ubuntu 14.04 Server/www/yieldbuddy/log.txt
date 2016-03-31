@@ -1,3 +1,1615 @@
 
 2016/03/27 23:17:04: Added a data point to the sensor values log.
 2016/03/27 23:19:36: Added a data point to the sensor values log.
+2016/03/27 23:22:06: Added a data point to the sensor values log.
+2016/03/27 23:24:39: Added a data point to the sensor values log.
+2016/03/27 23:27:12: Added a data point to the sensor values log.
+2016/03/27 23:29:42: Added a data point to the sensor values log.
+2016/03/27 23:32:14: Added a data point to the sensor values log.
+2016/03/27 23:34:46: Added a data point to the sensor values log.
+2016/03/27 23:37:17: Added a data point to the sensor values log.
+2016/03/27 23:39:49: Added a data point to the sensor values log.
+2016/03/27 23:42:22: Added a data point to the sensor values log.
+2016/03/27 23:44:53: Added a data point to the sensor values log.
+2016/03/27 23:47:25: Added a data point to the sensor values log.
+2016/03/27 23:49:57: Added a data point to the sensor values log.
+2016/03/27 23:52:28: Added a data point to the sensor values log.
+2016/03/27 23:55:00: Added a data point to the sensor values log.
+2016/03/27 23:57:32: Added a data point to the sensor values log.
+2016/03/28 00:00:02: Added a data point to the sensor values log.
+2016/03/28 00:02:35: Added a data point to the sensor values log.
+2016/03/28 00:05:07: Added a data point to the sensor values log.
+2016/03/28 00:07:38: Added a data point to the sensor values log.
+2016/03/28 00:10:10: Added a data point to the sensor values log.
+2016/03/28 00:12:43: Added a data point to the sensor values log.
+2016/03/28 00:15:13: Added a data point to the sensor values log.
+2016/03/28 00:17:45: Added a data point to the sensor values log.
+2016/03/28 00:20:17: Added a data point to the sensor values log.
+2016/03/28 00:22:48: Added a data point to the sensor values log.
+2016/03/28 00:25:21: Added a data point to the sensor values log.
+2016/03/28 00:27:53: Added a data point to the sensor values log.
+2016/03/28 00:30:24: Added a data point to the sensor values log.
+2016/03/28 00:32:56: Added a data point to the sensor values log.
+2016/03/28 00:35:28: Added a data point to the sensor values log.
+2016/03/28 00:37:59: Added a data point to the sensor values log.
+2016/03/28 00:40:31: Added a data point to the sensor values log.
+2016/03/28 00:43:03: Added a data point to the sensor values log.
+2016/03/28 00:45:33: Added a data point to the sensor values log.
+2016/03/28 00:48:06: Added a data point to the sensor values log.
+2016/03/28 00:50:39: Added a data point to the sensor values log.
+2016/03/28 00:53:09: Added a data point to the sensor values log.
+2016/03/28 00:55:41: Added a data point to the sensor values log.
+2016/03/28 00:58:14: Added a data point to the sensor values log.
+2016/03/28 01:00:44: Added a data point to the sensor values log.
+2016/03/28 01:03:17: Added a data point to the sensor values log.
+2016/03/28 01:05:49: Added a data point to the sensor values log.
+2016/03/28 01:08:19: Added a data point to the sensor values log.
+2016/03/28 01:10:52: Added a data point to the sensor values log.
+2016/03/28 01:13:25: Added a data point to the sensor values log.
+2016/03/28 01:15:55: Added a data point to the sensor values log.
+2016/03/28 01:18:27: Added a data point to the sensor values log.
+2016/03/28 01:21:00: Added a data point to the sensor values log.
+2016/03/28 01:23:30: Added a data point to the sensor values log.
+2016/03/28 01:26:02: Added a data point to the sensor values log.
+2016/03/28 01:28:34: Added a data point to the sensor values log.
+2016/03/28 01:31:05: Added a data point to the sensor values log.
+2016/03/28 01:33:38: Added a data point to the sensor values log.
+2016/03/28 01:36:09: Added a data point to the sensor values log.
+2016/03/28 01:38:40: Added a data point to the sensor values log.
+2016/03/28 01:41:13: Added a data point to the sensor values log.
+2016/03/28 01:43:45: Added a data point to the sensor values log.
+2016/03/28 01:46:16: Added a data point to the sensor values log.
+2016/03/28 01:48:48: Added a data point to the sensor values log.
+2016/03/28 01:51:20: Added a data point to the sensor values log.
+2016/03/28 01:53:50: Added a data point to the sensor values log.
+2016/03/28 01:55:19: Sent Command: Relay8 isAuto 0
+2016/03/28 01:55:23: Sent Command: Relay8 on
+2016/03/28 01:56:22: Added a data point to the sensor values log.
+2016/03/28 01:56:31: Sent Command: Relay8 off
+2016/03/28 01:56:49: Sent Command: Relay8 isAuto 1
+2016/03/28 01:58:52: Added a data point to the sensor values log.
+2016/03/28 02:01:24: Added a data point to the sensor values log.
+2016/03/28 02:03:55: Added a data point to the sensor values log.
+2016/03/28 02:06:28: Added a data point to the sensor values log.
+2016/03/28 02:09:00: Added a data point to the sensor values log.
+2016/03/28 02:11:30: Added a data point to the sensor values log.
+2016/03/28 02:14:02: Added a data point to the sensor values log.
+2016/03/28 02:16:35: Added a data point to the sensor values log.
+2016/03/28 02:19:05: Added a data point to the sensor values log.
+2016/03/28 02:21:37: Added a data point to the sensor values log.
+2016/03/28 02:24:10: Added a data point to the sensor values log.
+2016/03/28 02:26:41: Added a data point to the sensor values log.
+2016/03/28 02:29:13: Added a data point to the sensor values log.
+2016/03/28 02:31:45: Added a data point to the sensor values log.
+2016/03/28 02:34:15: Added a data point to the sensor values log.
+2016/03/28 02:36:48: Added a data point to the sensor values log.
+2016/03/28 02:39:20: Added a data point to the sensor values log.
+2016/03/28 02:41:50: Added a data point to the sensor values log.
+2016/03/28 02:44:23: Added a data point to the sensor values log.
+2016/03/28 02:46:56: Added a data point to the sensor values log.
+2016/03/28 02:49:26: Added a data point to the sensor values log.
+2016/03/28 02:51:59: Added a data point to the sensor values log.
+2016/03/28 02:54:31: Added a data point to the sensor values log.
+2016/03/28 02:57:01: Added a data point to the sensor values log.
+2016/03/28 02:59:33: Added a data point to the sensor values log.
+2016/03/28 03:02:06: Added a data point to the sensor values log.
+2016/03/28 03:04:37: Added a data point to the sensor values log.
+2016/03/28 03:07:09: Added a data point to the sensor values log.
+2016/03/28 03:09:41: Added a data point to the sensor values log.
+2016/03/28 03:12:12: Added a data point to the sensor values log.
+2016/03/28 03:14:44: Added a data point to the sensor values log.
+2016/03/28 03:17:16: Added a data point to the sensor values log.
+2016/03/28 03:19:46: Added a data point to the sensor values log.
+2016/03/28 03:22:19: Added a data point to the sensor values log.
+2016/03/28 03:24:51: Added a data point to the sensor values log.
+2016/03/28 03:27:22: Added a data point to the sensor values log.
+2016/03/28 03:29:55: Added a data point to the sensor values log.
+2016/03/28 03:32:27: Added a data point to the sensor values log.
+2016/03/28 03:34:57: Added a data point to the sensor values log.
+2016/03/28 03:37:30: Added a data point to the sensor values log.
+2016/03/28 03:40:02: Added a data point to the sensor values log.
+2016/03/28 03:42:32: Added a data point to the sensor values log.
+2016/03/28 03:45:04: Added a data point to the sensor values log.
+2016/03/28 03:47:37: Added a data point to the sensor values log.
+2016/03/28 03:50:08: Added a data point to the sensor values log.
+2016/03/28 03:52:40: Added a data point to the sensor values log.
+2016/03/28 03:55:12: Added a data point to the sensor values log.
+2016/03/28 03:57:43: Added a data point to the sensor values log.
+2016/03/28 04:00:15: Added a data point to the sensor values log.
+2016/03/28 04:02:47: Added a data point to the sensor values log.
+2016/03/28 04:05:17: Added a data point to the sensor values log.
+2016/03/28 04:07:50: Added a data point to the sensor values log.
+2016/03/28 04:10:23: Added a data point to the sensor values log.
+2016/03/28 04:12:53: Added a data point to the sensor values log.
+2016/03/28 04:15:25: Added a data point to the sensor values log.
+2016/03/28 04:17:58: Added a data point to the sensor values log.
+2016/03/28 04:20:28: Added a data point to the sensor values log.
+2016/03/28 04:23:01: Added a data point to the sensor values log.
+2016/03/28 04:25:33: Added a data point to the sensor values log.
+2016/03/28 04:28:03: Added a data point to the sensor values log.
+2016/03/28 04:30:36: Added a data point to the sensor values log.
+2016/03/28 04:33:08: Added a data point to the sensor values log.
+2016/03/28 04:35:39: Added a data point to the sensor values log.
+2016/03/28 04:38:11: Added a data point to the sensor values log.
+2016/03/28 04:40:43: Added a data point to the sensor values log.
+2016/03/28 04:43:14: Added a data point to the sensor values log.
+2016/03/28 04:45:46: Added a data point to the sensor values log.
+2016/03/28 04:48:18: Added a data point to the sensor values log.
+2016/03/28 04:50:48: Added a data point to the sensor values log.
+2016/03/28 04:53:18: Added a data point to the sensor values log.
+2016/03/28 04:55:48: Added a data point to the sensor values log.
+2016/03/28 04:58:21: Added a data point to the sensor values log.
+2016/03/28 05:00:54: Added a data point to the sensor values log.
+2016/03/28 05:03:24: Added a data point to the sensor values log.
+2016/03/28 05:05:56: Added a data point to the sensor values log.
+2016/03/28 05:08:29: Added a data point to the sensor values log.
+2016/03/28 05:10:59: Added a data point to the sensor values log.
+2016/03/28 05:13:31: Added a data point to the sensor values log.
+2016/03/28 05:16:03: Added a data point to the sensor values log.
+2016/03/28 05:18:34: Added a data point to the sensor values log.
+2016/03/28 05:21:07: Added a data point to the sensor values log.
+2016/03/28 05:23:38: Added a data point to the sensor values log.
+2016/03/28 05:26:09: Added a data point to the sensor values log.
+2016/03/28 05:28:42: Added a data point to the sensor values log.
+2016/03/28 05:31:14: Added a data point to the sensor values log.
+2016/03/28 05:33:44: Added a data point to the sensor values log.
+2016/03/28 05:36:16: Added a data point to the sensor values log.
+2016/03/28 05:38:49: Added a data point to the sensor values log.
+2016/03/28 05:41:19: Added a data point to the sensor values log.
+2016/03/28 05:43:52: Added a data point to the sensor values log.
+2016/03/28 05:46:24: Added a data point to the sensor values log.
+2016/03/28 05:48:55: Added a data point to the sensor values log.
+2016/03/28 05:51:27: Added a data point to the sensor values log.
+2016/03/28 05:53:59: Added a data point to the sensor values log.
+2016/03/28 05:56:30: Added a data point to the sensor values log.
+2016/03/28 05:59:02: Added a data point to the sensor values log.
+2016/03/28 06:01:35: Added a data point to the sensor values log.
+2016/03/28 06:04:05: Added a data point to the sensor values log.
+2016/03/28 06:06:37: Added a data point to the sensor values log.
+2016/03/28 06:09:10: Added a data point to the sensor values log.
+2016/03/28 06:11:41: Added a data point to the sensor values log.
+2016/03/28 06:14:13: Added a data point to the sensor values log.
+2016/03/28 06:16:45: Added a data point to the sensor values log.
+2016/03/28 06:19:15: Added a data point to the sensor values log.
+2016/03/28 06:21:48: Added a data point to the sensor values log.
+2016/03/28 06:24:20: Added a data point to the sensor values log.
+2016/03/28 06:26:50: Added a data point to the sensor values log.
+2016/03/28 06:29:23: Added a data point to the sensor values log.
+2016/03/28 06:31:55: Added a data point to the sensor values log.
+2016/03/28 06:34:26: Added a data point to the sensor values log.
+2016/03/28 06:36:58: Added a data point to the sensor values log.
+2016/03/28 06:39:30: Added a data point to the sensor values log.
+2016/03/28 06:42:01: Added a data point to the sensor values log.
+2016/03/28 06:44:33: Added a data point to the sensor values log.
+2016/03/28 06:47:05: Added a data point to the sensor values log.
+2016/03/28 06:49:36: Added a data point to the sensor values log.
+2016/03/28 06:52:09: Added a data point to the sensor values log.
+2016/03/28 06:54:41: Added a data point to the sensor values log.
+2016/03/28 06:57:11: Added a data point to the sensor values log.
+2016/03/28 06:59:43: Added a data point to the sensor values log.
+2016/03/28 07:02:16: Added a data point to the sensor values log.
+2016/03/28 07:04:46: Added a data point to the sensor values log.
+2016/03/28 07:07:19: Added a data point to the sensor values log.
+2016/03/28 07:09:51: Added a data point to the sensor values log.
+2016/03/28 07:12:21: Added a data point to the sensor values log.
+2016/03/28 07:14:54: Added a data point to the sensor values log.
+2016/03/28 07:17:27: Added a data point to the sensor values log.
+2016/03/28 07:19:57: Added a data point to the sensor values log.
+2016/03/28 07:22:29: Added a data point to the sensor values log.
+2016/03/28 07:25:01: Added a data point to the sensor values log.
+2016/03/28 07:27:32: Added a data point to the sensor values log.
+2016/03/28 07:30:04: Added a data point to the sensor values log.
+2016/03/28 07:32:36: Added a data point to the sensor values log.
+2016/03/28 07:35:07: Added a data point to the sensor values log.
+2016/03/28 07:37:40: Added a data point to the sensor values log.
+2016/03/28 07:40:12: Added a data point to the sensor values log.
+2016/03/28 07:42:43: Added a data point to the sensor values log.
+2016/03/28 07:45:15: Added a data point to the sensor values log.
+2016/03/28 07:47:47: Added a data point to the sensor values log.
+2016/03/28 07:50:17: Added a data point to the sensor values log.
+2016/03/28 07:52:50: Added a data point to the sensor values log.
+2016/03/28 07:55:23: Added a data point to the sensor values log.
+2016/03/28 07:57:58: Added a data point to the sensor values log.
+2016/03/28 08:00:28: Added a data point to the sensor values log.
+2016/03/28 08:03:01: Added a data point to the sensor values log.
+2016/03/28 08:05:33: Added a data point to the sensor values log.
+2016/03/28 08:08:04: Added a data point to the sensor values log.
+2016/03/28 08:10:37: Added a data point to the sensor values log.
+2016/03/28 08:13:09: Added a data point to the sensor values log.
+2016/03/28 08:15:39: Added a data point to the sensor values log.
+2016/03/28 08:18:12: Added a data point to the sensor values log.
+2016/03/28 08:20:44: Added a data point to the sensor values log.
+2016/03/28 08:23:14: Added a data point to the sensor values log.
+2016/03/28 08:25:46: Added a data point to the sensor values log.
+2016/03/28 08:28:19: Added a data point to the sensor values log.
+2016/03/28 08:30:50: Added a data point to the sensor values log.
+2016/03/28 08:33:23: Added a data point to the sensor values log.
+2016/03/28 08:35:55: Added a data point to the sensor values log.
+2016/03/28 08:38:25: Added a data point to the sensor values log.
+2016/03/28 08:40:57: Added a data point to the sensor values log.
+2016/03/28 08:43:30: Added a data point to the sensor values log.
+2016/03/28 08:46:00: Added a data point to the sensor values log.
+2016/03/28 08:48:32: Added a data point to the sensor values log.
+2016/03/28 08:51:04: Added a data point to the sensor values log.
+2016/03/28 08:53:35: Added a data point to the sensor values log.
+2016/03/28 08:56:08: Added a data point to the sensor values log.
+2016/03/28 08:58:41: Added a data point to the sensor values log.
+2016/03/28 09:01:11: Added a data point to the sensor values log.
+2016/03/28 09:03:43: Added a data point to the sensor values log.
+2016/03/28 09:06:15: Added a data point to the sensor values log.
+2016/03/28 09:08:46: Added a data point to the sensor values log.
+2016/03/28 09:11:19: Added a data point to the sensor values log.
+2016/03/28 09:13:51: Added a data point to the sensor values log.
+2016/03/28 09:16:22: Added a data point to the sensor values log.
+2016/03/28 09:18:54: Added a data point to the sensor values log.
+2016/03/28 09:21:26: Added a data point to the sensor values log.
+2016/03/28 09:23:57: Added a data point to the sensor values log.
+2016/03/28 09:26:29: Added a data point to the sensor values log.
+2016/03/28 09:29:01: Added a data point to the sensor values log.
+2016/03/28 09:31:31: Added a data point to the sensor values log.
+2016/03/28 09:34:04: Added a data point to the sensor values log.
+2016/03/28 09:36:37: Added a data point to the sensor values log.
+2016/03/28 09:39:08: Added a data point to the sensor values log.
+2016/03/28 09:41:40: Added a data point to the sensor values log.
+2016/03/28 09:44:12: Added a data point to the sensor values log.
+2016/03/28 09:46:42: Added a data point to the sensor values log.
+2016/03/28 09:49:15: Added a data point to the sensor values log.
+2016/03/28 09:51:47: Added a data point to the sensor values log.
+2016/03/28 09:54:17: Added a data point to the sensor values log.
+2016/03/28 09:56:50: Added a data point to the sensor values log.
+2016/03/28 09:59:23: Added a data point to the sensor values log.
+2016/03/28 10:01:54: Added a data point to the sensor values log.
+2016/03/28 10:04:26: Added a data point to the sensor values log.
+2016/03/28 10:06:58: Added a data point to the sensor values log.
+2016/03/28 10:09:28: Added a data point to the sensor values log.
+2016/03/28 10:12:01: Added a data point to the sensor values log.
+2016/03/28 10:14:33: Added a data point to the sensor values log.
+2016/03/28 10:17:04: Added a data point to the sensor values log.
+2016/03/28 10:19:37: Added a data point to the sensor values log.
+2016/03/28 10:22:08: Added a data point to the sensor values log.
+2016/03/28 10:24:39: Added a data point to the sensor values log.
+2016/03/28 10:27:12: Added a data point to the sensor values log.
+2016/03/28 10:29:44: Added a data point to the sensor values log.
+2016/03/28 10:32:14: Added a data point to the sensor values log.
+2016/03/28 10:34:46: Added a data point to the sensor values log.
+2016/03/28 10:37:19: Added a data point to the sensor values log.
+2016/03/28 10:39:49: Added a data point to the sensor values log.
+2016/03/28 10:42:22: Added a data point to the sensor values log.
+2016/03/28 10:44:55: Added a data point to the sensor values log.
+2016/03/28 10:47:25: Added a data point to the sensor values log.
+2016/03/28 10:49:57: Added a data point to the sensor values log.
+2016/03/28 10:52:30: Added a data point to the sensor values log.
+2016/03/28 10:55:00: Added a data point to the sensor values log.
+2016/03/28 10:57:32: Added a data point to the sensor values log.
+2016/03/28 11:00:04: Added a data point to the sensor values log.
+2016/03/28 11:02:35: Added a data point to the sensor values log.
+2016/03/28 11:05:08: Added a data point to the sensor values log.
+2016/03/28 11:07:40: Added a data point to the sensor values log.
+2016/03/28 11:10:11: Added a data point to the sensor values log.
+2016/03/28 11:12:43: Added a data point to the sensor values log.
+2016/03/28 11:15:15: Added a data point to the sensor values log.
+2016/03/28 11:17:46: Added a data point to the sensor values log.
+2016/03/28 11:20:18: Added a data point to the sensor values log.
+2016/03/28 11:22:51: Added a data point to the sensor values log.
+2016/03/28 11:25:22: Added a data point to the sensor values log.
+2016/03/28 11:27:54: Added a data point to the sensor values log.
+2016/03/28 11:30:26: Added a data point to the sensor values log.
+2016/03/28 11:32:57: Added a data point to the sensor values log.
+2016/03/28 11:35:29: Added a data point to the sensor values log.
+2016/03/28 11:38:01: Added a data point to the sensor values log.
+2016/03/28 11:40:31: Added a data point to the sensor values log.
+2016/03/28 11:43:04: Added a data point to the sensor values log.
+2016/03/28 11:45:36: Added a data point to the sensor values log.
+2016/03/28 11:48:07: Added a data point to the sensor values log.
+2016/03/28 11:50:40: Added a data point to the sensor values log.
+2016/03/28 11:53:12: Added a data point to the sensor values log.
+2016/03/28 11:55:42: Added a data point to the sensor values log.
+2016/03/28 11:58:15: Added a data point to the sensor values log.
+2016/03/28 12:00:47: Added a data point to the sensor values log.
+2016/03/28 12:03:18: Added a data point to the sensor values log.
+2016/03/28 12:05:50: Added a data point to the sensor values log.
+2016/03/28 12:08:22: Added a data point to the sensor values log.
+2016/03/28 12:10:53: Added a data point to the sensor values log.
+2016/03/28 12:13:26: Added a data point to the sensor values log.
+2016/03/28 12:15:58: Added a data point to the sensor values log.
+2016/03/28 12:18:29: Added a data point to the sensor values log.
+2016/03/28 12:21:01: Added a data point to the sensor values log.
+2016/03/28 12:23:33: Added a data point to the sensor values log.
+2016/03/28 12:26:03: Added a data point to the sensor values log.
+2016/03/28 12:28:36: Added a data point to the sensor values log.
+2016/03/28 12:31:09: Added a data point to the sensor values log.
+2016/03/28 12:33:40: Added a data point to the sensor values log.
+2016/03/28 12:36:12: Added a data point to the sensor values log.
+2016/03/28 12:38:44: Added a data point to the sensor values log.
+2016/03/28 12:41:14: Added a data point to the sensor values log.
+2016/03/28 12:43:47: Added a data point to the sensor values log.
+2016/03/28 12:46:19: Added a data point to the sensor values log.
+2016/03/28 12:48:49: Added a data point to the sensor values log.
+2016/03/28 12:51:22: Added a data point to the sensor values log.
+2016/03/28 12:53:54: Added a data point to the sensor values log.
+2016/03/28 12:56:25: Added a data point to the sensor values log.
+2016/03/28 12:58:58: Added a data point to the sensor values log.
+2016/03/28 13:01:30: Added a data point to the sensor values log.
+2016/03/28 13:04:00: Added a data point to the sensor values log.
+2016/03/28 13:06:32: Added a data point to the sensor values log.
+2016/03/28 13:09:05: Added a data point to the sensor values log.
+2016/03/28 13:11:35: Added a data point to the sensor values log.
+2016/03/28 13:14:08: Added a data point to the sensor values log.
+2016/03/28 13:16:41: Added a data point to the sensor values log.
+2016/03/28 13:19:11: Added a data point to the sensor values log.
+2016/03/28 13:21:43: Added a data point to the sensor values log.
+2016/03/28 13:24:16: Added a data point to the sensor values log.
+2016/03/28 13:26:46: Added a data point to the sensor values log.
+2016/03/28 13:29:19: Added a data point to the sensor values log.
+2016/03/28 13:31:51: Added a data point to the sensor values log.
+2016/03/28 13:34:21: Added a data point to the sensor values log.
+2016/03/28 13:34:48: Sent Command: Relay8 isAuto 0
+2016/03/28 13:34:53: Sent Command: Relay8 on
+2016/03/28 13:36:53: Added a data point to the sensor values log.
+2016/03/28 13:39:23: Added a data point to the sensor values log.
+2016/03/28 13:41:55: Added a data point to the sensor values log.
+2016/03/28 13:44:27: Added a data point to the sensor values log.
+2016/03/28 13:47:02: Added a data point to the sensor values log.
+2016/03/28 13:49:32: Added a data point to the sensor values log.
+2016/03/28 13:52:04: Added a data point to the sensor values log.
+2016/03/28 13:54:37: Added a data point to the sensor values log.
+2016/03/28 13:57:12: Added a data point to the sensor values log.
+2016/03/28 13:59:46: Added a data point to the sensor values log.
+2016/03/28 14:02:21: Added a data point to the sensor values log.
+2016/03/28 14:04:52: Added a data point to the sensor values log.
+2016/03/28 14:07:24: Added a data point to the sensor values log.
+2016/03/28 14:09:56: Added a data point to the sensor values log.
+2016/03/28 14:12:26: Added a data point to the sensor values log.
+2016/03/28 14:14:58: Added a data point to the sensor values log.
+2016/03/28 14:17:30: Added a data point to the sensor values log.
+2016/03/28 14:20:05: Added a data point to the sensor values log.
+2016/03/28 14:22:40: Added a data point to the sensor values log.
+2016/03/28 14:25:15: Added a data point to the sensor values log.
+2016/03/28 14:27:46: Added a data point to the sensor values log.
+2016/03/28 14:30:17: Added a data point to the sensor values log.
+2016/03/28 14:32:50: Added a data point to the sensor values log.
+2016/03/28 14:35:20: Added a data point to the sensor values log.
+2016/03/28 14:37:51: Added a data point to the sensor values log.
+2016/03/28 14:40:24: Added a data point to the sensor values log.
+2016/03/28 14:42:59: Added a data point to the sensor values log.
+2016/03/28 14:45:29: Added a data point to the sensor values log.
+2016/03/28 14:48:00: Added a data point to the sensor values log.
+2016/03/28 14:50:33: Added a data point to the sensor values log.
+2016/03/28 14:53:08: Added a data point to the sensor values log.
+2016/03/28 14:55:43: Added a data point to the sensor values log.
+2016/03/28 14:58:14: Added a data point to the sensor values log.
+2016/03/28 15:00:45: Added a data point to the sensor values log.
+2016/03/28 15:03:18: Added a data point to the sensor values log.
+2016/03/28 15:05:48: Added a data point to the sensor values log.
+2016/03/28 15:08:20: Added a data point to the sensor values log.
+2016/03/28 15:10:52: Added a data point to the sensor values log.
+2016/03/28 15:13:27: Added a data point to the sensor values log.
+2016/03/28 15:16:02: Added a data point to the sensor values log.
+2016/03/28 15:18:32: Added a data point to the sensor values log.
+2016/03/28 15:21:03: Added a data point to the sensor values log.
+2016/03/28 15:23:36: Added a data point to the sensor values log.
+2016/03/28 15:25:10: Error: need more than 2 values to unpack
+2016/03/28 15:26:09: Added a data point to the sensor values log.
+2016/03/28 15:39:08: Added a data point to the sensor values log.
+2016/03/28 15:39:59: Started yieldbuddy. Priority 15.
+2016/03/28 15:40:17: Added a data point to the sensor values log.
+2016/03/28 15:40:37: Sent Command: Relay8 isAuto 1
+2016/03/28 15:40:51: Sent Command: setlightschedule,0,0,23,59
+2016/03/28 15:42:50: Added a data point to the sensor values log.
+2016/03/28 15:45:21: Added a data point to the sensor values log.
+2016/03/28 15:47:54: Added a data point to the sensor values log.
+2016/03/28 15:50:27: Added a data point to the sensor values log.
+2016/03/28 15:52:57: Added a data point to the sensor values log.
+2016/03/28 15:55:30: Added a data point to the sensor values log.
+2016/03/28 15:58:02: Added a data point to the sensor values log.
+2016/03/28 16:00:32: Added a data point to the sensor values log.
+2016/03/28 16:03:04: Added a data point to the sensor values log.
+2016/03/28 16:05:37: Added a data point to the sensor values log.
+2016/03/28 16:08:08: Added a data point to the sensor values log.
+2016/03/28 16:10:40: Added a data point to the sensor values log.
+2016/03/28 16:13:12: Added a data point to the sensor values log.
+2016/03/28 16:15:43: Added a data point to the sensor values log.
+2016/03/28 16:18:15: Added a data point to the sensor values log.
+2016/03/28 16:20:48: Added a data point to the sensor values log.
+2016/03/28 16:23:18: Added a data point to the sensor values log.
+2016/03/28 16:25:50: Added a data point to the sensor values log.
+2016/03/28 16:28:23: Added a data point to the sensor values log.
+2016/03/28 16:30:54: Added a data point to the sensor values log.
+2016/03/28 16:33:26: Added a data point to the sensor values log.
+2016/03/28 16:35:58: Added a data point to the sensor values log.
+2016/03/28 16:38:28: Added a data point to the sensor values log.
+2016/03/28 16:41:01: Added a data point to the sensor values log.
+2016/03/28 16:43:33: Added a data point to the sensor values log.
+2016/03/28 16:46:04: Added a data point to the sensor values log.
+2016/03/28 16:48:37: Added a data point to the sensor values log.
+2016/03/28 16:51:08: Added a data point to the sensor values log.
+2016/03/28 16:53:39: Added a data point to the sensor values log.
+2016/03/28 16:56:12: Added a data point to the sensor values log.
+2016/03/28 16:58:44: Added a data point to the sensor values log.
+2016/03/28 17:01:14: Added a data point to the sensor values log.
+2016/03/28 17:03:46: Added a data point to the sensor values log.
+2016/03/28 17:06:19: Added a data point to the sensor values log.
+2016/03/28 17:08:49: Added a data point to the sensor values log.
+2016/03/28 17:11:22: Added a data point to the sensor values log.
+2016/03/28 17:13:55: Added a data point to the sensor values log.
+2016/03/28 17:16:25: Added a data point to the sensor values log.
+2016/03/28 17:18:57: Added a data point to the sensor values log.
+2016/03/28 17:21:30: Added a data point to the sensor values log.
+2016/03/28 17:24:00: Added a data point to the sensor values log.
+2016/03/28 17:26:32: Added a data point to the sensor values log.
+2016/03/28 17:29:04: Added a data point to the sensor values log.
+2016/03/28 17:31:35: Added a data point to the sensor values log.
+2016/03/28 17:34:08: Added a data point to the sensor values log.
+2016/03/28 17:36:41: Added a data point to the sensor values log.
+2016/03/28 17:39:11: Added a data point to the sensor values log.
+2016/03/28 17:41:43: Added a data point to the sensor values log.
+2016/03/28 17:44:15: Added a data point to the sensor values log.
+2016/03/28 17:46:46: Added a data point to the sensor values log.
+2016/03/28 17:49:18: Added a data point to the sensor values log.
+2016/03/28 17:51:50: Added a data point to the sensor values log.
+2016/03/28 17:54:21: Added a data point to the sensor values log.
+2016/03/28 17:56:54: Added a data point to the sensor values log.
+2016/03/28 17:59:26: Added a data point to the sensor values log.
+2016/03/28 18:01:57: Added a data point to the sensor values log.
+2016/03/28 18:04:29: Added a data point to the sensor values log.
+2016/03/28 18:07:01: Added a data point to the sensor values log.
+2016/03/28 18:09:31: Added a data point to the sensor values log.
+2016/03/28 18:12:04: Added a data point to the sensor values log.
+2016/03/28 18:14:36: Added a data point to the sensor values log.
+2016/03/28 18:17:07: Added a data point to the sensor values log.
+2016/03/28 18:19:39: Added a data point to the sensor values log.
+2016/03/28 18:22:12: Added a data point to the sensor values log.
+2016/03/28 18:24:42: Added a data point to the sensor values log.
+2016/03/28 18:27:15: Added a data point to the sensor values log.
+2016/03/28 18:29:47: Added a data point to the sensor values log.
+2016/03/28 18:32:17: Added a data point to the sensor values log.
+2016/03/28 18:34:50: Added a data point to the sensor values log.
+2016/03/28 18:37:22: Added a data point to the sensor values log.
+2016/03/28 18:39:53: Added a data point to the sensor values log.
+2016/03/28 18:42:25: Added a data point to the sensor values log.
+2016/03/28 18:44:57: Added a data point to the sensor values log.
+2016/03/28 18:47:28: Added a data point to the sensor values log.
+2016/03/28 18:50:00: Added a data point to the sensor values log.
+2016/03/28 18:52:33: Added a data point to the sensor values log.
+2016/03/28 18:55:03: Added a data point to the sensor values log.
+2016/03/28 18:57:35: Added a data point to the sensor values log.
+2016/03/28 19:00:08: Added a data point to the sensor values log.
+2016/03/28 19:02:39: Added a data point to the sensor values log.
+2016/03/28 19:05:11: Added a data point to the sensor values log.
+2016/03/28 19:07:43: Added a data point to the sensor values log.
+2016/03/28 19:10:13: Added a data point to the sensor values log.
+2016/03/28 19:12:46: Added a data point to the sensor values log.
+2016/03/28 19:15:18: Added a data point to the sensor values log.
+2016/03/28 19:17:48: Added a data point to the sensor values log.
+2016/03/28 19:20:21: Added a data point to the sensor values log.
+2016/03/28 19:22:53: Added a data point to the sensor values log.
+2016/03/28 19:25:24: Added a data point to the sensor values log.
+2016/03/28 19:27:56: Added a data point to the sensor values log.
+2016/03/28 19:30:28: Added a data point to the sensor values log.
+2016/03/28 19:32:59: Added a data point to the sensor values log.
+2016/03/28 19:35:31: Added a data point to the sensor values log.
+2016/03/28 19:38:04: Added a data point to the sensor values log.
+2016/03/28 19:40:35: Added a data point to the sensor values log.
+2016/03/28 19:43:07: Added a data point to the sensor values log.
+2016/03/28 19:45:42: Added a data point to the sensor values log.
+2016/03/28 19:48:12: Added a data point to the sensor values log.
+2016/03/28 19:50:42: Added a data point to the sensor values log.
+2016/03/28 19:50:55: serialerr: 1 from serial loop
+2016/03/28 19:50:55: Error reading serial device.
+2016/03/28 19:50:55: attempting to restart serial
+2016/03/28 19:53:12: Added a data point to the sensor values log.
+2016/03/28 19:55:45: Added a data point to the sensor values log.
+2016/03/28 19:58:17: Added a data point to the sensor values log.
+2016/03/28 20:00:47: Added a data point to the sensor values log.
+2016/03/28 20:02:31: Terminated PID: 20575 (for accessing the database)
+2016/03/28 20:02:31: Started yieldbuddy. Priority 15.
+2016/03/28 20:02:37: serialerr: 2 from serial loop
+2016/03/28 20:02:37: no path to serial device.
+2016/03/28 20:02:37: attempting to restart serial
+2016/03/28 20:02:52: serialerr: 2 from serial loop
+2016/03/28 20:02:52: no path to serial device.
+2016/03/28 20:02:52: attempting to restart serial
+2016/03/28 20:03:01: Added a data point to the sensor values log.
+2016/03/28 20:05:34: Added a data point to the sensor values log.
+2016/03/28 20:07:11: Started yieldbuddy. Priority 15.
+2016/03/28 20:07:26: serialerr: 1 from serial loop
+2016/03/28 20:07:26: Error reading serial device.
+2016/03/28 20:07:26: attempting to restart serial
+2016/03/28 20:07:32: Added a data point to the sensor values log.
+2016/03/28 20:10:02: Added a data point to the sensor values log.
+2016/03/28 20:12:34: Added a data point to the sensor values log.
+2016/03/28 20:15:05: Added a data point to the sensor values log.
+2016/03/28 20:17:38: Added a data point to the sensor values log.
+2016/03/28 20:20:10: Added a data point to the sensor values log.
+2016/03/28 20:22:40: Added a data point to the sensor values log.
+2016/03/28 20:25:12: Added a data point to the sensor values log.
+2016/03/28 20:27:45: Added a data point to the sensor values log.
+2016/03/28 20:30:15: Added a data point to the sensor values log.
+2016/03/28 20:32:47: Added a data point to the sensor values log.
+2016/03/28 20:35:20: Added a data point to the sensor values log.
+2016/03/28 20:37:51: Added a data point to the sensor values log.
+2016/03/28 20:40:23: Added a data point to the sensor values log.
+2016/03/28 20:42:56: Added a data point to the sensor values log.
+2016/03/28 20:45:26: Added a data point to the sensor values log.
+2016/03/28 20:47:58: Added a data point to the sensor values log.
+2016/03/28 20:50:30: Added a data point to the sensor values log.
+2016/03/28 20:53:01: Added a data point to the sensor values log.
+2016/03/28 20:55:34: Added a data point to the sensor values log.
+2016/03/28 20:58:05: Added a data point to the sensor values log.
+2016/03/28 21:00:36: Added a data point to the sensor values log.
+2016/03/28 21:03:09: Added a data point to the sensor values log.
+2016/03/28 21:05:41: Added a data point to the sensor values log.
+2016/03/28 21:08:11: Added a data point to the sensor values log.
+2016/03/28 21:10:43: Added a data point to the sensor values log.
+2016/03/28 21:13:16: Added a data point to the sensor values log.
+2016/03/28 21:15:46: Added a data point to the sensor values log.
+2016/03/28 21:18:19: Added a data point to the sensor values log.
+2016/03/28 21:20:52: Added a data point to the sensor values log.
+2016/03/28 21:23:22: Added a data point to the sensor values log.
+2016/03/28 21:25:54: Added a data point to the sensor values log.
+2016/03/28 21:28:27: Added a data point to the sensor values log.
+2016/03/28 21:30:57: Added a data point to the sensor values log.
+2016/03/28 21:33:29: Added a data point to the sensor values log.
+2016/03/28 21:36:01: Added a data point to the sensor values log.
+2016/03/28 21:38:32: Added a data point to the sensor values log.
+2016/03/28 21:41:05: Added a data point to the sensor values log.
+2016/03/28 21:43:38: Added a data point to the sensor values log.
+2016/03/28 21:46:08: Added a data point to the sensor values log.
+2016/03/28 21:48:40: Added a data point to the sensor values log.
+2016/03/28 21:51:12: Added a data point to the sensor values log.
+2016/03/28 21:53:43: Added a data point to the sensor values log.
+2016/03/28 21:56:15: Added a data point to the sensor values log.
+2016/03/28 21:58:47: Added a data point to the sensor values log.
+2016/03/28 22:01:18: Added a data point to the sensor values log.
+2016/03/28 22:03:51: Added a data point to the sensor values log.
+2016/03/28 22:06:23: Added a data point to the sensor values log.
+2016/03/28 22:08:53: Added a data point to the sensor values log.
+2016/03/28 22:11:25: Added a data point to the sensor values log.
+2016/03/28 22:13:58: Added a data point to the sensor values log.
+2016/03/28 22:16:28: Added a data point to the sensor values log.
+2016/03/28 22:19:01: Added a data point to the sensor values log.
+2016/03/28 22:21:33: Added a data point to the sensor values log.
+2016/03/28 22:24:03: Added a data point to the sensor values log.
+2016/03/28 22:26:36: Added a data point to the sensor values log.
+2016/03/28 22:29:09: Added a data point to the sensor values log.
+2016/03/28 22:31:39: Added a data point to the sensor values log.
+2016/03/28 22:34:11: Added a data point to the sensor values log.
+2016/03/28 22:36:43: Added a data point to the sensor values log.
+2016/03/28 22:39:14: Added a data point to the sensor values log.
+2016/03/28 22:41:46: Added a data point to the sensor values log.
+2016/03/28 22:44:19: Added a data point to the sensor values log.
+2016/03/28 22:46:50: Added a data point to the sensor values log.
+2016/03/28 22:49:22: Added a data point to the sensor values log.
+2016/03/28 22:51:54: Added a data point to the sensor values log.
+2016/03/28 22:54:25: Added a data point to the sensor values log.
+2016/03/28 22:56:57: Added a data point to the sensor values log.
+2016/03/28 22:59:29: Added a data point to the sensor values log.
+2016/03/28 23:01:59: Added a data point to the sensor values log.
+2016/03/28 23:04:32: Added a data point to the sensor values log.
+2016/03/28 23:07:05: Added a data point to the sensor values log.
+2016/03/28 23:09:35: Added a data point to the sensor values log.
+2016/03/28 23:09:56: Sent Command: setlightschedule,18,0,23,59
+2016/03/28 23:10:11: Sent Command: Relay1 isAuto 0
+2016/03/28 23:12:09: Added a data point to the sensor values log.
+2016/03/28 23:14:41: Added a data point to the sensor values log.
+2016/03/28 23:17:51: Started yieldbuddy. Priority 15.
+2016/03/28 23:18:08: Added a data point to the sensor values log.
+2016/03/28 23:20:38: Added a data point to the sensor values log.
+2016/03/28 23:22:38: Terminated PID: 28170 (for accessing the database)
+2016/03/28 23:22:38: Started yieldbuddy. Priority 15.
+2016/03/28 23:22:55: Added a data point to the sensor values log.
+2016/03/28 23:25:25: Added a data point to the sensor values log.
+2016/03/28 23:27:55: Added a data point to the sensor values log.
+2016/03/28 23:30:27: Added a data point to the sensor values log.
+2016/03/28 23:32:59: Added a data point to the sensor values log.
+2016/03/28 23:35:29: Added a data point to the sensor values log.
+2016/03/28 23:38:01: Added a data point to the sensor values log.
+2016/03/28 23:40:33: Added a data point to the sensor values log.
+2016/03/28 23:43:04: Added a data point to the sensor values log.
+2016/03/28 23:45:34: Added a data point to the sensor values log.
+2016/03/28 23:48:08: Added a data point to the sensor values log.
+2016/03/28 23:50:38: Added a data point to the sensor values log.
+2016/03/28 23:53:10: Added a data point to the sensor values log.
+2016/03/28 23:55:42: Added a data point to the sensor values log.
+2016/03/28 23:58:16: Added a data point to the sensor values log.
+2016/03/29 00:00:51: Added a data point to the sensor values log.
+2016/03/29 00:03:21: Added a data point to the sensor values log.
+2016/03/29 00:05:53: Added a data point to the sensor values log.
+2016/03/29 00:08:26: Added a data point to the sensor values log.
+2016/03/29 00:11:01: Added a data point to the sensor values log.
+2016/03/29 00:13:36: Added a data point to the sensor values log.
+2016/03/29 00:16:06: Added a data point to the sensor values log.
+2016/03/29 00:18:38: Added a data point to the sensor values log.
+2016/03/29 00:21:10: Added a data point to the sensor values log.
+2016/03/29 00:23:40: Added a data point to the sensor values log.
+2016/03/29 00:26:12: Added a data point to the sensor values log.
+2016/03/29 00:28:44: Added a data point to the sensor values log.
+2016/03/29 00:31:19: Added a data point to the sensor values log.
+2016/03/29 00:33:54: Added a data point to the sensor values log.
+2016/03/29 00:36:24: Added a data point to the sensor values log.
+2016/03/29 00:38:56: Added a data point to the sensor values log.
+2016/03/29 00:41:29: Added a data point to the sensor values log.
+2016/03/29 00:43:59: Added a data point to the sensor values log.
+2016/03/29 00:46:30: Added a data point to the sensor values log.
+2016/03/29 00:49:03: Added a data point to the sensor values log.
+2016/03/29 00:51:38: Added a data point to the sensor values log.
+2016/03/29 00:54:13: Added a data point to the sensor values log.
+2016/03/29 00:56:48: Added a data point to the sensor values log.
+2016/03/29 00:59:23: Added a data point to the sensor values log.
+2016/03/29 01:01:53: Added a data point to the sensor values log.
+2016/03/29 01:04:25: Added a data point to the sensor values log.
+2016/03/29 01:06:58: Added a data point to the sensor values log.
+2016/03/29 01:09:33: Added a data point to the sensor values log.
+2016/03/29 01:12:03: Added a data point to the sensor values log.
+2016/03/29 01:14:35: Added a data point to the sensor values log.
+2016/03/29 01:17:07: Added a data point to the sensor values log.
+2016/03/29 01:19:37: Added a data point to the sensor values log.
+2016/03/29 01:22:10: Added a data point to the sensor values log.
+2016/03/29 01:24:41: Added a data point to the sensor values log.
+2016/03/29 01:27:16: Added a data point to the sensor values log.
+2016/03/29 01:29:51: Added a data point to the sensor values log.
+2016/03/29 01:32:26: Added a data point to the sensor values log.
+2016/03/29 01:34:56: Added a data point to the sensor values log.
+2016/03/29 01:37:28: Added a data point to the sensor values log.
+2016/03/29 01:40:01: Added a data point to the sensor values log.
+2016/03/29 01:42:36: Added a data point to the sensor values log.
+2016/03/29 01:45:06: Added a data point to the sensor values log.
+2016/03/29 01:47:38: Added a data point to the sensor values log.
+2016/03/29 01:50:11: Added a data point to the sensor values log.
+2016/03/29 01:52:41: Added a data point to the sensor values log.
+2016/03/29 01:55:12: Added a data point to the sensor values log.
+2016/03/29 01:57:44: Added a data point to the sensor values log.
+2016/03/29 02:00:19: Added a data point to the sensor values log.
+2016/03/29 02:02:49: Added a data point to the sensor values log.
+2016/03/29 02:05:20: Added a data point to the sensor values log.
+2016/03/29 02:07:54: Added a data point to the sensor values log.
+2016/03/29 02:10:29: Added a data point to the sensor values log.
+2016/03/29 02:13:04: Added a data point to the sensor values log.
+2016/03/29 02:15:39: Added a data point to the sensor values log.
+2016/03/29 02:18:09: Added a data point to the sensor values log.
+2016/03/29 02:20:41: Added a data point to the sensor values log.
+2016/03/29 02:23:13: Added a data point to the sensor values log.
+2016/03/29 02:25:43: Added a data point to the sensor values log.
+2016/03/29 02:28:14: Added a data point to the sensor values log.
+2016/03/29 02:30:47: Added a data point to the sensor values log.
+2016/03/29 02:33:22: Added a data point to the sensor values log.
+2016/03/29 02:35:52: Added a data point to the sensor values log.
+2016/03/29 02:38:24: Added a data point to the sensor values log.
+2016/03/29 02:40:57: Added a data point to the sensor values log.
+2016/03/29 02:43:32: Added a data point to the sensor values log.
+2016/03/29 02:46:07: Added a data point to the sensor values log.
+2016/03/29 02:48:42: Added a data point to the sensor values log.
+2016/03/29 02:51:17: Added a data point to the sensor values log.
+2016/03/29 02:53:52: Added a data point to the sensor values log.
+2016/03/29 02:56:23: Added a data point to the sensor values log.
+2016/03/29 02:58:54: Added a data point to the sensor values log.
+2016/03/29 03:01:27: Added a data point to the sensor values log.
+2016/03/29 03:04:02: Added a data point to the sensor values log.
+2016/03/29 03:06:37: Added a data point to the sensor values log.
+2016/03/29 03:09:08: Added a data point to the sensor values log.
+2016/03/29 03:11:39: Added a data point to the sensor values log.
+2016/03/29 03:14:11: Added a data point to the sensor values log.
+2016/03/29 03:16:46: Added a data point to the sensor values log.
+2016/03/29 03:19:21: Added a data point to the sensor values log.
+2016/03/29 03:21:51: Added a data point to the sensor values log.
+2016/03/29 03:24:23: Added a data point to the sensor values log.
+2016/03/29 03:26:56: Added a data point to the sensor values log.
+2016/03/29 03:29:31: Added a data point to the sensor values log.
+2016/03/29 03:32:06: Added a data point to the sensor values log.
+2016/03/29 03:34:36: Added a data point to the sensor values log.
+2016/03/29 03:37:08: Added a data point to the sensor values log.
+2016/03/29 03:39:40: Added a data point to the sensor values log.
+2016/03/29 03:42:10: Added a data point to the sensor values log.
+2016/03/29 03:44:41: Added a data point to the sensor values log.
+2016/03/29 03:47:14: Added a data point to the sensor values log.
+2016/03/29 03:49:49: Added a data point to the sensor values log.
+2016/03/29 03:52:24: Added a data point to the sensor values log.
+2016/03/29 03:54:54: Added a data point to the sensor values log.
+2016/03/29 03:57:26: Added a data point to the sensor values log.
+2016/03/29 03:59:59: Added a data point to the sensor values log.
+2016/03/29 04:02:34: Added a data point to the sensor values log.
+2016/03/29 04:05:09: Added a data point to the sensor values log.
+2016/03/29 04:07:44: Added a data point to the sensor values log.
+2016/03/29 04:10:19: Added a data point to the sensor values log.
+2016/03/29 04:12:54: Added a data point to the sensor values log.
+2016/03/29 04:15:24: Added a data point to the sensor values log.
+2016/03/29 04:17:57: Added a data point to the sensor values log.
+2016/03/29 04:20:29: Added a data point to the sensor values log.
+2016/03/29 04:22:59: Added a data point to the sensor values log.
+2016/03/29 04:25:30: Added a data point to the sensor values log.
+2016/03/29 04:28:03: Added a data point to the sensor values log.
+2016/03/29 04:30:38: Added a data point to the sensor values log.
+2016/03/29 04:33:13: Added a data point to the sensor values log.
+2016/03/29 04:35:48: Added a data point to the sensor values log.
+2016/03/29 04:38:19: Added a data point to the sensor values log.
+2016/03/29 04:40:50: Added a data point to the sensor values log.
+2016/03/29 04:43:23: Added a data point to the sensor values log.
+2016/03/29 04:45:58: Added a data point to the sensor values log.
+2016/03/29 04:48:28: Added a data point to the sensor values log.
+2016/03/29 04:51:00: Added a data point to the sensor values log.
+2016/03/29 04:53:32: Added a data point to the sensor values log.
+2016/03/29 04:56:02: Added a data point to the sensor values log.
+2016/03/29 04:58:33: Added a data point to the sensor values log.
+2016/03/29 05:01:06: Added a data point to the sensor values log.
+2016/03/29 05:03:41: Added a data point to the sensor values log.
+2016/03/29 05:06:16: Added a data point to the sensor values log.
+2016/03/29 05:08:46: Added a data point to the sensor values log.
+2016/03/29 05:11:18: Added a data point to the sensor values log.
+2016/03/29 05:13:51: Added a data point to the sensor values log.
+2016/03/29 05:16:26: Added a data point to the sensor values log.
+2016/03/29 05:19:00: Added a data point to the sensor values log.
+2016/03/29 05:21:35: Added a data point to the sensor values log.
+2016/03/29 05:24:05: Added a data point to the sensor values log.
+2016/03/29 05:26:37: Added a data point to the sensor values log.
+2016/03/29 05:29:10: Added a data point to the sensor values log.
+2016/03/29 05:31:45: Added a data point to the sensor values log.
+2016/03/29 05:34:15: Added a data point to the sensor values log.
+2016/03/29 05:36:47: Added a data point to the sensor values log.
+2016/03/29 05:39:20: Added a data point to the sensor values log.
+2016/03/29 05:41:55: Added a data point to the sensor values log.
+2016/03/29 05:44:30: Added a data point to the sensor values log.
+2016/03/29 05:47:00: Added a data point to the sensor values log.
+2016/03/29 05:49:31: Added a data point to the sensor values log.
+2016/03/29 05:52:04: Added a data point to the sensor values log.
+2016/03/29 05:54:39: Added a data point to the sensor values log.
+2016/03/29 05:57:14: Added a data point to the sensor values log.
+2016/03/29 05:59:44: Added a data point to the sensor values log.
+2016/03/29 06:02:16: Added a data point to the sensor values log.
+2016/03/29 06:04:49: Added a data point to the sensor values log.
+2016/03/29 06:07:24: Added a data point to the sensor values log.
+2016/03/29 06:09:59: Added a data point to the sensor values log.
+2016/03/29 06:12:34: Added a data point to the sensor values log.
+2016/03/29 06:15:04: Added a data point to the sensor values log.
+2016/03/29 06:17:36: Added a data point to the sensor values log.
+2016/03/29 06:20:08: Added a data point to the sensor values log.
+2016/03/29 06:22:43: Added a data point to the sensor values log.
+2016/03/29 06:25:13: Added a data point to the sensor values log.
+2016/03/29 06:27:45: Added a data point to the sensor values log.
+2016/03/29 06:30:18: Added a data point to the sensor values log.
+2016/03/29 06:32:53: Added a data point to the sensor values log.
+2016/03/29 06:35:28: Added a data point to the sensor values log.
+2016/03/29 06:37:58: Added a data point to the sensor values log.
+2016/03/29 06:40:30: Added a data point to the sensor values log.
+2016/03/29 06:43:02: Added a data point to the sensor values log.
+2016/03/29 06:45:32: Added a data point to the sensor values log.
+2016/03/29 06:48:04: Added a data point to the sensor values log.
+2016/03/29 06:50:36: Added a data point to the sensor values log.
+2016/03/29 06:53:11: Added a data point to the sensor values log.
+2016/03/29 06:55:46: Added a data point to the sensor values log.
+2016/03/29 06:58:16: Added a data point to the sensor values log.
+2016/03/29 07:00:48: Added a data point to the sensor values log.
+2016/03/29 07:03:21: Added a data point to the sensor values log.
+2016/03/29 07:05:51: Added a data point to the sensor values log.
+2016/03/29 07:08:22: Added a data point to the sensor values log.
+2016/03/29 07:10:55: Added a data point to the sensor values log.
+2016/03/29 07:13:30: Added a data point to the sensor values log.
+2016/03/29 07:16:01: Added a data point to the sensor values log.
+2016/03/29 07:18:32: Added a data point to the sensor values log.
+2016/03/29 07:21:05: Added a data point to the sensor values log.
+2016/03/29 07:23:39: Added a data point to the sensor values log.
+2016/03/29 07:26:09: Added a data point to the sensor values log.
+2016/03/29 07:28:41: Added a data point to the sensor values log.
+2016/03/29 07:31:13: Added a data point to the sensor values log.
+2016/03/29 07:33:43: Added a data point to the sensor values log.
+2016/03/29 07:36:15: Added a data point to the sensor values log.
+2016/03/29 07:38:48: Added a data point to the sensor values log.
+2016/03/29 07:41:18: Added a data point to the sensor values log.
+2016/03/29 07:43:49: Added a data point to the sensor values log.
+2016/03/29 07:46:22: Added a data point to the sensor values log.
+2016/03/29 07:48:57: Added a data point to the sensor values log.
+2016/03/29 07:51:27: Added a data point to the sensor values log.
+2016/03/29 07:54:00: Added a data point to the sensor values log.
+2016/03/29 07:56:31: Added a data point to the sensor values log.
+2016/03/29 07:59:01: Added a data point to the sensor values log.
+2016/03/29 08:01:32: Added a data point to the sensor values log.
+2016/03/29 08:04:05: Added a data point to the sensor values log.
+2016/03/29 08:06:40: Added a data point to the sensor values log.
+2016/03/29 08:09:15: Added a data point to the sensor values log.
+2016/03/29 08:11:45: Added a data point to the sensor values log.
+2016/03/29 08:14:17: Added a data point to the sensor values log.
+2016/03/29 08:16:49: Added a data point to the sensor values log.
+2016/03/29 08:19:19: Added a data point to the sensor values log.
+2016/03/29 08:21:52: Added a data point to the sensor values log.
+2016/03/29 08:24:24: Added a data point to the sensor values log.
+2016/03/29 08:26:59: Added a data point to the sensor values log.
+2016/03/29 08:29:29: Added a data point to the sensor values log.
+2016/03/29 08:32:01: Added a data point to the sensor values log.
+2016/03/29 08:34:33: Added a data point to the sensor values log.
+2016/03/29 08:37:07: Added a data point to the sensor values log.
+2016/03/29 08:39:37: Added a data point to the sensor values log.
+2016/03/29 08:42:10: Added a data point to the sensor values log.
+2016/03/29 08:44:42: Added a data point to the sensor values log.
+2016/03/29 08:47:17: Added a data point to the sensor values log.
+2016/03/29 08:49:47: Added a data point to the sensor values log.
+2016/03/29 08:52:19: Added a data point to the sensor values log.
+2016/03/29 08:54:52: Added a data point to the sensor values log.
+2016/03/29 08:57:22: Added a data point to the sensor values log.
+2016/03/29 08:59:53: Added a data point to the sensor values log.
+2016/03/29 09:02:26: Added a data point to the sensor values log.
+2016/03/29 09:05:01: Added a data point to the sensor values log.
+2016/03/29 09:07:36: Added a data point to the sensor values log.
+2016/03/29 09:10:11: Added a data point to the sensor values log.
+2016/03/29 09:12:46: Added a data point to the sensor values log.
+2016/03/29 09:15:17: Added a data point to the sensor values log.
+2016/03/29 09:17:48: Added a data point to the sensor values log.
+2016/03/29 09:20:21: Added a data point to the sensor values log.
+2016/03/29 09:22:51: Added a data point to the sensor values log.
+2016/03/29 09:25:22: Added a data point to the sensor values log.
+2016/03/29 09:27:55: Added a data point to the sensor values log.
+2016/03/29 09:30:30: Added a data point to the sensor values log.
+2016/03/29 09:33:00: Added a data point to the sensor values log.
+2016/03/29 09:35:32: Added a data point to the sensor values log.
+2016/03/29 09:38:04: Added a data point to the sensor values log.
+2016/03/29 09:40:35: Added a data point to the sensor values log.
+2016/03/29 09:43:07: Added a data point to the sensor values log.
+2016/03/29 09:45:39: Added a data point to the sensor values log.
+2016/03/29 09:48:09: Added a data point to the sensor values log.
+2016/03/29 09:50:41: Added a data point to the sensor values log.
+2016/03/29 09:53:13: Added a data point to the sensor values log.
+2016/03/29 09:55:47: Added a data point to the sensor values log.
+2016/03/29 09:58:17: Added a data point to the sensor values log.
+2016/03/29 10:00:49: Added a data point to the sensor values log.
+2016/03/29 10:03:21: Added a data point to the sensor values log.
+2016/03/29 10:05:51: Added a data point to the sensor values log.
+2016/03/29 10:08:23: Added a data point to the sensor values log.
+2016/03/29 10:10:56: Added a data point to the sensor values log.
+2016/03/29 10:13:26: Added a data point to the sensor values log.
+2016/03/29 10:15:57: Added a data point to the sensor values log.
+2016/03/29 10:18:30: Added a data point to the sensor values log.
+2016/03/29 10:21:00: Added a data point to the sensor values log.
+2016/03/29 10:23:32: Added a data point to the sensor values log.
+2016/03/29 10:26:04: Added a data point to the sensor values log.
+2016/03/29 10:28:34: Added a data point to the sensor values log.
+2016/03/29 10:31:06: Added a data point to the sensor values log.
+2016/03/29 10:33:38: Added a data point to the sensor values log.
+2016/03/29 10:36:08: Added a data point to the sensor values log.
+2016/03/29 10:38:40: Added a data point to the sensor values log.
+2016/03/29 10:41:13: Added a data point to the sensor values log.
+2016/03/29 10:43:43: Added a data point to the sensor values log.
+2016/03/29 10:46:14: Added a data point to the sensor values log.
+2016/03/29 10:48:47: Added a data point to the sensor values log.
+2016/03/29 10:51:17: Added a data point to the sensor values log.
+2016/03/29 10:53:49: Added a data point to the sensor values log.
+2016/03/29 10:56:21: Added a data point to the sensor values log.
+2016/03/29 10:58:51: Added a data point to the sensor values log.
+2016/03/29 11:01:21: Added a data point to the sensor values log.
+2016/03/29 11:03:54: Added a data point to the sensor values log.
+2016/03/29 11:06:29: Added a data point to the sensor values log.
+2016/03/29 11:08:59: Added a data point to the sensor values log.
+2016/03/29 11:11:31: Added a data point to the sensor values log.
+2016/03/29 11:14:04: Added a data point to the sensor values log.
+2016/03/29 11:16:34: Added a data point to the sensor values log.
+2016/03/29 11:19:05: Added a data point to the sensor values log.
+2016/03/29 11:21:38: Added a data point to the sensor values log.
+2016/03/29 11:24:08: Added a data point to the sensor values log.
+2016/03/29 11:26:39: Added a data point to the sensor values log.
+2016/03/29 11:29:12: Added a data point to the sensor values log.
+2016/03/29 11:31:42: Added a data point to the sensor values log.
+2016/03/29 11:34:14: Added a data point to the sensor values log.
+2016/03/29 11:36:46: Added a data point to the sensor values log.
+2016/03/29 11:39:17: Added a data point to the sensor values log.
+2016/03/29 11:41:48: Added a data point to the sensor values log.
+2016/03/29 11:44:21: Added a data point to the sensor values log.
+2016/03/29 11:46:51: Added a data point to the sensor values log.
+2016/03/29 11:49:21: Added a data point to the sensor values log.
+2016/03/29 11:51:54: Added a data point to the sensor values log.
+2016/03/29 11:54:29: Added a data point to the sensor values log.
+2016/03/29 11:56:59: Added a data point to the sensor values log.
+2016/03/29 11:59:31: Added a data point to the sensor values log.
+2016/03/29 12:02:03: Added a data point to the sensor values log.
+2016/03/29 12:04:34: Added a data point to the sensor values log.
+2016/03/29 23:36:32: Started yieldbuddy. Priority 15.
+2016/03/29 23:37:43: Started yieldbuddy. Priority 15.
+2016/03/29 23:47:11: Started yieldbuddy. Priority 15.
+2016/03/29 23:47:20: Started yieldbuddy. Priority 15.
+2016/03/29 23:47:43: Started yieldbuddy. Priority 15.
+2016/03/29 23:47:45: Started yieldbuddy. Priority 15.
+2016/03/29 23:47:46: Started yieldbuddy. Priority 15.
+2016/03/29 23:48:45: Started yieldbuddy. Priority 15.
+2016/03/29 23:57:00: Started yieldbuddy. Priority 15.
+2016/03/29 23:57:04: Error sending email: pH1 Low - please run connect() first
+2016/03/29 23:57:05: Error sending email: pH2 Low - please run connect() first
+2016/03/29 23:59:57: Started yieldbuddy. Priority 15.
+2016/03/30 00:00:01: Error sending email: pH1 Low - please run connect() first
+2016/03/30 00:00:02: Error sending email: pH2 Low - please run connect() first
+2016/03/30 00:06:18: Started yieldbuddy. Priority 15.
+2016/03/30 00:06:21: Error sending email: pH1 Low - please run connect() first
+2016/03/30 00:06:22: Error sending email: pH2 Low - please run connect() first
+2016/03/30 00:09:07: Started yieldbuddy. Priority 15.
+2016/03/30 00:09:11: Error sending email: pH1 Low - please run connect() first
+2016/03/30 00:09:12: Error sending email: pH2 Low - please run connect() first
+2016/03/30 00:17:24: Terminated PID: 20173 (for accessing the database)
+2016/03/30 00:17:24: Started yieldbuddy. Priority 15.
+2016/03/30 00:17:28: Error sending email: pH1 Low - please run connect() first
+2016/03/30 00:17:29: Error sending email: pH2 Low - please run connect() first
+2016/03/30 00:18:19: Started yieldbuddy. Priority 15.
+2016/03/30 00:18:22: Error sending email: pH1 Low - please run connect() first
+2016/03/30 00:18:23: Error sending email: pH2 Low - please run connect() first
+2016/03/30 00:21:35: Terminated PID: 20658 (for accessing the database)
+2016/03/30 00:21:35: Started yieldbuddy. Priority 15.
+2016/03/30 00:21:39: Error sending email: pH1 Low - please run connect() first
+2016/03/30 00:21:40: Error sending email: pH2 Low - please run connect() first
+2016/03/30 00:27:42: Terminated PID: 20774 (for accessing the database)
+2016/03/30 00:27:42: Started yieldbuddy. Priority 15.
+2016/03/30 00:27:46: Error sending email: pH1 Low - please run connect() first
+2016/03/30 00:27:47: Error sending email: pH2 Low - please run connect() first
+2016/03/30 00:28:09: Added a data point to the sensor values log.
+2016/03/30 00:28:09: Error sending email: pH1 Low - please run connect() first
+2016/03/30 00:28:09: Error sending email: pH2 Low - please run connect() first
+2016/03/30 00:28:28: Error sending email: pH1 Low - please run connect() first
+2016/03/30 00:28:29: Error sending email: pH2 Low - please run connect() first
+2016/03/30 00:28:49: Error sending email: pH1 Low - please run connect() first
+2016/03/30 00:28:50: Error sending email: pH2 Low - please run connect() first
+2016/03/30 00:29:10: Error sending email: pH1 Low - please run connect() first
+2016/03/30 00:29:11: Error sending email: pH2 Low - please run connect() first
+2016/03/30 00:29:31: Error sending email: pH1 Low - please run connect() first
+2016/03/30 00:29:32: Error sending email: pH2 Low - please run connect() first
+2016/03/30 00:29:52: Error sending email: pH1 Low - please run connect() first
+2016/03/30 00:29:53: Error sending email: pH2 Low - please run connect() first
+2016/03/30 00:30:13: Error sending email: pH1 Low - please run connect() first
+2016/03/30 00:30:14: Error sending email: pH2 Low - please run connect() first
+2016/03/30 00:30:24: Sent Command: setTank4Value,50,200,200,190,0
+2016/03/30 00:30:29: Error sending email: pH1 Low - please run connect() first
+2016/03/30 00:30:29: Error sending email: pH2 Low - please run connect() first
+2016/03/30 00:30:45: Added a data point to the sensor values log.
+2016/03/30 00:30:49: Error sending email: pH1 Low - please run connect() first
+2016/03/30 00:30:50: Error sending email: pH2 Low - please run connect() first
+2016/03/30 00:31:10: Error sending email: pH1 Low - please run connect() first
+2016/03/30 00:31:11: Error sending email: pH2 Low - please run connect() first
+2016/03/30 00:31:31: Error sending email: pH1 Low - please run connect() first
+2016/03/30 00:31:32: Error sending email: pH2 Low - please run connect() first
+2016/03/30 00:31:52: Error sending email: pH1 Low - please run connect() first
+2016/03/30 00:31:53: Error sending email: pH2 Low - please run connect() first
+2016/03/30 00:32:13: Error sending email: pH1 Low - please run connect() first
+2016/03/30 00:32:14: Error sending email: pH2 Low - please run connect() first
+2016/03/30 00:32:34: Error sending email: pH1 Low - please run connect() first
+2016/03/30 00:32:35: Error sending email: pH2 Low - please run connect() first
+2016/03/30 00:32:55: Error sending email: pH1 Low - please run connect() first
+2016/03/30 00:32:56: Error sending email: pH2 Low - please run connect() first
+2016/03/30 00:33:18: Added a data point to the sensor values log.
+2016/03/30 00:33:18: Error sending email: pH1 Low - please run connect() first
+2016/03/30 00:33:18: Error sending email: pH2 Low - please run connect() first
+2016/03/30 00:33:37: Error sending email: pH1 Low - please run connect() first
+2016/03/30 00:33:38: Error sending email: pH2 Low - please run connect() first
+2016/03/30 00:33:58: Error sending email: pH1 Low - please run connect() first
+2016/03/30 00:33:59: Error sending email: pH2 Low - please run connect() first
+2016/03/30 00:34:19: Error sending email: pH1 Low - please run connect() first
+2016/03/30 00:34:20: Error sending email: pH2 Low - please run connect() first
+2016/03/30 00:34:40: Error sending email: pH1 Low - please run connect() first
+2016/03/30 00:34:41: Error sending email: pH2 Low - please run connect() first
+2016/03/30 00:35:01: Error sending email: pH1 Low - please run connect() first
+2016/03/30 00:35:02: Error sending email: pH2 Low - please run connect() first
+2016/03/30 00:35:22: Error sending email: pH1 Low - please run connect() first
+2016/03/30 00:35:23: Error sending email: pH2 Low - please run connect() first
+2016/03/30 00:35:43: Error sending email: pH1 Low - please run connect() first
+2016/03/30 00:35:44: Error sending email: pH2 Low - please run connect() first
+2016/03/30 00:35:49: Added a data point to the sensor values log.
+2016/03/30 00:36:04: Error sending email: pH1 Low - please run connect() first
+2016/03/30 00:36:05: Error sending email: pH2 Low - please run connect() first
+2016/03/30 00:36:14: Sent Command: setdate,03,30,2016,00,36,13
+2016/03/30 00:36:18: Error sending email: pH1 Low - please run connect() first
+2016/03/30 00:36:19: Error sending email: pH2 Low - please run connect() first
+2016/03/30 00:36:39: Error sending email: pH1 Low - please run connect() first
+2016/03/30 00:36:40: Error sending email: pH2 Low - please run connect() first
+2016/03/30 00:37:00: Error sending email: pH1 Low - please run connect() first
+2016/03/30 00:37:01: Error sending email: pH2 Low - please run connect() first
+2016/03/30 00:37:21: Error sending email: pH1 Low - please run connect() first
+2016/03/30 00:37:22: Error sending email: pH2 Low - please run connect() first
+2016/03/30 00:38:19: Added a data point to the sensor values log.
+2016/03/30 00:38:42: Error sending email: pH1 Low - please run connect() first
+2016/03/30 00:38:43: Error sending email: pH2 Low - please run connect() first
+2016/03/30 00:39:03: Error sending email: pH1 Low - please run connect() first
+2016/03/30 00:39:04: Error sending email: pH2 Low - please run connect() first
+2016/03/30 00:39:24: Error sending email: pH1 Low - please run connect() first
+2016/03/30 00:39:25: Error sending email: pH2 Low - please run connect() first
+2016/03/30 00:39:45: Error sending email: pH1 Low - please run connect() first
+2016/03/30 00:39:46: Error sending email: pH2 Low - please run connect() first
+2016/03/30 00:40:06: Error sending email: pH1 Low - please run connect() first
+2016/03/30 00:40:07: Error sending email: pH2 Low - please run connect() first
+2016/03/30 00:40:27: Error sending email: pH1 Low - please run connect() first
+2016/03/30 00:40:28: Error sending email: pH2 Low - please run connect() first
+2016/03/30 00:40:49: Added a data point to the sensor values log.
+2016/03/30 00:40:49: Error sending email: pH1 Low - please run connect() first
+2016/03/30 00:40:49: Error sending email: pH2 Low - please run connect() first
+2016/03/30 00:41:08: Error sending email: pH1 Low - please run connect() first
+2016/03/30 00:41:09: Error sending email: pH2 Low - please run connect() first
+2016/03/30 00:41:29: Error sending email: pH1 Low - please run connect() first
+2016/03/30 00:41:30: Error sending email: pH2 Low - please run connect() first
+2016/03/30 00:41:50: Error sending email: pH1 Low - please run connect() first
+2016/03/30 00:41:51: Error sending email: pH2 Low - please run connect() first
+2016/03/30 00:42:11: Error sending email: pH1 Low - please run connect() first
+2016/03/30 00:42:12: Error sending email: pH2 Low - please run connect() first
+2016/03/30 00:42:27: Sent Command: Relay8 isAuto 0
+2016/03/30 00:42:31: Sent Command: Relay8 on
+2016/03/30 00:42:32: Error sending email: pH1 Low - please run connect() first
+2016/03/30 00:42:36: Error sending email: pH1 Low - please run connect() first
+2016/03/30 00:42:37: Error sending email: pH2 Low - please run connect() first
+2016/03/30 00:42:57: Error sending email: pH1 Low - please run connect() first
+2016/03/30 00:42:58: Error sending email: pH2 Low - please run connect() first
+2016/03/30 00:43:03: Sent Command: setdate,3,30,2016,12,42,53
+2016/03/30 12:42:57: Added a data point to the sensor values log.
+2016/03/30 12:42:57: Error sending email: pH1 Low - please run connect() first
+2016/03/30 12:42:57: Error sending email: pH2 Low - please run connect() first
+2016/03/30 12:45:28: Added a data point to the sensor values log.
+2016/03/30 12:52:43: Terminated PID: 20858 (for accessing the database)
+2016/03/30 12:52:43: Started yieldbuddy. Priority 15.
+2016/03/30 12:53:10: Added a data point to the sensor values log.
+2016/03/30 12:55:40: Added a data point to the sensor values log.
+2016/03/30 12:58:20: Added a data point to the sensor values log.
+2016/03/30 13:01:41: Started yieldbuddy. Priority 15.
+2016/03/30 13:02:07: Added a data point to the sensor values log.
+2016/03/30 13:03:06: Terminated PID: 21418 (for accessing the database)
+2016/03/30 13:03:06: Started yieldbuddy. Priority 15.
+2016/03/30 13:03:33: Added a data point to the sensor values log.
+2016/03/30 13:05:22: Sent Command: Relay8 off
+2016/03/30 13:05:26: Sent Command: Relay8 isAuto 1
+2016/03/30 13:06:07: Added a data point to the sensor values log.
+2016/03/30 13:06:51: Sent Command: setpH1,-5,14
+2016/03/30 13:06:55: Error sending email: pH1 Low - please run connect() first
+2016/03/30 13:06:56: Error sending email: pH2 Low - please run connect() first
+2016/03/30 13:06:59: Sent Command: setpH2,-5,20
+2016/03/30 13:07:03: Error sending email: pH1 Low - please run connect() first
+2016/03/30 13:07:04: Error sending email: pH2 Low - please run connect() first
+2016/03/30 13:08:45: Added a data point to the sensor values log.
+2016/03/30 13:11:17: Added a data point to the sensor values log.
+2016/03/30 13:13:49: Added a data point to the sensor values log.
+2016/03/30 13:16:28: Added a data point to the sensor values log.
+2016/03/30 13:18:59: Added a data point to the sensor values log.
+2016/03/30 13:21:29: Added a data point to the sensor values log.
+2016/03/30 13:24:10: Added a data point to the sensor values log.
+2016/03/30 13:26:41: Added a data point to the sensor values log.
+2016/03/30 13:29:11: Added a data point to the sensor values log.
+2016/03/30 13:31:51: Added a data point to the sensor values log.
+2016/03/30 13:34:22: Added a data point to the sensor values log.
+2016/03/30 13:36:53: Added a data point to the sensor values log.
+2016/03/30 13:39:33: Added a data point to the sensor values log.
+2016/03/30 13:42:04: Added a data point to the sensor values log.
+2016/03/30 13:44:34: Added a data point to the sensor values log.
+2016/03/30 13:47:14: Added a data point to the sensor values log.
+2016/03/30 13:49:45: Added a data point to the sensor values log.
+2016/03/30 13:52:16: Added a data point to the sensor values log.
+2016/03/30 13:54:56: Added a data point to the sensor values log.
+2016/03/30 13:57:26: Added a data point to the sensor values log.
+2016/03/30 13:59:58: Added a data point to the sensor values log.
+2016/03/30 14:02:38: Added a data point to the sensor values log.
+2016/03/30 14:05:08: Added a data point to the sensor values log.
+2016/03/30 14:07:39: Added a data point to the sensor values log.
+2016/03/30 14:10:19: Added a data point to the sensor values log.
+2016/03/30 14:12:50: Added a data point to the sensor values log.
+2016/03/30 14:15:21: Added a data point to the sensor values log.
+2016/03/30 14:18:00: Added a data point to the sensor values log.
+2016/03/30 14:20:32: Added a data point to the sensor values log.
+2016/03/30 14:23:02: Added a data point to the sensor values log.
+2016/03/30 14:25:42: Added a data point to the sensor values log.
+2016/03/30 14:28:13: Added a data point to the sensor values log.
+2016/03/30 14:30:43: Added a data point to the sensor values log.
+2016/03/30 14:33:24: Added a data point to the sensor values log.
+2016/03/30 14:35:54: Added a data point to the sensor values log.
+2016/03/30 14:38:25: Added a data point to the sensor values log.
+2016/03/30 14:41:05: Added a data point to the sensor values log.
+2016/03/30 14:43:36: Added a data point to the sensor values log.
+2016/03/30 14:46:07: Added a data point to the sensor values log.
+2016/03/30 14:48:46: Added a data point to the sensor values log.
+2016/03/30 14:51:17: Added a data point to the sensor values log.
+2016/03/30 14:53:49: Added a data point to the sensor values log.
+2016/03/30 14:56:29: Added a data point to the sensor values log.
+2016/03/30 14:58:59: Added a data point to the sensor values log.
+2016/03/30 15:01:30: Added a data point to the sensor values log.
+2016/03/30 15:04:10: Added a data point to the sensor values log.
+2016/03/30 03:11:33: Started yieldbuddy. Priority 15.
+2016/03/30 15:11:46: Added a data point to the sensor values log.
+2016/03/30 15:13:43: Set Raspberry Pi Date and Time.
+2016/03/30 15:14:17: Added a data point to the sensor values log.
+2016/03/30 15:16:57: Added a data point to the sensor values log.
+2016/03/30 15:19:28: Added a data point to the sensor values log.
+2016/03/30 03:21:33: Negative Delta - Deleting Last Record (Wrong Time?)
+2016/03/30 03:21:58: Sent Command: setdate,03,30,2016,03,21,57
+2016/03/30 03:24:04: Added a data point to the sensor values log.
+2016/03/30 03:24:41: Terminated PID: 2894 (for accessing the database)
+2016/03/30 03:24:41: Started yieldbuddy. Priority 15.
+2016/03/30 03:25:07: Added a data point to the sensor values log.
+2016/03/30 03:27:37: Added a data point to the sensor values log.
+2016/03/30 03:30:17: Added a data point to the sensor values log.
+2016/03/30 03:32:49: Added a data point to the sensor values log.
+2016/03/30 03:35:19: Added a data point to the sensor values log.
+2016/03/30 03:37:59: Added a data point to the sensor values log.
+2016/03/30 03:40:29: Added a data point to the sensor values log.
+2016/03/30 03:43:01: Added a data point to the sensor values log.
+2016/03/30 03:45:41: Added a data point to the sensor values log.
+2016/03/30 03:48:11: Added a data point to the sensor values log.
+2016/03/30 03:50:42: Added a data point to the sensor values log.
+2016/03/30 03:53:22: Added a data point to the sensor values log.
+2016/03/30 03:55:53: Added a data point to the sensor values log.
+2016/03/30 03:58:23: Added a data point to the sensor values log.
+2016/03/30 04:01:03: Added a data point to the sensor values log.
+2016/03/30 04:03:34: Added a data point to the sensor values log.
+2016/03/30 04:06:05: Added a data point to the sensor values log.
+2016/03/30 04:08:44: Added a data point to the sensor values log.
+2016/03/30 04:11:15: Added a data point to the sensor values log.
+2016/03/30 04:13:46: Added a data point to the sensor values log.
+2016/03/30 04:16:26: Added a data point to the sensor values log.
+2016/03/30 04:18:57: Added a data point to the sensor values log.
+2016/03/30 04:21:27: Added a data point to the sensor values log.
+2016/03/30 04:24:08: Added a data point to the sensor values log.
+2016/03/30 04:26:38: Added a data point to the sensor values log.
+2016/03/30 04:29:09: Added a data point to the sensor values log.
+2016/03/30 04:31:49: Added a data point to the sensor values log.
+2016/03/30 04:34:20: Added a data point to the sensor values log.
+2016/03/30 04:36:51: Added a data point to the sensor values log.
+2016/03/30 04:39:30: Added a data point to the sensor values log.
+2016/03/30 04:42:01: Added a data point to the sensor values log.
+2016/03/30 04:44:32: Added a data point to the sensor values log.
+2016/03/30 04:47:12: Added a data point to the sensor values log.
+2016/03/30 04:49:42: Added a data point to the sensor values log.
+2016/03/30 04:52:13: Added a data point to the sensor values log.
+2016/03/30 04:54:53: Added a data point to the sensor values log.
+2016/03/30 04:57:24: Added a data point to the sensor values log.
+2016/03/30 04:59:54: Added a data point to the sensor values log.
+2016/03/30 05:02:35: Added a data point to the sensor values log.
+2016/03/30 05:05:06: Added a data point to the sensor values log.
+2016/03/30 05:07:36: Added a data point to the sensor values log.
+2016/03/30 05:10:16: Added a data point to the sensor values log.
+2016/03/30 05:12:47: Added a data point to the sensor values log.
+2016/03/30 05:15:18: Added a data point to the sensor values log.
+2016/03/30 05:17:57: Added a data point to the sensor values log.
+2016/03/30 05:20:28: Added a data point to the sensor values log.
+2016/03/30 05:22:59: Added a data point to the sensor values log.
+2016/03/30 05:25:39: Added a data point to the sensor values log.
+2016/03/30 05:28:10: Added a data point to the sensor values log.
+2016/03/30 05:30:40: Added a data point to the sensor values log.
+2016/03/30 05:33:21: Added a data point to the sensor values log.
+2016/03/30 05:35:51: Added a data point to the sensor values log.
+2016/03/30 05:38:22: Added a data point to the sensor values log.
+2016/03/30 05:41:01: Added a data point to the sensor values log.
+2016/03/30 05:43:33: Added a data point to the sensor values log.
+2016/03/30 05:46:04: Added a data point to the sensor values log.
+2016/03/30 05:48:43: Added a data point to the sensor values log.
+2016/03/30 05:51:14: Added a data point to the sensor values log.
+2016/03/30 05:53:45: Added a data point to the sensor values log.
+2016/03/30 05:56:25: Added a data point to the sensor values log.
+2016/03/30 05:58:55: Added a data point to the sensor values log.
+2016/03/30 06:01:26: Added a data point to the sensor values log.
+2016/03/30 06:04:06: Added a data point to the sensor values log.
+2016/03/30 06:06:37: Added a data point to the sensor values log.
+2016/03/30 06:09:07: Added a data point to the sensor values log.
+2016/03/30 06:11:47: Added a data point to the sensor values log.
+2016/03/30 06:14:19: Added a data point to the sensor values log.
+2016/03/30 06:16:49: Added a data point to the sensor values log.
+2016/03/30 06:19:29: Added a data point to the sensor values log.
+2016/03/30 06:21:59: Added a data point to the sensor values log.
+2016/03/30 06:24:31: Added a data point to the sensor values log.
+2016/03/30 06:27:11: Added a data point to the sensor values log.
+2016/03/30 06:29:41: Added a data point to the sensor values log.
+2016/03/30 06:32:12: Added a data point to the sensor values log.
+2016/03/30 06:34:52: Added a data point to the sensor values log.
+2016/03/30 06:37:23: Added a data point to the sensor values log.
+2016/03/30 06:39:53: Added a data point to the sensor values log.
+2016/03/30 06:42:33: Added a data point to the sensor values log.
+2016/03/30 06:45:04: Added a data point to the sensor values log.
+2016/03/30 06:47:35: Added a data point to the sensor values log.
+2016/03/30 06:49:50: Error: need more than 8 values to unpack
+2016/03/30 10:00:57: Started yieldbuddy. Priority 15.
+2016/03/30 10:01:25: Added a data point to the sensor values log.
+2016/03/30 10:03:55: Added a data point to the sensor values log.
+2016/03/30 10:06:36: Added a data point to the sensor values log.
+2016/03/30 10:09:06: Added a data point to the sensor values log.
+2016/03/30 10:11:37: Added a data point to the sensor values log.
+2016/03/30 10:14:17: Added a data point to the sensor values log.
+2016/03/30 10:16:48: Added a data point to the sensor values log.
+2016/03/30 10:19:27: Added a data point to the sensor values log.
+2016/03/30 10:22:02: Added a data point to the sensor values log.
+2016/03/30 10:24:33: Added a data point to the sensor values log.
+2016/03/30 10:27:13: Added a data point to the sensor values log.
+2016/03/30 10:29:44: Added a data point to the sensor values log.
+2016/03/30 10:32:15: Added a data point to the sensor values log.
+2016/03/30 10:34:55: Added a data point to the sensor values log.
+2016/03/30 10:37:25: Added a data point to the sensor values log.
+2016/03/30 10:39:57: Added a data point to the sensor values log.
+2016/03/30 10:52:14: Terminated PID: 2766 (for accessing the database)
+2016/03/30 10:52:14: Started yieldbuddy. Priority 15.
+2016/03/30 10:52:24: Terminated PID: 2766 (for accessing the database)
+2016/03/30 10:52:24: Started yieldbuddy. Priority 15.
+2016/03/30 10:52:51: Added a data point to the sensor values log.
+2016/03/30 10:55:22: Added a data point to the sensor values log.
+2016/03/30 10:58:02: Added a data point to the sensor values log.
+2016/03/30 11:00:33: Added a data point to the sensor values log.
+2016/03/30 11:03:04: Added a data point to the sensor values log.
+2016/03/30 11:05:44: Added a data point to the sensor values log.
+2016/03/30 11:08:14: Added a data point to the sensor values log.
+2016/03/30 11:10:46: Added a data point to the sensor values log.
+2016/03/30 11:13:25: Added a data point to the sensor values log.
+2016/03/30 11:15:56: Added a data point to the sensor values log.
+2016/03/30 11:18:26: Added a data point to the sensor values log.
+2016/03/30 11:21:02: Sent Command: setTank3Value,50,200,200,190,0
+2016/03/30 11:21:07: Added a data point to the sensor values log.
+2016/03/30 11:21:49: Sent Command: setTank2Value,50,200,200,190,0
+2016/03/30 11:21:57: Sent Command: setTank1Value,50,200,200,190,0
+2016/03/30 11:23:43: Added a data point to the sensor values log.
+2016/03/30 11:26:16: Added a data point to the sensor values log.
+2016/03/30 11:28:47: Added a data point to the sensor values log.
+2016/03/30 11:31:27: Added a data point to the sensor values log.
+2016/03/30 11:33:58: Added a data point to the sensor values log.
+2016/03/30 11:36:28: Added a data point to the sensor values log.
+2016/03/30 11:36:59: Sent Command: Relay8 isAuto 0
+2016/03/30 11:37:03: Sent Command: Relay8 on
+2016/03/30 11:38:59: Added a data point to the sensor values log.
+2016/03/30 11:41:39: Added a data point to the sensor values log.
+2016/03/30 11:44:10: Added a data point to the sensor values log.
+2016/03/30 11:46:40: Added a data point to the sensor values log.
+2016/03/30 11:47:59: serialerr: 1 from serial loop
+2016/03/30 11:47:59: Error reading serial device.
+2016/03/30 11:47:59: attempting to restart serial
+2016/03/30 11:49:17: Added a data point to the sensor values log.
+2016/03/30 11:51:50: Added a data point to the sensor values log.
+2016/03/30 11:54:21: Added a data point to the sensor values log.
+2016/03/30 11:57:00: Added a data point to the sensor values log.
+2016/03/30 11:59:31: Added a data point to the sensor values log.
+2016/03/30 12:02:01: Added a data point to the sensor values log.
+2016/03/30 12:04:41: Added a data point to the sensor values log.
+2016/03/30 12:07:12: Added a data point to the sensor values log.
+2016/03/30 12:09:42: Added a data point to the sensor values log.
+2016/03/30 12:12:22: Added a data point to the sensor values log.
+2016/03/30 12:14:52: Added a data point to the sensor values log.
+2016/03/30 12:17:23: Added a data point to the sensor values log.
+2016/03/30 12:20:03: Added a data point to the sensor values log.
+2016/03/30 12:22:33: Added a data point to the sensor values log.
+2016/03/30 12:25:04: Added a data point to the sensor values log.
+2016/03/30 12:27:43: Added a data point to the sensor values log.
+2016/03/30 12:30:15: Added a data point to the sensor values log.
+2016/03/30 12:32:45: Added a data point to the sensor values log.
+2016/03/30 12:35:25: Added a data point to the sensor values log.
+2016/03/30 12:37:55: Added a data point to the sensor values log.
+2016/03/30 12:40:26: Added a data point to the sensor values log.
+2016/03/30 12:43:05: Added a data point to the sensor values log.
+2016/03/30 12:45:36: Added a data point to the sensor values log.
+2016/03/30 12:48:06: Added a data point to the sensor values log.
+2016/03/30 12:50:46: Added a data point to the sensor values log.
+2016/03/30 12:53:17: Added a data point to the sensor values log.
+2016/03/30 12:55:47: Added a data point to the sensor values log.
+2016/03/30 12:58:27: Added a data point to the sensor values log.
+2016/03/30 13:00:57: Added a data point to the sensor values log.
+2016/03/30 13:03:28: Added a data point to the sensor values log.
+2016/03/30 13:06:08: Added a data point to the sensor values log.
+2016/03/30 13:08:38: Added a data point to the sensor values log.
+2016/03/30 13:11:09: Added a data point to the sensor values log.
+2016/03/30 13:13:48: Added a data point to the sensor values log.
+2016/03/30 13:16:19: Added a data point to the sensor values log.
+2016/03/30 13:18:49: Added a data point to the sensor values log.
+2016/03/30 13:21:30: Added a data point to the sensor values log.
+2016/03/30 13:24:00: Added a data point to the sensor values log.
+2016/03/30 13:26:31: Added a data point to the sensor values log.
+2016/03/30 13:29:10: Added a data point to the sensor values log.
+2016/03/30 13:31:41: Added a data point to the sensor values log.
+2016/03/30 13:34:11: Added a data point to the sensor values log.
+2016/03/30 13:36:51: Added a data point to the sensor values log.
+2016/03/30 13:39:22: Added a data point to the sensor values log.
+2016/03/30 13:41:52: Added a data point to the sensor values log.
+2016/03/30 13:44:32: Added a data point to the sensor values log.
+2016/03/30 13:47:02: Added a data point to the sensor values log.
+2016/03/30 13:49:33: Added a data point to the sensor values log.
+2016/03/30 13:52:12: Added a data point to the sensor values log.
+2016/03/30 13:54:43: Added a data point to the sensor values log.
+2016/03/30 13:57:13: Added a data point to the sensor values log.
+2016/03/30 13:59:53: Added a data point to the sensor values log.
+2016/03/30 14:02:24: Added a data point to the sensor values log.
+2016/03/30 14:04:54: Added a data point to the sensor values log.
+2016/03/30 14:07:34: Added a data point to the sensor values log.
+2016/03/30 14:10:04: Added a data point to the sensor values log.
+2016/03/30 14:12:35: Added a data point to the sensor values log.
+2016/03/30 14:15:15: Added a data point to the sensor values log.
+2016/03/30 14:17:45: Added a data point to the sensor values log.
+2016/03/30 14:20:16: Added a data point to the sensor values log.
+2016/03/30 14:22:55: Added a data point to the sensor values log.
+2016/03/30 14:25:27: Added a data point to the sensor values log.
+2016/03/30 14:27:57: Added a data point to the sensor values log.
+2016/03/30 14:30:37: Added a data point to the sensor values log.
+2016/03/30 14:33:07: Added a data point to the sensor values log.
+2016/03/30 14:35:38: Added a data point to the sensor values log.
+2016/03/30 14:38:17: Added a data point to the sensor values log.
+2016/03/30 14:40:48: Added a data point to the sensor values log.
+2016/03/30 14:43:18: Added a data point to the sensor values log.
+2016/03/30 14:45:58: Added a data point to the sensor values log.
+2016/03/30 14:48:29: Added a data point to the sensor values log.
+2016/03/30 14:50:59: Added a data point to the sensor values log.
+2016/03/30 14:53:39: Added a data point to the sensor values log.
+2016/03/30 14:56:09: Added a data point to the sensor values log.
+2016/03/30 14:58:40: Added a data point to the sensor values log.
+2016/03/30 15:01:19: Added a data point to the sensor values log.
+2016/03/30 15:03:50: Added a data point to the sensor values log.
+2016/03/30 15:06:20: Added a data point to the sensor values log.
+2016/03/30 15:09:00: Added a data point to the sensor values log.
+2016/03/30 15:11:31: Added a data point to the sensor values log.
+2016/03/30 15:14:01: Added a data point to the sensor values log.
+2016/03/30 15:16:41: Added a data point to the sensor values log.
+2016/03/30 15:19:11: Added a data point to the sensor values log.
+2016/03/30 15:21:42: Added a data point to the sensor values log.
+2016/03/30 15:24:21: Added a data point to the sensor values log.
+2016/03/30 15:26:52: Added a data point to the sensor values log.
+2016/03/30 15:29:22: Added a data point to the sensor values log.
+2016/03/30 15:32:03: Added a data point to the sensor values log.
+2016/03/30 15:34:33: Added a data point to the sensor values log.
+2016/03/30 15:37:04: Added a data point to the sensor values log.
+2016/03/30 15:39:44: Added a data point to the sensor values log.
+2016/03/30 15:42:14: Added a data point to the sensor values log.
+2016/03/30 15:44:45: Added a data point to the sensor values log.
+2016/03/30 15:47:24: Added a data point to the sensor values log.
+2016/03/30 15:49:55: Added a data point to the sensor values log.
+2016/03/30 15:52:25: Added a data point to the sensor values log.
+2016/03/30 15:55:05: Added a data point to the sensor values log.
+2016/03/30 15:57:35: Added a data point to the sensor values log.
+2016/03/30 16:00:06: Added a data point to the sensor values log.
+2016/03/30 16:02:46: Added a data point to the sensor values log.
+2016/03/30 16:05:16: Added a data point to the sensor values log.
+2016/03/30 16:07:47: Added a data point to the sensor values log.
+2016/03/30 16:10:26: Added a data point to the sensor values log.
+2016/03/30 16:12:57: Added a data point to the sensor values log.
+2016/03/30 16:15:27: Added a data point to the sensor values log.
+2016/03/30 16:18:07: Added a data point to the sensor values log.
+2016/03/30 16:20:38: Added a data point to the sensor values log.
+2016/03/30 16:23:08: Added a data point to the sensor values log.
+2016/03/30 16:25:48: Added a data point to the sensor values log.
+2016/03/30 16:28:18: Added a data point to the sensor values log.
+2016/03/30 16:30:49: Added a data point to the sensor values log.
+2016/03/30 16:33:28: Added a data point to the sensor values log.
+2016/03/30 16:36:00: Added a data point to the sensor values log.
+2016/03/30 16:38:30: Added a data point to the sensor values log.
+2016/03/30 16:41:10: Added a data point to the sensor values log.
+2016/03/30 16:43:40: Added a data point to the sensor values log.
+2016/03/30 16:46:11: Added a data point to the sensor values log.
+2016/03/30 16:48:51: Added a data point to the sensor values log.
+2016/03/30 16:51:21: Added a data point to the sensor values log.
+2016/03/30 16:53:52: Added a data point to the sensor values log.
+2016/03/30 16:56:31: Added a data point to the sensor values log.
+2016/03/30 16:59:02: Added a data point to the sensor values log.
+2016/03/30 17:01:32: Added a data point to the sensor values log.
+2016/03/30 17:04:12: Added a data point to the sensor values log.
+2016/03/30 17:06:42: Added a data point to the sensor values log.
+2016/03/30 17:09:13: Added a data point to the sensor values log.
+2016/03/30 17:11:53: Added a data point to the sensor values log.
+2016/03/30 17:14:23: Added a data point to the sensor values log.
+2016/03/30 17:16:54: Added a data point to the sensor values log.
+2016/03/30 17:19:33: Added a data point to the sensor values log.
+2016/03/30 17:22:04: Added a data point to the sensor values log.
+2016/03/30 17:24:34: Added a data point to the sensor values log.
+2016/03/30 17:27:14: Added a data point to the sensor values log.
+2016/03/30 17:29:44: Added a data point to the sensor values log.
+2016/03/30 17:32:15: Added a data point to the sensor values log.
+2016/03/30 17:34:55: Added a data point to the sensor values log.
+2016/03/30 17:37:25: Added a data point to the sensor values log.
+2016/03/30 17:39:56: Added a data point to the sensor values log.
+2016/03/30 17:42:36: Added a data point to the sensor values log.
+2016/03/30 17:45:07: Added a data point to the sensor values log.
+2016/03/30 17:47:37: Added a data point to the sensor values log.
+2016/03/30 17:50:17: Added a data point to the sensor values log.
+2016/03/30 17:52:47: Added a data point to the sensor values log.
+2016/03/30 17:55:18: Added a data point to the sensor values log.
+2016/03/30 17:57:58: Added a data point to the sensor values log.
+2016/03/30 18:00:28: Added a data point to the sensor values log.
+2016/03/30 18:02:59: Added a data point to the sensor values log.
+2016/03/30 18:05:38: Added a data point to the sensor values log.
+2016/03/30 18:08:09: Added a data point to the sensor values log.
+2016/03/30 18:10:39: Added a data point to the sensor values log.
+2016/03/30 18:13:19: Added a data point to the sensor values log.
+2016/03/30 18:15:50: Added a data point to the sensor values log.
+2016/03/30 18:18:20: Added a data point to the sensor values log.
+2016/03/30 18:21:00: Added a data point to the sensor values log.
+2016/03/30 18:23:30: Added a data point to the sensor values log.
+2016/03/30 18:26:01: Added a data point to the sensor values log.
+2016/03/30 18:28:40: Added a data point to the sensor values log.
+2016/03/30 18:31:11: Added a data point to the sensor values log.
+2016/03/30 18:33:41: Added a data point to the sensor values log.
+2016/03/30 18:36:21: Added a data point to the sensor values log.
+2016/03/30 18:38:51: Added a data point to the sensor values log.
+2016/03/30 18:41:22: Added a data point to the sensor values log.
+2016/03/30 18:44:02: Added a data point to the sensor values log.
+2016/03/30 18:46:32: Added a data point to the sensor values log.
+2016/03/30 18:49:03: Added a data point to the sensor values log.
+2016/03/30 18:51:43: Added a data point to the sensor values log.
+2016/03/30 18:54:14: Added a data point to the sensor values log.
+2016/03/30 18:56:44: Added a data point to the sensor values log.
+2016/03/30 18:59:24: Added a data point to the sensor values log.
+2016/03/30 19:01:54: Added a data point to the sensor values log.
+2016/03/30 20:07:40: Terminated PID: 2766 (for accessing the database)
+2016/03/30 20:07:40: Terminated PID: 3069 (for accessing the database)
+2016/03/30 20:07:40: Started yieldbuddy. Priority 15.
+2016/03/30 20:08:11: Added a data point to the sensor values log.
+2016/03/30 20:10:51: Added a data point to the sensor values log.
+2016/03/30 20:11:27: Terminated PID: 2766 (for accessing the database)
+2016/03/30 20:11:27: Terminated PID: 3069 (for accessing the database)
+2016/03/30 20:11:27: Terminated PID: 10031 (for accessing the database)
+2016/03/30 20:11:27: Started yieldbuddy. Priority 15.
+2016/03/30 20:13:26: Started yieldbuddy. Priority 15.
+2016/03/30 20:13:53: Added a data point to the sensor values log.
+2016/03/30 20:15:20: Terminated PID: 10276 (for accessing the database)
+2016/03/30 20:15:20: Started yieldbuddy. Priority 15.
+2016/03/30 20:15:27: Terminated PID: 10276 (for accessing the database)
+2016/03/30 20:15:27: Started yieldbuddy. Priority 15.
+2016/03/30 20:15:53: Added a data point to the sensor values log.
+2016/03/30 20:18:24: Added a data point to the sensor values log.
+2016/03/30 20:19:20: Terminated PID: 10276 (for accessing the database)
+2016/03/30 20:19:20: Terminated PID: 10320 (for accessing the database)
+2016/03/30 20:19:20: Started yieldbuddy. Priority 15.
+2016/03/30 20:19:46: Added a data point to the sensor values log.
+2016/03/30 20:20:57: Started yieldbuddy. Priority 15.
+2016/03/30 20:21:25: Added a data point to the sensor values log.
+2016/03/30 20:22:36: Terminated PID: 10465 (for accessing the database)
+2016/03/30 20:22:36: Started yieldbuddy. Priority 15.
+2016/03/30 20:23:03: Added a data point to the sensor values log.
+2016/03/30 20:24:30: Terminated PID: 10465 (for accessing the database)
+2016/03/30 20:24:30: Terminated PID: 10510 (for accessing the database)
+2016/03/30 20:24:30: Started yieldbuddy. Priority 15.
+2016/03/30 20:24:57: Added a data point to the sensor values log.
+2016/03/30 20:25:11: Terminated PID: 10465 (for accessing the database)
+2016/03/30 20:25:11: Terminated PID: 10510 (for accessing the database)
+2016/03/30 20:25:11: Terminated PID: 10562 (for accessing the database)
+2016/03/30 20:25:11: Started yieldbuddy. Priority 15.
+2016/03/30 20:25:37: Added a data point to the sensor values log.
+2016/03/30 20:26:29: Terminated PID: 10465 (for accessing the database)
+2016/03/30 20:26:29: Terminated PID: 10510 (for accessing the database)
+2016/03/30 20:26:29: Terminated PID: 10562 (for accessing the database)
+2016/03/30 20:26:29: Terminated PID: 10600 (for accessing the database)
+2016/03/30 20:26:29: Started yieldbuddy. Priority 15.
+2016/03/30 20:26:57: Added a data point to the sensor values log.
+2016/03/30 20:27:23: Terminated PID: 10465 (for accessing the database)
+2016/03/30 20:27:23: Terminated PID: 10510 (for accessing the database)
+2016/03/30 20:27:23: Terminated PID: 10562 (for accessing the database)
+2016/03/30 20:27:23: Terminated PID: 10600 (for accessing the database)
+2016/03/30 20:27:23: Terminated PID: 10648 (for accessing the database)
+2016/03/30 20:27:23: Started yieldbuddy. Priority 15.
+2016/03/30 20:27:50: Added a data point to the sensor values log.
+2016/03/30 20:27:57: Terminated PID: 10465 (for accessing the database)
+2016/03/30 20:27:57: Terminated PID: 10510 (for accessing the database)
+2016/03/30 20:27:57: Terminated PID: 10562 (for accessing the database)
+2016/03/30 20:27:57: Terminated PID: 10600 (for accessing the database)
+2016/03/30 20:27:57: Terminated PID: 10648 (for accessing the database)
+2016/03/30 20:27:57: Terminated PID: 10695 (for accessing the database)
+2016/03/30 20:27:57: Started yieldbuddy. Priority 15.
+2016/03/30 20:28:24: Added a data point to the sensor values log.
+2016/03/30 20:30:23: Terminated PID: 10465 (for accessing the database)
+2016/03/30 20:30:23: Terminated PID: 10510 (for accessing the database)
+2016/03/30 20:30:23: Terminated PID: 10562 (for accessing the database)
+2016/03/30 20:30:23: Terminated PID: 10600 (for accessing the database)
+2016/03/30 20:30:23: Terminated PID: 10648 (for accessing the database)
+2016/03/30 20:30:23: Terminated PID: 10695 (for accessing the database)
+2016/03/30 20:30:23: Terminated PID: 10741 (for accessing the database)
+2016/03/30 20:30:23: Started yieldbuddy. Priority 15.
+2016/03/30 20:30:54: Terminated PID: 10465 (for accessing the database)
+2016/03/30 20:30:54: Terminated PID: 10510 (for accessing the database)
+2016/03/30 20:30:54: Terminated PID: 10562 (for accessing the database)
+2016/03/30 20:30:54: Terminated PID: 10600 (for accessing the database)
+2016/03/30 20:30:54: Terminated PID: 10648 (for accessing the database)
+2016/03/30 20:30:54: Terminated PID: 10695 (for accessing the database)
+2016/03/30 20:30:54: Terminated PID: 10741 (for accessing the database)
+2016/03/30 20:30:54: Terminated PID: 10815 (for accessing the database)
+2016/03/30 20:30:54: Started yieldbuddy. Priority 15.
+2016/03/30 20:31:14: Terminated PID: 10465 (for accessing the database)
+2016/03/30 20:31:14: Terminated PID: 10510 (for accessing the database)
+2016/03/30 20:31:14: Terminated PID: 10562 (for accessing the database)
+2016/03/30 20:31:14: Terminated PID: 10600 (for accessing the database)
+2016/03/30 20:31:14: Terminated PID: 10648 (for accessing the database)
+2016/03/30 20:31:14: Terminated PID: 10695 (for accessing the database)
+2016/03/30 20:31:14: Terminated PID: 10741 (for accessing the database)
+2016/03/30 20:31:14: Terminated PID: 10815 (for accessing the database)
+2016/03/30 20:31:14: Terminated PID: 10866 (for accessing the database)
+2016/03/30 20:31:14: Started yieldbuddy. Priority 15.
+2016/03/30 20:31:41: Added a data point to the sensor values log.
+2016/03/30 20:31:53: Terminated PID: 10465 (for accessing the database)
+2016/03/30 20:31:53: Terminated PID: 10510 (for accessing the database)
+2016/03/30 20:31:53: Terminated PID: 10562 (for accessing the database)
+2016/03/30 20:31:53: Terminated PID: 10600 (for accessing the database)
+2016/03/30 20:31:53: Terminated PID: 10648 (for accessing the database)
+2016/03/30 20:31:53: Terminated PID: 10695 (for accessing the database)
+2016/03/30 20:31:53: Terminated PID: 10741 (for accessing the database)
+2016/03/30 20:31:53: Terminated PID: 10815 (for accessing the database)
+2016/03/30 20:31:53: Terminated PID: 10866 (for accessing the database)
+2016/03/30 20:31:53: Terminated PID: 10911 (for accessing the database)
+2016/03/30 20:31:53: Started yieldbuddy. Priority 15.
+2016/03/30 20:32:19: Added a data point to the sensor values log.
+2016/03/30 20:33:18: Started yieldbuddy. Priority 15.
+2016/03/30 20:33:44: Added a data point to the sensor values log.
+2016/03/30 20:34:27: Terminated PID: 11048 (for accessing the database)
+2016/03/30 20:34:27: Started yieldbuddy. Priority 15.
+2016/03/30 20:34:53: Added a data point to the sensor values log.
+2016/03/30 20:35:41: Terminated PID: 11048 (for accessing the database)
+2016/03/30 20:35:41: Terminated PID: 11087 (for accessing the database)
+2016/03/30 20:35:41: Started yieldbuddy. Priority 15.
+2016/03/30 20:36:08: Added a data point to the sensor values log.
+2016/03/30 20:38:38: Added a data point to the sensor values log.
+2016/03/30 20:41:18: Added a data point to the sensor values log.
+2016/03/30 20:43:48: Added a data point to the sensor values log.
+2016/03/30 20:46:19: Added a data point to the sensor values log.
+2016/03/30 20:46:53: Terminated PID: 11048 (for accessing the database)
+2016/03/30 20:46:53: Terminated PID: 11087 (for accessing the database)
+2016/03/30 20:46:53: Terminated PID: 11130 (for accessing the database)
+2016/03/30 20:46:53: Started yieldbuddy. Priority 15.
+2016/03/30 20:47:20: Added a data point to the sensor values log.
+2016/03/30 20:49:51: Added a data point to the sensor values log.
+2016/03/30 20:52:30: Added a data point to the sensor values log.
+2016/03/30 20:55:01: Added a data point to the sensor values log.
+2016/03/30 20:57:31: Added a data point to the sensor values log.
+2016/03/30 20:59:47: Terminated PID: 11048 (for accessing the database)
+2016/03/30 20:59:47: Terminated PID: 11087 (for accessing the database)
+2016/03/30 20:59:47: Terminated PID: 11130 (for accessing the database)
+2016/03/30 20:59:47: Terminated PID: 11344 (for accessing the database)
+2016/03/30 20:59:47: Started yieldbuddy. Priority 15.
+2016/03/30 21:00:14: Added a data point to the sensor values log.
+2016/03/30 21:02:44: Added a data point to the sensor values log.
+2016/03/30 21:05:13: Terminated PID: 11048 (for accessing the database)
+2016/03/30 21:05:13: Terminated PID: 11087 (for accessing the database)
+2016/03/30 21:05:13: Terminated PID: 11130 (for accessing the database)
+2016/03/30 21:05:13: Terminated PID: 11344 (for accessing the database)
+2016/03/30 21:05:13: Terminated PID: 11572 (for accessing the database)
+2016/03/30 21:05:13: Started yieldbuddy. Priority 15.
+2016/03/30 21:05:39: Added a data point to the sensor values log.
+2016/03/30 21:08:10: Added a data point to the sensor values log.
+2016/03/30 21:10:50: Added a data point to the sensor values log.
+2016/03/30 21:13:20: Added a data point to the sensor values log.
+2016/03/30 21:15:51: Added a data point to the sensor values log.
+2016/03/30 21:18:30: Added a data point to the sensor values log.
+2016/03/30 21:21:01: Added a data point to the sensor values log.
+2016/03/30 21:23:31: Added a data point to the sensor values log.
+2016/03/30 21:26:11: Added a data point to the sensor values log.
+2016/03/30 21:28:42: Added a data point to the sensor values log.
+2016/03/30 21:31:12: Added a data point to the sensor values log.
+2016/03/30 21:33:53: Added a data point to the sensor values log.
+2016/03/30 21:36:23: Added a data point to the sensor values log.
+2016/03/30 21:38:54: Added a data point to the sensor values log.
+2016/03/30 21:41:34: Added a data point to the sensor values log.
+2016/03/30 21:44:04: Added a data point to the sensor values log.
+2016/03/30 21:46:35: Added a data point to the sensor values log.
+2016/03/30 21:49:14: Added a data point to the sensor values log.
+2016/03/30 21:51:45: Added a data point to the sensor values log.
+2016/03/30 21:54:15: Added a data point to the sensor values log.
+2016/03/30 21:56:55: Added a data point to the sensor values log.
+2016/03/30 21:59:25: Added a data point to the sensor values log.
+2016/03/30 22:01:56: Added a data point to the sensor values log.
+2016/03/30 22:04:35: Added a data point to the sensor values log.
+2016/03/30 22:07:06: Added a data point to the sensor values log.
+2016/03/30 22:09:36: Added a data point to the sensor values log.
+2016/03/30 22:12:16: Added a data point to the sensor values log.
+2016/03/30 22:14:46: Added a data point to the sensor values log.
+2016/03/30 22:17:17: Added a data point to the sensor values log.
+2016/03/30 22:19:57: Added a data point to the sensor values log.
+2016/03/30 22:22:27: Added a data point to the sensor values log.
+2016/03/30 22:24:58: Added a data point to the sensor values log.
+2016/03/30 22:27:37: Added a data point to the sensor values log.
+2016/03/30 22:30:08: Added a data point to the sensor values log.
+2016/03/30 22:31:14: Error: need more than 16 values to unpack
+2016/03/30 22:31:58: Error sending email: Water High - please run connect() first
+2016/03/30 22:32:19: Error sending email: Water High - please run connect() first
+2016/03/30 22:32:40: Error sending email: Water High - please run connect() first
+2016/03/30 22:32:47: Added a data point to the sensor values log.
+2016/03/30 22:32:59: Terminated PID: 11048 (for accessing the database)
+2016/03/30 22:32:59: Terminated PID: 11087 (for accessing the database)
+2016/03/30 22:32:59: Terminated PID: 11130 (for accessing the database)
+2016/03/30 22:32:59: Terminated PID: 11344 (for accessing the database)
+2016/03/30 22:32:59: Terminated PID: 11572 (for accessing the database)
+2016/03/30 22:32:59: Terminated PID: 11686 (for accessing the database)
+2016/03/30 22:33:00: Started yieldbuddy. Priority 15.
+2016/03/30 22:33:12: Error sending email: Water High - please run connect() first
+2016/03/30 22:33:27: Added a data point to the sensor values log.
+2016/03/30 22:33:34: Error sending email: Water High - please run connect() first
+2016/03/30 22:33:55: Error sending email: Water High - please run connect() first
+2016/03/30 22:34:16: Error sending email: Water High - please run connect() first
+2016/03/30 22:34:36: Error sending email: Water High - please run connect() first
+2016/03/30 22:34:57: Error sending email: Water High - please run connect() first
+2016/03/30 22:35:18: Error sending email: Water High - please run connect() first
+2016/03/30 22:35:39: Error sending email: Water High - please run connect() first
+2016/03/30 22:35:58: Added a data point to the sensor values log.
+2016/03/30 22:36:01: Error sending email: Water High - please run connect() first
+2016/03/30 22:36:22: Error sending email: Water High - please run connect() first
+2016/03/30 22:36:43: Error sending email: Water High - please run connect() first
+2016/03/30 22:37:02: Error sending email: Water High - please run connect() first
+2016/03/30 22:37:23: Error sending email: Water High - please run connect() first
+2016/03/30 22:37:44: Error sending email: Water High - please run connect() first
+2016/03/30 22:38:04: Error sending email: Water High - please run connect() first
+2016/03/30 22:38:19: Sent Command: setWater,50,1000
+2016/03/30 22:38:33: Error sending email: Water High - please run connect() first
+2016/03/30 22:38:40: Added a data point to the sensor values log.
+2016/03/30 22:41:14: Added a data point to the sensor values log.
+2016/03/30 22:43:44: Added a data point to the sensor values log.
+2016/03/30 22:46:03: Sent Command: Relay8 isAuto 1
+2016/03/30 22:46:14: Added a data point to the sensor values log.
+2016/03/30 22:46:36: Sent Command: setwateringschedule,23,0,0,5,2,20
+2016/03/30 22:48:45: Added a data point to the sensor values log.
+2016/03/30 22:51:15: Added a data point to the sensor values log.

@@ -161,6 +161,7 @@ a:active {
 		if (session_status() == PHP_SESSION_NONE) {
 		    session_start();
 		}
+		
 		if ($_SESSION['pH1_Low_Alarm'] > 0) {
 			echo "<tr>";
 				echo "<td>";
@@ -220,10 +221,8 @@ a:active {
 				echo "<td><input type=\"submit\" name=\"alarmname_ack_id\" id=\"alarmname_ack_id\" value=\"Delete\" onclick=\"alarm_sql('pH1','High_Alarm',0)\" /></td>";
 			echo "</tr>";
 		}
-		
-		
-		
-				if ($_SESSION['pH2_Low_Alarm'] > 0) {
+				
+		if ($_SESSION['pH2_Low_Alarm'] > 0) {
 			echo "<tr>";
 				echo "<td>";
 				echo $_SESSION['pH2_Low_Time'];
@@ -282,10 +281,8 @@ a:active {
 				echo "<td><input type=\"submit\" name=\"alarmname_ack_id\" id=\"alarmname_ack_id\" value=\"Delete\" onclick=\"alarm_sql('pH2','High_Alarm',0)\" /></td>";
 			echo "</tr>";
 		}
-		
-		
-		
-				if ($_SESSION['Temp_Low_Alarm'] > 0) {
+				
+		if ($_SESSION['Temp_Low_Alarm'] > 0) {
 			echo "<tr>";
 				echo "<td>";
 				echo $_SESSION['Temp_Low_Time'];
@@ -344,10 +341,8 @@ a:active {
 				echo "<td><input type=\"submit\" name=\"alarmname_ack_id\" id=\"alarmname_ack_id\" value=\"Delete\" onclick=\"alarm_sql('Temp','High_Alarm',0)\" /></td>";
 			echo "</tr>";
 		}
-		
-		
-		
-				if ($_SESSION['RH_Low_Alarm'] > 0) {
+				
+		if ($_SESSION['RH_Low_Alarm'] > 0) {
 			echo "<tr>";
 				echo "<td>";
 				echo $_SESSION['RH_Low_Time'];
@@ -406,10 +401,8 @@ a:active {
 				echo "<td><input type=\"submit\" name=\"alarmname_ack_id\" id=\"alarmname_ack_id\" value=\"Delete\" onclick=\"alarm_sql('RH','High_Alarm',0)\" /></td>";
 			echo "</tr>";
 		}
-		
-		
-		
-				if ($_SESSION['TDS1_Low_Alarm'] > 0) {
+			
+		if ($_SESSION['TDS1_Low_Alarm'] > 0) {
 			echo "<tr>";
 				echo "<td>";
 				echo $_SESSION['TDS1_Low_Time'];
@@ -468,10 +461,8 @@ a:active {
 				echo "<td><input type=\"submit\" name=\"alarmname_ack_id\" id=\"alarmname_ack_id\" value=\"Delete\" onclick=\"alarm_sql('TDS1','High_Alarm',0)\" /></td>";
 			echo "</tr>";
 		}
-		
-		
-		
-				if ($_SESSION['TDS2_Low_Alarm'] > 0) {
+				
+		if ($_SESSION['TDS2_Low_Alarm'] > 0) {
 			echo "<tr>";
 				echo "<td>";
 				echo $_SESSION['TDS2_Low_Time'];
@@ -530,10 +521,8 @@ a:active {
 				echo "<td><input type=\"submit\" name=\"alarmname_ack_id\" id=\"alarmname_ack_id\" value=\"Delete\" onclick=\"alarm_sql('TDS2','High_Alarm',0)\" /></td>";
 			echo "</tr>";
 		}
-		
-		
-		
-				if ($_SESSION['CO2_Low_Alarm'] > 0) {
+				
+		if ($_SESSION['CO2_Low_Alarm'] > 0) {
 			echo "<tr>";
 				echo "<td>";
 				echo $_SESSION['CO2_Low_Time'];
@@ -592,10 +581,8 @@ a:active {
 				echo "<td><input type=\"submit\" name=\"alarmname_ack_id\" id=\"alarmname_ack_id\" value=\"Delete\" onclick=\"alarm_sql('CO2','High_Alarm',0)\" /></td>";
 			echo "</tr>";
 		}
-		
-		
-		
-				if ($_SESSION['Light_Low_Alarm'] > 0) {
+				
+		if ($_SESSION['Light_Low_Alarm'] > 0) {
 			echo "<tr>";
 				echo "<td>";
 				echo $_SESSION['Light_Low_Time'];
@@ -654,6 +641,367 @@ a:active {
 				echo "<td><input type=\"submit\" name=\"alarmname_ack_id\" id=\"alarmname_ack_id\" value=\"Delete\" onclick=\"alarm_sql('Light','High_Alarm',0)\" /></td>";
 			echo "</tr>";
 		}
+
+		if ($_SESSION['Water_Low_Alarm'] > 0) {
+			echo "<tr>";
+				echo "<td>";
+				echo $_SESSION['Water_Low_Time'];
+				echo "</td>";
+				echo "<td>Water Low</td>";
+				if ($_SESSION['Water_Low_Alarm'] == 1) {
+					echo "<td>Unacknowledged</td>";
+					echo "<td></td>";
+					echo "<td><input type=\"submit\" name=\"alarmname_ack_id\" id=\"alarmname_ack_id\" value=\"Acknowledge\" onclick=\"alarm_sql('Water','Low_Alarm',3)\" /></td>";
+				}
+				if ($_SESSION['Water_Low_Alarm'] == 2) {
+					echo "<td>Unacknowledged</td>";
+					echo "<td align=\"center\"><img src=\"img/email.png\" /></td>";
+					echo "<td><input type=\"submit\" name=\"alarmname_ack_id\" id=\"alarmname_ack_id\" value=\"Acknowledge\" onclick=\"alarm_sql('Water','Low_Alarm',4)\" /></td>";
+				}
+				if ($_SESSION['Water_Low_Alarm'] == 3) {
+					echo "<td>Acknowledged</td>";
+					echo "<td></td>";
+					echo "<td></td>";
+				}
+				if ($_SESSION['Water_Low_Alarm'] == 4) {
+					echo "<td>Acknowledged</td>";
+					echo "<td align=\"center\"><img src=\"img/email.png\" /></td>";
+					echo "<td></td>";
+				}
+				echo "<td><input type=\"submit\" name=\"alarmname_ack_id\" id=\"alarmname_ack_id\" value=\"Delete\" onclick=\"alarm_sql('Water','Low_Alarm',0)\" /></td>";
+			echo "</tr>";
+		}
+		
+		if ($_SESSION['Water_High_Alarm'] > 0) {
+			echo "<tr>";
+				echo "<td>";
+				echo $_SESSION['Water_High_Time'];
+				echo "</td>";
+				echo "<td>Water High</td>";
+				if ($_SESSION['Water_High_Alarm'] == 1) {
+					echo "<td>Unacknowledged</td>";
+					echo "<td></td>";
+					echo "<td><input type=\"submit\" name=\"alarmname_ack_id\" id=\"alarmname_ack_id\" value=\"Acknowledge\" onclick=\"alarm_sql('Water','High_Alarm',3)\" /></td>";
+				}
+				if ($_SESSION['Water_High_Alarm'] == 2) {
+					echo "<td>Unacknowledged</td>";
+					echo "<td align=\"center\"><img src=\"img/email.png\" /></td>";
+					echo "<td><input type=\"submit\" name=\"alarmname_ack_id\" id=\"alarmname_ack_id\" value=\"Acknowledge\" onclick=\"alarm_sql('Water','High_Alarm',4)\" /></td>";
+				}
+				if ($_SESSION['Water_High_Alarm'] == 3) {
+					echo "<td>Acknowledged</td>";
+					echo "<td></td>";
+					echo "<td></td>";
+				}
+				if ($_SESSION['Water_High_Alarm'] == 4) {
+					echo "<td>Acknowledged</td>";
+					echo "<td align=\"center\"><img src=\"img/email.png\" /></td>";
+					echo "<td></td>";
+				}
+				echo "<td><input type=\"submit\" name=\"alarmname_ack_id\" id=\"alarmname_ack_id\" value=\"Delete\" onclick=\"alarm_sql('Water','High_Alarm',0)\" /></td>";
+			echo "</tr>";
+		}
+		
+		if ($_SESSION['TankTotal_Low_Alarm'] > 0) {
+			echo "<tr>";
+				echo "<td>";
+				echo $_SESSION['TankTotal_Low_Time'];
+				echo "</td>";
+				echo "<td>TankTotal Low</td>";
+				if ($_SESSION['TankTotal_Low_Alarm'] == 1) {
+					echo "<td>Unacknowledged</td>";
+					echo "<td></td>";
+					echo "<td><input type=\"submit\" name=\"alarmname_ack_id\" id=\"alarmname_ack_id\" value=\"Acknowledge\" onclick=\"alarm_sql('TankTotal','Low_Alarm',3)\" /></td>";
+				}
+				if ($_SESSION['TankTotal_Low_Alarm'] == 2) {
+					echo "<td>Unacknowledged</td>";
+					echo "<td align=\"center\"><img src=\"img/email.png\" /></td>";
+					echo "<td><input type=\"submit\" name=\"alarmname_ack_id\" id=\"alarmname_ack_id\" value=\"Acknowledge\" onclick=\"alarm_sql('TankTotal','Low_Alarm',4)\" /></td>";
+				}
+				if ($_SESSION['TankTotal_Low_Alarm'] == 3) {
+					echo "<td>Acknowledged</td>";
+					echo "<td></td>";
+					echo "<td></td>";
+				}
+				if ($_SESSION['TankTotal_Low_Alarm'] == 4) {
+					echo "<td>Acknowledged</td>";
+					echo "<td align=\"center\"><img src=\"img/email.png\" /></td>";
+					echo "<td></td>";
+				}
+				echo "<td><input type=\"submit\" name=\"alarmname_ack_id\" id=\"alarmname_ack_id\" value=\"Delete\" onclick=\"alarm_sql('TankTotal','Low_Alarm',0)\" /></td>";
+			echo "</tr>";
+		}
+		
+		if ($_SESSION['TankTotal_High_Alarm'] > 0) {
+			echo "<tr>";
+				echo "<td>";
+				echo $_SESSION['TankTotal_High_Time'];
+				echo "</td>";
+				echo "<td>TankTotal High</td>";
+				if ($_SESSION['TankTotal_High_Alarm'] == 1) {
+					echo "<td>Unacknowledged</td>";
+					echo "<td></td>";
+					echo "<td><input type=\"submit\" name=\"alarmname_ack_id\" id=\"alarmname_ack_id\" value=\"Acknowledge\" onclick=\"alarm_sql('TankTotal','High_Alarm',3)\" /></td>";
+				}
+				if ($_SESSION['TankTotal_High_Alarm'] == 2) {
+					echo "<td>Unacknowledged</td>";
+					echo "<td align=\"center\"><img src=\"img/email.png\" /></td>";
+					echo "<td><input type=\"submit\" name=\"alarmname_ack_id\" id=\"alarmname_ack_id\" value=\"Acknowledge\" onclick=\"alarm_sql('TankTotal','High_Alarm',4)\" /></td>";
+				}
+				if ($_SESSION['TankTotal_High_Alarm'] == 3) {
+					echo "<td>Acknowledged</td>";
+					echo "<td></td>";
+					echo "<td></td>";
+				}
+				if ($_SESSION['TankTotal_High_Alarm'] == 4) {
+					echo "<td>Acknowledged</td>";
+					echo "<td align=\"center\"><img src=\"img/email.png\" /></td>";
+					echo "<td></td>";
+				}
+				echo "<td><input type=\"submit\" name=\"alarmname_ack_id\" id=\"alarmname_ack_id\" value=\"Delete\" onclick=\"alarm_sql('TankTotal','High_Alarm',0)\" /></td>";
+			echo "</tr>";
+		}		
+		
+		if ($_SESSION['Tank1_Low_Alarm'] > 0) {
+			echo "<tr>";
+				echo "<td>";
+				echo $_SESSION['Tank1_Low_Time'];
+				echo "</td>";
+				echo "<td>Tank1 Low</td>";
+				if ($_SESSION['Tank1_Low_Alarm'] == 1) {
+					echo "<td>Unacknowledged</td>";
+					echo "<td></td>";
+					echo "<td><input type=\"submit\" name=\"alarmname_ack_id\" id=\"alarmname_ack_id\" value=\"Acknowledge\" onclick=\"alarm_sql('Tank1','Low_Alarm',3)\" /></td>";
+				}
+				if ($_SESSION['Tank1_Low_Alarm'] == 2) {
+					echo "<td>Unacknowledged</td>";
+					echo "<td align=\"center\"><img src=\"img/email.png\" /></td>";
+					echo "<td><input type=\"submit\" name=\"alarmname_ack_id\" id=\"alarmname_ack_id\" value=\"Acknowledge\" onclick=\"alarm_sql('Tank1','Low_Alarm',4)\" /></td>";
+				}
+				if ($_SESSION['Tank1_Low_Alarm'] == 3) {
+					echo "<td>Acknowledged</td>";
+					echo "<td></td>";
+					echo "<td></td>";
+				}
+				if ($_SESSION['Tank1_Low_Alarm'] == 4) {
+					echo "<td>Acknowledged</td>";
+					echo "<td align=\"center\"><img src=\"img/email.png\" /></td>";
+					echo "<td></td>";
+				}
+				echo "<td><input type=\"submit\" name=\"alarmname_ack_id\" id=\"alarmname_ack_id\" value=\"Delete\" onclick=\"alarm_sql('Tank1','Low_Alarm',0)\" /></td>";
+			echo "</tr>";
+		}
+		
+		if ($_SESSION['Tank1_High_Alarm'] > 0) {
+			echo "<tr>";
+				echo "<td>";
+				echo $_SESSION['Tank1_High_Time'];
+				echo "</td>";
+				echo "<td>Tank1 High</td>";
+				if ($_SESSION['Tank1_High_Alarm'] == 1) {
+					echo "<td>Unacknowledged</td>";
+					echo "<td></td>";
+					echo "<td><input type=\"submit\" name=\"alarmname_ack_id\" id=\"alarmname_ack_id\" value=\"Acknowledge\" onclick=\"alarm_sql('Tank1','High_Alarm',3)\" /></td>";
+				}
+				if ($_SESSION['Tank1_High_Alarm'] == 2) {
+					echo "<td>Unacknowledged</td>";
+					echo "<td align=\"center\"><img src=\"img/email.png\" /></td>";
+					echo "<td><input type=\"submit\" name=\"alarmname_ack_id\" id=\"alarmname_ack_id\" value=\"Acknowledge\" onclick=\"alarm_sql('Tank1','High_Alarm',4)\" /></td>";
+				}
+				if ($_SESSION['TDS1_High_Alarm'] == 3) {
+					echo "<td>Acknowledged</td>";
+					echo "<td></td>";
+					echo "<td></td>";
+				}
+				if ($_SESSION['TDS1_High_Alarm'] == 4) {
+					echo "<td>Acknowledged</td>";
+					echo "<td align=\"center\"><img src=\"img/email.png\" /></td>";
+					echo "<td></td>";
+				}
+				echo "<td><input type=\"submit\" name=\"alarmname_ack_id\" id=\"alarmname_ack_id\" value=\"Delete\" onclick=\"alarm_sql('TDS1','High_Alarm',0)\" /></td>";
+			echo "</tr>";
+		}
+
+		if ($_SESSION['Tank2_Low_Alarm'] > 0) {
+			echo "<tr>";
+				echo "<td>";
+				echo $_SESSION['Tank2_Low_Time'];
+				echo "</td>";
+				echo "<td>Tank2 Low</td>";
+				if ($_SESSION['Tank2_Low_Alarm'] == 1) {
+					echo "<td>Unacknowledged</td>";
+					echo "<td></td>";
+					echo "<td><input type=\"submit\" name=\"alarmname_ack_id\" id=\"alarmname_ack_id\" value=\"Acknowledge\" onclick=\"alarm_sql('Tank2','Low_Alarm',3)\" /></td>";
+				}
+				if ($_SESSION['Tank2_Low_Alarm'] == 2) {
+					echo "<td>Unacknowledged</td>";
+					echo "<td align=\"center\"><img src=\"img/email.png\" /></td>";
+					echo "<td><input type=\"submit\" name=\"alarmname_ack_id\" id=\"alarmname_ack_id\" value=\"Acknowledge\" onclick=\"alarm_sql('Tank2','Low_Alarm',4)\" /></td>";
+				}
+				if ($_SESSION['Tank2_Low_Alarm'] == 3) {
+					echo "<td>Acknowledged</td>";
+					echo "<td></td>";
+					echo "<td></td>";
+				}
+				if ($_SESSION['Tank2_Low_Alarm'] == 4) {
+					echo "<td>Acknowledged</td>";
+					echo "<td align=\"center\"><img src=\"img/email.png\" /></td>";
+					echo "<td></td>";
+				}
+				echo "<td><input type=\"submit\" name=\"alarmname_ack_id\" id=\"alarmname_ack_id\" value=\"Delete\" onclick=\"alarm_sql('Tank2','Low_Alarm',0)\" /></td>";
+			echo "</tr>";
+		}
+		
+		if ($_SESSION['Tank2_High_Alarm'] > 0) {
+			echo "<tr>";
+				echo "<td>";
+				echo $_SESSION['Tank2_High_Time'];
+				echo "</td>";
+				echo "<td>Tank2 High</td>";
+				if ($_SESSION['Tank2_High_Alarm'] == 1) {
+					echo "<td>Unacknowledged</td>";
+					echo "<td></td>";
+					echo "<td><input type=\"submit\" name=\"alarmname_ack_id\" id=\"alarmname_ack_id\" value=\"Acknowledge\" onclick=\"alarm_sql('Tank2','High_Alarm',3)\" /></td>";
+				}
+				if ($_SESSION['Tank2_High_Alarm'] == 2) {
+					echo "<td>Unacknowledged</td>";
+					echo "<td align=\"center\"><img src=\"img/email.png\" /></td>";
+					echo "<td><input type=\"submit\" name=\"alarmname_ack_id\" id=\"alarmname_ack_id\" value=\"Acknowledge\" onclick=\"alarm_sql('Tank2','High_Alarm',4)\" /></td>";
+				}
+				if ($_SESSION['Tank2_High_Alarm'] == 3) {
+					echo "<td>Acknowledged</td>";
+					echo "<td></td>";
+					echo "<td></td>";
+				}
+				if ($_SESSION['Tank2_High_Alarm'] == 4) {
+					echo "<td>Acknowledged</td>";
+					echo "<td align=\"center\"><img src=\"img/email.png\" /></td>";
+					echo "<td></td>";
+				}
+				echo "<td><input type=\"submit\" name=\"alarmname_ack_id\" id=\"alarmname_ack_id\" value=\"Delete\" onclick=\"alarm_sql('Tank2','High_Alarm',0)\" /></td>";
+			echo "</tr>";
+		}		
+
+		if ($_SESSION['Tank3_Low_Alarm'] > 0) {
+			echo "<tr>";
+				echo "<td>";
+				echo $_SESSION['Tank3_Low_Time'];
+				echo "</td>";
+				echo "<td>Tank3 Low</td>";
+				if ($_SESSION['Tank3_Low_Alarm'] == 1) {
+					echo "<td>Unacknowledged</td>";
+					echo "<td></td>";
+					echo "<td><input type=\"submit\" name=\"alarmname_ack_id\" id=\"alarmname_ack_id\" value=\"Acknowledge\" onclick=\"alarm_sql('Tank3','Low_Alarm',3)\" /></td>";
+				}
+				if ($_SESSION['Tank3_Low_Alarm'] == 2) {
+					echo "<td>Unacknowledged</td>";
+					echo "<td align=\"center\"><img src=\"img/email.png\" /></td>";
+					echo "<td><input type=\"submit\" name=\"alarmname_ack_id\" id=\"alarmname_ack_id\" value=\"Acknowledge\" onclick=\"alarm_sql('Tank3','Low_Alarm',4)\" /></td>";
+				}
+				if ($_SESSION['Tank3_Low_Alarm'] == 3) {
+					echo "<td>Acknowledged</td>";
+					echo "<td></td>";
+					echo "<td></td>";
+				}
+				if ($_SESSION['Tank3_Low_Alarm'] == 4) {
+					echo "<td>Acknowledged</td>";
+					echo "<td align=\"center\"><img src=\"img/email.png\" /></td>";
+					echo "<td></td>";
+				}
+				echo "<td><input type=\"submit\" name=\"alarmname_ack_id\" id=\"alarmname_ack_id\" value=\"Delete\" onclick=\"alarm_sql('Tank3','Low_Alarm',0)\" /></td>";
+			echo "</tr>";
+		}
+		
+		if ($_SESSION['Tank3_High_Alarm'] > 0) {
+			echo "<tr>";
+				echo "<td>";
+				echo $_SESSION['Tank3_High_Time'];
+				echo "</td>";
+				echo "<td>Tank3 High</td>";
+				if ($_SESSION['Tank3_High_Alarm'] == 1) {
+					echo "<td>Unacknowledged</td>";
+					echo "<td></td>";
+					echo "<td><input type=\"submit\" name=\"alarmname_ack_id\" id=\"alarmname_ack_id\" value=\"Acknowledge\" onclick=\"alarm_sql('Tank3','High_Alarm',3)\" /></td>";
+				}
+				if ($_SESSION['Tank3_High_Alarm'] == 2) {
+					echo "<td>Unacknowledged</td>";
+					echo "<td align=\"center\"><img src=\"img/email.png\" /></td>";
+					echo "<td><input type=\"submit\" name=\"alarmname_ack_id\" id=\"alarmname_ack_id\" value=\"Acknowledge\" onclick=\"alarm_sql('Tank3','High_Alarm',4)\" /></td>";
+				}
+				if ($_SESSION['Tank3_High_Alarm'] == 3) {
+					echo "<td>Acknowledged</td>";
+					echo "<td></td>";
+					echo "<td></td>";
+				}
+				if ($_SESSION['Tank3_High_Alarm'] == 4) {
+					echo "<td>Acknowledged</td>";
+					echo "<td align=\"center\"><img src=\"img/email.png\" /></td>";
+					echo "<td></td>";
+				}
+				echo "<td><input type=\"submit\" name=\"alarmname_ack_id\" id=\"alarmname_ack_id\" value=\"Delete\" onclick=\"alarm_sql('Tank3','High_Alarm',0)\" /></td>";
+			echo "</tr>";
+		}
+
+		if ($_SESSION['Tank4_Low_Alarm'] > 0) {
+			echo "<tr>";
+				echo "<td>";
+				echo $_SESSION['Tank4_Low_Time'];
+				echo "</td>";
+				echo "<td>Tank4 Low</td>";
+				if ($_SESSION['Tank4_Low_Alarm'] == 1) {
+					echo "<td>Unacknowledged</td>";
+					echo "<td></td>";
+					echo "<td><input type=\"submit\" name=\"alarmname_ack_id\" id=\"alarmname_ack_id\" value=\"Acknowledge\" onclick=\"alarm_sql('Tank4','Low_Alarm',3)\" /></td>";
+				}
+				if ($_SESSION['Tank4_Low_Alarm'] == 2) {
+					echo "<td>Unacknowledged</td>";
+					echo "<td align=\"center\"><img src=\"img/email.png\" /></td>";
+					echo "<td><input type=\"submit\" name=\"alarmname_ack_id\" id=\"alarmname_ack_id\" value=\"Acknowledge\" onclick=\"alarm_sql('Tank4','Low_Alarm',4)\" /></td>";
+				}
+				if ($_SESSION['Tank4_Low_Alarm'] == 3) {
+					echo "<td>Acknowledged</td>";
+					echo "<td></td>";
+					echo "<td></td>";
+				}
+				if ($_SESSION['Tank4_Low_Alarm'] == 4) {
+					echo "<td>Acknowledged</td>";
+					echo "<td align=\"center\"><img src=\"img/email.png\" /></td>";
+					echo "<td></td>";
+				}
+				echo "<td><input type=\"submit\" name=\"alarmname_ack_id\" id=\"alarmname_ack_id\" value=\"Delete\" onclick=\"alarm_sql('Tank4','Low_Alarm',0)\" /></td>";
+			echo "</tr>";
+		}
+		
+		if ($_SESSION['Tank4_High_Alarm'] > 0) {
+			echo "<tr>";
+				echo "<td>";
+				echo $_SESSION['Tank4_High_Time'];
+				echo "</td>";
+				echo "<td>Tank4 High</td>";
+				if ($_SESSION['Tank4_High_Alarm'] == 1) {
+					echo "<td>Unacknowledged</td>";
+					echo "<td></td>";
+					echo "<td><input type=\"submit\" name=\"alarmname_ack_id\" id=\"alarmname_ack_id\" value=\"Acknowledge\" onclick=\"alarm_sql('Tank4','High_Alarm',3)\" /></td>";
+				}
+				if ($_SESSION['Tank4_High_Alarm'] == 2) {
+					echo "<td>Unacknowledged</td>";
+					echo "<td align=\"center\"><img src=\"img/email.png\" /></td>";
+					echo "<td><input type=\"submit\" name=\"alarmname_ack_id\" id=\"alarmname_ack_id\" value=\"Acknowledge\" onclick=\"alarm_sql('Tank4','High_Alarm',4)\" /></td>";
+				}
+				if ($_SESSION['Tank4_High_Alarm'] == 3) {
+					echo "<td>Acknowledged</td>";
+					echo "<td></td>";
+					echo "<td></td>";
+				}
+				if ($_SESSION['Tank4_High_Alarm'] == 4) {
+					echo "<td>Acknowledged</td>";
+					echo "<td align=\"center\"><img src=\"img/email.png\" /></td>";
+					echo "<td></td>";
+				}
+				echo "<td><input type=\"submit\" name=\"alarmname_ack_id\" id=\"alarmname_ack_id\" value=\"Delete\" onclick=\"alarm_sql('Tank4','High_Alarm',0)\" /></td>";
+			echo "</tr>";
+		}		
+		
   ?>
   </tr>
 	  </table>

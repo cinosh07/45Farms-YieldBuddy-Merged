@@ -16,13 +16,22 @@ $column_to_session_value = array(
     "7" => "Sensors_CO2",
     "8" => "Sensors_Light",
     "9" => "Sensors_Water",
+	"10" => "Sensors_MagX",
+	"11" => "Sensors_MagY",
+	"12" => "Sensors_MagZ",
+	"13" => "Sensors_TankTotal",
+	"14" => "Sensors_Tank1",
+	"15" => "Sensors_Tank2",
+	"16" => "Sensors_Tank3",
+	"17" => "Sensors_Tank4",
+	
 );
 
 while ($row = $results->fetchArray()) {
 //	var_dump($row);
 
 	$i=0;
-	while($i < 10){
+	while($i < 18){
 //	echo "<p></p>";
 //	echo '\'';
 //	echo $column_to_session_value[$i];
