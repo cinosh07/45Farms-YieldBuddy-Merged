@@ -35,12 +35,6 @@ body,td,th {
     }
 
 	$command=$_GET["command"];
-
-//    if (!isset($_GET['submit']))
-//    {
-//    header("Refresh: $sec; url={$_SERVER['HTTP_REFERER']}");
-//    }
-
     $submit=$_GET["submit"];
 
 
@@ -196,25 +190,6 @@ body,td,th {
 	$LightValue_High = $_GET["LightValue_High"];
 	$command="setLight," .$LightValue_Low. "," .$LightValue_High;
 	}
-	
-	if ($submit == "Save Email Settings"){
-    echo "Sending Command:  Save Email Settings<br>";
-	} else {
-	echo "Sending Command:  " .$command. "<br>";
-	}
-	
-	if ($submit == "Reboot"){
-	echo "Rebooting!  Waiting 65 seconds...</br>";
-	$command="reboot yes";
-	$sec = "65";
-	}
-	
-	if ($submit == "Restart yieldbuddy"){
-	echo "Restarting yieldbuddy!  Waiting 10 seconds...</br>";
-	$command="restart yieldbuddy";
-	$sec = "10";
-	}
-
 	if ($submit == "Save Water Settings"){
 	$WaterValue_Low = $_GET["WaterValue_Low"];
 	$WaterValue_High = $_GET["WaterValue_High"];
@@ -283,6 +258,26 @@ body,td,th {
 	$command="setTank4Value," .$Tank4Value_Low. "," .$Tank4Value_High. "," .$Tank4Pump_ON. "," .$Tank4Pump_OFF. "," .$Tank4MixPump_Enabled;
 	}
 	
+	if ($submit == "Save Email Settings"){
+    echo "Sending Command:  Save Email Settings<br>";
+	} 
+	
+	else {
+	echo "Sending Command:  " .$command. "<br>";
+	}
+	
+	if ($submit == "Reboot"){
+	echo "Rebooting!  Waiting 65 seconds...</br>";
+	$command="reboot yes";
+	$sec = "65";
+	}
+	
+	if ($submit == "Restart yieldbuddy"){
+	echo "Restarting yieldbuddy!  Waiting 10 seconds...</br>";
+	$command="restart yieldbuddy";
+	$sec = "10";
+	}
+
 	//SEND COMMAND
 	$myFile = $_SERVER['DOCUMENT_ROOT'] . "/yieldbuddy/Command";
 	$file_command=fopen($myFile, "w") or exit("Unable to open file! '" .$myFile."'");

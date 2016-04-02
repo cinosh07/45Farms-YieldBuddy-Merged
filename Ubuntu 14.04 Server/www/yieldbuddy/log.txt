@@ -1613,3 +1613,2654 @@
 2016/03/30 22:46:36: Sent Command: setwateringschedule,23,0,0,5,2,20
 2016/03/30 22:48:45: Added a data point to the sensor values log.
 2016/03/30 22:51:15: Added a data point to the sensor values log.
+2016/03/30 22:53:47: Added a data point to the sensor values log.
+2016/03/30 22:56:26: Added a data point to the sensor values log.
+2016/03/30 22:58:58: Added a data point to the sensor values log.
+2016/03/30 23:01:29: Added a data point to the sensor values log.
+2016/03/30 23:04:08: Added a data point to the sensor values log.
+2016/03/30 23:06:39: Added a data point to the sensor values log.
+2016/03/30 23:09:10: Added a data point to the sensor values log.
+2016/03/30 23:11:50: Added a data point to the sensor values log.
+2016/03/30 23:14:21: Added a data point to the sensor values log.
+2016/03/30 23:16:52: Added a data point to the sensor values log.
+2016/03/30 23:19:32: Added a data point to the sensor values log.
+2016/03/30 23:22:02: Added a data point to the sensor values log.
+2016/03/30 23:24:33: Added a data point to the sensor values log.
+2016/03/30 23:27:14: Added a data point to the sensor values log.
+2016/03/30 23:29:44: Added a data point to the sensor values log.
+2016/03/30 23:32:15: Added a data point to the sensor values log.
+2016/03/30 23:34:55: Added a data point to the sensor values log.
+2016/03/30 23:37:26: Added a data point to the sensor values log.
+2016/03/30 23:39:56: Added a data point to the sensor values log.
+2016/03/30 23:42:37: Added a data point to the sensor values log.
+2016/03/30 23:45:08: Added a data point to the sensor values log.
+2016/03/30 23:47:38: Added a data point to the sensor values log.
+2016/03/30 23:50:18: Added a data point to the sensor values log.
+2016/03/30 23:52:49: Added a data point to the sensor values log.
+2016/03/30 23:55:20: Added a data point to the sensor values log.
+2016/03/30 23:58:00: Added a data point to the sensor values log.
+2016/03/31 00:00:31: Added a data point to the sensor values log.
+2016/03/31 00:03:03: Added a data point to the sensor values log.
+2016/03/31 00:05:42: Added a data point to the sensor values log.
+2016/03/31 00:08:13: Added a data point to the sensor values log.
+2016/03/31 00:08:30: Sent Command: Relay1 isAuto 1
+2016/03/31 00:10:43: Added a data point to the sensor values log.
+2016/03/31 00:11:48: Sent Command: setdate,3,31,2016,12,11,40
+2016/03/31 00:12:59: Sent Command: setlightschedule,18,0,0,59
+2016/03/31 12:12:55: Added a data point to the sensor values log.
+2016/03/31 12:13:49: Sent Command: setlightschedule,18,0,1,0
+2016/03/31 12:14:19: Sent Command: Relay8 isAuto 0
+2016/03/31 12:14:23: Sent Command: Relay8 isAuto 1
+2016/03/31 12:14:44: Sent Command: setlightschedule,20,0,4,0
+2016/03/31 12:15:27: Added a data point to the sensor values log.
+2016/03/31 12:18:00: Added a data point to the sensor values log.
+2016/03/31 12:18:46: Sent Command: Relay8 isAuto 1
+2016/03/31 12:19:29: Sent Command: setlightschedule,23,0,12,0
+2016/03/31 12:20:33: Added a data point to the sensor values log.
+2016/03/31 12:23:04: Added a data point to the sensor values log.
+2016/03/31 12:23:12: Sent Command: setlightschedule,1,1,14,0
+2016/03/31 12:24:10: Sent Command: setlightschedule,18,0,2,0
+2016/03/31 12:25:17: Sent Command: setlightschedule,0,0,2,0
+2016/03/31 12:25:37: Sent Command: setlightschedule,1,0,4,0
+2016/03/31 12:25:38: Added a data point to the sensor values log.
+2016/03/31 12:27:31: Sent Command: setlightschedule,23,1,4,1
+2016/03/31 12:28:04: Sent Command: setlightschedule,4,1,23,1
+2016/03/31 12:28:11: Added a data point to the sensor values log.
+2016/03/31 12:28:41: Sent Command: setlightschedule,1,0,18,0
+2016/03/31 12:30:49: Added a data point to the sensor values log.
+2016/03/31 12:33:20: Added a data point to the sensor values log.
+2016/03/31 12:35:51: Added a data point to the sensor values log.
+2016/03/31 12:38:32: Added a data point to the sensor values log.
+2016/03/31 12:41:03: Added a data point to the sensor values log.
+2016/03/31 12:42:47: Sent Command: setwateringschedule,23,45,0,5,2,20
+2016/03/31 12:43:10: Sent Command: setwateringschedule,0,45,0,5,2,20
+2016/03/31 12:43:35: Added a data point to the sensor values log.
+2016/03/31 12:46:09: Added a data point to the sensor values log.
+2016/03/31 12:48:09: Sent Command: setwateringschedule,1,45,0,5,2,20
+2016/03/31 12:48:51: Added a data point to the sensor values log.
+2016/03/31 12:49:25: Sent Command: setwateringschedule,0,45,0,5,2,10
+2016/03/31 12:51:06: Sent Command: setwateringschedule,1,0,0,5,2,10
+2016/03/31 12:51:28: Added a data point to the sensor values log.
+2016/03/31 12:52:35: Sent Command: Relay1 isAuto 0
+2016/03/31 12:52:40: Sent Command: Relay1 isAuto 1
+2016/03/31 12:52:52: Sent Command: Relay2 isAuto 1
+2016/03/31 12:52:56: Sent Command: Relay3 isAuto 1
+2016/03/31 12:53:00: Sent Command: Relay4 isAuto 1
+2016/03/31 12:53:03: Sent Command: Relay5 isAuto 1
+2016/03/31 12:53:05: Sent Command: Relay6 isAuto 1
+2016/03/31 12:53:09: Sent Command: Relay7 isAuto 1
+2016/03/31 12:53:31: Sent Command: setwateringschedule,0,56,0,5,2,10
+2016/03/31 12:54:00: Added a data point to the sensor values log.
+2016/03/31 12:56:42: Added a data point to the sensor values log.
+2016/03/31 12:56:48: Sent Command: setwateringschedule,2,0,0,5,2,10
+2016/03/31 12:59:16: Added a data point to the sensor values log.
+2016/03/31 13:00:53: Sent Command: setwateringschedule,1,15,0,10,3,20
+2016/03/31 13:01:57: Added a data point to the sensor values log.
+2016/03/31 13:04:30: Added a data point to the sensor values log.
+2016/03/31 13:06:57: Sent Command: setlightschedule,2,15,18,0
+2016/03/31 13:07:01: Added a data point to the sensor values log.
+2016/03/31 13:07:52: Sent Command: setlightschedule,1,15,18,0
+2016/03/31 13:09:38: Added a data point to the sensor values log.
+2016/03/31 13:12:11: Added a data point to the sensor values log.
+2016/03/31 13:14:42: Added a data point to the sensor values log.
+2016/03/31 13:17:23: Added a data point to the sensor values log.
+2016/03/31 13:19:54: Added a data point to the sensor values log.
+2016/03/31 13:22:25: Added a data point to the sensor values log.
+2016/03/31 13:25:05: Added a data point to the sensor values log.
+2016/03/31 13:25:43: Sent Command: setlightschedule,1,30,1,45
+2016/03/31 13:26:36: Sent Command: setwateringschedule,1,25,0,5,3,2
+2016/03/31 13:27:40: Added a data point to the sensor values log.
+2016/03/31 13:30:13: Added a data point to the sensor values log.
+2016/03/31 13:32:44: Added a data point to the sensor values log.
+2016/03/31 13:49:25: Terminated PID: 11048 (for accessing the database)
+2016/03/31 13:49:25: Terminated PID: 11087 (for accessing the database)
+2016/03/31 13:49:25: Terminated PID: 11130 (for accessing the database)
+2016/03/31 13:49:25: Terminated PID: 11344 (for accessing the database)
+2016/03/31 13:49:25: Terminated PID: 11572 (for accessing the database)
+2016/03/31 13:49:25: Terminated PID: 11686 (for accessing the database)
+2016/03/31 13:49:25: Terminated PID: 13133 (for accessing the database)
+2016/03/31 13:49:25: Started yieldbuddy. Priority 15.
+2016/03/31 01:48:52: Added a data point to the sensor values log.
+2016/03/31 01:49:16: Sent Command: Relay8 isAuto 1
+2016/03/31 01:50:31: Sent Command: setwateringschedule,2,0,0,5,2,10
+2016/03/31 01:51:22: Added a data point to the sensor values log.
+2016/03/31 01:53:52: Added a data point to the sensor values log.
+2016/03/31 01:56:23: Added a data point to the sensor values log.
+2016/03/31 01:58:53: Added a data point to the sensor values log.
+2016/03/31 02:01:23: Added a data point to the sensor values log.
+2016/03/31 02:03:56: Added a data point to the sensor values log.
+2016/03/31 02:06:27: Added a data point to the sensor values log.
+2016/03/31 02:08:44: Sent Command: setlightschedule,2,11,2,5
+2016/03/31 02:08:59: Added a data point to the sensor values log.
+2016/03/31 02:09:22: Sent Command: setlightschedule,3,0,2,10
+2016/03/31 02:09:37: Sent Command: setlightschedule,3,0,2,15
+2016/03/31 02:11:32: Added a data point to the sensor values log.
+2016/03/31 02:14:03: Added a data point to the sensor values log.
+2016/03/31 02:16:33: Added a data point to the sensor values log.
+2016/03/31 02:19:03: Added a data point to the sensor values log.
+2016/03/31 02:20:38: Sent Command: setlightschedule,3,0,1,15
+2016/03/31 02:21:25: Sent Command: setlightschedule,18,0,2,30
+2016/03/31 02:21:33: Added a data point to the sensor values log.
+2016/03/31 02:24:03: Added a data point to the sensor values log.
+2016/03/31 02:26:33: Added a data point to the sensor values log.
+2016/03/31 02:29:04: Added a data point to the sensor values log.
+2016/03/31 02:30:32: Sent Command: setlightschedule,18,0,2,45
+2016/03/31 02:31:34: Added a data point to the sensor values log.
+2016/03/31 02:34:06: Added a data point to the sensor values log.
+2016/03/31 02:36:39: Added a data point to the sensor values log.
+2016/03/31 02:39:09: Added a data point to the sensor values log.
+2016/03/31 02:41:39: Added a data point to the sensor values log.
+2016/03/31 02:44:10: Added a data point to the sensor values log.
+2016/03/31 02:46:40: Added a data point to the sensor values log.
+2016/03/31 02:47:19: Sent Command: setwateringschedule,2,0,0,5,2,20
+2016/03/31 02:49:10: Added a data point to the sensor values log.
+2016/03/31 02:51:40: Added a data point to the sensor values log.
+2016/03/31 02:53:10: Sent Command: setwateringschedule,3,0,0,5,2,10
+2016/03/31 02:54:12: Added a data point to the sensor values log.
+2016/03/31 02:56:42: Added a data point to the sensor values log.
+2016/03/31 02:59:12: Added a data point to the sensor values log.
+2016/03/31 03:01:42: Added a data point to the sensor values log.
+2016/03/31 03:04:13: Added a data point to the sensor values log.
+2016/03/31 03:06:46: Added a data point to the sensor values log.
+2016/03/31 03:09:16: Added a data point to the sensor values log.
+2016/03/31 03:11:46: Added a data point to the sensor values log.
+2016/03/31 03:14:17: Added a data point to the sensor values log.
+2016/03/31 03:16:47: Added a data point to the sensor values log.
+2016/03/31 03:19:17: Added a data point to the sensor values log.
+2016/03/31 03:21:50: Added a data point to the sensor values log.
+2016/03/31 03:24:21: Added a data point to the sensor values log.
+2016/03/31 03:26:51: Added a data point to the sensor values log.
+2016/03/31 03:29:21: Added a data point to the sensor values log.
+2016/03/31 03:31:51: Added a data point to the sensor values log.
+2016/03/31 03:34:22: Added a data point to the sensor values log.
+2016/03/31 03:36:55: Added a data point to the sensor values log.
+2016/03/31 03:39:25: Added a data point to the sensor values log.
+2016/03/31 03:41:55: Added a data point to the sensor values log.
+2016/03/31 03:44:26: Added a data point to the sensor values log.
+2016/03/31 03:46:56: Added a data point to the sensor values log.
+2016/03/31 03:49:27: Added a data point to the sensor values log.
+2016/03/31 03:52:00: Added a data point to the sensor values log.
+2016/03/31 03:54:30: Added a data point to the sensor values log.
+2016/03/31 03:57:00: Added a data point to the sensor values log.
+2016/03/31 03:59:31: Added a data point to the sensor values log.
+2016/03/31 04:02:01: Added a data point to the sensor values log.
+2016/03/31 04:04:31: Added a data point to the sensor values log.
+2016/03/31 04:07:04: Added a data point to the sensor values log.
+2016/03/31 04:09:35: Added a data point to the sensor values log.
+2016/03/31 04:12:05: Added a data point to the sensor values log.
+2016/03/31 04:14:35: Added a data point to the sensor values log.
+2016/03/31 04:17:05: Added a data point to the sensor values log.
+2016/03/31 04:19:36: Added a data point to the sensor values log.
+2016/03/31 04:22:09: Added a data point to the sensor values log.
+2016/03/31 04:24:39: Added a data point to the sensor values log.
+2016/03/31 04:27:09: Added a data point to the sensor values log.
+2016/03/31 04:29:40: Added a data point to the sensor values log.
+2016/03/31 04:32:10: Added a data point to the sensor values log.
+2016/03/31 04:34:41: Added a data point to the sensor values log.
+2016/03/31 04:37:14: Added a data point to the sensor values log.
+2016/03/31 04:39:44: Added a data point to the sensor values log.
+2016/03/31 04:42:14: Added a data point to the sensor values log.
+2016/03/31 04:44:45: Added a data point to the sensor values log.
+2016/03/31 04:47:15: Added a data point to the sensor values log.
+2016/03/31 04:49:45: Added a data point to the sensor values log.
+2016/03/31 04:52:18: Added a data point to the sensor values log.
+2016/03/31 04:54:49: Added a data point to the sensor values log.
+2016/03/31 04:57:19: Added a data point to the sensor values log.
+2016/03/31 04:59:49: Added a data point to the sensor values log.
+2016/03/31 05:02:19: Added a data point to the sensor values log.
+2016/03/31 05:04:50: Added a data point to the sensor values log.
+2016/03/31 05:07:23: Added a data point to the sensor values log.
+2016/03/31 05:09:53: Added a data point to the sensor values log.
+2016/03/31 05:12:23: Added a data point to the sensor values log.
+2016/03/31 05:14:54: Added a data point to the sensor values log.
+2016/03/31 05:17:24: Added a data point to the sensor values log.
+2016/03/31 05:19:54: Added a data point to the sensor values log.
+2016/03/31 05:22:27: Added a data point to the sensor values log.
+2016/03/31 05:24:58: Added a data point to the sensor values log.
+2016/03/31 05:27:28: Added a data point to the sensor values log.
+2016/03/31 05:29:59: Added a data point to the sensor values log.
+2016/03/31 05:32:29: Added a data point to the sensor values log.
+2016/03/31 05:34:59: Added a data point to the sensor values log.
+2016/03/31 05:37:32: Added a data point to the sensor values log.
+2016/03/31 05:40:03: Added a data point to the sensor values log.
+2016/03/31 05:42:33: Added a data point to the sensor values log.
+2016/03/31 05:45:03: Added a data point to the sensor values log.
+2016/03/31 05:47:33: Added a data point to the sensor values log.
+2016/03/31 05:50:04: Added a data point to the sensor values log.
+2016/03/31 05:52:37: Added a data point to the sensor values log.
+2016/03/31 05:55:07: Added a data point to the sensor values log.
+2016/03/31 05:57:37: Added a data point to the sensor values log.
+2016/03/31 06:00:08: Added a data point to the sensor values log.
+2016/03/31 06:02:38: Added a data point to the sensor values log.
+2016/03/31 06:05:08: Added a data point to the sensor values log.
+2016/03/31 06:07:41: Added a data point to the sensor values log.
+2016/03/31 06:10:12: Added a data point to the sensor values log.
+2016/03/31 06:12:42: Added a data point to the sensor values log.
+2016/03/31 06:15:12: Added a data point to the sensor values log.
+2016/03/31 06:17:42: Added a data point to the sensor values log.
+2016/03/31 06:20:13: Added a data point to the sensor values log.
+2016/03/31 06:22:46: Added a data point to the sensor values log.
+2016/03/31 06:25:16: Added a data point to the sensor values log.
+2016/03/31 06:27:46: Added a data point to the sensor values log.
+2016/03/31 06:30:17: Added a data point to the sensor values log.
+2016/03/31 06:32:47: Added a data point to the sensor values log.
+2016/03/31 06:35:18: Added a data point to the sensor values log.
+2016/03/31 06:37:51: Added a data point to the sensor values log.
+2016/03/31 06:40:21: Added a data point to the sensor values log.
+2016/03/31 06:42:51: Added a data point to the sensor values log.
+2016/03/31 06:45:22: Added a data point to the sensor values log.
+2016/03/31 06:47:52: Added a data point to the sensor values log.
+2016/03/31 06:50:22: Added a data point to the sensor values log.
+2016/03/31 06:52:55: Added a data point to the sensor values log.
+2016/03/31 06:55:26: Added a data point to the sensor values log.
+2016/03/31 06:57:56: Added a data point to the sensor values log.
+2016/03/31 07:00:26: Added a data point to the sensor values log.
+2016/03/31 07:02:56: Added a data point to the sensor values log.
+2016/03/31 07:05:27: Added a data point to the sensor values log.
+2016/03/31 07:08:00: Added a data point to the sensor values log.
+2016/03/31 07:10:30: Added a data point to the sensor values log.
+2016/03/31 07:13:00: Added a data point to the sensor values log.
+2016/03/31 07:15:31: Added a data point to the sensor values log.
+2016/03/31 07:18:01: Added a data point to the sensor values log.
+2016/03/31 07:20:32: Added a data point to the sensor values log.
+2016/03/31 07:23:05: Added a data point to the sensor values log.
+2016/03/31 07:25:35: Added a data point to the sensor values log.
+2016/03/31 07:28:05: Added a data point to the sensor values log.
+2016/03/31 07:30:36: Added a data point to the sensor values log.
+2016/03/31 07:33:06: Added a data point to the sensor values log.
+2016/03/31 07:35:36: Added a data point to the sensor values log.
+2016/03/31 07:38:09: Added a data point to the sensor values log.
+2016/03/31 07:40:40: Added a data point to the sensor values log.
+2016/03/31 07:43:10: Added a data point to the sensor values log.
+2016/03/31 07:45:40: Added a data point to the sensor values log.
+2016/03/31 07:48:10: Added a data point to the sensor values log.
+2016/03/31 07:50:41: Added a data point to the sensor values log.
+2016/03/31 07:53:14: Added a data point to the sensor values log.
+2016/03/31 07:55:45: Added a data point to the sensor values log.
+2016/03/31 07:58:15: Added a data point to the sensor values log.
+2016/03/31 08:00:45: Added a data point to the sensor values log.
+2016/03/31 08:03:15: Added a data point to the sensor values log.
+2016/03/31 08:05:46: Added a data point to the sensor values log.
+2016/03/31 08:08:19: Added a data point to the sensor values log.
+2016/03/31 08:10:49: Added a data point to the sensor values log.
+2016/03/31 08:13:19: Added a data point to the sensor values log.
+2016/03/31 08:15:50: Added a data point to the sensor values log.
+2016/03/31 08:18:20: Added a data point to the sensor values log.
+2016/03/31 08:20:50: Added a data point to the sensor values log.
+2016/03/31 08:23:20: Added a data point to the sensor values log.
+2016/03/31 08:25:53: Added a data point to the sensor values log.
+2016/03/31 08:28:24: Added a data point to the sensor values log.
+2016/03/31 08:30:54: Added a data point to the sensor values log.
+2016/03/31 08:33:24: Added a data point to the sensor values log.
+2016/03/31 08:35:55: Added a data point to the sensor values log.
+2016/03/31 08:38:25: Added a data point to the sensor values log.
+2016/03/31 08:40:55: Added a data point to the sensor values log.
+2016/03/31 08:43:25: Added a data point to the sensor values log.
+2016/03/31 08:45:58: Added a data point to the sensor values log.
+2016/03/31 08:48:29: Added a data point to the sensor values log.
+2016/03/31 08:50:59: Added a data point to the sensor values log.
+2016/03/31 08:53:29: Added a data point to the sensor values log.
+2016/03/31 08:56:00: Added a data point to the sensor values log.
+2016/03/31 08:58:30: Added a data point to the sensor values log.
+2016/03/31 09:01:00: Added a data point to the sensor values log.
+2016/03/31 09:03:33: Added a data point to the sensor values log.
+2016/03/31 09:06:04: Added a data point to the sensor values log.
+2016/03/31 09:08:34: Added a data point to the sensor values log.
+2016/03/31 09:11:05: Added a data point to the sensor values log.
+2016/03/31 09:13:35: Added a data point to the sensor values log.
+2016/03/31 09:16:05: Added a data point to the sensor values log.
+2016/03/31 09:18:35: Added a data point to the sensor values log.
+2016/03/31 09:21:05: Added a data point to the sensor values log.
+2016/03/31 09:23:35: Added a data point to the sensor values log.
+2016/03/31 09:26:08: Added a data point to the sensor values log.
+2016/03/31 09:28:39: Added a data point to the sensor values log.
+2016/03/31 09:31:09: Added a data point to the sensor values log.
+2016/03/31 09:33:39: Added a data point to the sensor values log.
+2016/03/31 09:36:10: Added a data point to the sensor values log.
+2016/03/31 09:38:40: Added a data point to the sensor values log.
+2016/03/31 09:41:10: Added a data point to the sensor values log.
+2016/03/31 09:43:43: Added a data point to the sensor values log.
+2016/03/31 09:46:14: Added a data point to the sensor values log.
+2016/03/31 09:48:44: Added a data point to the sensor values log.
+2016/03/31 09:51:14: Added a data point to the sensor values log.
+2016/03/31 09:53:44: Added a data point to the sensor values log.
+2016/03/31 09:56:15: Added a data point to the sensor values log.
+2016/03/31 09:58:45: Added a data point to the sensor values log.
+2016/03/31 10:01:15: Added a data point to the sensor values log.
+2016/03/31 10:03:45: Added a data point to the sensor values log.
+2016/03/31 10:06:16: Added a data point to the sensor values log.
+2016/03/31 10:08:49: Added a data point to the sensor values log.
+2016/03/31 10:11:19: Added a data point to the sensor values log.
+2016/03/31 10:13:49: Added a data point to the sensor values log.
+2016/03/31 10:16:19: Added a data point to the sensor values log.
+2016/03/31 10:18:49: Added a data point to the sensor values log.
+2016/03/31 10:21:20: Added a data point to the sensor values log.
+2016/03/31 10:23:50: Added a data point to the sensor values log.
+2016/03/31 10:26:20: Added a data point to the sensor values log.
+2016/03/31 10:28:50: Added a data point to the sensor values log.
+2016/03/31 10:31:20: Added a data point to the sensor values log.
+2016/03/31 10:33:50: Added a data point to the sensor values log.
+2016/03/31 10:36:21: Added a data point to the sensor values log.
+2016/03/31 10:38:51: Added a data point to the sensor values log.
+2016/03/31 10:41:22: Added a data point to the sensor values log.
+2016/03/31 10:43:52: Added a data point to the sensor values log.
+2016/03/31 10:46:25: Added a data point to the sensor values log.
+2016/03/31 10:48:55: Added a data point to the sensor values log.
+2016/03/31 10:51:25: Added a data point to the sensor values log.
+2016/03/31 10:53:55: Added a data point to the sensor values log.
+2016/03/31 10:56:26: Added a data point to the sensor values log.
+2016/03/31 10:58:56: Added a data point to the sensor values log.
+2016/03/31 11:01:26: Added a data point to the sensor values log.
+2016/03/31 11:03:56: Added a data point to the sensor values log.
+2016/03/31 11:06:27: Added a data point to the sensor values log.
+2016/03/31 11:08:57: Added a data point to the sensor values log.
+2016/03/31 11:11:27: Added a data point to the sensor values log.
+2016/03/31 11:14:00: Added a data point to the sensor values log.
+2016/03/31 11:16:31: Added a data point to the sensor values log.
+2016/03/31 11:19:01: Added a data point to the sensor values log.
+2016/03/31 11:21:31: Added a data point to the sensor values log.
+2016/03/31 11:24:01: Added a data point to the sensor values log.
+2016/03/31 11:26:31: Added a data point to the sensor values log.
+2016/03/31 11:29:01: Added a data point to the sensor values log.
+2016/03/31 11:31:32: Added a data point to the sensor values log.
+2016/03/31 11:34:02: Added a data point to the sensor values log.
+2016/03/31 11:36:32: Added a data point to the sensor values log.
+2016/03/31 11:39:02: Added a data point to the sensor values log.
+2016/03/31 11:40:27: Sent Command: setlightschedule,12,0,23,0
+2016/03/31 11:41:35: Added a data point to the sensor values log.
+2016/03/31 11:48:33: Terminated PID: 18535 (for accessing the database)
+2016/03/31 11:48:33: Started yieldbuddy. Priority 15.
+2016/03/31 11:48:51: Added a data point to the sensor values log.
+2016/03/31 11:51:22: Added a data point to the sensor values log.
+2016/03/31 11:53:52: Added a data point to the sensor values log.
+2016/03/31 11:56:22: Added a data point to the sensor values log.
+2016/03/31 11:58:53: Added a data point to the sensor values log.
+2016/03/31 12:01:23: Added a data point to the sensor values log.
+2016/03/31 12:03:53: Added a data point to the sensor values log.
+2016/03/31 12:06:23: Added a data point to the sensor values log.
+2016/03/31 12:08:53: Added a data point to the sensor values log.
+2016/03/31 12:11:23: Added a data point to the sensor values log.
+2016/03/31 12:13:54: Added a data point to the sensor values log.
+2016/03/31 12:16:24: Added a data point to the sensor values log.
+2016/03/31 12:18:13: Sent Command: Relay8 isAuto 0
+2016/03/31 12:18:17: Sent Command: Relay8 off
+2016/03/31 12:18:21: Sent Command: Relay8 on
+2016/03/31 12:18:22: Sent Command: Relay8 isAuto 1
+2016/03/31 12:18:54: Added a data point to the sensor values log.
+2016/03/31 12:21:24: Added a data point to the sensor values log.
+2016/03/31 12:23:55: Added a data point to the sensor values log.
+2016/03/31 12:26:25: Added a data point to the sensor values log.
+2016/03/31 12:28:55: Added a data point to the sensor values log.
+2016/03/31 12:31:25: Added a data point to the sensor values log.
+2016/03/31 12:33:55: Added a data point to the sensor values log.
+2016/03/31 12:36:25: Added a data point to the sensor values log.
+2016/03/31 12:38:56: Added a data point to the sensor values log.
+2016/03/31 12:41:26: Added a data point to the sensor values log.
+2016/03/31 12:43:56: Added a data point to the sensor values log.
+2016/03/31 12:46:26: Added a data point to the sensor values log.
+2016/03/31 12:48:56: Added a data point to the sensor values log.
+2016/03/31 12:51:26: Added a data point to the sensor values log.
+2016/03/31 12:53:56: Added a data point to the sensor values log.
+2016/03/31 12:56:26: Added a data point to the sensor values log.
+2016/03/31 12:58:57: Added a data point to the sensor values log.
+2016/03/31 13:01:27: Added a data point to the sensor values log.
+2016/03/31 13:03:57: Added a data point to the sensor values log.
+2016/03/31 13:06:27: Added a data point to the sensor values log.
+2016/03/31 13:08:57: Added a data point to the sensor values log.
+2016/03/31 13:11:27: Added a data point to the sensor values log.
+2016/03/31 13:13:57: Added a data point to the sensor values log.
+2016/03/31 13:16:27: Added a data point to the sensor values log.
+2016/03/31 13:18:57: Added a data point to the sensor values log.
+2016/03/31 13:21:27: Added a data point to the sensor values log.
+2016/03/31 13:23:57: Added a data point to the sensor values log.
+2016/03/31 13:26:27: Added a data point to the sensor values log.
+2016/03/31 13:28:58: Added a data point to the sensor values log.
+2016/03/31 13:31:28: Added a data point to the sensor values log.
+2016/03/31 13:33:58: Added a data point to the sensor values log.
+2016/03/31 13:36:28: Added a data point to the sensor values log.
+2016/03/31 13:38:59: Added a data point to the sensor values log.
+2016/03/31 13:41:29: Added a data point to the sensor values log.
+2016/03/31 13:43:59: Added a data point to the sensor values log.
+2016/03/31 13:46:29: Added a data point to the sensor values log.
+2016/03/31 13:48:59: Added a data point to the sensor values log.
+2016/03/31 13:51:29: Added a data point to the sensor values log.
+2016/03/31 13:53:59: Added a data point to the sensor values log.
+2016/03/31 13:56:29: Added a data point to the sensor values log.
+2016/03/31 13:59:00: Added a data point to the sensor values log.
+2016/03/31 14:01:30: Added a data point to the sensor values log.
+2016/03/31 14:04:00: Added a data point to the sensor values log.
+2016/03/31 14:06:30: Added a data point to the sensor values log.
+2016/03/31 14:09:01: Added a data point to the sensor values log.
+2016/03/31 14:11:31: Added a data point to the sensor values log.
+2016/03/31 14:14:01: Added a data point to the sensor values log.
+2016/03/31 14:16:31: Added a data point to the sensor values log.
+2016/03/31 14:19:01: Added a data point to the sensor values log.
+2016/03/31 14:21:31: Added a data point to the sensor values log.
+2016/03/31 14:24:02: Added a data point to the sensor values log.
+2016/03/31 14:26:32: Added a data point to the sensor values log.
+2016/03/31 14:29:05: Added a data point to the sensor values log.
+2016/03/31 14:31:35: Added a data point to the sensor values log.
+2016/03/31 14:34:06: Added a data point to the sensor values log.
+2016/03/31 14:36:36: Added a data point to the sensor values log.
+2016/03/31 14:39:06: Added a data point to the sensor values log.
+2016/03/31 14:41:36: Added a data point to the sensor values log.
+2016/03/31 14:44:06: Added a data point to the sensor values log.
+2016/03/31 14:46:36: Added a data point to the sensor values log.
+2016/03/31 14:49:07: Added a data point to the sensor values log.
+2016/03/31 14:51:37: Added a data point to the sensor values log.
+2016/03/31 14:54:07: Added a data point to the sensor values log.
+2016/03/31 14:56:37: Added a data point to the sensor values log.
+2016/03/31 14:59:08: Added a data point to the sensor values log.
+2016/03/31 15:01:38: Added a data point to the sensor values log.
+2016/03/31 15:04:08: Added a data point to the sensor values log.
+2016/03/31 15:06:38: Added a data point to the sensor values log.
+2016/03/31 15:09:08: Added a data point to the sensor values log.
+2016/03/31 15:09:46: serialerr: 2 from serial loop
+2016/03/31 15:09:46: no path to serial device.
+2016/03/31 15:09:46: attempting to restart serial
+2016/03/31 15:11:38: Added a data point to the sensor values log.
+2016/03/31 15:14:08: Added a data point to the sensor values log.
+2016/03/31 15:16:38: Added a data point to the sensor values log.
+2016/03/31 15:19:09: Added a data point to the sensor values log.
+2016/03/31 15:21:39: Added a data point to the sensor values log.
+2016/03/31 15:24:09: Added a data point to the sensor values log.
+2016/03/31 15:26:39: Added a data point to the sensor values log.
+2016/03/31 15:29:09: Added a data point to the sensor values log.
+2016/03/31 15:31:39: Added a data point to the sensor values log.
+2016/03/31 15:34:09: Added a data point to the sensor values log.
+2016/03/31 15:36:39: Added a data point to the sensor values log.
+2016/03/31 15:39:10: Added a data point to the sensor values log.
+2016/03/31 15:41:40: Added a data point to the sensor values log.
+2016/03/31 15:44:10: Added a data point to the sensor values log.
+2016/03/31 15:46:40: Added a data point to the sensor values log.
+2016/03/31 15:49:11: Added a data point to the sensor values log.
+2016/03/31 15:51:41: Added a data point to the sensor values log.
+2016/03/31 15:54:11: Added a data point to the sensor values log.
+2016/03/31 15:56:41: Added a data point to the sensor values log.
+2016/03/31 15:59:11: Added a data point to the sensor values log.
+2016/03/31 16:01:41: Added a data point to the sensor values log.
+2016/03/31 16:04:11: Added a data point to the sensor values log.
+2016/03/31 16:06:41: Added a data point to the sensor values log.
+2016/03/31 16:09:12: Added a data point to the sensor values log.
+2016/03/31 16:11:42: Added a data point to the sensor values log.
+2016/03/31 16:14:12: Added a data point to the sensor values log.
+2016/03/31 16:16:42: Added a data point to the sensor values log.
+2016/03/31 16:19:12: Added a data point to the sensor values log.
+2016/03/31 16:21:42: Added a data point to the sensor values log.
+2016/03/31 16:24:13: Added a data point to the sensor values log.
+2016/03/31 16:26:43: Added a data point to the sensor values log.
+2016/03/31 16:29:13: Added a data point to the sensor values log.
+2016/03/31 16:31:43: Added a data point to the sensor values log.
+2016/03/31 16:34:13: Added a data point to the sensor values log.
+2016/03/31 16:36:43: Added a data point to the sensor values log.
+2016/03/31 16:39:14: Added a data point to the sensor values log.
+2016/03/31 16:41:44: Added a data point to the sensor values log.
+2016/03/31 16:44:14: Added a data point to the sensor values log.
+2016/03/31 16:46:44: Added a data point to the sensor values log.
+2016/03/31 16:49:14: Added a data point to the sensor values log.
+2016/03/31 16:51:44: Added a data point to the sensor values log.
+2016/03/31 16:54:15: Added a data point to the sensor values log.
+2016/03/31 16:56:45: Added a data point to the sensor values log.
+2016/03/31 16:59:15: Added a data point to the sensor values log.
+2016/03/31 17:01:45: Added a data point to the sensor values log.
+2016/03/31 17:04:15: Added a data point to the sensor values log.
+2016/03/31 17:06:45: Added a data point to the sensor values log.
+2016/03/31 17:09:15: Added a data point to the sensor values log.
+2016/03/31 17:11:45: Added a data point to the sensor values log.
+2016/03/31 17:14:15: Added a data point to the sensor values log.
+2016/03/31 17:16:45: Added a data point to the sensor values log.
+2016/03/31 17:19:16: Added a data point to the sensor values log.
+2016/03/31 17:21:46: Added a data point to the sensor values log.
+2016/03/31 17:24:16: Added a data point to the sensor values log.
+2016/03/31 17:26:46: Added a data point to the sensor values log.
+2016/03/31 17:29:16: Added a data point to the sensor values log.
+2016/03/31 17:31:46: Added a data point to the sensor values log.
+2016/03/31 17:34:16: Added a data point to the sensor values log.
+2016/03/31 17:36:46: Added a data point to the sensor values log.
+2016/03/31 17:39:17: Added a data point to the sensor values log.
+2016/03/31 17:41:47: Added a data point to the sensor values log.
+2016/03/31 17:44:17: Added a data point to the sensor values log.
+2016/03/31 17:46:47: Added a data point to the sensor values log.
+2016/03/31 17:49:18: Added a data point to the sensor values log.
+2016/03/31 17:51:48: Added a data point to the sensor values log.
+2016/03/31 17:54:18: Added a data point to the sensor values log.
+2016/03/31 17:56:48: Added a data point to the sensor values log.
+2016/03/31 17:59:19: Added a data point to the sensor values log.
+2016/03/31 18:01:49: Added a data point to the sensor values log.
+2016/03/31 18:04:19: Added a data point to the sensor values log.
+2016/03/31 18:04:49: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:04:51: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:04:52: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:04:53: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:05:13: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:05:14: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:05:15: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:05:17: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:05:36: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:05:38: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:05:39: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:05:40: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:05:59: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:06:01: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:06:02: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:06:03: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:06:23: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:06:24: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:06:25: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:06:27: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:06:46: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:06:48: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:06:49: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:06:50: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:06:52: Added a data point to the sensor values log.
+2016/03/31 18:07:10: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:07:12: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:07:13: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:07:14: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:07:34: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:07:35: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:07:36: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:07:38: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:07:57: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:07:59: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:08:00: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:08:01: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:08:23: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:08:24: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:08:25: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:08:26: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:08:46: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:08:48: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:08:48: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:08:50: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:09:10: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:09:11: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:09:12: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:09:13: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:09:23: Added a data point to the sensor values log.
+2016/03/31 18:09:33: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:09:35: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:09:36: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:09:37: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:09:57: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:09:59: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:09:59: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:10:01: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:10:21: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:10:22: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:10:23: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:10:25: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:10:44: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:10:46: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:10:47: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:10:48: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:11:08: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:11:10: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:11:11: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:11:12: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:11:32: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:11:33: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:11:34: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:11:36: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:11:53: Added a data point to the sensor values log.
+2016/03/31 18:11:55: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:11:57: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:11:58: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:11:59: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:12:19: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:12:21: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:12:22: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:12:23: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:12:43: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:12:44: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:12:45: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:12:47: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:13:06: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:13:08: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:13:09: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:13:10: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:13:30: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:13:32: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:13:33: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:13:34: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:13:54: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:13:55: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:13:56: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:13:58: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:14:17: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:14:19: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:14:20: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:14:21: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:14:23: Added a data point to the sensor values log.
+2016/03/31 18:14:41: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:14:43: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:14:44: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:14:45: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:15:05: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:15:06: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:15:07: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:15:09: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:15:28: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:15:30: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:15:31: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:15:32: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:15:53: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:15:54: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:15:55: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:15:56: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:16:16: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:16:18: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:16:18: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:16:20: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:16:39: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:16:41: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:16:42: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:16:43: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:16:53: Added a data point to the sensor values log.
+2016/03/31 18:17:03: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:17:05: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:17:06: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:17:07: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:17:27: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:17:29: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:17:30: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:17:31: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:17:51: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:17:52: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:17:53: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:17:55: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:18:14: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:18:16: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:18:17: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:18:18: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:18:39: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:18:41: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:18:42: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:18:43: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:19:03: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:19:04: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:19:05: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:19:07: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:19:24: Added a data point to the sensor values log.
+2016/03/31 18:19:26: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:19:28: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:19:29: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:19:30: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:19:50: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:19:52: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:19:53: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:19:54: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:20:14: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:20:15: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:20:16: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:20:18: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:20:37: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:20:39: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:20:40: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:20:41: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:21:00: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:21:02: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:21:03: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:21:04: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:21:24: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:21:25: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:21:26: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:21:28: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:21:47: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:21:49: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:21:50: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:21:51: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:21:57: Added a data point to the sensor values log.
+2016/03/31 18:22:11: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:22:13: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:22:14: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:22:15: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:22:35: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:22:37: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:22:37: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:22:39: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:22:58: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:23:00: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:23:01: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:23:02: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:23:22: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:23:26: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:23:26: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:23:27: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:23:46: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:23:48: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:23:49: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:23:50: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:24:10: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:24:11: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:24:12: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:24:13: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:24:27: Added a data point to the sensor values log.
+2016/03/31 18:24:33: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:24:35: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:24:36: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:24:37: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:24:57: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:24:59: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:25:00: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:25:01: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:25:21: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:25:22: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:25:23: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:25:25: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:25:44: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:25:46: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:25:47: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:25:48: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:26:08: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:26:10: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:26:11: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:26:12: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:26:32: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:26:33: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:26:34: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:26:36: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:26:55: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:26:57: Added a data point to the sensor values log.
+2016/03/31 18:26:57: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:26:58: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:26:59: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:27:19: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:27:21: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:27:22: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:27:23: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:27:43: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:27:44: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:27:45: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:27:47: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:28:06: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:28:08: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:28:09: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:28:10: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:28:31: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:28:33: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:28:34: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:28:35: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:28:55: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:28:56: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:28:57: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:28:59: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:29:18: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:29:20: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:29:21: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:29:22: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:29:28: Added a data point to the sensor values log.
+2016/03/31 18:29:42: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:29:44: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:29:45: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:29:46: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:30:06: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:30:08: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:30:08: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:30:10: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:30:30: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:30:31: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:30:32: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:30:33: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:30:53: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:30:57: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:30:57: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:30:58: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:31:17: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:31:19: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:31:20: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:31:21: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:31:41: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:31:42: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:31:43: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:31:45: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:31:58: Added a data point to the sensor values log.
+2016/03/31 18:32:04: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:32:06: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:32:07: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:32:08: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:32:28: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:32:30: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:32:31: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:32:32: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:32:52: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:32:53: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:32:54: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:32:56: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:33:15: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:33:17: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:33:18: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:33:19: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:33:39: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:33:41: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:33:42: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:33:43: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:34:03: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:34:04: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:34:05: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:34:07: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:34:26: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:34:28: Added a data point to the sensor values log.
+2016/03/31 18:34:28: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:34:29: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:34:30: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:34:50: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:34:52: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:34:53: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:34:54: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:35:14: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:35:15: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:35:16: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:35:18: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:35:37: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:35:39: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:35:40: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:35:41: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:36:00: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:36:02: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:36:03: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:36:04: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:36:24: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:36:25: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:36:26: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:36:28: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:36:47: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:36:49: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:36:50: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:36:51: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:37:01: Added a data point to the sensor values log.
+2016/03/31 18:37:11: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:37:13: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:37:14: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:37:15: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:37:35: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:37:37: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:37:38: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:37:39: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:37:59: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:38:00: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:38:01: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:38:03: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:38:22: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:38:24: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:38:25: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:38:26: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:38:47: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:38:49: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:38:50: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:38:51: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:39:11: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:39:12: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:39:13: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:39:15: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:39:32: Added a data point to the sensor values log.
+2016/03/31 18:39:34: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:39:36: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:39:37: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:39:38: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:39:58: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:40:00: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:40:01: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:40:02: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:40:22: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:40:23: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:40:24: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:40:26: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:40:45: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:40:47: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:40:48: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:40:49: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:41:09: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:41:11: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:41:12: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:41:13: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:41:33: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:41:34: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:41:35: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:41:37: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:41:56: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:41:58: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:41:59: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:42:00: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:42:02: Added a data point to the sensor values log.
+2016/03/31 18:42:20: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:42:22: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:42:23: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:42:24: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:42:44: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:42:45: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:42:46: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:42:48: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:43:08: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:43:09: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:43:10: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:43:11: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:43:32: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:43:33: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:43:34: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:43:35: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:43:55: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:43:57: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:43:57: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:43:59: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:44:18: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:44:20: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:44:21: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:44:22: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:44:32: Added a data point to the sensor values log.
+2016/03/31 18:44:42: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:44:44: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:44:45: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:44:46: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:45:06: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:45:08: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:45:09: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:45:10: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:45:30: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:45:31: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:45:32: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:45:34: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:45:53: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:45:55: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:45:56: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:45:57: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:46:17: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:46:19: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:46:20: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:46:21: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:46:41: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:46:42: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:46:43: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:46:45: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:47:02: Added a data point to the sensor values log.
+2016/03/31 18:47:04: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:47:06: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:47:07: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:47:08: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:47:28: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:47:30: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:47:31: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:47:32: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:47:52: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:47:53: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:47:54: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:47:56: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:48:15: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:48:17: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:48:18: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:48:19: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:48:40: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:48:42: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:48:43: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:48:44: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:49:04: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:49:05: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:49:06: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:49:08: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:49:27: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:49:29: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:49:30: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:49:31: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:49:33: Added a data point to the sensor values log.
+2016/03/31 18:49:51: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:49:53: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:49:54: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:49:55: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:50:15: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:50:17: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:50:17: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:50:19: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:50:38: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:50:40: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:50:41: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:50:42: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:51:02: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:51:03: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:51:04: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:51:05: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:51:25: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:51:26: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:51:27: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:51:29: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:51:49: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:51:50: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:51:51: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:51:52: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:52:06: Added a data point to the sensor values log.
+2016/03/31 18:52:12: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:52:14: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:52:15: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:52:16: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:52:36: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:52:38: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:52:38: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:52:40: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:53:00: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:53:01: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:53:02: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:53:04: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:53:23: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:53:25: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:53:26: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:53:27: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:53:47: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:53:49: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:53:50: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:53:51: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:54:11: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:54:12: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:54:13: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:54:15: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:54:34: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:54:36: Added a data point to the sensor values log.
+2016/03/31 18:54:36: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:54:37: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:54:38: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:54:58: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:55:00: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:55:01: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:55:02: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:55:22: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:55:23: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:55:24: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:55:26: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:55:45: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:55:47: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:55:48: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:55:49: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:56:09: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:56:11: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:56:12: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:56:13: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:56:33: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:56:34: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:56:35: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:56:37: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:56:56: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:56:58: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:56:59: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:57:00: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:57:06: Added a data point to the sensor values log.
+2016/03/31 18:57:20: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:57:22: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:57:23: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:57:24: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:57:44: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:57:46: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:57:46: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:57:48: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:58:08: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:58:09: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:58:10: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:58:11: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:58:31: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:58:36: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:58:36: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:58:37: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:58:56: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:58:58: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:58:59: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:59:00: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:59:20: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:59:21: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:59:22: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:59:24: Error sending email: Tank4 High - please run connect() first
+2016/03/31 18:59:37: Added a data point to the sensor values log.
+2016/03/31 18:59:43: Error sending email: Tank1 High - please run connect() first
+2016/03/31 18:59:45: Error sending email: Tank2 High - please run connect() first
+2016/03/31 18:59:46: Error sending email: Tank3 High - please run connect() first
+2016/03/31 18:59:47: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:00:07: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:00:09: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:00:10: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:00:11: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:00:31: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:00:32: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:00:33: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:00:35: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:00:54: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:00:56: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:00:57: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:00:58: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:01:18: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:01:20: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:01:21: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:01:22: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:01:42: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:01:43: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:01:44: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:01:46: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:02:05: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:02:07: Added a data point to the sensor values log.
+2016/03/31 19:02:07: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:02:08: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:02:09: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:02:29: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:02:31: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:02:32: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:02:33: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:02:53: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:02:54: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:02:55: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:02:57: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:03:16: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:03:18: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:03:19: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:03:20: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:03:40: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:03:42: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:03:43: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:03:44: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:04:04: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:04:05: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:04:06: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:04:08: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:04:27: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:04:29: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:04:30: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:04:31: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:04:37: Added a data point to the sensor values log.
+2016/03/31 19:04:51: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:04:53: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:04:54: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:04:55: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:05:15: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:05:17: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:05:17: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:05:19: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:05:39: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:05:40: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:05:41: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:05:42: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:06:02: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:06:05: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:06:05: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:06:06: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:06:25: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:06:27: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:06:27: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:06:29: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:06:49: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:06:50: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:06:51: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:06:52: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:07:10: Added a data point to the sensor values log.
+2016/03/31 19:07:12: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:07:14: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:07:15: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:07:16: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:07:36: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:07:38: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:07:39: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:07:40: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:08:00: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:08:01: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:08:02: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:08:04: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:08:23: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:08:25: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:08:26: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:08:27: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:08:48: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:08:50: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:08:51: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:08:52: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:09:12: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:09:13: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:09:14: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:09:16: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:09:35: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:09:37: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:09:38: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:09:39: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:09:41: Added a data point to the sensor values log.
+2016/03/31 19:09:59: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:10:01: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:10:02: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:10:03: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:10:23: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:10:24: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:10:25: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:10:27: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:10:46: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:10:48: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:10:49: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:10:50: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:11:11: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:11:12: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:11:13: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:11:14: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:11:34: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:11:35: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:11:36: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:11:38: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:11:57: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:11:59: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:12:00: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:12:01: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:12:11: Added a data point to the sensor values log.
+2016/03/31 19:12:21: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:12:23: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:12:24: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:12:25: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:12:45: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:12:47: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:12:47: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:12:49: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:13:09: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:13:10: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:13:11: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:13:13: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:13:32: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:13:34: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:13:35: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:13:36: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:13:56: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:13:58: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:13:59: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:14:00: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:14:20: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:14:21: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:14:22: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:14:24: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:14:41: Added a data point to the sensor values log.
+2016/03/31 19:14:43: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:14:45: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:14:46: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:14:47: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:15:07: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:15:09: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:15:10: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:15:11: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:15:31: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:15:32: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:15:33: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:15:35: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:15:54: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:15:56: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:15:57: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:15:58: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:16:18: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:16:20: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:16:21: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:16:22: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:16:42: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:16:43: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:16:44: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:16:46: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:17:05: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:17:07: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:17:08: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:17:09: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:17:11: Added a data point to the sensor values log.
+2016/03/31 19:17:29: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:17:31: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:17:32: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:17:33: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:17:53: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:17:54: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:17:55: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:17:57: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:18:16: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:18:18: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:18:19: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:18:21: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:18:42: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:18:43: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:18:44: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:18:45: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:19:05: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:19:07: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:19:07: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:19:09: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:19:29: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:19:30: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:19:31: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:19:32: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:19:42: Added a data point to the sensor values log.
+2016/03/31 19:19:52: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:19:54: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:19:55: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:19:56: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:20:16: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:20:18: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:20:19: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:20:20: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:20:40: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:20:41: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:20:42: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:20:44: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:21:03: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:21:05: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:21:06: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:21:07: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:21:26: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:21:28: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:21:29: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:21:30: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:21:50: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:21:51: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:21:52: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:21:54: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:22:13: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:22:15: Added a data point to the sensor values log.
+2016/03/31 19:22:15: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:22:16: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:22:17: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:22:37: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:22:39: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:22:40: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:22:41: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:23:01: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:23:02: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:23:03: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:23:05: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:23:24: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:23:26: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:23:27: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:23:28: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:23:48: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:23:50: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:23:51: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:23:52: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:24:12: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:24:14: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:24:14: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:24:16: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:24:35: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:24:37: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:24:38: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:24:39: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:24:45: Added a data point to the sensor values log.
+2016/03/31 19:24:59: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:25:01: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:25:02: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:25:03: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:25:23: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:25:25: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:25:26: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:25:27: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:25:47: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:25:48: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:25:49: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:25:50: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:26:10: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:26:14: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:26:14: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:26:15: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:26:34: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:26:36: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:26:36: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:26:38: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:26:58: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:26:59: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:27:00: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:27:02: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:27:15: Added a data point to the sensor values log.
+2016/03/31 19:27:21: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:27:23: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:27:24: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:27:25: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:27:45: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:27:47: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:27:48: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:27:49: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:28:09: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:28:10: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:28:11: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:28:13: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:28:32: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:28:34: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:28:35: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:28:36: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:28:57: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:28:59: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:29:00: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:29:01: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:29:21: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:29:22: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:29:23: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:29:25: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:29:44: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:29:46: Added a data point to the sensor values log.
+2016/03/31 19:29:46: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:29:47: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:29:48: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:30:08: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:30:10: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:30:11: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:30:12: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:30:32: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:30:33: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:30:34: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:30:36: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:30:55: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:30:57: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:30:58: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:30:59: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:31:19: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:31:21: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:31:22: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:31:23: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:31:43: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:31:44: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:31:45: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:31:47: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:32:06: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:32:08: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:32:09: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:32:10: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:32:16: Added a data point to the sensor values log.
+2016/03/31 19:32:30: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:32:32: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:32:33: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:32:34: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:32:54: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:32:55: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:32:56: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:32:58: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:33:18: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:33:19: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:33:20: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:33:21: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:33:41: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:33:45: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:33:45: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:33:46: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:34:05: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:34:07: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:34:08: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:34:09: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:34:29: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:34:30: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:34:31: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:34:32: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:34:46: Added a data point to the sensor values log.
+2016/03/31 19:34:52: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:34:54: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:34:55: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:34:56: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:35:16: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:35:18: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:35:19: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:35:20: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:35:40: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:35:41: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:35:42: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:35:44: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:36:03: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:36:05: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:36:06: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:36:07: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:36:26: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:36:28: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:36:29: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:36:30: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:36:50: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:36:51: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:36:52: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:36:54: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:37:13: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:37:15: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:37:16: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:37:17: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:37:19: Added a data point to the sensor values log.
+2016/03/31 19:37:37: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:37:39: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:37:40: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:37:41: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:38:01: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:38:02: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:38:03: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:38:05: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:38:24: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:38:26: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:38:27: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:38:28: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:38:50: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:38:51: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:38:52: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:38:53: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:39:13: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:39:15: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:39:15: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:39:17: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:39:36: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:39:38: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:39:39: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:39:40: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:39:50: Added a data point to the sensor values log.
+2016/03/31 19:40:00: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:40:02: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:40:03: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:40:04: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:40:24: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:40:26: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:40:27: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:40:28: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:40:48: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:40:49: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:40:50: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:40:52: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:41:11: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:41:13: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:41:14: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:41:15: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:41:35: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:41:37: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:41:38: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:41:39: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:41:59: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:42:00: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:42:01: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:42:03: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:42:20: Added a data point to the sensor values log.
+2016/03/31 19:42:22: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:42:24: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:42:25: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:42:26: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:42:46: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:42:48: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:42:49: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:42:50: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:43:10: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:43:11: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:43:12: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:43:14: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:43:33: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:43:35: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:43:36: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:43:37: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:43:57: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:43:59: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:44:00: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:44:01: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:44:21: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:44:22: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:44:23: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:44:25: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:44:44: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:44:46: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:44:47: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:44:48: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:44:50: Added a data point to the sensor values log.
+2016/03/31 19:45:08: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:45:10: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:45:11: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:45:12: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:45:32: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:45:33: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:45:34: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:45:36: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:45:55: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:45:57: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:45:58: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:45:59: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:46:20: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:46:21: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:46:22: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:46:23: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:46:43: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:46:45: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:46:45: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:46:47: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:47:07: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:47:08: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:47:09: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:47:10: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:47:20: Added a data point to the sensor values log.
+2016/03/31 19:47:30: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:47:32: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:47:33: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:47:34: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:47:54: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:47:56: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:47:56: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:47:58: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:48:18: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:48:19: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:48:20: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:48:22: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:48:41: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:48:43: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:48:44: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:48:45: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:49:05: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:49:07: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:49:08: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:49:09: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:49:29: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:49:30: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:49:31: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:49:33: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:49:50: Added a data point to the sensor values log.
+2016/03/31 19:49:52: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:49:54: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:49:55: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:49:56: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:50:16: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:50:18: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:50:19: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:50:20: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:50:40: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:50:41: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:50:42: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:50:44: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:51:03: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:51:05: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:51:06: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:51:07: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:51:27: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:51:29: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:51:30: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:51:31: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:51:51: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:51:52: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:51:53: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:51:55: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:52:14: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:52:16: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:52:17: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:52:18: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:52:20: Added a data point to the sensor values log.
+2016/03/31 19:52:38: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:52:40: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:52:41: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:52:42: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:53:02: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:53:03: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:53:04: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:53:06: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:53:25: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:53:27: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:53:28: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:53:29: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:53:50: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:53:51: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:53:52: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:53:53: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:54:13: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:54:15: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:54:15: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:54:17: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:54:37: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:54:38: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:54:39: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:54:40: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:54:50: Added a data point to the sensor values log.
+2016/03/31 19:55:00: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:55:02: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:55:03: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:55:04: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:55:24: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:55:26: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:55:27: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:55:28: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:55:48: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:55:49: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:55:50: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:55:52: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:56:11: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:56:13: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:56:14: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:56:15: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:56:35: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:56:37: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:56:38: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:56:39: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:56:59: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:57:00: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:57:01: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:57:03: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:57:20: Added a data point to the sensor values log.
+2016/03/31 19:57:22: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:57:24: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:57:25: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:57:26: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:57:46: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:57:48: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:57:49: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:57:50: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:58:10: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:58:11: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:58:12: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:58:14: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:58:33: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:58:35: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:58:36: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:58:37: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:58:58: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:59:00: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:59:01: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:59:02: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:59:22: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:59:23: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:59:24: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:59:26: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:59:45: Error sending email: Tank1 High - please run connect() first
+2016/03/31 19:59:47: Error sending email: Tank2 High - please run connect() first
+2016/03/31 19:59:48: Error sending email: Tank3 High - please run connect() first
+2016/03/31 19:59:49: Error sending email: Tank4 High - please run connect() first
+2016/03/31 19:59:51: Added a data point to the sensor values log.
+2016/03/31 20:00:09: Error sending email: Tank1 High - please run connect() first
+2016/03/31 20:00:11: Error sending email: Tank2 High - please run connect() first
+2016/03/31 20:00:12: Error sending email: Tank3 High - please run connect() first
+2016/03/31 20:00:13: Error sending email: Tank4 High - please run connect() first
+2016/03/31 20:00:33: Error sending email: Tank1 High - please run connect() first
+2016/03/31 20:00:34: Error sending email: Tank2 High - please run connect() first
+2016/03/31 20:00:35: Error sending email: Tank3 High - please run connect() first
+2016/03/31 20:00:37: Error sending email: Tank4 High - please run connect() first
+2016/03/31 20:00:56: Error sending email: Tank1 High - please run connect() first
+2016/03/31 20:00:58: Error sending email: Tank2 High - please run connect() first
+2016/03/31 20:00:59: Error sending email: Tank3 High - please run connect() first
+2016/03/31 20:01:00: Error sending email: Tank4 High - please run connect() first
+2016/03/31 20:01:21: Error sending email: Tank1 High - please run connect() first
+2016/03/31 20:01:22: Error sending email: Tank2 High - please run connect() first
+2016/03/31 20:01:23: Error sending email: Tank3 High - please run connect() first
+2016/03/31 20:01:24: Error sending email: Tank4 High - please run connect() first
+2016/03/31 20:01:44: Error sending email: Tank1 High - please run connect() first
+2016/03/31 20:01:45: Error sending email: Tank2 High - please run connect() first
+2016/03/31 20:01:46: Error sending email: Tank3 High - please run connect() first
+2016/03/31 20:01:48: Error sending email: Tank4 High - please run connect() first
+2016/03/31 20:02:08: Error sending email: Tank1 High - please run connect() first
+2016/03/31 20:02:09: Error sending email: Tank2 High - please run connect() first
+2016/03/31 20:02:10: Error sending email: Tank3 High - please run connect() first
+2016/03/31 20:02:11: Error sending email: Tank4 High - please run connect() first
+2016/03/31 20:02:21: Added a data point to the sensor values log.
+2016/03/31 20:02:31: Error sending email: Tank1 High - please run connect() first
+2016/03/31 20:02:33: Error sending email: Tank2 High - please run connect() first
+2016/03/31 20:02:34: Error sending email: Tank3 High - please run connect() first
+2016/03/31 20:02:35: Error sending email: Tank4 High - please run connect() first
+2016/03/31 20:02:55: Error sending email: Tank1 High - please run connect() first
+2016/03/31 20:02:57: Error sending email: Tank2 High - please run connect() first
+2016/03/31 20:02:57: Error sending email: Tank3 High - please run connect() first
+2016/03/31 20:02:59: Error sending email: Tank4 High - please run connect() first
+2016/03/31 20:03:19: Error sending email: Tank1 High - please run connect() first
+2016/03/31 20:03:20: Error sending email: Tank2 High - please run connect() first
+2016/03/31 20:03:21: Error sending email: Tank3 High - please run connect() first
+2016/03/31 20:03:22: Error sending email: Tank4 High - please run connect() first
+2016/03/31 20:03:42: Error sending email: Tank1 High - please run connect() first
+2016/03/31 20:03:44: Error sending email: Tank2 High - please run connect() first
+2016/03/31 20:03:45: Error sending email: Tank3 High - please run connect() first
+2016/03/31 20:03:46: Error sending email: Tank4 High - please run connect() first
+2016/03/31 20:04:06: Error sending email: Tank1 High - please run connect() first
+2016/03/31 20:04:08: Error sending email: Tank2 High - please run connect() first
+2016/03/31 20:04:09: Error sending email: Tank3 High - please run connect() first
+2016/03/31 20:04:10: Error sending email: Tank4 High - please run connect() first
+2016/03/31 20:04:30: Error sending email: Tank1 High - please run connect() first
+2016/03/31 20:04:31: Error sending email: Tank2 High - please run connect() first
+2016/03/31 20:04:32: Error sending email: Tank3 High - please run connect() first
+2016/03/31 20:04:34: Error sending email: Tank4 High - please run connect() first
+2016/03/31 20:04:51: Added a data point to the sensor values log.
+2016/03/31 20:04:53: Error sending email: Tank1 High - please run connect() first
+2016/03/31 20:04:55: Error sending email: Tank2 High - please run connect() first
+2016/03/31 20:04:56: Error sending email: Tank3 High - please run connect() first
+2016/03/31 20:04:57: Error sending email: Tank4 High - please run connect() first
+2016/03/31 20:05:17: Error sending email: Tank1 High - please run connect() first
+2016/03/31 20:05:19: Error sending email: Tank2 High - please run connect() first
+2016/03/31 20:05:20: Error sending email: Tank3 High - please run connect() first
+2016/03/31 20:05:21: Error sending email: Tank4 High - please run connect() first
+2016/03/31 20:05:41: Error sending email: Tank1 High - please run connect() first
+2016/03/31 20:05:42: Error sending email: Tank2 High - please run connect() first
+2016/03/31 20:05:43: Error sending email: Tank3 High - please run connect() first
+2016/03/31 20:05:45: Error sending email: Tank4 High - please run connect() first
+2016/03/31 20:06:04: Error sending email: Tank1 High - please run connect() first
+2016/03/31 20:06:06: Error sending email: Tank2 High - please run connect() first
+2016/03/31 20:06:07: Error sending email: Tank3 High - please run connect() first
+2016/03/31 20:06:08: Error sending email: Tank4 High - please run connect() first
+2016/03/31 20:06:27: Error sending email: Tank1 High - please run connect() first
+2016/03/31 20:06:29: Error sending email: Tank2 High - please run connect() first
+2016/03/31 20:06:30: Error sending email: Tank3 High - please run connect() first
+2016/03/31 20:06:31: Error sending email: Tank4 High - please run connect() first
+2016/03/31 20:06:51: Error sending email: Tank1 High - please run connect() first
+2016/03/31 20:06:52: Error sending email: Tank2 High - please run connect() first
+2016/03/31 20:06:53: Error sending email: Tank3 High - please run connect() first
+2016/03/31 20:06:55: Error sending email: Tank4 High - please run connect() first
+2016/03/31 20:07:14: Error sending email: Tank1 High - please run connect() first
+2016/03/31 20:07:16: Error sending email: Tank2 High - please run connect() first
+2016/03/31 20:07:17: Error sending email: Tank3 High - please run connect() first
+2016/03/31 20:07:18: Error sending email: Tank4 High - please run connect() first
+2016/03/31 20:07:24: Added a data point to the sensor values log.
+2016/03/31 20:07:38: Error sending email: Tank1 High - please run connect() first
+2016/03/31 20:07:40: Error sending email: Tank2 High - please run connect() first
+2016/03/31 20:07:41: Error sending email: Tank3 High - please run connect() first
+2016/03/31 20:07:42: Error sending email: Tank4 High - please run connect() first
+2016/03/31 20:08:02: Error sending email: Tank1 High - please run connect() first
+2016/03/31 20:08:03: Error sending email: Tank2 High - please run connect() first
+2016/03/31 20:08:04: Error sending email: Tank3 High - please run connect() first
+2016/03/31 20:08:06: Error sending email: Tank4 High - please run connect() first
+2016/03/31 20:08:25: Error sending email: Tank1 High - please run connect() first
+2016/03/31 20:08:27: Error sending email: Tank2 High - please run connect() first
+2016/03/31 20:08:28: Error sending email: Tank3 High - please run connect() first
+2016/03/31 20:08:29: Error sending email: Tank4 High - please run connect() first
+2016/03/31 20:08:49: Error sending email: Tank1 High - please run connect() first
+2016/03/31 20:08:54: Error sending email: Tank2 High - please run connect() first
+2016/03/31 20:08:54: Error sending email: Tank3 High - please run connect() first
+2016/03/31 20:08:55: Error sending email: Tank4 High - please run connect() first
+2016/03/31 20:09:14: Error sending email: Tank1 High - please run connect() first
+2016/03/31 20:09:16: Error sending email: Tank2 High - please run connect() first
+2016/03/31 20:09:17: Error sending email: Tank3 High - please run connect() first
+2016/03/31 20:09:18: Error sending email: Tank4 High - please run connect() first
+2016/03/31 20:09:38: Error sending email: Tank1 High - please run connect() first
+2016/03/31 20:09:39: Error sending email: Tank2 High - please run connect() first
+2016/03/31 20:09:40: Error sending email: Tank3 High - please run connect() first
+2016/03/31 20:09:42: Error sending email: Tank4 High - please run connect() first
+2016/03/31 20:09:55: Added a data point to the sensor values log.
+2016/03/31 20:10:01: Error sending email: Tank1 High - please run connect() first
+2016/03/31 20:10:03: Error sending email: Tank2 High - please run connect() first
+2016/03/31 20:10:04: Error sending email: Tank3 High - please run connect() first
+2016/03/31 20:10:05: Error sending email: Tank4 High - please run connect() first
+2016/03/31 20:10:25: Error sending email: Tank1 High - please run connect() first
+2016/03/31 20:10:27: Error sending email: Tank2 High - please run connect() first
+2016/03/31 20:10:28: Error sending email: Tank3 High - please run connect() first
+2016/03/31 20:10:29: Error sending email: Tank4 High - please run connect() first
+2016/03/31 20:10:49: Error sending email: Tank1 High - please run connect() first
+2016/03/31 20:10:50: Error sending email: Tank2 High - please run connect() first
+2016/03/31 20:10:51: Error sending email: Tank3 High - please run connect() first
+2016/03/31 20:10:53: Error sending email: Tank4 High - please run connect() first
+2016/03/31 20:11:12: Error sending email: Tank1 High - please run connect() first
+2016/03/31 20:11:14: Error sending email: Tank2 High - please run connect() first
+2016/03/31 20:11:15: Error sending email: Tank3 High - please run connect() first
+2016/03/31 20:11:16: Error sending email: Tank4 High - please run connect() first
+2016/03/31 20:11:36: Error sending email: Tank1 High - please run connect() first
+2016/03/31 20:11:38: Error sending email: Tank2 High - please run connect() first
+2016/03/31 20:11:39: Error sending email: Tank3 High - please run connect() first
+2016/03/31 20:11:40: Error sending email: Tank4 High - please run connect() first
+2016/03/31 20:12:00: Error sending email: Tank1 High - please run connect() first
+2016/03/31 20:12:01: Error sending email: Tank2 High - please run connect() first
+2016/03/31 20:12:02: Error sending email: Tank3 High - please run connect() first
+2016/03/31 20:12:04: Error sending email: Tank4 High - please run connect() first
+2016/03/31 20:12:23: Error sending email: Tank1 High - please run connect() first
+2016/03/31 20:12:25: Added a data point to the sensor values log.
+2016/03/31 20:12:25: Error sending email: Tank2 High - please run connect() first
+2016/03/31 20:12:26: Error sending email: Tank3 High - please run connect() first
+2016/03/31 20:12:27: Error sending email: Tank4 High - please run connect() first
+2016/03/31 20:12:47: Error sending email: Tank1 High - please run connect() first
+2016/03/31 20:12:49: Error sending email: Tank2 High - please run connect() first
+2016/03/31 20:12:50: Error sending email: Tank3 High - please run connect() first
+2016/03/31 20:12:51: Error sending email: Tank4 High - please run connect() first
+2016/03/31 20:13:11: Error sending email: Tank1 High - please run connect() first
+2016/03/31 20:13:12: Error sending email: Tank2 High - please run connect() first
+2016/03/31 20:13:13: Error sending email: Tank3 High - please run connect() first
+2016/03/31 20:13:15: Error sending email: Tank4 High - please run connect() first
+2016/03/31 20:13:34: Error sending email: Tank1 High - please run connect() first
+2016/03/31 20:13:36: Error sending email: Tank2 High - please run connect() first
+2016/03/31 20:13:37: Error sending email: Tank3 High - please run connect() first
+2016/03/31 20:13:38: Error sending email: Tank4 High - please run connect() first
+2016/03/31 20:13:58: Error sending email: Tank1 High - please run connect() first
+2016/03/31 20:14:00: Error sending email: Tank2 High - please run connect() first
+2016/03/31 20:14:01: Error sending email: Tank3 High - please run connect() first
+2016/03/31 20:14:02: Error sending email: Tank4 High - please run connect() first
+2016/03/31 20:14:22: Error sending email: Tank1 High - please run connect() first
+2016/03/31 20:14:23: Error sending email: Tank2 High - please run connect() first
+2016/03/31 20:14:24: Error sending email: Tank3 High - please run connect() first
+2016/03/31 20:14:26: Error sending email: Tank4 High - please run connect() first
+2016/03/31 20:14:45: Error sending email: Tank1 High - please run connect() first
+2016/03/31 20:14:47: Error sending email: Tank2 High - please run connect() first
+2016/03/31 20:14:48: Error sending email: Tank3 High - please run connect() first
+2016/03/31 20:14:49: Error sending email: Tank4 High - please run connect() first
+2016/03/31 20:14:55: Added a data point to the sensor values log.
+2016/03/31 20:15:09: Error sending email: Tank1 High - please run connect() first
+2016/03/31 20:15:11: Error sending email: Tank2 High - please run connect() first
+2016/03/31 20:15:12: Error sending email: Tank3 High - please run connect() first
+2016/03/31 20:15:13: Error sending email: Tank4 High - please run connect() first
+2016/03/31 20:15:33: Error sending email: Tank1 High - please run connect() first
+2016/03/31 20:15:34: Error sending email: Tank2 High - please run connect() first
+2016/03/31 20:15:35: Error sending email: Tank3 High - please run connect() first
+2016/03/31 20:15:37: Error sending email: Tank4 High - please run connect() first
+2016/03/31 20:15:56: Error sending email: Tank1 High - please run connect() first
+2016/03/31 20:15:58: Error sending email: Tank2 High - please run connect() first
+2016/03/31 20:15:59: Error sending email: Tank3 High - please run connect() first
+2016/03/31 20:16:00: Error sending email: Tank4 High - please run connect() first
+2016/03/31 20:16:20: Error sending email: Tank1 High - please run connect() first
+2016/03/31 20:16:24: Error sending email: Tank2 High - please run connect() first
+2016/03/31 20:16:24: Error sending email: Tank3 High - please run connect() first
+2016/03/31 20:16:25: Error sending email: Tank4 High - please run connect() first
+2016/03/31 20:16:44: Error sending email: Tank1 High - please run connect() first
+2016/03/31 20:16:46: Error sending email: Tank2 High - please run connect() first
+2016/03/31 20:16:47: Error sending email: Tank3 High - please run connect() first
+2016/03/31 20:16:48: Error sending email: Tank4 High - please run connect() first
+2016/03/31 20:17:08: Error sending email: Tank1 High - please run connect() first
+2016/03/31 20:17:09: Error sending email: Tank2 High - please run connect() first
+2016/03/31 20:17:10: Error sending email: Tank3 High - please run connect() first
+2016/03/31 20:17:12: Error sending email: Tank4 High - please run connect() first
+2016/03/31 20:17:25: Added a data point to the sensor values log.
+2016/03/31 20:17:31: Error sending email: Tank1 High - please run connect() first
+2016/03/31 20:17:33: Error sending email: Tank2 High - please run connect() first
+2016/03/31 20:17:34: Error sending email: Tank3 High - please run connect() first
+2016/03/31 20:17:35: Error sending email: Tank4 High - please run connect() first
+2016/03/31 20:17:55: Error sending email: Tank1 High - please run connect() first
+2016/03/31 20:17:57: Error sending email: Tank2 High - please run connect() first
+2016/03/31 20:17:58: Error sending email: Tank3 High - please run connect() first
+2016/03/31 20:17:59: Error sending email: Tank4 High - please run connect() first
+2016/03/31 20:18:19: Error sending email: Tank1 High - please run connect() first
+2016/03/31 20:18:20: Error sending email: Tank2 High - please run connect() first
+2016/03/31 20:18:21: Error sending email: Tank3 High - please run connect() first
+2016/03/31 20:18:23: Error sending email: Tank4 High - please run connect() first
+2016/03/31 20:18:42: Error sending email: Tank1 High - please run connect() first
+2016/03/31 20:18:44: Error sending email: Tank2 High - please run connect() first
+2016/03/31 20:18:45: Error sending email: Tank3 High - please run connect() first
+2016/03/31 20:18:46: Error sending email: Tank4 High - please run connect() first
+2016/03/31 20:19:07: Error sending email: Tank1 High - please run connect() first
+2016/03/31 20:19:09: Error sending email: Tank2 High - please run connect() first
+2016/03/31 20:19:10: Error sending email: Tank3 High - please run connect() first
+2016/03/31 20:19:11: Error sending email: Tank4 High - please run connect() first
+2016/03/31 20:19:31: Error sending email: Tank1 High - please run connect() first
+2016/03/31 20:19:32: Error sending email: Tank2 High - please run connect() first
+2016/03/31 20:19:33: Error sending email: Tank3 High - please run connect() first
+2016/03/31 20:19:35: Error sending email: Tank4 High - please run connect() first
+2016/03/31 20:19:54: Error sending email: Tank1 High - please run connect() first
+2016/03/31 20:19:56: Added a data point to the sensor values log.
+2016/03/31 20:19:56: Error sending email: Tank2 High - please run connect() first
+2016/03/31 20:19:57: Error sending email: Tank3 High - please run connect() first
+2016/03/31 20:19:58: Error sending email: Tank4 High - please run connect() first
+2016/03/31 20:20:18: Error sending email: Tank1 High - please run connect() first
+2016/03/31 20:20:20: Error sending email: Tank2 High - please run connect() first
+2016/03/31 20:20:21: Error sending email: Tank3 High - please run connect() first
+2016/03/31 20:20:22: Error sending email: Tank4 High - please run connect() first
+2016/03/31 20:21:04: Sent Command: setwateringschedule,9,0,0,5,2,20
+2016/03/31 20:22:27: Added a data point to the sensor values log.
+2016/03/31 20:24:57: Added a data point to the sensor values log.
+2016/03/31 20:27:27: Added a data point to the sensor values log.
+2016/03/31 20:29:58: Added a data point to the sensor values log.
+2016/03/31 20:32:31: Added a data point to the sensor values log.
+2016/03/31 20:35:01: Added a data point to the sensor values log.
+2016/03/31 20:37:31: Added a data point to the sensor values log.
+2016/03/31 20:40:02: Added a data point to the sensor values log.
+2016/03/31 20:42:32: Added a data point to the sensor values log.
+2016/03/31 20:45:02: Added a data point to the sensor values log.
+2016/03/31 20:47:35: Added a data point to the sensor values log.
+2016/03/31 20:50:05: Added a data point to the sensor values log.
+2016/03/31 20:52:35: Added a data point to the sensor values log.
+2016/03/31 20:55:06: Added a data point to the sensor values log.
+2016/03/31 20:57:36: Added a data point to the sensor values log.
+2016/03/31 21:00:06: Added a data point to the sensor values log.
+2016/03/31 21:02:39: Added a data point to the sensor values log.
+2016/03/31 21:05:10: Added a data point to the sensor values log.
+2016/03/31 21:07:40: Added a data point to the sensor values log.
+2016/03/31 21:10:10: Added a data point to the sensor values log.
+2016/03/31 21:12:40: Added a data point to the sensor values log.
+2016/03/31 21:15:11: Added a data point to the sensor values log.
+2016/03/31 21:17:44: Added a data point to the sensor values log.
+2016/03/31 21:20:14: Added a data point to the sensor values log.
+2016/03/31 21:22:44: Added a data point to the sensor values log.
+2016/03/31 21:25:15: Added a data point to the sensor values log.
+2016/03/31 21:27:45: Added a data point to the sensor values log.
+2016/03/31 21:30:15: Added a data point to the sensor values log.
+2016/03/31 21:32:48: Added a data point to the sensor values log.
+2016/03/31 21:35:19: Added a data point to the sensor values log.
+2016/03/31 21:37:49: Added a data point to the sensor values log.
+2016/03/31 21:40:19: Added a data point to the sensor values log.
+2016/03/31 21:42:49: Added a data point to the sensor values log.
+2016/03/31 21:45:20: Added a data point to the sensor values log.
+2016/03/31 21:47:53: Added a data point to the sensor values log.
+2016/03/31 21:50:23: Added a data point to the sensor values log.
+2016/03/31 21:52:53: Added a data point to the sensor values log.
+2016/03/31 21:55:23: Added a data point to the sensor values log.
+2016/03/31 21:57:53: Added a data point to the sensor values log.
+2016/03/31 22:00:24: Added a data point to the sensor values log.
+2016/03/31 22:02:57: Added a data point to the sensor values log.
+2016/03/31 22:05:27: Added a data point to the sensor values log.
+2016/03/31 22:07:57: Added a data point to the sensor values log.
+2016/03/31 22:10:28: Added a data point to the sensor values log.
+2016/03/31 22:12:58: Added a data point to the sensor values log.
+2016/03/31 22:15:28: Added a data point to the sensor values log.
+2016/03/31 22:18:01: Added a data point to the sensor values log.
+2016/03/31 22:20:32: Added a data point to the sensor values log.
+2016/03/31 22:23:02: Added a data point to the sensor values log.
+2016/03/31 22:25:32: Added a data point to the sensor values log.
+2016/03/31 22:28:02: Added a data point to the sensor values log.
+2016/03/31 22:30:33: Added a data point to the sensor values log.
+2016/03/31 22:33:06: Added a data point to the sensor values log.
+2016/03/31 22:35:36: Added a data point to the sensor values log.
+2016/03/31 22:38:06: Added a data point to the sensor values log.
+2016/03/31 22:40:37: Added a data point to the sensor values log.
+2016/03/31 22:43:07: Added a data point to the sensor values log.
+2016/03/31 22:45:37: Added a data point to the sensor values log.
+2016/03/31 22:48:07: Added a data point to the sensor values log.
+2016/03/31 22:50:37: Added a data point to the sensor values log.
+2016/03/31 22:53:07: Added a data point to the sensor values log.
+2016/03/31 22:55:37: Added a data point to the sensor values log.
+2016/03/31 22:58:07: Added a data point to the sensor values log.
+2016/03/31 23:00:38: Added a data point to the sensor values log.
+2016/03/31 23:03:08: Added a data point to the sensor values log.
+2016/03/31 23:05:41: Added a data point to the sensor values log.
+2016/03/31 23:08:11: Added a data point to the sensor values log.
+2016/03/31 23:10:42: Added a data point to the sensor values log.
+2016/03/31 23:13:12: Added a data point to the sensor values log.
+2016/03/31 23:15:42: Added a data point to the sensor values log.
+2016/03/31 23:18:12: Added a data point to the sensor values log.
+2016/03/31 23:20:42: Added a data point to the sensor values log.
+2016/03/31 23:23:12: Added a data point to the sensor values log.
+2016/03/31 23:25:43: Added a data point to the sensor values log.
+2016/03/31 23:28:13: Added a data point to the sensor values log.
+2016/03/31 23:30:43: Added a data point to the sensor values log.
+2016/03/31 23:33:13: Added a data point to the sensor values log.
+2016/03/31 23:35:43: Added a data point to the sensor values log.
+2016/03/31 23:38:13: Added a data point to the sensor values log.
+2016/03/31 23:40:43: Added a data point to the sensor values log.
+2016/03/31 23:43:13: Added a data point to the sensor values log.
+2016/03/31 23:45:44: Added a data point to the sensor values log.
+2016/03/31 23:48:14: Added a data point to the sensor values log.
+2016/03/31 23:50:47: Added a data point to the sensor values log.
+2016/03/31 23:53:17: Added a data point to the sensor values log.
+2016/03/31 23:55:48: Added a data point to the sensor values log.
+2016/03/31 23:58:18: Added a data point to the sensor values log.
+2016/04/01 00:00:48: Added a data point to the sensor values log.
+2016/04/01 00:03:18: Added a data point to the sensor values log.
+2016/04/01 00:05:48: Added a data point to the sensor values log.
+2016/04/01 00:08:18: Added a data point to the sensor values log.
+2016/04/01 00:10:48: Added a data point to the sensor values log.
+2016/04/01 00:13:18: Added a data point to the sensor values log.
+2016/04/01 00:15:49: Added a data point to the sensor values log.
+2016/04/01 00:18:19: Added a data point to the sensor values log.
+2016/04/01 00:20:52: Added a data point to the sensor values log.
+2016/04/01 00:23:22: Added a data point to the sensor values log.
+2016/04/01 00:25:52: Added a data point to the sensor values log.
+2016/04/01 00:28:22: Added a data point to the sensor values log.
+2016/04/01 00:30:53: Added a data point to the sensor values log.
+2016/04/01 00:33:23: Added a data point to the sensor values log.
+2016/04/01 00:35:56: Added a data point to the sensor values log.
+2016/04/01 00:38:26: Added a data point to the sensor values log.
+2016/04/01 00:40:57: Added a data point to the sensor values log.
+2016/04/01 00:43:27: Added a data point to the sensor values log.
+2016/04/01 00:45:57: Added a data point to the sensor values log.
+2016/04/01 00:48:27: Added a data point to the sensor values log.
+2016/04/01 00:50:57: Added a data point to the sensor values log.
+2016/04/01 00:53:27: Added a data point to the sensor values log.
+2016/04/01 00:55:57: Added a data point to the sensor values log.
+2016/04/01 00:58:27: Added a data point to the sensor values log.
+2016/04/01 01:00:58: Added a data point to the sensor values log.
+2016/04/01 01:03:28: Added a data point to the sensor values log.
+2016/04/01 01:06:01: Added a data point to the sensor values log.
+2016/04/01 01:08:31: Added a data point to the sensor values log.
+2016/04/01 01:11:02: Added a data point to the sensor values log.
+2016/04/01 01:13:32: Added a data point to the sensor values log.
+2016/04/01 01:16:02: Added a data point to the sensor values log.
+2016/04/01 01:18:32: Added a data point to the sensor values log.
+2016/04/01 01:21:02: Added a data point to the sensor values log.
+2016/04/01 01:23:32: Added a data point to the sensor values log.
+2016/04/01 01:26:02: Added a data point to the sensor values log.
+2016/04/01 01:28:32: Added a data point to the sensor values log.
+2016/04/01 01:31:02: Added a data point to the sensor values log.
+2016/04/01 01:33:32: Added a data point to the sensor values log.
+2016/04/01 01:36:03: Added a data point to the sensor values log.
+2016/04/01 01:38:36: Added a data point to the sensor values log.
+2016/04/01 01:41:06: Added a data point to the sensor values log.
+2016/04/01 01:43:36: Added a data point to the sensor values log.
+2016/04/01 01:46:07: Added a data point to the sensor values log.
+2016/04/01 01:48:37: Added a data point to the sensor values log.
+2016/04/01 01:51:07: Added a data point to the sensor values log.
+2016/04/01 01:53:40: Added a data point to the sensor values log.
+2016/04/01 01:56:11: Added a data point to the sensor values log.
+2016/04/01 01:58:41: Added a data point to the sensor values log.
+2016/04/01 02:01:11: Added a data point to the sensor values log.
+2016/04/01 02:03:41: Added a data point to the sensor values log.
+2016/04/01 02:06:12: Added a data point to the sensor values log.
+2016/04/01 02:08:45: Added a data point to the sensor values log.
+2016/04/01 02:11:15: Added a data point to the sensor values log.
+2016/04/01 02:13:45: Added a data point to the sensor values log.
+2016/04/01 02:16:16: Added a data point to the sensor values log.
+2016/04/01 02:18:46: Added a data point to the sensor values log.
+2016/04/01 02:21:16: Added a data point to the sensor values log.
+2016/04/01 02:23:49: Added a data point to the sensor values log.
+2016/04/01 02:26:20: Added a data point to the sensor values log.
+2016/04/01 02:28:50: Added a data point to the sensor values log.
+2016/04/01 02:31:20: Added a data point to the sensor values log.
+2016/04/01 02:33:50: Added a data point to the sensor values log.
+2016/04/01 02:36:21: Added a data point to the sensor values log.
+2016/04/01 02:38:54: Added a data point to the sensor values log.
+2016/04/01 02:41:24: Added a data point to the sensor values log.
+2016/04/01 04:11:49: Started yieldbuddy. Priority 15.
+2016/04/01 04:11:07: Added a data point to the sensor values log.
+2016/04/01 04:13:38: Added a data point to the sensor values log.
+2016/04/01 04:16:09: Added a data point to the sensor values log.
+2016/04/01 04:18:41: Added a data point to the sensor values log.
+2016/04/01 04:21:14: Added a data point to the sensor values log.
+2016/04/01 04:23:45: Added a data point to the sensor values log.
+2016/04/01 04:26:15: Added a data point to the sensor values log.
+2016/04/01 04:28:47: Added a data point to the sensor values log.
+2016/04/01 04:31:19: Added a data point to the sensor values log.
+2016/04/01 04:33:51: Added a data point to the sensor values log.
+2016/04/01 04:36:24: Added a data point to the sensor values log.
+2016/04/01 04:38:55: Added a data point to the sensor values log.
+2016/04/01 04:41:25: Added a data point to the sensor values log.
+2016/04/01 04:43:57: Added a data point to the sensor values log.
+2016/04/01 04:46:44: Added a data point to the sensor values log.
+2016/04/01 04:49:17: Added a data point to the sensor values log.
+2016/04/01 04:51:48: Added a data point to the sensor values log.
+2016/04/01 04:54:20: Added a data point to the sensor values log.
+2016/04/01 04:56:53: Added a data point to the sensor values log.
+2016/04/01 04:59:24: Added a data point to the sensor values log.
+2016/04/01 05:01:54: Added a data point to the sensor values log.
+2016/04/01 05:04:24: Added a data point to the sensor values log.
+2016/04/01 05:06:54: Added a data point to the sensor values log.
+2016/04/01 05:09:26: Added a data point to the sensor values log.
+2016/04/01 05:11:59: Added a data point to the sensor values log.
+2016/04/01 05:14:29: Added a data point to the sensor values log.
+2016/04/01 05:17:00: Added a data point to the sensor values log.
+2016/04/01 05:19:30: Added a data point to the sensor values log.
+2016/04/01 05:22:03: Added a data point to the sensor values log.
+2016/04/01 05:24:33: Added a data point to the sensor values log.
+2016/04/01 05:27:05: Added a data point to the sensor values log.
+2016/04/01 05:29:39: Added a data point to the sensor values log.
+2016/04/01 05:32:10: Added a data point to the sensor values log.
+2016/04/01 05:34:42: Added a data point to the sensor values log.
+2016/04/01 05:37:13: Added a data point to the sensor values log.
+2016/04/01 05:39:43: Added a data point to the sensor values log.
+2016/04/01 05:42:15: Added a data point to the sensor values log.
+2016/04/01 05:44:46: Added a data point to the sensor values log.
+2016/04/01 05:47:16: Added a data point to the sensor values log.
+2016/04/01 05:49:48: Added a data point to the sensor values log.
+2016/04/01 05:52:43: Added a data point to the sensor values log.
+2016/04/01 05:55:16: Added a data point to the sensor values log.
+2016/04/01 05:57:46: Added a data point to the sensor values log.
+2016/04/01 06:00:16: Added a data point to the sensor values log.
+2016/04/01 06:02:48: Added a data point to the sensor values log.
+2016/04/01 06:05:19: Added a data point to the sensor values log.
+2016/04/01 06:07:49: Added a data point to the sensor values log.
+2016/04/01 06:10:21: Added a data point to the sensor values log.
+2016/04/01 06:12:52: Added a data point to the sensor values log.
+2016/04/01 06:15:22: Added a data point to the sensor values log.
+2016/04/01 06:17:54: Added a data point to the sensor values log.
+2016/04/01 06:20:25: Added a data point to the sensor values log.
+2016/04/01 06:22:55: Added a data point to the sensor values log.
+2016/04/01 06:25:29: Added a data point to the sensor values log.
+2016/04/01 06:28:01: Added a data point to the sensor values log.
+2016/04/01 06:30:32: Added a data point to the sensor values log.
+2016/04/01 06:33:04: Added a data point to the sensor values log.
+2016/04/01 06:35:35: Added a data point to the sensor values log.
+2016/04/01 06:38:05: Added a data point to the sensor values log.
+2016/04/01 06:40:35: Added a data point to the sensor values log.
+2016/04/01 06:43:07: Added a data point to the sensor values log.
+2016/04/01 06:45:38: Added a data point to the sensor values log.
+2016/04/01 06:48:10: Added a data point to the sensor values log.
+2016/04/01 06:50:41: Added a data point to the sensor values log.
+2016/04/01 06:53:11: Added a data point to the sensor values log.
+2016/04/01 06:55:41: Added a data point to the sensor values log.
+2016/04/01 06:58:42: Added a data point to the sensor values log.
+2016/04/01 07:01:15: Added a data point to the sensor values log.
+2016/04/01 07:03:47: Added a data point to the sensor values log.
+2016/04/01 07:06:19: Added a data point to the sensor values log.
+2016/04/01 07:08:51: Added a data point to the sensor values log.
+2016/04/01 07:11:22: Added a data point to the sensor values log.
+2016/04/01 07:13:52: Added a data point to the sensor values log.
+2016/04/01 07:16:22: Added a data point to the sensor values log.
+2016/04/01 07:18:54: Added a data point to the sensor values log.
+2016/04/01 07:21:25: Added a data point to the sensor values log.
+2016/04/01 07:23:57: Added a data point to the sensor values log.
+2016/04/01 07:26:28: Added a data point to the sensor values log.
+2016/04/01 07:28:58: Added a data point to the sensor values log.
+2016/04/01 07:31:47: Added a data point to the sensor values log.
+2016/04/01 07:34:21: Added a data point to the sensor values log.
+2016/04/01 07:36:53: Added a data point to the sensor values log.
+2016/04/01 07:39:24: Added a data point to the sensor values log.
+2016/04/01 07:41:54: Added a data point to the sensor values log.
+2016/04/01 07:44:26: Added a data point to the sensor values log.
+2016/04/01 07:46:57: Added a data point to the sensor values log.
+2016/04/01 07:49:27: Added a data point to the sensor values log.
+2016/04/01 07:52:00: Added a data point to the sensor values log.
+2016/04/01 07:54:31: Added a data point to the sensor values log.
+2016/04/01 07:57:03: Added a data point to the sensor values log.
+2016/04/01 07:59:36: Added a data point to the sensor values log.
+2016/04/01 08:02:07: Added a data point to the sensor values log.
+2016/04/01 08:04:42: Added a data point to the sensor values log.
+2016/04/01 08:07:14: Added a data point to the sensor values log.
+2016/04/01 08:09:44: Added a data point to the sensor values log.
+2016/04/01 08:12:15: Added a data point to the sensor values log.
+2016/04/01 08:14:47: Added a data point to the sensor values log.
+2016/04/01 08:17:20: Added a data point to the sensor values log.
+2016/04/01 08:19:51: Added a data point to the sensor values log.
+2016/04/01 08:22:21: Added a data point to the sensor values log.
+2016/04/01 08:24:53: Added a data point to the sensor values log.
+2016/04/01 08:27:24: Added a data point to the sensor values log.
+2016/04/01 08:29:54: Added a data point to the sensor values log.
+2016/04/01 08:32:24: Added a data point to the sensor values log.
+2016/04/01 08:34:54: Added a data point to the sensor values log.
+2016/04/01 08:37:39: Added a data point to the sensor values log.
+2016/04/01 08:40:12: Added a data point to the sensor values log.
+2016/04/01 08:42:42: Added a data point to the sensor values log.
+2016/04/01 08:45:12: Added a data point to the sensor values log.
+2016/04/01 08:47:42: Added a data point to the sensor values log.
+2016/04/01 08:50:14: Added a data point to the sensor values log.
+2016/04/01 08:52:45: Added a data point to the sensor values log.
+2016/04/01 08:55:15: Added a data point to the sensor values log.
+2016/04/01 08:57:47: Added a data point to the sensor values log.
+2016/04/01 09:00:18: Added a data point to the sensor values log.
+2016/04/01 09:02:48: Added a data point to the sensor values log.
+2016/04/01 09:05:20: Added a data point to the sensor values log.
+2016/04/01 09:07:51: Added a data point to the sensor values log.
+2016/04/01 09:10:22: Added a data point to the sensor values log.
+2016/04/01 09:12:54: Added a data point to the sensor values log.
+2016/04/01 09:15:27: Added a data point to the sensor values log.
+2016/04/01 09:17:58: Added a data point to the sensor values log.
+2016/04/01 09:20:28: Added a data point to the sensor values log.
+2016/04/01 09:23:00: Added a data point to the sensor values log.
+2016/04/01 09:25:31: Added a data point to the sensor values log.
+2016/04/01 09:28:01: Added a data point to the sensor values log.
+2016/04/01 09:30:34: Added a data point to the sensor values log.
+2016/04/01 09:33:05: Added a data point to the sensor values log.
+2016/04/01 09:35:38: Added a data point to the sensor values log.
+2016/04/01 09:38:10: Added a data point to the sensor values log.
+2016/04/01 09:40:41: Added a data point to the sensor values log.
+2016/04/01 09:43:12: Added a data point to the sensor values log.
+2016/04/01 09:45:45: Added a data point to the sensor values log.
+2016/04/01 09:48:17: Added a data point to the sensor values log.
+2016/04/01 09:50:48: Added a data point to the sensor values log.
+2016/04/01 09:53:18: Added a data point to the sensor values log.
+2016/04/01 09:55:48: Added a data point to the sensor values log.
+2016/04/01 09:58:18: Added a data point to the sensor values log.
+2016/04/01 10:00:50: Added a data point to the sensor values log.
+2016/04/01 10:03:23: Added a data point to the sensor values log.
+2016/04/01 10:05:54: Added a data point to the sensor values log.
+2016/04/01 10:08:24: Added a data point to the sensor values log.
+2016/04/01 10:10:54: Added a data point to the sensor values log.
+2016/04/01 10:13:24: Added a data point to the sensor values log.
+2016/04/01 10:15:54: Added a data point to the sensor values log.
+2016/04/01 10:18:27: Added a data point to the sensor values log.
+2016/04/01 10:20:57: Added a data point to the sensor values log.
+2016/04/01 10:23:27: Added a data point to the sensor values log.
+2016/04/01 10:26:00: Added a data point to the sensor values log.
+2016/04/01 10:28:30: Added a data point to the sensor values log.
+2016/04/01 10:31:00: Added a data point to the sensor values log.
+2016/04/01 10:33:33: Added a data point to the sensor values log.
+2016/04/01 10:36:03: Added a data point to the sensor values log.
+2016/04/01 10:38:33: Added a data point to the sensor values log.
+2016/04/01 10:41:03: Added a data point to the sensor values log.
+2016/04/01 10:43:33: Added a data point to the sensor values log.
+2016/04/01 10:45:38: Sent Command: Relay8 isAuto 1
+2016/04/01 10:46:05: Added a data point to the sensor values log.
+2016/04/01 10:48:02: Sent Command: setTank1Value,50,300,200,190,0
+2016/04/01 10:48:14: Sent Command: setTank2Value,50,300,200,190,0
+2016/04/01 10:48:30: Sent Command: setTank3Value,50,300,200,190,0
+2016/04/01 10:48:38: Added a data point to the sensor values log.
+2016/04/01 10:48:51: Sent Command: setTank4Value,50,300,200,190,0
+2016/04/01 10:51:09: Added a data point to the sensor values log.
+2016/04/01 10:53:39: Added a data point to the sensor values log.
+2016/04/01 10:56:10: Added a data point to the sensor values log.
+2016/04/01 10:58:40: Added a data point to the sensor values log.
+2016/04/01 11:01:10: Added a data point to the sensor values log.
+2016/04/01 11:03:40: Added a data point to the sensor values log.
+2016/04/01 11:06:10: Added a data point to the sensor values log.
+2016/04/01 11:08:40: Added a data point to the sensor values log.
+2016/04/01 11:11:10: Added a data point to the sensor values log.
+2016/04/01 11:13:40: Added a data point to the sensor values log.
+2016/04/01 11:16:11: Added a data point to the sensor values log.
+2016/04/01 11:18:41: Added a data point to the sensor values log.
+2016/04/01 11:21:14: Added a data point to the sensor values log.
+2016/04/01 11:23:44: Added a data point to the sensor values log.
+2016/04/01 11:26:15: Added a data point to the sensor values log.
+2016/04/01 11:28:45: Added a data point to the sensor values log.
+2016/04/01 11:31:15: Added a data point to the sensor values log.
+2016/04/01 11:33:45: Added a data point to the sensor values log.
+2016/04/01 11:36:16: Added a data point to the sensor values log.
+2016/04/01 11:38:49: Added a data point to the sensor values log.
+2016/04/01 11:41:19: Added a data point to the sensor values log.
+2016/04/01 11:43:49: Added a data point to the sensor values log.
+2016/04/01 11:46:20: Added a data point to the sensor values log.
+2016/04/01 11:48:50: Added a data point to the sensor values log.
+2016/04/01 11:51:20: Added a data point to the sensor values log.
+2016/04/01 11:53:53: Added a data point to the sensor values log.
+2016/04/01 11:56:24: Added a data point to the sensor values log.
+2016/04/01 11:58:54: Added a data point to the sensor values log.
+2016/04/01 12:01:24: Added a data point to the sensor values log.
+2016/04/01 12:04:18: Added a data point to the sensor values log.
+2016/04/01 12:06:48: Added a data point to the sensor values log.
+2016/04/01 12:09:18: Added a data point to the sensor values log.
+2016/04/01 12:11:48: Added a data point to the sensor values log.
+2016/04/01 12:14:18: Added a data point to the sensor values log.
+2016/04/01 12:16:49: Added a data point to the sensor values log.
+2016/04/01 12:19:22: Added a data point to the sensor values log.
+2016/04/01 12:21:52: Added a data point to the sensor values log.
+2016/04/01 12:24:22: Added a data point to the sensor values log.
+2016/04/01 12:26:53: Added a data point to the sensor values log.
+2016/04/01 12:29:23: Added a data point to the sensor values log.
+2016/04/01 12:31:53: Added a data point to the sensor values log.
+2016/04/01 12:34:26: Added a data point to the sensor values log.
+2016/04/01 12:36:57: Added a data point to the sensor values log.
+2016/04/01 12:39:27: Added a data point to the sensor values log.
+2016/04/01 12:41:57: Added a data point to the sensor values log.
+2016/04/01 12:44:27: Added a data point to the sensor values log.
+2016/04/01 12:46:58: Added a data point to the sensor values log.
+2016/04/01 12:49:31: Added a data point to the sensor values log.
+2016/04/01 12:52:01: Added a data point to the sensor values log.
+2016/04/01 12:54:31: Added a data point to the sensor values log.
+2016/04/01 12:57:02: Added a data point to the sensor values log.
+2016/04/01 12:59:32: Added a data point to the sensor values log.
+2016/04/01 13:02:02: Added a data point to the sensor values log.
+2016/04/01 13:04:35: Added a data point to the sensor values log.
+2016/04/01 13:07:05: Added a data point to the sensor values log.
+2016/04/01 13:09:35: Added a data point to the sensor values log.
+2016/04/01 13:12:06: Added a data point to the sensor values log.
+2016/04/01 13:14:36: Added a data point to the sensor values log.
+2016/04/01 13:17:06: Added a data point to the sensor values log.
+2016/04/01 13:19:39: Added a data point to the sensor values log.
+2016/04/01 13:22:10: Added a data point to the sensor values log.
+2016/04/01 13:24:40: Added a data point to the sensor values log.
+2016/04/01 13:27:10: Added a data point to the sensor values log.
+2016/04/01 13:30:40: Added a data point to the sensor values log.
+2016/04/01 13:33:13: Added a data point to the sensor values log.
+2016/04/01 13:35:44: Added a data point to the sensor values log.
+2016/04/01 13:38:17: Added a data point to the sensor values log.
+2016/04/01 13:40:47: Added a data point to the sensor values log.
+2016/04/01 13:43:18: Added a data point to the sensor values log.
+2016/04/01 13:45:48: Added a data point to the sensor values log.
+2016/04/01 13:48:18: Added a data point to the sensor values log.
+2016/04/01 13:50:48: Added a data point to the sensor values log.
+2016/04/01 13:53:18: Added a data point to the sensor values log.
+2016/04/01 13:55:48: Added a data point to the sensor values log.
+2016/04/01 13:58:18: Added a data point to the sensor values log.
+2016/04/01 14:00:48: Added a data point to the sensor values log.
+2016/04/01 14:03:19: Added a data point to the sensor values log.
+2016/04/01 14:05:49: Added a data point to the sensor values log.
+2016/04/01 14:08:22: Added a data point to the sensor values log.
+2016/04/01 14:10:52: Added a data point to the sensor values log.
+2016/04/01 14:12:08: Sent Command: setlightschedule,14,0,1,0
+2016/04/01 14:13:23: Added a data point to the sensor values log.
+2016/04/01 14:15:53: Added a data point to the sensor values log.
+2016/04/01 14:18:24: Added a data point to the sensor values log.
+2016/04/01 14:20:54: Added a data point to the sensor values log.
+2016/04/01 14:23:25: Added a data point to the sensor values log.
+2016/04/01 14:25:55: Added a data point to the sensor values log.
+2016/04/01 14:28:28: Added a data point to the sensor values log.
+2016/04/01 14:31:42: Added a data point to the sensor values log.
+2016/04/01 14:34:12: Added a data point to the sensor values log.
+2016/04/01 14:36:42: Added a data point to the sensor values log.
+2016/04/01 14:39:12: Added a data point to the sensor values log.
+2016/04/01 14:41:42: Added a data point to the sensor values log.
+2016/04/01 14:44:13: Added a data point to the sensor values log.
+2016/04/01 14:46:43: Added a data point to the sensor values log.
+2016/04/01 14:49:13: Added a data point to the sensor values log.
+2016/04/01 14:51:46: Added a data point to the sensor values log.
+2016/04/01 14:54:17: Added a data point to the sensor values log.
+2016/04/01 14:56:47: Added a data point to the sensor values log.
+2016/04/01 14:59:17: Added a data point to the sensor values log.
+2016/04/01 15:01:47: Added a data point to the sensor values log.
+2016/04/01 15:04:18: Added a data point to the sensor values log.
+2016/04/01 15:06:51: Added a data point to the sensor values log.
+2016/04/01 15:09:21: Added a data point to the sensor values log.
+2016/04/01 15:11:51: Added a data point to the sensor values log.
+2016/04/01 15:14:22: Added a data point to the sensor values log.
+2016/04/01 15:16:52: Added a data point to the sensor values log.
+2016/04/01 15:19:22: Added a data point to the sensor values log.
+2016/04/01 15:21:55: Added a data point to the sensor values log.
+2016/04/01 15:24:26: Added a data point to the sensor values log.
+2016/04/01 15:26:56: Added a data point to the sensor values log.
+2016/04/01 15:29:26: Added a data point to the sensor values log.
+2016/04/01 15:31:56: Added a data point to the sensor values log.
+2016/04/01 15:34:27: Added a data point to the sensor values log.
+2016/04/01 15:37:28: Added a data point to the sensor values log.
+2016/04/01 15:40:02: Added a data point to the sensor values log.
+2016/04/01 15:42:32: Added a data point to the sensor values log.
+2016/04/01 15:45:02: Added a data point to the sensor values log.
+2016/04/01 15:47:33: Added a data point to the sensor values log.
+2016/04/01 15:50:03: Added a data point to the sensor values log.
+2016/04/01 15:52:33: Added a data point to the sensor values log.
+2016/04/01 15:55:03: Added a data point to the sensor values log.
+2016/04/01 15:57:33: Added a data point to the sensor values log.
+2016/04/01 16:00:03: Added a data point to the sensor values log.
+2016/04/01 16:02:33: Added a data point to the sensor values log.
+2016/04/01 16:05:03: Added a data point to the sensor values log.
+2016/04/01 16:07:34: Added a data point to the sensor values log.
+2016/04/01 16:10:04: Added a data point to the sensor values log.
+2016/04/01 16:12:34: Added a data point to the sensor values log.
+2016/04/01 16:15:04: Added a data point to the sensor values log.
+2016/04/01 16:17:34: Added a data point to the sensor values log.
+2016/04/01 16:20:04: Added a data point to the sensor values log.
+2016/04/01 16:22:34: Added a data point to the sensor values log.
+2016/04/01 16:25:04: Added a data point to the sensor values log.
+2016/04/01 16:27:35: Added a data point to the sensor values log.
+2016/04/01 16:30:05: Added a data point to the sensor values log.
+2016/04/01 16:32:38: Added a data point to the sensor values log.
+2016/04/01 16:35:56: Added a data point to the sensor values log.
+2016/04/01 16:38:26: Added a data point to the sensor values log.
+2016/04/01 16:40:56: Added a data point to the sensor values log.
+2016/04/01 16:43:27: Added a data point to the sensor values log.
+2016/04/01 16:45:57: Added a data point to the sensor values log.
+2016/04/01 16:48:27: Added a data point to the sensor values log.
+2016/04/01 16:50:57: Added a data point to the sensor values log.
+2016/04/01 16:53:27: Added a data point to the sensor values log.
+2016/04/01 16:55:57: Added a data point to the sensor values log.
+2016/04/01 16:58:27: Added a data point to the sensor values log.
+2016/04/01 17:00:57: Added a data point to the sensor values log.
+2016/04/01 17:03:28: Added a data point to the sensor values log.
+2016/04/01 17:05:58: Added a data point to the sensor values log.
+2016/04/01 17:08:55: Added a data point to the sensor values log.
+2016/04/01 17:11:25: Added a data point to the sensor values log.
+2016/04/01 17:13:56: Added a data point to the sensor values log.
+2016/04/01 17:16:26: Added a data point to the sensor values log.
+2016/04/01 17:18:59: Added a data point to the sensor values log.
+2016/04/01 17:21:29: Added a data point to the sensor values log.
+2016/04/01 17:24:00: Added a data point to the sensor values log.
+2016/04/01 17:26:30: Added a data point to the sensor values log.
+2016/04/01 17:29:00: Added a data point to the sensor values log.
+2016/04/01 17:31:30: Added a data point to the sensor values log.
+2016/04/01 17:34:00: Added a data point to the sensor values log.
+2016/04/01 17:36:30: Added a data point to the sensor values log.
+2016/04/01 17:39:00: Added a data point to the sensor values log.
+2016/04/01 17:41:30: Added a data point to the sensor values log.
+2016/04/01 17:44:01: Added a data point to the sensor values log.
+2016/04/01 17:44:37: serialerr: 2 from serial loop
+2016/04/01 17:44:37: no path to serial device.
+2016/04/01 17:44:37: attempting to restart serial
+2016/04/01 17:46:31: Added a data point to the sensor values log.
+2016/04/01 17:49:04: Added a data point to the sensor values log.
+2016/04/01 17:51:34: Added a data point to the sensor values log.
+2016/04/01 17:54:05: Added a data point to the sensor values log.
+2016/04/01 17:56:35: Added a data point to the sensor values log.
+2016/04/01 17:59:05: Added a data point to the sensor values log.
+2016/04/01 18:01:35: Added a data point to the sensor values log.
+2016/04/01 18:01:44: Sent Command: Relay8 off
+2016/04/01 18:01:48: Sent Command: Relay8 isAuto 0
+2016/04/01 18:01:53: Sent Command: Relay8 off
+2016/04/01 18:01:57: Sent Command: Relay8 on
+2016/04/01 18:02:00: Sent Command: Relay8 isAuto 1
+2016/04/01 18:04:07: Added a data point to the sensor values log.
+2016/04/01 18:06:37: Added a data point to the sensor values log.
+2016/04/01 18:09:07: Added a data point to the sensor values log.
+2016/04/01 18:11:37: Added a data point to the sensor values log.
+2016/04/01 18:14:35: Added a data point to the sensor values log.
+2016/04/01 18:17:08: Added a data point to the sensor values log.
+2016/04/01 18:19:39: Added a data point to the sensor values log.
+2016/04/01 18:22:09: Added a data point to the sensor values log.
+2016/04/01 18:24:39: Added a data point to the sensor values log.
+2016/04/01 18:27:09: Added a data point to the sensor values log.
+2016/04/01 18:29:40: Added a data point to the sensor values log.
+2016/04/01 18:32:10: Added a data point to the sensor values log.
+2016/04/01 18:34:43: Added a data point to the sensor values log.
+2016/04/01 18:37:13: Added a data point to the sensor values log.
+2016/04/01 18:39:44: Added a data point to the sensor values log.
+2016/04/01 18:42:14: Added a data point to the sensor values log.
+2016/04/01 18:44:44: Added a data point to the sensor values log.
+2016/04/01 18:47:26: Added a data point to the sensor values log.
+2016/04/01 18:49:56: Added a data point to the sensor values log.
+2016/04/01 18:52:26: Added a data point to the sensor values log.
+2016/04/01 18:54:56: Added a data point to the sensor values log.
+2016/04/01 18:57:26: Added a data point to the sensor values log.
+2016/04/01 18:59:57: Added a data point to the sensor values log.
+2016/04/01 19:02:27: Added a data point to the sensor values log.
+2016/04/01 19:05:00: Added a data point to the sensor values log.
+2016/04/01 19:07:30: Added a data point to the sensor values log.
+2016/04/01 19:10:01: Added a data point to the sensor values log.
+2016/04/01 19:12:31: Added a data point to the sensor values log.
+2016/04/01 19:15:01: Added a data point to the sensor values log.
+2016/04/01 19:17:31: Added a data point to the sensor values log.
+2016/04/01 19:20:33: Added a data point to the sensor values log.
+2016/04/01 19:23:06: Added a data point to the sensor values log.
+2016/04/01 19:25:37: Added a data point to the sensor values log.
+2016/04/01 19:28:10: Added a data point to the sensor values log.
+2016/04/01 19:30:41: Added a data point to the sensor values log.
+2016/04/01 19:33:11: Added a data point to the sensor values log.
+2016/04/01 19:35:41: Added a data point to the sensor values log.
+2016/04/01 19:38:11: Added a data point to the sensor values log.
+2016/04/01 19:40:41: Added a data point to the sensor values log.
+2016/04/01 19:43:11: Added a data point to the sensor values log.
+2016/04/01 19:45:41: Added a data point to the sensor values log.
+2016/04/01 19:48:11: Added a data point to the sensor values log.
+2016/04/01 19:50:42: Added a data point to the sensor values log.
+2016/04/01 19:54:11: Added a data point to the sensor values log.
+2016/04/01 19:56:44: Added a data point to the sensor values log.
+2016/04/01 19:59:15: Added a data point to the sensor values log.
+2016/04/01 20:01:45: Added a data point to the sensor values log.
+2016/04/01 20:04:15: Added a data point to the sensor values log.
+2016/04/01 20:06:45: Added a data point to the sensor values log.
+2016/04/01 20:09:16: Added a data point to the sensor values log.
+2016/04/01 20:11:46: Added a data point to the sensor values log.
+2016/04/01 20:14:19: Added a data point to the sensor values log.
+2016/04/01 20:16:49: Added a data point to the sensor values log.
+2016/04/01 20:19:20: Added a data point to the sensor values log.
+2016/04/01 20:21:50: Added a data point to the sensor values log.
+2016/04/01 20:24:20: Added a data point to the sensor values log.
+2016/04/01 20:26:50: Added a data point to the sensor values log.
+2016/04/01 20:29:20: Added a data point to the sensor values log.
+2016/04/01 20:31:50: Added a data point to the sensor values log.
+2016/04/01 20:34:20: Added a data point to the sensor values log.
+2016/04/01 20:36:50: Added a data point to the sensor values log.
+2016/04/01 20:39:21: Added a data point to the sensor values log.
+2016/04/01 20:41:51: Added a data point to the sensor values log.
+2016/04/01 20:44:21: Added a data point to the sensor values log.
+2016/04/01 20:46:54: Added a data point to the sensor values log.
+2016/04/01 20:49:25: Added a data point to the sensor values log.
+2016/04/01 20:51:55: Added a data point to the sensor values log.
+2016/04/01 20:54:25: Added a data point to the sensor values log.
+2016/04/01 20:56:39: Sent Command: setwateringschedule,20,0,0,5,2,20
+2016/04/01 20:56:55: Added a data point to the sensor values log.
+2016/04/01 20:59:57: Added a data point to the sensor values log.
+2016/04/01 21:02:27: Added a data point to the sensor values log.
+2016/04/01 21:04:57: Added a data point to the sensor values log.
+2016/04/01 21:07:27: Added a data point to the sensor values log.
+2016/04/01 21:09:58: Added a data point to the sensor values log.
+2016/04/01 21:12:28: Added a data point to the sensor values log.
+2016/04/01 21:15:01: Added a data point to the sensor values log.
+2016/04/01 21:17:31: Added a data point to the sensor values log.
+2016/04/01 21:20:02: Added a data point to the sensor values log.
+2016/04/01 21:22:32: Added a data point to the sensor values log.
+2016/04/01 21:25:02: Added a data point to the sensor values log.
+2016/04/01 21:27:32: Added a data point to the sensor values log.
+2016/04/01 21:30:02: Added a data point to the sensor values log.
+2016/04/01 21:32:32: Added a data point to the sensor values log.
+2016/04/01 21:35:02: Added a data point to the sensor values log.
+2016/04/01 21:37:32: Added a data point to the sensor values log.
+2016/04/01 21:40:03: Added a data point to the sensor values log.
+2016/04/01 21:42:33: Added a data point to the sensor values log.
+2016/04/01 21:45:03: Added a data point to the sensor values log.
+2016/04/01 21:47:36: Added a data point to the sensor values log.
+2016/04/01 21:50:07: Added a data point to the sensor values log.
+2016/04/01 21:52:37: Added a data point to the sensor values log.
+2016/04/01 21:55:07: Added a data point to the sensor values log.
+2016/04/01 21:57:37: Added a data point to the sensor values log.
+2016/04/01 22:00:07: Added a data point to the sensor values log.
+2016/04/01 22:02:40: Added a data point to the sensor values log.
+2016/04/01 22:05:39: Added a data point to the sensor values log.
+2016/04/01 22:08:12: Added a data point to the sensor values log.
+2016/04/01 22:10:42: Added a data point to the sensor values log.
+2016/04/01 22:13:12: Added a data point to the sensor values log.
+2016/04/01 22:15:43: Added a data point to the sensor values log.
+2016/04/01 22:18:13: Added a data point to the sensor values log.
+2016/04/01 22:20:43: Added a data point to the sensor values log.
+2016/04/01 22:23:13: Added a data point to the sensor values log.
+2016/04/01 22:25:26: Sent Command: setLight,-1,45000
+2016/04/01 22:25:45: Added a data point to the sensor values log.
+2016/04/01 22:25:51: Sent Command: setWater,50,2000
+2016/04/01 22:28:17: Added a data point to the sensor values log.
+2016/04/01 22:30:48: Added a data point to the sensor values log.
+2016/04/01 22:33:18: Added a data point to the sensor values log.
+2016/04/01 22:35:48: Added a data point to the sensor values log.
+2016/04/01 22:38:34: Added a data point to the sensor values log.
+2016/04/01 22:39:06: Sent Command: setLight,-1,40000
+2016/04/01 22:39:16: Sent Command: setWater,50,2500
+2016/04/01 22:41:07: Added a data point to the sensor values log.
+2016/04/01 22:43:37: Added a data point to the sensor values log.
+2016/04/01 22:46:07: Added a data point to the sensor values log.
+2016/04/01 22:48:37: Added a data point to the sensor values log.
+2016/04/01 22:51:07: Added a data point to the sensor values log.
+2016/04/01 22:53:37: Added a data point to the sensor values log.
+2016/04/01 22:56:07: Added a data point to the sensor values log.
+2016/04/01 22:58:37: Added a data point to the sensor values log.
+2016/04/01 23:01:08: Added a data point to the sensor values log.
+2016/04/01 23:03:38: Added a data point to the sensor values log.
+2016/04/01 23:06:11: Added a data point to the sensor values log.
+2016/04/01 23:08:41: Added a data point to the sensor values log.
+2016/04/01 23:11:31: Added a data point to the sensor values log.
+2016/04/01 23:14:01: Added a data point to the sensor values log.
+2016/04/01 23:16:31: Added a data point to the sensor values log.
+2016/04/01 23:19:01: Added a data point to the sensor values log.
+2016/04/01 23:19:46: Saved new e-mail settings.
+2016/04/01 23:20:23: Sent Command: setTank1Value,50,100,200,190,0
+2016/04/01 23:21:07: Error sending email: Tank1 High - SMTP AUTH extension not supported by server.
+2016/04/01 23:21:31: Error sending email: Tank1 High - SMTP AUTH extension not supported by server.
+2016/04/01 23:21:31: Added a data point to the sensor values log.
+2016/04/01 23:21:54: Error sending email: Tank1 High - SMTP AUTH extension not supported by server.
+2016/04/01 23:22:18: Error sending email: Tank1 High - SMTP AUTH extension not supported by server.
+2016/04/01 23:22:42: Error sending email: Tank1 High - SMTP AUTH extension not supported by server.
+2016/04/01 23:23:06: Error sending email: Tank1 High - SMTP AUTH extension not supported by server.
+2016/04/01 23:23:30: Error sending email: Tank1 High - SMTP AUTH extension not supported by server.
+2016/04/01 23:23:54: Error sending email: Tank1 High - SMTP AUTH extension not supported by server.
+2016/04/01 23:24:05: Added a data point to the sensor values log.
+2016/04/01 23:24:17: Error sending email: Tank1 High - SMTP AUTH extension not supported by server.
+2016/04/01 23:24:41: Error sending email: Tank1 High - SMTP AUTH extension not supported by server.
+2016/04/01 23:25:05: Error sending email: Tank1 High - SMTP AUTH extension not supported by server.
+2016/04/01 23:25:05: Saved new e-mail settings.
+2016/04/01 23:32:31: Started yieldbuddy. Priority 15.
+2016/04/01 23:32:31: Saved new e-mail settings.
+2016/04/01 23:32:48: Added a data point to the sensor values log.
+2016/04/01 23:33:15: Error sending email: Tank1 High - (535, '#5.7.0 Authentication failed')
+2016/04/01 23:33:37: Error sending email: Tank1 High - (535, '#5.7.0 Authentication failed')
+2016/04/01 23:34:02: Error sending email: Tank1 High - (535, '#5.7.0 Authentication failed')
+2016/04/01 23:34:07: Saved new e-mail settings.
+2016/04/01 23:34:25: Error sending email: Tank1 High - (454, '#4.5.4 Temporary authentication failure')
+2016/04/01 23:34:48: Error sending email: Tank1 High - (454, '#4.5.4 Temporary authentication failure')
+2016/04/01 23:35:12: Error sending email: Tank1 High - (454, '#4.5.4 Temporary authentication failure')
+2016/04/01 23:35:20: Added a data point to the sensor values log.
+2016/04/01 23:35:37: Successfully sent email: Tank1 High
+2016/04/01 23:36:47: Saved new e-mail settings.
+2016/04/01 23:37:50: Added a data point to the sensor values log.
+2016/04/01 23:38:27: Saved new e-mail settings.
+2016/04/01 23:40:20: Added a data point to the sensor values log.
+2016/04/01 23:40:36: Sent Command: setWater,50,500
+2016/04/01 23:40:48: Sent Command: setTankTotal,200,500
+2016/04/01 23:41:03: Sent Command: setTank2Value,50,100,200,190,0
+2016/04/01 23:41:15: Sent Command: setTank3Value,50,100,200,190,0
+2016/04/01 23:41:25: Sent Command: setTank4Value,50,100,200,190,0
+2016/04/01 23:42:10: Error sending email: TankTotal High - (535, '#5.7.0 Authentication failed')
+2016/04/01 23:42:16: Error sending email: Tank2 High - (535, '#5.7.0 Authentication failed')
+2016/04/01 23:42:22: Error sending email: Tank3 High - (535, '#5.7.0 Authentication failed')
+2016/04/01 23:42:27: Error sending email: Tank4 High - (535, '#5.7.0 Authentication failed')
+2016/04/01 23:42:34: Error sending email: TankTotal High - (535, '#5.7.0 Authentication failed')
+2016/04/01 23:42:40: Error sending email: Tank2 High - (535, '#5.7.0 Authentication failed')
+2016/04/01 23:42:46: Error sending email: Tank3 High - (535, '#5.7.0 Authentication failed')
+2016/04/01 23:42:51: Error sending email: Tank4 High - (535, '#5.7.0 Authentication failed')
+2016/04/01 23:42:52: Added a data point to the sensor values log.
+2016/04/01 23:42:58: Error sending email: TankTotal High - (535, '#5.7.0 Authentication failed')
+2016/04/01 23:43:04: Error sending email: Tank2 High - (535, '#5.7.0 Authentication failed')
+2016/04/01 23:43:04: Saved new e-mail settings.
+2016/04/01 23:43:05: Successfully sent email: Tank3 High
+2016/04/01 23:43:08: Successfully sent email: Tank4 High
+2016/04/01 23:44:17: Successfully sent email: TankTotal High
+2016/04/01 23:44:20: Successfully sent email: Tank2 High
+2016/04/01 23:45:22: Added a data point to the sensor values log.
+2016/04/01 23:46:16: Successfully sent email: Tank1 High
+2016/04/01 23:46:19: Successfully sent email: Tank2 High
+2016/04/01 23:46:20: Successfully sent email: Tank3 High
+2016/04/01 23:46:21: Successfully sent email: Tank4 High
+2016/04/01 23:46:39: Successfully sent email: TankTotal High
+2016/04/01 23:47:55: Added a data point to the sensor values log.
+2016/04/01 23:50:26: Added a data point to the sensor values log.
+2016/04/01 23:52:56: Added a data point to the sensor values log.
+2016/04/01 23:55:26: Added a data point to the sensor values log.
+2016/04/01 23:57:56: Added a data point to the sensor values log.
+2016/04/02 00:00:27: Added a data point to the sensor values log.
+2016/04/02 00:02:57: Added a data point to the sensor values log.
+2016/04/02 00:05:30: Added a data point to the sensor values log.
+2016/04/02 00:08:00: Added a data point to the sensor values log.
+2016/04/02 00:10:31: Added a data point to the sensor values log.
+2016/04/02 00:13:01: Added a data point to the sensor values log.
+2016/04/02 00:14:28: Sent Command: setWater,50,3000
+2016/04/02 00:14:40: Sent Command: setTankTotal,200,1200
+2016/04/02 00:14:56: Sent Command: setTank1Value,50,300,200,190,0
+2016/04/02 00:15:02: Sent Command: setTank4Value,50,300,200,190,0
+2016/04/02 00:15:09: Sent Command: setTank3Value,50,300,200,190,0
+2016/04/02 00:15:17: Sent Command: setTank2Value,50,300,200,190,0
+2016/04/02 00:15:33: Added a data point to the sensor values log.
+2016/04/02 00:17:22: Sent Command: setTank4Value,50,350,200,190,0
+2016/04/02 00:18:05: Added a data point to the sensor values log.

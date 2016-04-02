@@ -808,17 +808,17 @@ a:active {
 					echo "<td align=\"center\"><img src=\"img/email.png\" /></td>";
 					echo "<td><input type=\"submit\" name=\"alarmname_ack_id\" id=\"alarmname_ack_id\" value=\"Acknowledge\" onclick=\"alarm_sql('Tank1','High_Alarm',4)\" /></td>";
 				}
-				if ($_SESSION['TDS1_High_Alarm'] == 3) {
+				if ($_SESSION['Tank1_High_Alarm'] == 3) {
 					echo "<td>Acknowledged</td>";
 					echo "<td></td>";
 					echo "<td></td>";
 				}
-				if ($_SESSION['TDS1_High_Alarm'] == 4) {
+				if ($_SESSION['Tank1_High_Alarm'] == 4) {
 					echo "<td>Acknowledged</td>";
 					echo "<td align=\"center\"><img src=\"img/email.png\" /></td>";
 					echo "<td></td>";
 				}
-				echo "<td><input type=\"submit\" name=\"alarmname_ack_id\" id=\"alarmname_ack_id\" value=\"Delete\" onclick=\"alarm_sql('TDS1','High_Alarm',0)\" /></td>";
+				echo "<td><input type=\"submit\" name=\"alarmname_ack_id\" id=\"alarmname_ack_id\" value=\"Delete\" onclick=\"alarm_sql('Tank1','High_Alarm',0)\" /></td>";
 			echo "</tr>";
 		}
 

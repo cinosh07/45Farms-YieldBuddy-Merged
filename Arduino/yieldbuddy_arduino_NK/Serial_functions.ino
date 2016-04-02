@@ -91,7 +91,7 @@ void sendserialmessages(){
   //into 3 chunks, and those chunks are then sent every second loop (over a period of a total of 5 'loop()s')
   //However, Sensors and Relay values are sent every 1st and 4th messages.
 
-  if (serialcounter == 1 || serialcounter == 4 || serialcounter == 7){
+  if (serialcounter == 1 || serialcounter == 4 || serialcounter == 7 || serialcounter == 10 || serialcounter == 13 || serialcounter == 16 ){
     //*****SEND TIMESTAMP
     updatelongdate();
     Serial1.println(); 
@@ -148,7 +148,7 @@ void sendserialmessages(){
     //Serial1.println();
   }
   
-  if (serialcounter == 2) { 
+  if (serialcounter == 3) { 
 
 
     //*****LIGHTS
@@ -183,7 +183,7 @@ void sendserialmessages(){
     Serial1.println(Pump_times);
   }
  //******SETPOINTS****************  
-  if (serialcounter == 3) {    
+  if (serialcounter == 4) {    
 
     //*****pH1    
     Serial1.print("SetPoint_pH1,");
@@ -193,7 +193,7 @@ void sendserialmessages(){
     Serial1.print(",");
     Serial1.println(pH1_Status);
   }
-  if (serialcounter == 4) { 
+  if (serialcounter == 5) { 
 
     //*****pH2    
     Serial1.print("SetPoint_pH2,");
@@ -203,7 +203,7 @@ void sendserialmessages(){
     Serial1.print(",");
     Serial1.println(pH1_Status);
   }
-  if (serialcounter == 5) { 
+  if (serialcounter == 6) { 
 
     //*****Temp   
     Serial1.print("SetPoint_Temp,");
@@ -221,7 +221,7 @@ void sendserialmessages(){
     Serial1.print(",");
     Serial1.println(Temp_Status);
   } 
-  if (serialcounter == 6) { 
+  if (serialcounter == 7) { 
  
     //*****RH    
     Serial1.print("SetPoint_RH,");
@@ -239,7 +239,7 @@ void sendserialmessages(){
     Serial1.print(",");        
     Serial1.println(RH_Status);
   }
-  if (serialcounter == 7) { 
+  if (serialcounter == 8) { 
 
     //*****TDS1    
     Serial1.print("SetPoint_TDS1,");
@@ -255,7 +255,7 @@ void sendserialmessages(){
     Serial1.print(",");
     Serial1.println(TDS1_Status);
   }
-  if (serialcounter == 8) { 
+  if (serialcounter == 9) { 
 
     //*****TDS2   
     Serial1.print("SetPoint_TDS2,");
@@ -271,7 +271,7 @@ void sendserialmessages(){
     Serial1.print(",");
     Serial1.println(TDS2_Status);
   }
-  if (serialcounter == 9) { 
+  if (serialcounter == 10) { 
 
    //*****CO2    
     Serial1.print("SetPoint_CO2,");
@@ -287,7 +287,7 @@ void sendserialmessages(){
     Serial1.print(",");
     Serial1.println(CO2_Status);
   }
-  if (serialcounter == 10) { 
+  if (serialcounter == 11) { 
  
     //*****Light   
     Serial1.print("SetPoint_Light,");
@@ -298,7 +298,7 @@ void sendserialmessages(){
     Serial1.println(Light_Status); 
 
   }
-  if (serialcounter == 11) {    
+  if (serialcounter == 13) {    
 
     //*****Water    
     Serial1.print("SetPoint_Water,");
@@ -308,7 +308,7 @@ void sendserialmessages(){
     Serial1.print(",");
     Serial1.println(Water_Status);
   }
-  if (serialcounter == 12) { 
+  if (serialcounter == 14) { 
 
     //*****Tank Total    
     Serial1.print("SetPoint_TankTotal,");
@@ -318,7 +318,7 @@ void sendserialmessages(){
     Serial1.print(",");
     Serial1.println(TankTotal_Status);
   }
-  if (serialcounter == 13) { 
+  if (serialcounter == 15) { 
 
     //*****Tank 1   
     Serial1.print("SetPoint_Tank1,");
@@ -334,7 +334,7 @@ void sendserialmessages(){
     Serial1.print(",");
     Serial1.println(Tank1_Status);
   }
-  if (serialcounter == 14) { 
+  if (serialcounter == 16) { 
  
     //*****Tank 2   
     Serial1.print("SetPoint_Tank2,");
@@ -350,7 +350,7 @@ void sendserialmessages(){
     Serial1.print(",");
     Serial1.println(Tank2_Status);
   }
-  if (serialcounter == 15) { 
+  if (serialcounter == 17) { 
 
     //*****Tank 3    
     Serial1.print("SetPoint_Tank3,");
@@ -366,7 +366,7 @@ void sendserialmessages(){
     Serial1.print(",");
     Serial1.println(Tank3_Status);
   }
-  if (serialcounter == 16) { 
+  if (serialcounter == 18) { 
 
     //*****Tank 4    
     Serial1.print("SetPoint_Tank4,");
