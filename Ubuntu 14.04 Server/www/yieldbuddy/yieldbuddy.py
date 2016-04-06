@@ -873,7 +873,7 @@ except:
 	
 
 #Insert sensors datapoint into SQL db at this interval (in seconds):
-TakeDataPoint_Every = 150   #default: 300 seconds (Every 5 minutes) (12 times per hour) --> 288 Datapoints a day
+TakeDataPoint_Every = 60   #default: 300 seconds (Every 5 minutes) (12 times per hour) --> 288 Datapoints a day
 
 #Start initial time sync counter at this number:
 timesync = 17

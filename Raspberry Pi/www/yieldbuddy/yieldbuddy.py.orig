@@ -14,15 +14,13 @@ import socket
 import subprocess
 
 
-
-
 def drawInterface():
 	print '\033[1m' #Bold
 	print("\033[0;0H")
 	os.system('clear')
-	#os.system('cat splashscreen')
-	print("\033[3;78Hyieldbuddy v1.17a")
-	print("\033[5;75H[Interface IP Addresses]")
+	os.system('cat splashscreen')
+	print("\033[16;78Hyieldbuddy v1.17a")
+	print("\033[7;75H[Interface IP Addresses]")
 	print("\033[39;0H[  Lastest Messages  ]-------------------------------------------------------------------------------------")
 	print '\033[0m' #Un-Bold
 	drawInterfaceIPs()
@@ -204,10 +202,13 @@ def drawInterfaceIPs():
 		IP_Addresses = getInterfaceIPs()
 		i=0
 		while i < len(IP_Addresses):
-			print("\033[" + str(i+6) + ";80H")
-			print("\033[" + str(i+6) + ";80H" + str(i+1) + ")" + str(IP_Addresses[i]))	
+			print("\033[" + str(i+8) + ";80H")
+			print("\033[" + str(i+8) + ";80H" + str(i+1) + ")" + str(IP_Addresses[i]))	
 			i=i+1
+	
 		
+
+	
 def checkSerial():
 	
 	try:
@@ -234,12 +235,6 @@ def checkSerial():
 		global oldSetPoint_CO2
 		global oldSetPoint_Light
 		global oldSetPoint_Water
-		global oldSetPoint_TankTotal
-		global oldSetPoint_Tank1
-		global oldSetPoint_Tank2
-		global oldSetPoint_Tank3
-		global oldSetPoint_Tank4
-		
 
 		oldRelays = " "
 		oldRelay_isAuto = " "
@@ -254,12 +249,6 @@ def checkSerial():
 		oldSetPoint_CO2 = " "
 		oldSetPoint_Light = " "
 		oldSetPoint_Water = " "
-		oldSetPoint_TankTotal = " "
-		oldSetPoint_Tank1 = " "
-		oldSetPoint_Tank2 = " "
-		oldSetPoint_Tank3 = " "
-		oldSetPoint_Tank4 = " "
-		
 		
 				
 		global LastDataPoint_Time
@@ -384,20 +373,19 @@ def checkSerial():
 				line=ser.readline()
 				if isinstance(line, basestring) == 0:
 					#print 'Expected String...  Serial Read Error?\n'
-					# addMessageLog("Expected String...  Serial Read Error?")
-					# printMessageLog()
+					addMessageLog("Expected String...  Serial Read Error?")
+					printMessageLog()
 					return 0
 			except:
 				#print "Error reading serial device."
-				# addMessageLog("Error reading serial device.")
-				# printMessageLog()
-				return 1
+				addMessageLog("Error reading serial device.")
+				printMessageLog()
+				return 0
 		else:
 			#print "Error reading serial device."
-			#addMessageLog("no path to serial device.")
-			#printMessageLog()
-			return 2
-			
+			addMessageLog("Error reading serial device.")
+			printMessageLog()
+			return 0
 		#print("\v%s"%(line))
 		print("\033[35;0H                                                                                                           ")
 		print("\033[35;0H(" + now.strftime("%Y/%m/%d %H:%M:%S") + ") Now: " + now.strftime('%s') + "  Last Data Point: " + LastDataPoint_Time.strftime('%s') + "   Next Data Point [sec]: " + str(float(now.strftime('%s')) - float(LastDataPoint_Time.strftime('%s'))) + "/" + str(TakeDataPoint_Every -  (float(now.strftime('%s')) - float(LastDataPoint_Time.strftime('%s')) )  ) + "/" + str(TakeDataPoint_Every))
@@ -424,9 +412,9 @@ def checkSerial():
 				Arduino_sec='0'+Arduino_sec
 			if ArduinoTime != '':
 				print("\033[34;0H                                                                                                                       ")
-				print("\033[9;0H                                                                                                                       ")
+				print("\033[19;0H                                                                                                                       ")
 				print '\033[1m' #Bold
-				print("\033[9;0H[Arduino Time: " + ArduinoTime + "]------------------------[Raspberry Pi Time: " + now.strftime("%b %d %Y %I:%M:%S %p")+"]")
+				print("\033[19;0H[Arduino Time: " + ArduinoTime + "]------------------------[Raspberry Pi Time: " + now.strftime("%b %d %Y %I:%M:%S %p")+"]")
 				print '\033[0m' #Un-Bold
 				update_sql("UPDATE `Arduino` SET `Time` = '" + ArduinoTime + "' , Month= '" + Arduino_month + "' , Day = '" + Arduino_day + "', Year = '" + Arduino_year + "', Hour = '" + Arduino_hour + "', Minute = '" + Arduino_min + "', Second = '" + Arduino_sec + "'")
 		#If the 'timesync' counter value goes over 20, then update the Raspberry Pi's time to be that of the Arduino's.
@@ -443,13 +431,13 @@ def checkSerial():
 				timesync = 0
 			timesync = timesync + 1
 		elif 'Sensors' in line:
-			Sensors,pH1,pH2,Temp,RH,TDS1,TDS2,CO2,Light,Water,MagX,MagY,MagZ,TankTotal,Tank1,Tank2,Tank3,Tank4=line.split(",")
+			Sensors,pH1,pH2,Temp,RH,TDS1,TDS2,CO2,Light,Water=line.split(",")
 			Sensors = Sensors.replace("Read fail", "")
 			Light = Light.rstrip()
 			elapsedTime = now-startTime
 			elapsedSeconds = (elapsedTime.microseconds+(elapsedTime.days*24*3600+elapsedTime.seconds)*10**6)/10**6
-			print("\033[10;0H\r")
-			print("\033[10;0H(" + now.strftime("%Y/%m/%d %H:%M:%S") + ") Sensors: %s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s"%(pH1,pH2,Temp,RH,TDS1,TDS2,CO2,Light,Water,MagX,MagY,MagZ,TankTotal,Tank1,Tank2,Tank3,Tank4))
+			print("\033[20;0H\r")
+			print("\033[20;0H(" + now.strftime("%Y/%m/%d %H:%M:%S") + ") Sensors: %s,%s,%s,%s,%s,%s,%s,%s,%s"%(pH1,pH2,Temp,RH,TDS1,TDS2,CO2,Light,Water))
 			now = datetime.now()
 			delta = float(now.strftime('%s')) - float(LastDataPoint_Time.strftime('%s'))
 			if (delta < 0):
@@ -461,12 +449,12 @@ def checkSerial():
 			if (delta >= TakeDataPoint_Every) or (Datapoint_count == 0 and first_timesync == True):
 				addMessageLog("Added a data point to the sensor values log.")
 				printMessageLog()
-				update_sql("INSERT INTO 'Sensors_Log' (Time,pH1,pH2,Temp,RH,TDS1,TDS2,CO2,Light,Water,MagX,MagY,MagZ,TankTotal,Tank1,Tank2,Tank3,Tank4) VALUES ('" + now.strftime("%Y-%m-%d %H:%M:%S") + "'," + pH1 + "," + pH2+ "," + Temp + "," + RH + "," + TDS1 + "," + TDS2 + "," + CO2 + "," + Light  + "," + Water + "," + MagX + "," + MagY + "," + MagZ + "," + TankTotal + "," + Tank1 + "," + Tank2 + "," + Tank3 + "," + Tank4 +")")
+				update_sql("INSERT INTO 'Sensors_Log' (Time,pH1,pH2,Temp,RH,TDS1,TDS2,CO2,Light,Water) VALUES ('" + now.strftime("%Y-%m-%d %H:%M:%S") + "'," + pH1 + "," + pH2+ "," + Temp + "," + RH + "," + TDS1 + "," + TDS2 + "," + CO2 + "," + Light  + "," + Water + ")")
 				LastDataPoint_Time = datetime.now()
 				timesync = 0 #do a timesync
 				Datapoint_count = Datapoint_count + 1
 			#SENSOR VALUES
-			update_sql("UPDATE `Sensors` SET pH1 = " + pH1 + ", pH2 = " + pH2 + ", Temp = " + Temp + ", RH = " + RH + ", TDS1 = " + TDS1 + ", TDS2 = " + TDS2 + ", CO2 = " + CO2 + ", Light = " + Light + ", Water = " + Water + ", MagX = " + MagX + ", MagY = " + MagY + ", MagZ = " + MagZ + ", TankTotal = " + TankTotal + ", Tank1 = " + Tank1 + ", Tank2 = " + Tank2 + ", Tank3 = " + Tank3 + ", Tank4 = " + Tank4 + "")
+			update_sql("UPDATE `Sensors` SET pH1 = " + pH1 + ", pH2 = " + pH2+ ", Temp = " + Temp + ", RH = " + RH + ", TDS1 =" + TDS1 + ", TDS2 =" + TDS2 + ", CO2 = " + CO2 + ", Light = " + Light + ", Water = " + Water)
 			db.commit()
 		elif 'Relays' in line:
 			if oldRelays != line:
@@ -475,8 +463,8 @@ def checkSerial():
 				Relays,Relay1,Relay2,Relay3,Relay4,Relay5,Relay6,Relay7,Relay8=line.split(",")
 				Relays = Relays.replace("Read fail", "")
 				Relay8 = Relay8.rstrip()
-				print("\033[11;0H                                                                                                                       ")
-				print("\033[11;0H(" + now.strftime("%Y/%m/%d %H:%M:%S") + ") Relays: %s,%s,%s,%s,%s,%s,%s,%s"%(Relay1,Relay2,Relay3,Relay4,Relay5,Relay6,Relay7,Relay8))
+				print("\033[21;0H                                                                                                                       ")
+				print("\033[21;0H(" + now.strftime("%Y/%m/%d %H:%M:%S") + ") Relays: %s,%s,%s,%s,%s,%s,%s,%s"%(Relay1,Relay2,Relay3,Relay4,Relay5,Relay6,Relay7,Relay8))
 				#RELAYS
 				update_sql("UPDATE `Relays` SET Relay1 = '" + Relay1 + "', Relay2 = '" + Relay2 + "', Relay3 = '" + Relay3 + "', Relay4 = '" + Relay4 + "', Relay5 = '" + Relay5 + "', Relay6 = '" + Relay6 + "', Relay7 = '" + Relay7 + "', Relay8= '" + Relay8 + "'")
 				db.commit()
@@ -487,8 +475,8 @@ def checkSerial():
 				Relay_isAuto,Relay1_isAuto,Relay2_isAuto,Relay3_isAuto,Relay4_isAuto,Relay5_isAuto,Relay6_isAuto,Relay7_isAuto,Relay8_isAuto=line.split(",")
 				Relay_isAuto = Relay_isAuto.replace("Read fail", "")
 				Relay8_isAuto = Relay8_isAuto.rstrip()
-				print("\033[12;0H                                                                                                                       ")
-				print("\033[12;0H(" + now.strftime("%Y/%m/%d %H:%M:%S") + ") Relay_isAuto: %s,%s,%s,%s,%s,%s,%s,%s"%(Relay1_isAuto,Relay2_isAuto,Relay3_isAuto,Relay4_isAuto,Relay5_isAuto,Relay6_isAuto,Relay7_isAuto,Relay8_isAuto))
+				print("\033[22;0H                                                                                                                       ")
+				print("\033[22;0H(" + now.strftime("%Y/%m/%d %H:%M:%S") + ") Relay_isAuto: %s,%s,%s,%s,%s,%s,%s,%s"%(Relay1_isAuto,Relay2_isAuto,Relay3_isAuto,Relay4_isAuto,Relay5_isAuto,Relay6_isAuto,Relay7_isAuto,Relay8_isAuto))
 				#RELAYS
 				update_sql("UPDATE `Relays` SET Relay1_isAuto = " + Relay1_isAuto + ", Relay2_isAuto = " + Relay2_isAuto + ", Relay3_isAuto = " + Relay3_isAuto + ", Relay4_isAuto = " + Relay4_isAuto + ", Relay5_isAuto =" + Relay5_isAuto + ", Relay6_isAuto =" + Relay6_isAuto + ", Relay7_isAuto =" + Relay7_isAuto + ", Relay8_isAuto =" + Relay8_isAuto)
 				db.commit()
@@ -499,8 +487,8 @@ def checkSerial():
 				Lighting,Light_ON_hour,Light_ON_min,Light_OFF_hour,Light_OFF_min=line.split(",")
 				Lighting = Lighting.replace("Read fail", "")
 				Light_OFF_min = Light_OFF_min.rstrip()
-				print("\033[13;0H                                                                                                                       ")
-				print("\033[13;0H(" + now.strftime("%Y/%m/%d %H:%M:%S") + ") Light_Schedule: %s,%s,%s,%s"%(Light_ON_hour,Light_ON_min,Light_OFF_hour,Light_OFF_min))
+				print("\033[23;0H                                                                                                                       ")
+				print("\033[23;0H(" + now.strftime("%Y/%m/%d %H:%M:%S") + ") Light_Schedule: %s,%s,%s,%s"%(Light_ON_hour,Light_ON_min,Light_OFF_hour,Light_OFF_min))
 				#LIGHTING
 				update_sql("UPDATE `Light_Schedule` SET Light_ON_hour = " + Light_ON_hour + ", Light_ON_min = " + Light_ON_min + ", Light_OFF_hour = " + Light_OFF_hour + ", Light_OFF_min = " + Light_OFF_min)
 		elif 'Watering_Schedule' in line:
@@ -510,8 +498,8 @@ def checkSerial():
 				Watering,Pump_start_hour,Pump_start_min,Pump_start_isAM,Pump_every_hours,Pump_every_mins,Pump_for,Pump_times=line.split(",")
 				Watering = Watering.replace("Read fail", "")
 				Pump_times = Pump_times.rstrip()
-				print("\033[14;0H                                                                                                                       ")
-				print("\033[14;0H(" + now.strftime("%Y/%m/%d %H:%M:%S") + ") Watering_Schedule: %s,%s,%s,%s,%s,%s,%s"%(Pump_start_hour,Pump_start_min,Pump_start_isAM,Pump_every_hours,Pump_every_mins,Pump_for,Pump_times))
+				print("\033[24;0H                                                                                                                       ")
+				print("\033[24;0H(" + now.strftime("%Y/%m/%d %H:%M:%S") + ") Watering_Schedule: %s,%s,%s,%s,%s,%s,%s"%(Pump_start_hour,Pump_start_min,Pump_start_isAM,Pump_every_hours,Pump_every_mins,Pump_for,Pump_times))
 				#WATERING
 				update_sql("UPDATE `Watering_Schedule` SET Pump_start_hour = " + Pump_start_hour + ", Pump_start_min = " + Pump_start_min + ", Pump_start_isAM = " + Pump_start_isAM + ", Pump_every_hours = " + Pump_every_hours + ", Pump_every_mins =" + Pump_every_mins + ", Pump_for =" + Pump_for + ", Pump_times =" + Pump_times)
 		elif 'SetPoint_pH1' in line:
@@ -521,8 +509,8 @@ def checkSerial():
 				SetPoint_pH1,pH1Value_Low,pH1Value_High,pH1_Status=line.split(",")
 				SetPoint_pH1 = SetPoint_pH1.replace("Read fail", "")
 				pH1_Status = pH1_Status.rstrip()
-				print("\033[15;0H                                                                                                                       ")
-				print("\033[15;0H(" + now.strftime("%Y/%m/%d %H:%M:%S") + ") SetPoint_pH1: %s,%s,%s"%(pH1Value_Low,pH1Value_High,pH1_Status))
+				print("\033[25;0H                                                                                                                       ")
+				print("\033[25;0H(" + now.strftime("%Y/%m/%d %H:%M:%S") + ") SetPoint_pH1: %s,%s,%s"%(pH1Value_Low,pH1Value_High,pH1_Status))
 				#SetPoint_pH
 				update_sql("UPDATE `pH1` SET Low='" + pH1Value_Low + "', High='" + pH1Value_High + "', Status='" + pH1_Status + "'")
 				pH1_Low_Alarm = fetch_sql("SELECT Low_Alarm FROM pH1")
@@ -536,7 +524,7 @@ def checkSerial():
 				if 'LOW' in pH1_Status and pH1_Low_Alarm[0] == 0:
 					update_sql("UPDATE `pH1` SET Low_Alarm = 1, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
 				if 'HIGH' in pH1_Status and pH1_High_Alarm[0] == 0:
-					update_sql("UPDATE `pH1` SET High_Alarm = 1, High_Time= '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")					
+					update_sql("UPDATE `pH1` SET High_Alarm = 1, High_Time= '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
 		elif 'SetPoint_pH2' in line:
 			if oldSetPoint_pH2 != line:
 				oldSetPoint_pH2 = line
@@ -544,8 +532,8 @@ def checkSerial():
 				SetPoint_pH2,pH2Value_Low,pH2Value_High,pH2_Status=line.split(",")
 				SetPoint_pH2 = SetPoint_pH2.replace("Read fail", "")
 				pH2_Status = pH2_Status.rstrip()
-				print("\033[16;0H                                                                                                                       ")
-				print("\033[16;0H(" + now.strftime("%Y/%m/%d %H:%M:%S") + ") SetPoint_pH2: %s,%s,%s"%(pH2Value_Low,pH2Value_High,pH2_Status))
+				print("\033[26;0H                                                                                                                       ")
+				print("\033[26;0H(" + now.strftime("%Y/%m/%d %H:%M:%S") + ") SetPoint_pH2: %s,%s,%s"%(pH2Value_Low,pH2Value_High,pH2_Status))
 				#SetPoint_pH
 				update_sql("UPDATE `pH2` SET Low='" + pH2Value_Low + "',High='" + pH2Value_High + "',Status='" + pH2_Status + "'")
 				pH2_Low_Alarm = fetch_sql("SELECT Low_Alarm FROM pH2")
@@ -567,8 +555,8 @@ def checkSerial():
 				SetPoint_Temp,TempValue_Low,TempValue_High,Heater_ON,Heater_OFF,AC_ON,AC_OFF,Temp_Status=line.split(",")
 				SetPoint_Temp = SetPoint_Temp.replace("Read fail", "")
 				Temp_Status = Temp_Status.rstrip()
-				print("\033[17;0H                                                                                                                       ")
-				print("\033[17;0H(" + now.strftime("%Y/%m/%d %H:%M:%S") + ") SetPoint_Temp: %s,%s,%s,%s,%s,%s,%s"%(TempValue_Low,TempValue_High,Heater_ON,Heater_OFF,AC_ON,AC_OFF,Temp_Status))
+				print("\033[27;0H                                                                                                                       ")
+				print("\033[27;0H(" + now.strftime("%Y/%m/%d %H:%M:%S") + ") SetPoint_Temp: %s,%s,%s,%s,%s,%s,%s"%(TempValue_Low,TempValue_High,Heater_ON,Heater_OFF,AC_ON,AC_OFF,Temp_Status))
 				#SetPoint_pH
 				update_sql("UPDATE `Temp` SET Low = " + TempValue_Low + ", High = " + TempValue_High + ", Heater_ON = " + Heater_ON + ", Heater_OFF = " + Heater_OFF + ", AC_ON =" + AC_ON + ", AC_OFF =" + AC_OFF + ", Status ='" + Temp_Status + "'")
 				Temp_Low_Alarm = fetch_sql("SELECT Low_Alarm FROM Temp")
@@ -590,8 +578,8 @@ def checkSerial():
 				SetPoint_RH,RHValue_Low,RHValue_High,Humidifier_ON,Humidifier_OFF,Dehumidifier_ON,Dehumidifier_OFF,RH_Status=line.split(",")
 				SetPoint_RH = SetPoint_RH.replace("Read fail", "")
 				RH_Status = RH_Status.rstrip()
-				print("\033[18;0H                                                                                                                       ")
-				print("\033[18;0H(" + now.strftime("%Y/%m/%d %H:%M:%S") + ") SetPoint_RH: %s,%s,%s,%s,%s,%s,%s"%(RHValue_Low,RHValue_High,Humidifier_ON,Humidifier_OFF,Dehumidifier_ON,Dehumidifier_OFF,RH_Status))
+				print("\033[28;0H                                                                                                                       ")
+				print("\033[28;0H(" + now.strftime("%Y/%m/%d %H:%M:%S") + ") SetPoint_RH: %s,%s,%s,%s,%s,%s,%s"%(RHValue_Low,RHValue_High,Humidifier_ON,Humidifier_OFF,Dehumidifier_ON,Dehumidifier_OFF,RH_Status))
 				#SetPoint_RH
 				update_sql("UPDATE `RH` SET Low = " + RHValue_Low + ", High = " + RHValue_High + ", Humidifier_ON = " + Humidifier_ON + ", Humidifier_OFF = " + Humidifier_OFF + ", Dehumidifier_ON =" + Dehumidifier_ON + ", Dehumidifier_OFF =" + Dehumidifier_OFF + ", Status ='" + RH_Status + "'")
 				RH_Low_Alarm = fetch_sql("SELECT Low_Alarm FROM RH")
@@ -613,8 +601,8 @@ def checkSerial():
 				SetPoint_TDS1,TDS1Value_Low,TDS1Value_High,NutePump1_ON,NutePump1_OFF,MixPump1_Enabled,TDS1_Status=line.split(",")
 				SetPoint_TDS1 = SetPoint_TDS1.replace("Read fail", "")
 				TDS1_Status = TDS1_Status.rstrip()
-				print("\033[19;0H                                                                                                                       ")
-				print("\033[19;0H(" + now.strftime("%Y/%m/%d %H:%M:%S") + ") SetPoint_TDS1: %s,%s,%s,%s,%s,%s"%(TDS1Value_Low,TDS1Value_High,NutePump1_ON,NutePump1_OFF,MixPump1_Enabled,TDS1_Status))
+				print("\033[29;0H                                                                                                                       ")
+				print("\033[29;0H(" + now.strftime("%Y/%m/%d %H:%M:%S") + ") SetPoint_TDS1: %s,%s,%s,%s,%s,%s"%(TDS1Value_Low,TDS1Value_High,NutePump1_ON,NutePump1_OFF,MixPump1_Enabled,TDS1_Status))
 				#SetPoint_TDS1
 				update_sql("UPDATE `TDS1` SET Low = " + TDS1Value_Low + ", High = " + TDS1Value_High + ", NutePump1_ON = " + NutePump1_ON + ", NutePump1_OFF = " + NutePump1_OFF + ", MixPump1_Enabled =" + MixPump1_Enabled + ", Status ='" + TDS1_Status + "'")
 				TDS1_Low_Alarm = fetch_sql("SELECT Low_Alarm FROM TDS1")
@@ -628,7 +616,7 @@ def checkSerial():
 				if 'LOW' in TDS1_Status and TDS1_Low_Alarm[0] == 0:
 					update_sql("UPDATE `TDS1` SET Low_Alarm = 1, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
 				if 'HIGH' in TDS1_Status and TDS1_High_Alarm[0] == 0:
-					update_sql("UPDATE `TDS1` SET High_Alarm = 1, High_Time= '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")					
+					update_sql("UPDATE `TDS1` SET High_Alarm = 1, High_Time= '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
 		elif 'SetPoint_TDS2' in line:
 			if oldSetPoint_TDS2 != line:
 				oldSetPoint_TDS2 = line
@@ -636,8 +624,8 @@ def checkSerial():
 				SetPoint_TDS2,TDS2Value_Low,TDS2Value_High,NutePump2_ON,NutePump2_OFF,MixPump2_Enabled,TDS2_Status=line.split(",")
 				SetPoint_TDS2 = SetPoint_TDS2.replace("Read fail", "")
 				TDS2_Status = TDS2_Status.rstrip()
-				print("\033[20;0H                                                                                                                       ")
-				print("\033[20;0H(" + now.strftime("%Y/%m/%d %H:%M:%S") + ") SetPoint_TDS2: %s,%s,%s,%s,%s,%s"%(TDS2Value_Low,TDS2Value_High,NutePump2_ON,NutePump2_OFF,MixPump2_Enabled,TDS2_Status))
+				print("\033[30;0H                                                                                                                       ")
+				print("\033[30;0H(" + now.strftime("%Y/%m/%d %H:%M:%S") + ") SetPoint_TDS2: %s,%s,%s,%s,%s,%s"%(TDS2Value_Low,TDS2Value_High,NutePump2_ON,NutePump2_OFF,MixPump2_Enabled,TDS2_Status))
 				#SetPoint_TDS2
 				update_sql("UPDATE `TDS2` SET Low = " + TDS2Value_Low + ", High = " + TDS2Value_High + ", NutePump2_ON = " + NutePump2_ON + ", NutePump2_OFF = " + NutePump2_OFF + ", MixPump2_Enabled =" + MixPump2_Enabled + ", Status ='" + TDS2_Status + "'")
 				TDS2_Low_Alarm = fetch_sql("SELECT Low_Alarm FROM TDS2")
@@ -659,8 +647,8 @@ def checkSerial():
 				SetPoint_CO2,CO2Value_Low,CO2Value_High,CO2_ON,CO2_OFF,CO2_Enabled,CO2_Status=line.split(",")
 				SetPoint_CO2 = SetPoint_CO2.replace("Read fail", "")
 				CO2_Status = CO2_Status.rstrip()
-				print("\033[21;0H                                                                                                                       ")
-				print("\033[21;0H(" + now.strftime("%Y/%m/%d %H:%M:%S") + ") SetPoint_CO2: %s,%s,%s,%s,%s,%s"%(CO2Value_Low,CO2Value_High,CO2_ON,CO2_OFF,CO2_Enabled,CO2_Status))
+				print("\033[31;0H                                                                                                                       ")
+				print("\033[31;0H(" + now.strftime("%Y/%m/%d %H:%M:%S") + ") SetPoint_CO2: %s,%s,%s,%s,%s,%s"%(CO2Value_Low,CO2Value_High,CO2_ON,CO2_OFF,CO2_Enabled,CO2_Status))
 				#SetPoint_CO2'
 				update_sql("UPDATE `CO2` SET Low = " + CO2Value_Low + ", High = " + CO2Value_High + ", CO2_ON = " + CO2_ON + ", CO2_OFF = " + CO2_OFF + ", CO2_Enabled =" + CO2_Enabled + ", Status = '" + CO2_Status + "'")
 				CO2_Low_Alarm = fetch_sql("SELECT Low_Alarm FROM CO2")
@@ -682,8 +670,8 @@ def checkSerial():
 				SetPoint_Light,LightValue_Low,LightValue_High,Light_Status=line.split(",")
 				SetPoint_Light = SetPoint_Light.replace("Read fail", "")
 				Light_Status = Light_Status.rstrip()
-				print("\033[22;0H                                                                                                           ")
-				print("\033[22;0H(" + now.strftime("%Y/%m/%d %H:%M:%S") + ") SetPoint_Light: %s,%s,%s"%(LightValue_Low,LightValue_High,Light_Status))
+				print("\033[32;0H                                                                                                           ")
+				print("\033[32;0H(" + now.strftime("%Y/%m/%d %H:%M:%S") + ") SetPoint_Light: %s,%s,%s"%(LightValue_Low,LightValue_High,Light_Status))
 				#SetPoint_pH
 				update_sql("UPDATE `Light` SET Low = '" + LightValue_Low + "', High = '" + LightValue_High + "', Status = '" + Light_Status + "'")
 				Light_Low_Alarm = fetch_sql("SELECT Low_Alarm FROM Light")
@@ -698,152 +686,13 @@ def checkSerial():
 					update_sql("UPDATE `Light` SET Low_Alarm = 1, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
 				if 'HIGH' in Light_Status and Light_High_Alarm[0] == 0:
 					update_sql("UPDATE `Light` SET High_Alarm = 1, High_Time= '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-		elif 'SetPoint_Water' in line:
-			if oldSetPoint_Water != line:
-				oldSetPoint_Water = line
-				#print("%s"%(line))  For Debugging
-				SetPoint_Water,WaterValue_Low,WaterValue_High,Water_Status=line.split(",")
-				SetPoint_Water = SetPoint_Water.replace("Read fail", "")
-				Water_Status = Water_Status.rstrip()
-				print("\033[23;0H                                                                                                                       ")
-				print("\033[23;0H(" + now.strftime("%Y/%m/%d %H:%M:%S") + ") SetPoint_Water: %s,%s,%s"%(WaterValue_Low,WaterValue_High,Water_Status))
-				#SetPoint_pH
-				update_sql("UPDATE `Water` SET Low='" + WaterValue_Low + "',High='" + WaterValue_High + "',Status='" + Water_Status + "'")
-				Water_Low_Alarm = fetch_sql("SELECT Low_Alarm FROM Water")
-				Water_High_Alarm = fetch_sql("SELECT High_Alarm FROM Water")
-				if Water_Low_Alarm[0] == 1:
-					if email_message_tls(login_address,email_password,to_address,"Water Low",smtp_server, smtp_port) == 1:
-						update_sql("UPDATE `Water` SET Low_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if Water_High_Alarm[0] == 1:
-					if email_message_tls(login_address,email_password,to_address,"Water High",smtp_server, smtp_port) == 1:
-						update_sql("UPDATE `Water` SET High_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if 'LOW' in Water_Status and Water_Low_Alarm[0] == 0:
-					update_sql("UPDATE `Water` SET Low_Alarm = 1, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if 'HIGH' in Water_Status and Water_High_Alarm[0] == 0:
-					update_sql("UPDATE `Water` SET High_Alarm = 1, High_Time= '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-		elif 'SetPoint_TankTotal' in line:
-			if oldSetPoint_TankTotal != line:
-				oldSetPoint_TankTotal = line
-				#print("%s"%(line))  For Debugging
-				SetPoint_TankTotal,TankTotalValue_Low,TankTotalValue_High,TankTotal_Status=line.split(",")
-				SetPoint_TankTotal = SetPoint_TankTotal.replace("Read fail", "")
-				TankTotal_Status = TankTotal_Status.rstrip()
-				print("\033[24;0H                                                                                                                       ")
-				print("\033[24;0H(" + now.strftime("%Y/%m/%d %H:%M:%S") + ") SetPoint_TankTotal: %s,%s,%s"%(TankTotalValue_Low,TankTotalValue_High,TankTotal_Status))
-				#SetPoint_TankTotal
-				update_sql("UPDATE `TankTotal` SET Low='" + TankTotalValue_Low + "', High='" + TankTotalValue_High + "', Status='" + TankTotal_Status + "'")
-				TankTotal_Low_Alarm = fetch_sql("SELECT Low_Alarm FROM TankTotal")
-				TankTotal_High_Alarm = fetch_sql("SELECT High_Alarm FROM TankTotal")
-				if TankTotal_Low_Alarm[0] == 1:
-					if email_message_tls(login_address,email_password,to_address,"TankTotal Low",smtp_server, smtp_port) == 1:
-						update_sql("UPDATE `TankTotal` SET Low_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if TankTotal_High_Alarm[0] == 1:
-					if email_message_tls(login_address,email_password,to_address,"TankTotal High",smtp_server, smtp_port) == 1:
-						update_sql("UPDATE `TankTotal` SET High_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if 'LOW' in TankTotal_Status and TankTotal_Low_Alarm[0] == 0:
-					update_sql("UPDATE `TankTotal` SET Low_Alarm = 1, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if 'HIGH' in TankTotal_Status and TankTotal_High_Alarm[0] == 0:
-					update_sql("UPDATE `TankTotal` SET High_Alarm = 1, High_Time= '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")							
-		elif 'SetPoint_Tank1' in line:
-			if oldSetPoint_Tank1 != line:
-				oldSetPoint_Tank1 = line
-				#print("%s"%(line))  For Debugging
-				SetPoint_Tank1,Tank1Value_Low,Tank1Value_High,Tank1Pump_ON,Tank1Pump_OFF,Tank1MixPump_Enabled,Tank1_Status=line.split(",")
-				SetPoint_Tank1 = SetPoint_Tank1.replace("Read fail", "")
-				Tank1_Status = Tank1_Status.rstrip()
-				print("\033[25;0H                                                                                                                       ")
-				print("\033[25;0H(" + now.strftime("%Y/%m/%d %H:%M:%S") + ") SetPoint_Tank1: %s,%s,%s,%s,%s,%s"%(Tank1Value_Low,Tank1Value_High,Tank1Pump_ON,Tank1Pump_OFF,Tank1MixPump_Enabled,Tank1_Status))
-				#SetPoint_Tank1
-				update_sql("UPDATE `Tank1` SET Low = " + Tank1Value_Low + ", High = " + Tank1Value_High + ", Tank1Pump_ON = " + Tank1Pump_ON + ", Tank1Pump_OFF = " + Tank1Pump_OFF + ", Tank1MixPump_Enabled =" + Tank1MixPump_Enabled + ", Status ='" + Tank1_Status + "'")
-				Tank1_Low_Alarm = fetch_sql("SELECT Low_Alarm FROM Tank1")
-				Tank1_High_Alarm = fetch_sql("SELECT High_Alarm FROM Tank1")
-				if Tank1_Low_Alarm[0] == 1:
-					if email_message_tls(login_address,email_password,to_address,"Tank1 Low",smtp_server, smtp_port) == 1:
-						update_sql("UPDATE `Tank1` SET Low_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if Tank1_High_Alarm[0] == 1:
-					if email_message_tls(login_address,email_password,to_address,"Tank1 High",smtp_server, smtp_port) == 1:
-						update_sql("UPDATE `Tank1` SET High_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if 'LOW' in Tank1_Status and Tank1_Low_Alarm[0] == 0:
-					update_sql("UPDATE `Tank1` SET Low_Alarm = 1, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if 'HIGH' in Tank1_Status and Tank1_High_Alarm[0] == 0:
-					update_sql("UPDATE `Tank1` SET High_Alarm = 1, High_Time= '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")					
-		elif 'SetPoint_Tank2' in line:
-			if oldSetPoint_Tank2 != line:
-				oldSetPoint_Tank2 = line
-				#print("%s"%(line))  For Debugging
-				SetPoint_Tank2,Tank2Value_Low,Tank2Value_High,Tank2Pump_ON,Tank2Pump_OFF,Tank2MixPump_Enabled,Tank2_Status=line.split(",")
-				SetPoint_Tank2 = SetPoint_Tank2.replace("Read fail", "")
-				Tank2_Status = Tank2_Status.rstrip()
-				print("\033[26;0H                                                                                                                       ")
-				print("\033[26;0H(" + now.strftime("%Y/%m/%d %H:%M:%S") + ") SetPoint_Tank2: %s,%s,%s,%s,%s,%s"%(Tank2Value_Low,Tank2Value_High,Tank2Pump_ON,Tank2Pump_OFF,Tank2MixPump_Enabled,Tank2_Status))
-				#SetPoint_Tank1
-				update_sql("UPDATE `Tank2` SET Low = " + Tank2Value_Low + ", High = " + Tank2Value_High + ", Tank2Pump_ON = " + Tank2Pump_ON + ", Tank2Pump_OFF = " + Tank2Pump_OFF + ", Tank2MixPump_Enabled =" + Tank2MixPump_Enabled + ", Status ='" + Tank2_Status + "'")
-				Tank2_Low_Alarm = fetch_sql("SELECT Low_Alarm FROM Tank2")
-				Tank2_High_Alarm = fetch_sql("SELECT High_Alarm FROM Tank2")
-				if Tank2_Low_Alarm[0] == 1:
-					if email_message_tls(login_address,email_password,to_address,"Tank2 Low",smtp_server, smtp_port) == 1:
-						update_sql("UPDATE `Tank2` SET Low_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if Tank2_High_Alarm[0] == 1:
-					if email_message_tls(login_address,email_password,to_address,"Tank2 High",smtp_server, smtp_port) == 1:
-						update_sql("UPDATE `Tank2` SET High_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if 'LOW' in Tank2_Status and Tank2_Low_Alarm[0] == 0:
-					update_sql("UPDATE `Tank2` SET Low_Alarm = 1, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if 'HIGH' in Tank2_Status and Tank2_High_Alarm[0] == 0:
-					update_sql("UPDATE `Tank2` SET High_Alarm = 1, High_Time= '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")										
-		elif 'SetPoint_Tank3' in line:
-			if oldSetPoint_Tank3 != line:
-				oldSetPoint_Tank3 = line
-				#print("%s"%(line))  For Debugging
-				SetPoint_Tank3,Tank3Value_Low,Tank3Value_High,Tank3Pump_ON,Tank3Pump_OFF,Tank3MixPump_Enabled,Tank3_Status=line.split(",")
-				SetPoint_Tank3 = SetPoint_Tank3.replace("Read fail", "")
-				Tank3_Status = Tank3_Status.rstrip()
-				print("\033[27;0H                                                                                                                       ")
-				print("\033[27;0H(" + now.strftime("%Y/%m/%d %H:%M:%S") + ") SetPoint_Tank3: %s,%s,%s,%s,%s,%s"%(Tank3Value_Low,Tank3Value_High,Tank3Pump_ON,Tank3Pump_OFF,Tank3MixPump_Enabled,Tank3_Status))
-				#SetPoint_Tank3
-				update_sql("UPDATE `Tank3` SET Low = " + Tank3Value_Low + ", High = " + Tank3Value_High + ", Tank3Pump_ON = " + Tank3Pump_ON + ", Tank3Pump_OFF = " + Tank3Pump_OFF + ", Tank3MixPump_Enabled =" + Tank3MixPump_Enabled + ", Status ='" + Tank3_Status + "'")
-				Tank3_Low_Alarm = fetch_sql("SELECT Low_Alarm FROM Tank3")
-				Tank3_High_Alarm = fetch_sql("SELECT High_Alarm FROM Tank3")
-				if Tank3_Low_Alarm[0] == 1:
-					if email_message_tls(login_address,email_password,to_address,"Tank3 Low",smtp_server, smtp_port) == 1:
-						update_sql("UPDATE `Tank3` SET Low_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if Tank3_High_Alarm[0] == 1:
-					if email_message_tls(login_address,email_password,to_address,"Tank3 High",smtp_server, smtp_port) == 1:
-						update_sql("UPDATE `Tank3` SET High_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if 'LOW' in Tank3_Status and Tank3_Low_Alarm[0] == 0:
-					update_sql("UPDATE `Tank3` SET Low_Alarm = 1, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if 'HIGH' in Tank3_Status and Tank3_High_Alarm[0] == 0:
-					update_sql("UPDATE `Tank3` SET High_Alarm = 1, High_Time= '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")		
-		elif 'SetPoint_Tank4' in line:
-			if oldSetPoint_Tank4 != line:
-				oldSetPoint_Tank4 = line
-				#print("%s"%(line))  For Debugging
-				SetPoint_Tank4,Tank4Value_Low,Tank4Value_High,Tank4Pump_ON,Tank4Pump_OFF,Tank4MixPump_Enabled,Tank4_Status=line.split(",")
-				SetPoint_Tank4 = SetPoint_Tank4.replace("Read fail", "")
-				Tank4_Status = Tank4_Status.rstrip()
-				print("\033[28;0H                                                                                                                       ")
-				print("\033[28;0H(" + now.strftime("%Y/%m/%d %H:%M:%S") + ") SetPoint_Tank4: %s,%s,%s,%s,%s,%s"%(Tank4Value_Low,Tank4Value_High,Tank4Pump_ON,Tank4Pump_OFF,Tank4MixPump_Enabled,Tank4_Status))
-				#SetPoint_Tank4
-				update_sql("UPDATE `Tank4` SET Low = " + Tank4Value_Low + ", High = " + Tank4Value_High + ", Tank4Pump_ON = " + Tank4Pump_ON + ", Tank4Pump_OFF = " + Tank4Pump_OFF + ", Tank4MixPump_Enabled =" + Tank4MixPump_Enabled + ", Status ='" + Tank4_Status + "'")
-				Tank4_Low_Alarm = fetch_sql("SELECT Low_Alarm FROM Tank4")
-				Tank4_High_Alarm = fetch_sql("SELECT High_Alarm FROM Tank4")
-				if Tank4_Low_Alarm[0] == 1:
-					if email_message_tls(login_address,email_password,to_address,"Tank4 Low",smtp_server, smtp_port) == 1:
-						update_sql("UPDATE `Tank4` SET Low_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if Tank4_High_Alarm[0] == 1:
-					if email_message_tls(login_address,email_password,to_address,"Tank4 High",smtp_server, smtp_port) == 1:
-						update_sql("UPDATE `Tank4` SET High_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if 'LOW' in Tank4_Status and Tank4_Low_Alarm[0] == 0:
-					update_sql("UPDATE `Tank4` SET Low_Alarm = 1, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if 'HIGH' in Tank4_Status and Tank4_High_Alarm[0] == 0:
-					update_sql("UPDATE `Tank4` SET High_Alarm = 1, High_Time= '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")		
-					
 			ser.flushInput()
 		
+			
 	except ValueError as detail:
 		#print "\nError: ", detail
 		addMessageLog("Error: " + str(detail))
 		printMessageLog()
-				
 #			time.sleep(5)
 
 #####MAIN############################################################
@@ -862,7 +711,15 @@ app_path = str( os.path.dirname(os.path.realpath(__file__)) )+"/"
 print 'Application Path: ' + app_path + '\n'
 
 
-device_path='/dev/yieldbuddytty'    #override device_path (no user input)
+print 'Checking For Possible Serial Devices:'
+f=os.system("ls /dev/tty*")
+
+print '\r'
+print 'Enter the path to the serial device.  (/dev/ttyAMA0):'
+#device_path=raw_input()
+device_path='/dev/ttyAMA0'    #override device_path (no user input)
+if device_path == '':
+	device_path = '/dev/ttyAMA0'
 device_path = device_path.strip("\n")
 try:
 	ser = serial.Serial(device_path,115200,timeout=10)
@@ -873,7 +730,7 @@ except:
 	
 
 #Insert sensors datapoint into SQL db at this interval (in seconds):
-TakeDataPoint_Every = 60   #default: 300 seconds (Every 5 minutes) (12 times per hour) --> 288 Datapoints a day
+TakeDataPoint_Every = 90   #default: 300 seconds (Every 5 minutes) (12 times per hour) --> 288 Datapoints a day
 
 #Start initial time sync counter at this number:
 timesync = 17
@@ -916,7 +773,7 @@ f_AESkey.close()
 #f_sql_database.close()
 
 # Open database connection
-db = lite.connect(app_path+'www/sql/yieldbuddy.sqlite3', timeout=10)
+db = lite.connect(app_path+'www/sql/yieldbuddy.sqlite3', timeout=20)
 
 # prepare a cursor object using cursor() method
 cursor = db.cursor()
@@ -954,48 +811,13 @@ while (i < len(openpid)):
 		os.system("sudo kill " + openpid[i])
 	i=i+1
 #raw_input()
-
 drawInterface()
 
 addMessageLog("Started yieldbuddy. Priority 15.")
 printMessageLog()
-loopcounter = 0
-
 
 while 1:
-		serialerr=checkSerial()
-		if str(serialerr) != str("None"):
-			if loopcounter == 0: # log error first time
-				if str(serialerr) == str("0"):
-					addMessageLog("serialerr: " + str(serialerr) + " from serial loop")
-					printMessageLog()
-					addMessageLog("Expected String...  Serial Read Error?")
-					printMessageLog()				
-					addMessageLog("attempting to restart serial")
-					printMessageLog()
-				if str(serialerr) == str("1"):
-					addMessageLog("serialerr: " + str(serialerr) + " from serial loop")
-					printMessageLog()
-					addMessageLog("Error reading serial device.")
-					printMessageLog()				
-					addMessageLog("attempting to restart serial")
-					printMessageLog()
-				if str(serialerr) == str("2"):
-					addMessageLog("serialerr: " + str(serialerr) + " from serial loop")
-					printMessageLog()
-					addMessageLog("no path to serial device.")
-					printMessageLog()
-					addMessageLog("attempting to restart serial")
-					printMessageLog()				
-			ser.close()
-			try:
-				ser = serial.Serial(device_path,115200,timeout=10)
-				ser.flushInput()
-				loopcounter = 0 # good to go have com port clear the loop for next time
-				os.system('clear')
-				os.system('cat splashscreen')
-			except:
-				loopcounter = loopcounter + 1 # don't log it again
-				#sys.exit(0)
-		global now
-		now = datetime.now()
+	checkSerial()
+	global now
+	now = datetime.now()
+

@@ -75,6 +75,8 @@ void CheckTimers(){
     }
 
 exit_loop_light:;
+
+
     if (TurnLightOn == 1) {
       if (Relay8_isAuto == 1){
         Relay8_State = 1;
@@ -95,7 +97,6 @@ exit_loop_light:;
       //    Serial1.println("Turned Light OFF");
       //    Serial1.println();
     }
-
 
   }
 

@@ -145,7 +145,6 @@ float TDS2Value = 0;
 float CO2Value = 0;
 float LightValue = 0;
 
-
 // added ultrasonic tank sensors
 float Tank1Value = 0;
 float Tank2Value = 0;
@@ -373,14 +372,14 @@ int Tank4EchoPin = A9;
 
 
 
-int Relay1_Pin = 22;  //Water Pump
-int Relay2_Pin = 23;  //Water Supply
-int Relay3_Pin = 24;  //pH down
-int Relay4_Pin = 25;  //Nute 1
-int Relay5_Pin = 26;  //Nute 2
-int Relay6_Pin = 27;  //Dehumidifier
-int Relay7_Pin = 28;  //AC
-int Relay8_Pin = 29;  //Light
+int Relay1_Pin = 22;  // Tank1Pump-FEED-PODS            //Water Pump
+int Relay2_Pin = 23;  // Tank2Pump-XFER-Tank3           //Water Supply
+int Relay3_Pin = 24;  // Tank3Pump-XFER-Tank1           //pH down
+int Relay4_Pin = 25;  // Tank4Pump-XFER-Tank2           //Nute 1                        
+int Relay5_Pin = 26;  // Nute 2
+int Relay6_Pin = 27;  // Dehumidifier
+int Relay7_Pin = 28;  // Humidifier                     //AC
+int Relay8_Pin = 29;  // Light
 
 int Relay1_State = 0;
 int Relay2_State = 0;
@@ -391,14 +390,14 @@ int Relay6_State = 0;
 int Relay7_State = 0;
 int Relay8_State = 0;
 
-int Relay1_isAuto = 1;  //Water Pump 1
-int Relay2_isAuto = 1;  //Water Supply
-int Relay3_isAuto = 1;  //pH down
-int Relay4_isAuto = 1;  //Nute 1
-int Relay5_isAuto = 1;  //Nute 2
-int Relay6_isAuto = 1;  //Dehumidifier
-int Relay7_isAuto = 1;  //AC
-int Relay8_isAuto = 1;  //Light
+int Relay1_isAuto = 1;  // Tank1Pump-FEED-PODS           //Water Pump
+int Relay2_isAuto = 1;  // Tank2Pump-XFER-Tank3 || Tank1 //Water Supply
+int Relay3_isAuto = 1;  // Tank4Pump-XFER-Tank2          //pH down
+int Relay4_isAuto = 1;  // Nute 1
+int Relay5_isAuto = 1;  // Nute 2
+int Relay6_isAuto = 1;  // Dehumidifier
+int Relay7_isAuto = 1;  // Humidifier                    //AC
+int Relay8_isAuto = 1;  // Light
 /*
 /!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
  /!!SETUP!!SETUP!!SETUP!!SETUP!!SETUP!!SETUP!!SETUP!!SETUP!!SETUP!!SETUP!!SETUP!!SETUP!!SETUP!!SETUP!!!!SETUP!!SETUP!!SETUP!!SETUP!!SETUP!!SETUP!!SETUP!!SETUP!!SETUP!!SETUP!!SETUP!!SETUP!!SETUP!!SETUP!!

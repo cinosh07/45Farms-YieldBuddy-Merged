@@ -481,8 +481,9 @@ void serialEvent() {
         turnRelay(6, 0);
         sendRelayMessages();
       }
-      if (Serial_inString == "Relay7 on" && Relay5_isAuto == 0) {
-        Relay5_State = 1;
+//********************************************check logic*********************      
+      if (Serial_inString == "Relay7 on" && Relay7_isAuto == 0) {
+        Relay7_State = 1;
         EEPROM.write(12,1);
         turnRelay(7, 1);
         sendRelayMessages();
@@ -494,7 +495,7 @@ void serialEvent() {
         sendRelayMessages();
       }
 
-      if (Serial_inString == "Relay8 on" && Relay6_isAuto == 0) {
+      if (Serial_inString == "Relay8 on" && Relay8_isAuto == 0) {
         Relay8_State = 1;
         EEPROM.write(13,1);
         turnRelay(8, 1);
@@ -507,6 +508,9 @@ void serialEvent() {
         turnRelay(8, 0);
         sendRelayMessages();
       }
+
+
+//********************************************************************************
 
       if (Serial_inString == "Relay1 isAuto 1") {
         Relay1_isAuto = 1;
