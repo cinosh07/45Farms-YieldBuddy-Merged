@@ -77,7 +77,9 @@ void updateSensorValues() {
   }
   pH1RawValue = pH1Sum/30;
 
-  pH1Value = (pHSlope * pH1RawValue + pHOffset);
+//  pH1Value = (pHSlope * pH1RawValue + pHOffset);
+  pH1Value = 0;
+    
   if(isnan(pH1Value)){
     pH1Value = 0;        
   }
@@ -105,7 +107,9 @@ void updateSensorValues() {
   }
   pH2RawValue = pH2Sum/30;
 
-  pH2Value = (pHSlope * pH2RawValue + pHOffset);
+//  pH2Value = (pHSlope * pH2RawValue + pHOffset);
+  pH2Value = 0;
+    
   if(isnan(pH2Value)){
     pH2Value = 0;        
   }
@@ -136,13 +140,13 @@ void updateSensorValues() {
  !!WATER TANK LEVEL SCAN
  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 // delays are needed for testing as i am only using 1 phsical sensor for test. Remove when 4 sensors wired
-  delay(50);
+//  delay(50);
   Tank1RawValue = (read_water_sensor(Tank1TrigPin, Tank1EchoPin));
-  delay(50);
+//  delay(50);
   Tank2RawValue = (read_water_sensor(Tank2TrigPin, Tank2EchoPin));
-  delay(50);
+//  delay(50);
   Tank3RawValue = (read_water_sensor(Tank3TrigPin, Tank3EchoPin));
-  delay(50);
+//  delay(50);
   Tank4RawValue = (read_water_sensor(Tank4TrigPin, Tank4EchoPin));
   
   TankTotalRawValue = Tank1RawValue + Tank2RawValue + Tank3RawValue + Tank4RawValue;
@@ -188,7 +192,9 @@ void updateSensorValues() {
   }
   WaterRawValue = WaterSum/10;
 //  WaterRawValue = WaterSum/((j-1) * 2);
-  WaterValue = ((5.00 * WaterRawValue * 100.0)/1024.0);
+//  WaterValue = ((5.00 * WaterRawValue)/1024.0);
+//  WaterValue = map(WaterRawValue, 0, 1023, 0, 100);
+  WaterValue = 0;
  
   if(isnan(WaterValue)){
     WaterValue = 0;        
@@ -228,23 +234,28 @@ void updateSensorValues() {
   
 // ******************magnetometer sensor******************
 
-  MagnetometerScaled scaled = compass.ReadScaledAxis();
-  
-  MagXRawValue = scaled.XAxis;
-  MagYRawValue = scaled.YAxis;
-  MagZRawValue = scaled.ZAxis;
+//  MagnetometerScaled scaled = compass.ReadScaledAxis();
+//  
+//  MagXRawValue = scaled.XAxis;
+//  MagYRawValue = scaled.YAxis;
+//  MagZRawValue = scaled.ZAxis;
 
-  MagXValue = MagXRawValue;
+
+  MagXValue = 0;
+  MagYValue = 0;
+  MagZValue = 0;
+
+//  MagXValue = MagXRawValue;
   PString my_MagX_string(MagX_char, sizeof(MagX_char));
   my_MagX_string.print(MagXValue);
   my_MagX_string.println("Guass");
   
-  MagYValue = MagYRawValue;
+//  MagYValue = MagYRawValue;
   PString my_MagY_string(MagY_char, sizeof(MagY_char));
   my_MagY_string.print(MagYValue);
   my_MagY_string.println("Guass");
     
-  MagZValue = MagZRawValue;
+//  MagZValue = MagZRawValue;
   PString my_MagZ_string(MagZ_char, sizeof(MagZ_char));
   my_MagZ_string.print(MagZValue);
   my_MagZ_string.println("Guass");
@@ -269,8 +280,9 @@ void updateSensorValues() {
   }
 
   TDS1RawValue = TDS1Sum/((j-1) * 2);
-  TDS1Value = ((TDS1RawValue * 100.0)/1024.0);
-
+//  TDS1Value = ((TDS1RawValue * 100.0)/1024.0);
+  TDS1Value = 0;
+  
   if(isnan(TDS1Value)){
     TDS1Value = 0;        
   }
@@ -293,7 +305,8 @@ void updateSensorValues() {
   }
 
   TDS2RawValue = TDS2Sum/((j-1) * 2);
-  TDS2Value = ((TDS2RawValue * 100.0)/1024.0);
+//  TDS2Value = ((TDS2RawValue * 100.0)/1024.0);
+  TDS2Value = 0;
 
   if(isnan(TDS2Value)){
     TDS2Value = 0;        
@@ -316,8 +329,9 @@ void updateSensorValues() {
   }
 
   CO2RawValue = CO2Sum/((j-1) * 2);
-  CO2Value = ((CO2RawValue * 100.0)/1024.0);
-
+//  CO2Value = ((CO2RawValue * 100.0)/1024.0);
+  CO2Value = 0;
+  
   if(isnan(CO2Value)){
     CO2Value = 0;        
   }
@@ -347,7 +361,8 @@ void updateSensorValues() {
   }
   
   LightRawValue = (int)valf,DEC;
-  LightValue = LightRawValue;
+//  LightValue = LightRawValue;
+  LightValue = 0;
   
   if (isnan(LightValue)) {
     LightValue = 0;

@@ -355,19 +355,19 @@ int WaterPin = A7;
 //added utlrasonic tank sensors
 int Tank1TrigPin = A8;
 int Tank1EchoPin = A9;
-//int Tank2TrigPin = A10;
-//int Tank2EchoPin = A11;
-//int Tank3TrigPin = A12;
-//int Tank3EchoPin = A13;
-//int Tank4TrigPin = A14;
-//int Tank4EchoPin = A15;
+int Tank2TrigPin = A10;
+int Tank2EchoPin = A11;
+int Tank3TrigPin = A12;
+int Tank3EchoPin = A13;
+int Tank4TrigPin = A14;
+int Tank4EchoPin = A15;
 //testing
-int Tank2TrigPin = A8;
-int Tank2EchoPin = A9;
-int Tank3TrigPin = A8;
-int Tank3EchoPin = A9;
-int Tank4TrigPin = A8;
-int Tank4EchoPin = A9;
+//int Tank2TrigPin = A8;
+//int Tank2EchoPin = A9;
+//int Tank3TrigPin = A8;
+//int Tank3EchoPin = A9;
+//int Tank4TrigPin = A8;
+//int Tank4EchoPin = A9;
 
 
 
@@ -380,6 +380,8 @@ int Relay5_Pin = 26;  // Nute 2
 int Relay6_Pin = 27;  // Dehumidifier
 int Relay7_Pin = 28;  // Humidifier                     //AC
 int Relay8_Pin = 29;  // Light
+int inet_on = 10;
+int sdcard_on = 4;
 
 int Relay1_State = 0;
 int Relay2_State = 0;
@@ -414,6 +416,11 @@ void setup()
   pinMode(Relay6_Pin, OUTPUT);
   pinMode(Relay7_Pin, OUTPUT);
   pinMode(Relay8_Pin, OUTPUT);
+  pinMode(inet_on, OUTPUT);
+  pinMode(sdcard_on, OUTPUT);
+
+  digitalWrite(inet_on, HIGH);
+  digitalWrite(sdcard_on, HIGH);
 
 //  //COMMENT OUT THIS SECTION ON FIRST START UP!!-----------------------------------
 //  //EEPROM TIME
@@ -635,7 +642,7 @@ void setup()
  */
 void loop()
 {  
-  //Clear the EEPROM and then write defaults.
+//  Clear the EEPROM and then write defaults.
 //  for (int i = 0; i < 4096; i++) {
 //    EEPROM.write(i, 0);
 //  }
@@ -666,8 +673,8 @@ void loop()
 //  turnRelay(8,1);
 //  delay(1000);
 //  turnRelay(8,0);
-//  //delay(30000);
-//  //delay(30000);
+  //delay(30000);
+  //delay(30000);
   
   
   

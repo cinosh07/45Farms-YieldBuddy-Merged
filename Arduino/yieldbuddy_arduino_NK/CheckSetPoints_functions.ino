@@ -27,10 +27,10 @@
   // Tank2 xfer to Tank3  
   if ((Relay2_isAuto == 1) && (Tank2MixPump_Enabled == true)){    
     if ((Tank2Value >= Tank2Pump_ON) || (Tank2Value <= Tank2Pump_OFF)){
-      if(Tank2Value <= Tank2Pump_OFF -1){
+      if((Tank2Value <= Tank2Pump_OFF -1) || (Tank3Value >= 180)){
         turnRelay(2,0);
       }        
-      if(Tank2Value >= Tank2Pump_ON + 1){
+      if((Tank2Value >= Tank2Pump_ON + 1) || (Tank3Value < 180)){
         turnRelay(2,1);
       }            
     }
@@ -39,10 +39,10 @@
   // Tank3 xfer to Tank1
   if ((Relay3_isAuto == 1) && (Tank3MixPump_Enabled == true)){    
     if ((Tank3Value >= Tank3Pump_ON) || (Tank3Value <= Tank3Pump_OFF)){
-      if(Tank3Value <= Tank3Pump_OFF -1){
+      if((Tank3Value <= Tank3Pump_OFF -1) && (Tank1Value >= 180)){
         turnRelay(3,0);
       }        
-      if(Tank3Value >= Tank3Pump_ON + 1){
+      if((Tank3Value >= Tank3Pump_ON + 1) && (Tank3Value <= 180)){
         turnRelay(3,1);
       }            
     }
