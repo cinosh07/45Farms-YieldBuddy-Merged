@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Use UV Sensor with Arduino | CuteDigi Blog</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="http://www.cutedigi.com/blog/xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="http://www.cutedigi.com/blog/wp-content/themes/twentytwelve/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<link rel="alternate" type="application/rss+xml" title="CuteDigi Blog &raquo; Feed" href="http://www.cutedigi.com/blog/feed/" />
+<link rel="alternate" type="application/rss+xml" title="CuteDigi Blog &raquo; Comments Feed" href="http://www.cutedigi.com/blog/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="CuteDigi Blog &raquo; Use UV Sensor with Arduino Comments Feed" href="http://www.cutedigi.com/blog/use-uv-sensor-with-arduino/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/www.cutedigi.com\/blog\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.4.4"}};
+			!function(a,b,c){function d(a){var c,d,e,f=b.createElement("canvas"),g=f.getContext&&f.getContext("2d"),h=String.fromCharCode;return g&&g.fillText?(g.textBaseline="top",g.font="600 32px Arial","flag"===a?(g.fillText(h(55356,56806,55356,56826),0,0),f.toDataURL().length>3e3):"diversity"===a?(g.fillText(h(55356,57221),0,0),c=g.getImageData(16,16,1,1).data,g.fillText(h(55356,57221,55356,57343),0,0),c=g.getImageData(16,16,1,1).data,e=c[0]+","+c[1]+","+c[2]+","+c[3],d!==e):("simple"===a?g.fillText(h(55357,56835),0,0):g.fillText(h(55356,57135),0,0),0!==g.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag"),unicode8:d("unicode8"),diversity:d("diversity")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag&&c.supports.unicode8&&c.supports.diversity||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='twentytwelve-fonts-css'  href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&#038;subset=latin,latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-style-css'  href='http://www.cutedigi.com/blog/wp-content/themes/twentytwelve/style.css?ver=4.4.4' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css'  href='http://www.cutedigi.com/blog/wp-content/themes/twentytwelve/css/ie.css?ver=20121010' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='core3.0-css'  href='http://www.cutedigi.com/blog/wp-content/plugins/wp-syntaxhighlighter/syntaxhighlighter3/styles/shCore.css?ver=3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='core-Default3.0-css'  href='http://www.cutedigi.com/blog/wp-content/plugins/wp-syntaxhighlighter/syntaxhighlighter3/styles/shCoreDefault.css?ver=3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='theme-Default3.0-css'  href='http://www.cutedigi.com/blog/wp-content/plugins/wp-syntaxhighlighter/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0' type='text/css' media='all' />
+<script type='text/javascript' src='http://www.cutedigi.com/blog/wp-includes/js/jquery/jquery.js?ver=1.11.3'></script>
+<script type='text/javascript' src='http://www.cutedigi.com/blog/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<link rel='https://api.w.org/' href='http://www.cutedigi.com/blog/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.cutedigi.com/blog/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.cutedigi.com/blog/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='How to Setup CuteDigi PicoBoard with Scratch 1.4' href='http://www.cutedigi.com/blog/how-to-setup-cutedigi-picoboard-with-scratch-1-4/' />
+<link rel='next' title='UV index meter with pcDuino: Detailed Instructions of Hardware Project with pcDuino' href='http://www.cutedigi.com/blog/uv-meter-with-pcduio-detailed-instructions-of-hardware-project-with-pcduino/' />
+<meta name="generator" content="WordPress 4.4.4" />
+<link rel="canonical" href="http://www.cutedigi.com/blog/use-uv-sensor-with-arduino/" />
+<link rel='shortlink' href='http://www.cutedigi.com/blog/?p=171' />
+<link rel="alternate" type="application/json+oembed" href="http://www.cutedigi.com/blog/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.cutedigi.com%2Fblog%2Fuse-uv-sensor-with-arduino%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://www.cutedigi.com/blog/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.cutedigi.com%2Fblog%2Fuse-uv-sensor-with-arduino%2F&#038;format=xml" />
+<!-- <meta name="vfb" version="2.8.1" /> -->
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<meta name="generator" content="Powered by Visual Composer - drag and drop page builder for WordPress."/>
+	<style type="text/css">
+			.site-title,
+		.site-description {
+			position: absolute !important;
+			clip: rect(1px 1px 1px 1px); /* IE7 */
+			clip: rect(1px, 1px, 1px, 1px);
+		}
+		</style>
+	</head>
+
+<body class="single single-post postid-171 single-format-standard custom-font-enabled single-author wpb-js-composer js-comp-ver-4.0.4 vc_responsive">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner">
+		<hgroup>
+			<h1 class="site-title"><a href="http://www.cutedigi.com/blog/" title="CuteDigi Blog" rel="home">CuteDigi Blog</a></h1>
+<!--21349348-->
+
+			<h2 class="site-description">CuteDigi</h2>
+		</hgroup>
+
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<h3 class="menu-toggle">Menu</h3>
+			<a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
+			<div class="menu-menu-container"><ul id="menu-menu" class="nav-menu"><li id="menu-item-169" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-169"><a href="http://store.cutedigi.com">Store</a></li>
+</ul></div>		</nav><!-- #site-navigation -->
+
+					<a href="http://www.cutedigi.com/blog/"><img src="http://www.cutedigi.com/blog/wp-content/uploads/2013/03/cropped-oscommerce.gif" class="header-image" width="236" height="92" alt="" /></a>
+			</header><!-- #masthead -->
+
+	<div id="main" class="wrapper">
+	<div id="primary" class="site-content">
+		<div id="content" role="main">
+
+			
+				
+	<article id="post-171" class="post-171 post type-post status-publish format-standard hentry category-arduino">
+				<header class="entry-header">
+									<h1 class="entry-title">Use UV Sensor with Arduino</h1>
+										<div class="comments-link">
+					<a href="http://www.cutedigi.com/blog/use-uv-sensor-with-arduino/#respond"><span class="leave-reply">Leave a reply</span></a>				</div><!-- .comments-link -->
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>This UV Sensor (Gadgeteer compatible) used GUVA-S12SD chip is suitable for detecting the UV raditation in sunlight. It can be used in UV Index Monitoring, DIY project, UV-A Lamp Monitoring, Plants growing Environmental monitoring&#8230;etc.</p>
+<p>It can detect the UV wavelength of 200-370nm, fast response, linear analog voltage signal output. Small size, easy for installing. With the diagram of the world health organization UV index grading standards, you can know the UV index from the sensor directly.</p>
+<p>This sensor can be powered with 5V or 3.3V which makes it compatible with both pcDuino, Arduino DUE 3.3V system and standard Arduino UNO / Mega 5V system.</p>
+<p>&nbsp;</p>
+<h2>Wire Diagram</h2>
+<p><a href="http://www.cutedigi.com/blog/wp-content/uploads/2014/06/UV_wire.jpg"><img class="alignnone size-full wp-image-182" alt="UV_wire" src="http://www.cutedigi.com/blog/wp-content/uploads/2014/06/UV_wire.jpg" width="600" height="472" srcset="http://www.cutedigi.com/blog/wp-content/uploads/2014/06/UV_wire-300x236.jpg 300w, http://www.cutedigi.com/blog/wp-content/uploads/2014/06/UV_wire.jpg 600w" sizes="(max-width: 600px) 100vw, 600px" /></a></p>
+<h2>Sample Code</h2>
+<pre class="brush: actionscript3; gutter: true">/*
+# This Sample code is for testing the UV Sensor .
+#Connection:
+    VCC-5V
+    GND-GND
+    OUT-Analog pin 0
+*/
+
+void setup() 
+{
+  Serial.begin(9600);// open serial port, set the baud rate to 9600 bps
+}
+void loop() 
+{
+  int sensorValue;
+  sensorValue = analogRead(0);//connect UV sensors to Analog 0    
+  Serial.println(sensorValue);//print the value to serial  
+  delay(200);      
+}</pre>
+<h2>Chart mapping ADC reading to UV Index</h2>
+<p><a href="http://www.cutedigi.com/blog/wp-content/uploads/2014/06/500px-UV_index.png"><img class="alignnone size-full wp-image-180" alt="500px-UV_index" src="http://www.cutedigi.com/blog/wp-content/uploads/2014/06/500px-UV_index.png" width="500" height="375" srcset="http://www.cutedigi.com/blog/wp-content/uploads/2014/06/500px-UV_index-300x225.png 300w, http://www.cutedigi.com/blog/wp-content/uploads/2014/06/500px-UV_index.png 500w" sizes="(max-width: 500px) 100vw, 500px" /></a></p>
+<p>&nbsp;</p>
+<h2>Results</h2>
+<p>We test the circuit indoor, and got a reading of 0. When we place it behind the windows screen, we got a reading of 50-70. When we place it outdoor under direct sunlight, here in Colorado, we got around 220!</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			This entry was posted in <a href="http://www.cutedigi.com/blog/category/arduino/" rel="category tag">Arduino</a> on <a href="http://www.cutedigi.com/blog/use-uv-sensor-with-arduino/" title="7:04 pm" rel="bookmark"><time class="entry-date" datetime="2014-06-19T19:04:58+00:00">June 19, 2014</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="http://www.cutedigi.com/blog/author/admin/" title="View all posts by admin" rel="author">admin</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+
+				<nav class="nav-single">
+					<h3 class="assistive-text">Post navigation</h3>
+					<span class="nav-previous"><a href="http://www.cutedigi.com/blog/how-to-setup-cutedigi-picoboard-with-scratch-1-4/" rel="prev"><span class="meta-nav">&larr;</span> How to Setup CuteDigi PicoBoard with Scratch 1.4</a></span>
+					<span class="nav-next"><a href="http://www.cutedigi.com/blog/uv-meter-with-pcduio-detailed-instructions-of-hardware-project-with-pcduino/" rel="next">UV index meter with pcDuino: Detailed Instructions of Hardware Project with pcDuino <span class="meta-nav">&rarr;</span></a></span>
+				</nav><!-- .nav-single -->
+
+				
+<div id="comments" class="comments-area">
+
+	
+	
+					<div id="respond" class="comment-respond">
+			<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/blog/use-uv-sensor-with-arduino/#respond" style="display:none;">Cancel reply</a></small></h3>				<form action="http://www.cutedigi.com/blog/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+					<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8"  aria-required="true" required="required"></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required='true' required='required' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" aria-describedby="email-notes" aria-required='true' required='required' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" /></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment" /> <input type='hidden' name='comment_post_ID' value='171' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p>				</form>
+					</div><!-- #respond -->
+		
+</div><!-- #comments .comments-area -->
+			
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+
+			<div id="secondary" class="widget-area" role="complementary">
+			<aside id="search-2" class="widget widget_search"><form role="search" method="get" id="searchform" class="searchform" action="http://www.cutedigi.com/blog/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Search" />
+				</div>
+			</form></aside>		<aside id="recent-posts-2" class="widget widget_recent_entries">		<h3 class="widget-title">Recent Posts</h3>		<ul>
+					<li>
+				<a href="http://www.cutedigi.com/blog/use-cutedigi-picoboard-with-scratch-2-0/">Use CuteDigi Picoboard with Scratch 2.0</a>
+						</li>
+					<li>
+				<a href="http://www.cutedigi.com/blog/install-ubuntu-14-04-3-on-linksprite-canyonlands-intel-atom-z3735f-quad/">Install Ubuntu 14.04.3 on LinkSprite Canyonlands: Intel Atom Z3735F Quad</a>
+						</li>
+					<li>
+				<a href="http://www.cutedigi.com/blog/motion-detection-and-video-clip-upload-to-dropbox-with-pcduino8-uno-and-openhapp-wifi-plug-and-play-security-camera/">Motion Detection and Save Video Clip to Dropbox with pcDuino8 Uno and Openhapp WiFI Plug and Play Security Camera</a>
+						</li>
+					<li>
+				<a href="http://www.cutedigi.com/blog/cardboard-computer/">Cardboard computer</a>
+						</li>
+					<li>
+				<a href="http://www.cutedigi.com/blog/install-1024x600-7%e2%80%b3-lvds-lcd-with-capacitive-touch-on-pcduino3/">Install 1024Ã—600 7â€³ LVDS LCD with Capacitive touch on pcDuino3</a>
+						</li>
+				</ul>
+		</aside>		<aside id="recent-comments-2" class="widget widget_recent_comments"><h3 class="widget-title">Recent Comments</h3><ul id="recentcomments"></ul></aside><aside id="archives-2" class="widget widget_archive"><h3 class="widget-title">Archives</h3>		<ul>
+			<li><a href='http://www.cutedigi.com/blog/2016/02/'>February 2016</a></li>
+	<li><a href='http://www.cutedigi.com/blog/2014/10/'>October 2014</a></li>
+	<li><a href='http://www.cutedigi.com/blog/2014/08/'>August 2014</a></li>
+	<li><a href='http://www.cutedigi.com/blog/2014/06/'>June 2014</a></li>
+	<li><a href='http://www.cutedigi.com/blog/2014/04/'>April 2014</a></li>
+	<li><a href='http://www.cutedigi.com/blog/2013/06/'>June 2013</a></li>
+	<li><a href='http://www.cutedigi.com/blog/2013/05/'>May 2013</a></li>
+	<li><a href='http://www.cutedigi.com/blog/2013/04/'>April 2013</a></li>
+	<li><a href='http://www.cutedigi.com/blog/2013/03/'>March 2013</a></li>
+		</ul>
+		</aside><aside id="categories-2" class="widget widget_categories"><h3 class="widget-title">Categories</h3>		<ul>
+	<li class="cat-item cat-item-5"><a href="http://www.cutedigi.com/blog/category/arduino/" >Arduino</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="http://www.cutedigi.com/blog/category/beagleboard/" >BeagleBoard</a>
+</li>
+	<li class="cat-item cat-item-2"><a href="http://www.cutedigi.com/blog/category/news/" >News</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="http://www.cutedigi.com/blog/category/pcduino/" >pcDuino</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="http://www.cutedigi.com/blog/category/raspberry-pi/" >Raspberry Pi</a>
+</li>
+	<li class="cat-item cat-item-7"><a href="http://www.cutedigi.com/blog/category/scratch/" >Scratch</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="http://www.cutedigi.com/blog/category/uncategorized/" >Uncategorized</a>
+</li>
+		</ul>
+</aside><aside id="meta-2" class="widget widget_meta"><h3 class="widget-title">Meta</h3>			<ul>
+						<li><a href="http://www.cutedigi.com/blog/wp-login.php">Log in</a></li>
+			<li><a href="http://www.cutedigi.com/blog/feed/">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://www.cutedigi.com/blog/comments/feed/">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="https://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>			</ul>
+			</aside><aside id="nav_menu-2" class="widget widget_nav_menu"><div class="menu-menu-container"><ul id="menu-menu-1" class="menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-169"><a href="http://store.cutedigi.com">Store</a></li>
+</ul></div></aside>		</div><!-- #secondary -->
+		</div><!-- #main .wrapper -->
+	<footer id="colophon" role="contentinfo">
+		<div class="site-info">
+						<a href="http://wordpress.org/" title="Semantic Personal Publishing Platform">Proudly powered by WordPress</a>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+
+<!-- WP SyntaxHighlighter Ver.1.7.3 Begin -->
+<script type="text/javascript" src="http://www.cutedigi.com/blog/wp-content/plugins/wp-syntaxhighlighter/syntaxhighlighter3/scripts/shCore.js?ver=3.0"></script>
+<script type="text/javascript" src="http://www.cutedigi.com/blog/wp-content/plugins/wp-syntaxhighlighter/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0"></script>
+<script type="text/javascript" src="http://www.cutedigi.com/blog/wp-content/plugins/wp-syntaxhighlighter/syntaxhighlighter3/scripts/shBrushXml.js?ver=3.0"></script>
+<script type="text/javascript">//<![CDATA[
+	SyntaxHighlighter.autoloader(
+	"applescript	http://www.cutedigi.com/blog/wp-content/plugins/wp-syntaxhighlighter/syntaxhighlighter3/scripts/shBrushAppleScript.js?ver=3.0"
+	,"as3 actionscript3	http://www.cutedigi.com/blog/wp-content/plugins/wp-syntaxhighlighter/syntaxhighlighter3/scripts/shBrushAS3.js?ver=3.0"
+	,"bash shell	http://www.cutedigi.com/blog/wp-content/plugins/wp-syntaxhighlighter/syntaxhighlighter3/scripts/shBrushBash.js?ver=3.0"
+	,"cf coldfusion	http://www.cutedigi.com/blog/wp-content/plugins/wp-syntaxhighlighter/syntaxhighlighter3/scripts/shBrushColdFusion.js?ver=3.0"
+	,"cpp c	http://www.cutedigi.com/blog/wp-content/plugins/wp-syntaxhighlighter/syntaxhighlighter3/scripts/shBrushCpp.js?ver=3.0"
+	,"c# c-sharp csharp	http://www.cutedigi.com/blog/wp-content/plugins/wp-syntaxhighlighter/syntaxhighlighter3/scripts/shBrushCSharp.js?ver=3.0"
+	,"css	http://www.cutedigi.com/blog/wp-content/plugins/wp-syntaxhighlighter/syntaxhighlighter3/scripts/shBrushCss.js?ver=3.0"
+	,"delphi pas pascal	http://www.cutedigi.com/blog/wp-content/plugins/wp-syntaxhighlighter/syntaxhighlighter3/scripts/shBrushDelphi.js?ver=3.0"
+	,"diff patch	http://www.cutedigi.com/blog/wp-content/plugins/wp-syntaxhighlighter/syntaxhighlighter3/scripts/shBrushDiff.js?ver=3.0"
+	,"erl erlang	http://www.cutedigi.com/blog/wp-content/plugins/wp-syntaxhighlighter/syntaxhighlighter3/scripts/shBrushErlang.js?ver=3.0"
+	,"groovy	http://www.cutedigi.com/blog/wp-content/plugins/wp-syntaxhighlighter/syntaxhighlighter3/scripts/shBrushGroovy.js?ver=3.0"
+	,"java	http://www.cutedigi.com/blog/wp-content/plugins/wp-syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJava.js?ver=3.0"
+	,"jfx javafx	http://www.cutedigi.com/blog/wp-content/plugins/wp-syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJavaFX.js?ver=3.0"
+	,"js jscript javascript	http://www.cutedigi.com/blog/wp-content/plugins/wp-syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJScript.js?ver=3.0"
+	,"perl pl	http://www.cutedigi.com/blog/wp-content/plugins/wp-syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPerl.js?ver=3.0"
+	,"php	http://www.cutedigi.com/blog/wp-content/plugins/wp-syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPhp.js?ver=3.0"
+	,"plain text	http://www.cutedigi.com/blog/wp-content/plugins/wp-syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPlain.js?ver=3.0"
+	,"ps powershell	http://www.cutedigi.com/blog/wp-content/plugins/wp-syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPowerShell.js?ver=3.0"
+	,"py python	http://www.cutedigi.com/blog/wp-content/plugins/wp-syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPython.js?ver=3.0"
+	,"rails ror ruby rb	http://www.cutedigi.com/blog/wp-content/plugins/wp-syntaxhighlighter/syntaxhighlighter3/scripts/shBrushRuby.js?ver=3.0"
+	,"sass scss	http://www.cutedigi.com/blog/wp-content/plugins/wp-syntaxhighlighter/syntaxhighlighter3/scripts/shBrushSass.js?ver=3.0"
+	,"scala	http://www.cutedigi.com/blog/wp-content/plugins/wp-syntaxhighlighter/syntaxhighlighter3/scripts/shBrushScala.js?ver=3.0"
+	,"sql	http://www.cutedigi.com/blog/wp-content/plugins/wp-syntaxhighlighter/syntaxhighlighter3/scripts/shBrushSql.js?ver=3.0"
+	,"vb vbnet	http://www.cutedigi.com/blog/wp-content/plugins/wp-syntaxhighlighter/syntaxhighlighter3/scripts/shBrushVb.js?ver=3.0"
+	,"xml xhtml xslt html	http://www.cutedigi.com/blog/wp-content/plugins/wp-syntaxhighlighter/syntaxhighlighter3/scripts/shBrushXml.js?ver=3.0"
+	);
+	SyntaxHighlighter.defaults['auto-links'] = true;
+	SyntaxHighlighter.defaults['quick-code'] = true;
+	SyntaxHighlighter.defaults['title'] = '';
+	SyntaxHighlighter.defaults['class-name'] = 'notranslate';
+	SyntaxHighlighter.defaults['collapse'] = false;
+	SyntaxHighlighter.defaults['first-line'] = 1;
+	SyntaxHighlighter.defaults['gutter'] = true;
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.defaults['smart-tabs'] = true;
+	SyntaxHighlighter.defaults['tab-size'] = 4;
+	SyntaxHighlighter.defaults['toolbar'] = true;
+	SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = "Can't find brush for: ";
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = "Brush wasn't configured for html-script option: ";
+	SyntaxHighlighter.all();
+	
+//]]></script>
+<!-- WP SyntaxHighlighter Ver.1.7.3 End -->
+<script type='text/javascript' src='http://www.cutedigi.com/blog/wp-includes/js/comment-reply.min.js?ver=4.4.4'></script>
+<script type='text/javascript' src='http://www.cutedigi.com/blog/wp-content/themes/twentytwelve/js/navigation.js?ver=1.0'></script>
+<script type='text/javascript' src='http://www.cutedigi.com/blog/wp-includes/js/wp-embed.min.js?ver=4.4.4'></script>
+</body>
+</html>Úr£¦›¼      WlWl<˜°ãWl   9    :http://www.cutedigi.com/blog/use-uv-sensor-with-arduino/ necko:classified 1 request-method GET response-head HTTP/1.1 200 OK
+Date: Thu, 23 Jun 2016 16:58:54 GMT
+Server: Apache
+x-pingback: http://www.cutedigi.com/blog/xmlrpc.php
+Link: <http://www.cutedigi.com/blog/wp-json/>; rel="https://api.w.org/", <http://www.cutedigi.com/blog/?p=171>; rel=shortlink
+Cache-Control: max-age=1
+Expires: Thu, 23 Jun 2016 16:58:55 GMT
+Content-Type: text/html; charset=UTF-8
+ charset UTF-8 uncompressed-len 0 predictor::resource-count 20 predictor::http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&subset=latin,latin-ext 1,1,1466701076,0 predictor::http://www.cutedigi.com/blog/wp-content/themes/twentytwelve/style.css?ver=4.4.4 1,1,1466701076,0 predictor::http://www.cutedigi.com/blog/wp-content/plugins/wp-syntaxhighlighter/syntaxhighlighter3/styles/shCore.css?ver=3.0 1,1,1466701076,0 predictor::http://www.cutedigi.com/blog/wp-content/plugins/wp-syntaxhighlighter/syntaxhighlighter3/styles/shCoreDefault.css?ver=3.0 1,1,1466701076,0 predictor::http://www.cutedigi.com/blog/wp-content/plugins/wp-syntaxhighlighter/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0 1,1,1466701076,0 predictor::http://www.cutedigi.com/blog/wp-includes/js/jquery/jquery.js?ver=1.11.3 1,1,1466701076,0 predictor::http://www.cutedigi.com/blog/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1 1,1,1466701076,0 predictor::http://www.cutedigi.com/blog/wp-content/uploads/2013/03/cropped-oscommerce.gif 1,1,1466701076,0 predictor::http://www.cutedigi.com/blog/wp-content/uploads/2014/06/UV_wire.jpg 1,1,1466701076,0 predictor::http://www.cutedigi.com/blog/wp-content/uploads/2014/06/500px-UV_index.png 1,1,1466701076,0 predictor::http://www.cutedigi.com/blog/wp-includes/js/wp-emoji-release.min.js?ver=4.4.4 1,1,1466701076,0 predictor::http://www.cutedigi.com/blog/wp-content/plugins/wp-syntaxhighlighter/syntaxhighlighter3/scripts/shCore.js?ver=3.0 1,1,1466701076,0 predictor::http://www.cutedigi.com/blog/wp-content/plugins/wp-syntaxhighlighter/syntaxhighlighter3/scripts/shAutoloader.js?ver=3.0 1,1,1466701076,0 predictor::http://www.cutedigi.com/blog/wp-content/plugins/wp-syntaxhighlighter/syntaxhighlighter3/scripts/shBrushXml.js?ver=3.0 1,1,1466701076,0 predictor::http://www.cutedigi.com/blog/wp-includes/js/comment-reply.min.js?ver=4.4.4 1,1,1466701076,0 predictor::http://www.cutedigi.com/blog/wp-content/themes/twentytwelve/js/navigation.js?ver=1.0 1,1,1466701076,0 predictor::http://www.cutedigi.com/blog/wp-includes/js/wp-embed.min.js?ver=4.4.4 1,1,1466701076,0 predictor::http://fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3VtXRa8TVwTICgirnJhmVJw.woff2 1,1,1466701076,0 predictor::http://fonts.gstatic.com/s/opensans/v13/k3k702ZOKiLJc3WVjuplzOgdm0LZdjqr5-oayXSOefg.woff2 1,1,1466701076,0 predictor::http://www.cutedigi.com/blog/wp-content/plugins/wp-syntaxhighlighter/syntaxhighlighter3/scripts/shBrushAS3.js?ver=3.0 1,1,1466701076,0   [j

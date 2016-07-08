@@ -1,0 +1,395 @@
+Activating service name='com.ubuntu.OneConf'
+Successfully activated service 'com.ubuntu.OneConf'
+WARNING:oneconf.hosts:Error in loading other_hosts file: [Errno 2] No such file or directory: '/home/sysop/.cache/oneconf/578f7bcebb549f4f47832eaa56f0ebcb/other_hosts'
+Activating service name='com.ubuntu.sso'
+Successfully activated service 'com.ubuntu.sso'
+Activating service name='com.ubuntu.sso'
+Successfully activated service 'com.ubuntu.sso'
+Activating service name='com.ubuntu.OneConf'
+Successfully activated service 'com.ubuntu.OneConf'
+WARNING:oneconf.hosts:Error in loading other_hosts file: [Errno 2] No such file or directory: '/home/sysop/.cache/oneconf/578f7bcebb549f4f47832eaa56f0ebcb/other_hosts'
+Activating service name='com.ubuntu.sso'
+Successfully activated service 'com.ubuntu.sso'
+Activating service name='com.ubuntu.sso'
+Successfully activated service 'com.ubuntu.sso'
+Activating service name='com.canonical.Unity.Scope.Home'
+Successfully activated service 'com.canonical.Unity.Scope.Home'
+
+(unity-scope-home:10425): unity-scope-home-WARNING **: platform-info.vala:112: Unable to read SIM properties: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.ofono was not provided by any .service files
+Activating service name='com.canonical.Unity.Scope.Applications'
+Activating service name='com.canonical.Unity.Scope.File.Gdrive'
+Activating service name='com.canonical.Unity.Scope.LocalFiles'
+
+(process:10441): unity-files-daemon-WARNING **: folder.vala:65: Failed to read favorites: Failed to open file '/home/sysop/.gtk-bookmarks': No such file or directory
+Successfully activated service 'com.canonical.Unity.Scope.LocalFiles'
+Successfully activated service 'com.canonical.Unity.Scope.File.Gdrive'
+Successfully activated service 'com.canonical.Unity.Scope.Applications'
+Activating service name='com.ubuntu.SoftwareCenterDataProvider'
+Successfully activated service 'com.ubuntu.SoftwareCenterDataProvider'
+Activating service name='org.freedesktop.Geoclue.Master'
+Successfully activated service 'org.freedesktop.Geoclue.Master'
+** Message: GSettings key 'gps-baudrate' initialised to '0'
+** Message: GSettings key 'gps-device' initialised to '(null)'
+Activating service name='org.freedesktop.Geoclue.Providers.UbuntuGeoIP'
+Successfully activated service 'org.freedesktop.Geoclue.Providers.UbuntuGeoIP'
+No handlers could be found for logger "softwarecenter.region"
+
+(unity-scope-loader:10437): unity-applications-daemon-WARNING **: daemon.vala:195: Unable to open ratings database environment '/home/sysop/.cache/software-center/reviews.ubuntu.com_reviews_api_1.0_review-stats-pkgnames.p__5.1.db.dbenv': No such file or directory
+Activating service name='com.ubuntu.sso'
+Successfully activated service 'com.ubuntu.sso'
+/usr/lib/python2.7/dist-packages/gi/overrides/GLib.py:523: Warning: Source ID 23 was not found when attempting to remove it
+  super(MainLoop, self).run()
+/usr/lib/python2.7/dist-packages/gi/overrides/GLib.py:535: Warning: Source ID 20 was not found when attempting to remove it
+  return super(MainContext, self).iteration(may_block)
+module-cache-reaper-Message: Reaping abandoned data directories
+module-cache-reaper-Message: Reaping abandoned cache directories
+Activating service name='com.ubuntu.OneConf'
+Successfully activated service 'com.ubuntu.OneConf'
+WARNING:oneconf.hosts:Error in loading other_hosts file: [Errno 2] No such file or directory: '/home/sysop/.cache/oneconf/578f7bcebb549f4f47832eaa56f0ebcb/other_hosts'
+Activating service name='com.ubuntu.sso'
+Successfully activated service 'com.ubuntu.sso'
+Activating service name='com.ubuntu.sso'
+Successfully activated service 'com.ubuntu.sso'
+Activating service name='com.ubuntu.OneConf'
+Successfully activated service 'com.ubuntu.OneConf'
+WARNING:oneconf.hosts:Error in loading other_hosts file: [Errno 2] No such file or directory: '/home/sysop/.cache/oneconf/578f7bcebb549f4f47832eaa56f0ebcb/other_hosts'
+Activating service name='com.ubuntu.sso'
+Successfully activated service 'com.ubuntu.sso'
+Activating service name='org.freedesktop.PackageKit'
+INFO:Starting service
+Successfully activated service 'org.freedesktop.PackageKit'
+INFO:InstallPrinterDrivers() was called: 0, dbus.Array([dbus.UTF8String('MFG:Hewlett-Packard;MDL:HP LaserJet 1020;')], signature=dbus.Signature('s')), hide-finished
+DEBUG:Updating last_timestamp
+DEBUG:Updating last_timestamp
+Activating service name='com.ubuntu.sso'
+Successfully activated service 'com.ubuntu.sso'
+DEBUG:Checking for inactivity (29s)
+DEBUG:Checking for inactivity (59s)
+DEBUG:Checking for inactivity (89s)
+Activating service name='com.canonical.Unity.Scope.File.Gdrive'
+Activating service name='com.canonical.Unity.Scope.Music'
+Successfully activated service 'com.canonical.Unity.Scope.Music'
+Successfully activated service 'com.canonical.Unity.Scope.File.Gdrive'
+DEBUG:Checking for inactivity (119s)
+
+(unity-music-daemon:14638): unity-music-daemon-WARNING **: rhythmbox-collection.vala:510: Unable to open album-art DB!
+
+(unity-music-daemon:14638): unity-music-daemon-WARNING **: rhythmbox-collection.vala:574: Error while parsing rhythmbox DB: Error opening file: No such file or directory
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): libunity-WARNING **: unity-aggregator-scope.vala:145: Error serializing GVariant with type string 'mv' to the D-Bus wire format
+Activating service name='com.canonical.Unity.Scope.Academic.Zotero'
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+Successfully activated service 'com.canonical.Unity.Scope.Academic.Zotero'
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+DEBUG:Checking for inactivity (149s)
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+DEBUG:Checking for inactivity (179s)
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): libunity-WARNING **: unity-aggregator-scope.vala:145: Error serializing GVariant with type string 'mv' to the D-Bus wire format
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): libunity-WARNING **: unity-aggregator-scope.vala:145: Error serializing GVariant with type string 'mv' to the D-Bus wire format
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+
+(unity-scope-home:10425): Json-CRITICAL **: json_object_get_object_member: assertion 'node != NULL' failed
+DEBUG:Checking for inactivity (209s)
+INFO:Shutting down because of inactivity
+Activating service name='com.ubuntu.SoftwareCenterDataProvider'
+Successfully activated service 'com.ubuntu.SoftwareCenterDataProvider'
+
+(unity-scope-loader:10437): unity-applications-daemon-WARNING **: daemon.vala:1210: No purchase info for: RNCoder, rncoder:i386
+
+(unity-scope-loader:10437): unity-applications-daemon-WARNING **: daemon.vala:1210: No purchase info for: 2048-Qt, 2048-qt
+
+(unity-scope-loader:10437): unity-applications-daemon-WARNING **: daemon.vala:1210: No purchase info for: Youtube-music-downloader, youtubemusicdownloader
+
+(unity-scope-loader:10437): unity-applications-daemon-WARNING **: daemon.vala:1210: No purchase info for: Messenger-ubuntu, messenger-desktop
+
+(unity-scope-loader:10437): unity-applications-daemon-WARNING **: daemon.vala:1210: No purchase info for: JimboDICOMViewer, jimbodicomviewer
+
+(unity-scope-loader:10437): unity-applications-daemon-WARNING **: daemon.vala:1210: No purchase info for: WhatsApp-Ubuntu, whatsapp-desktop
+
+(unity-scope-loader:10437): unity-applications-daemon-WARNING **: daemon.vala:1210: No purchase info for: Mandelbrot Plotter, mandelbrot:i386
+
+(unity-scope-loader:10437): unity-applications-daemon-WARNING **: daemon.vala:1210: No purchase info for: Hunting Stars, huntingstars:i386
+
+(unity-scope-loader:10437): unity-applications-daemon-WARNING **: daemon.vala:1210: No purchase info for: Uthrottle, uthrottle
+
+(unity-scope-loader:10437): unity-applications-daemon-WARNING **: daemon.vala:1210: No purchase info for: Ultimate-media-downloader, ultimate-media-downloader:i386
+Activating service name='com.ubuntu.sso'
+Successfully activated service 'com.ubuntu.sso'
+No handlers could be found for logger "softwarecenter.backend.reviews"
+/usr/lib/python2.7/dist-packages/gi/overrides/GLib.py:523: Warning: Source ID 21 was not found when attempting to remove it
+  super(MainLoop, self).run()
+/usr/lib/python2.7/dist-packages/gi/overrides/GLib.py:535: Warning: Source ID 20 was not found when attempting to remove it
+  return super(MainContext, self).iteration(may_block)
+Activating service name='org.gtk.vfs.Metadata'
+Successfully activated service 'org.gtk.vfs.Metadata'
+/usr/share/software-center/softwarecenter/backend/installbackend_impl/aptd.py:764: Warning: Source ID 14 was not found when attempting to remove it
+  GLib.source_remove(self._progress_signal)
+/usr/share/software-center/softwarecenter/backend/installbackend_impl/aptd.py:764: Warning: Source ID 15 was not found when attempting to remove it
+  GLib.source_remove(self._progress_signal)
+
+** (zeitgeist-fts:2020): WARNING **: Unable to get info on application:///usr/share/app-install/desktop/system-config-samba:system-config-samba.desktop
+g_dbus_connection_real_closed: Remote peer vanished with error: Underlying GIOStream returned 0 bytes on an async read (g-io-error-quark, 0). Exiting.
+
+** (ubuntu-geoip-provider:10489): WARNING **: SIGTERM recieved
+
+(ubuntu-geoip-provider:10489): GLib-GObject-CRITICAL **: g_object_unref: assertion 'G_IS_OBJECT (object)' failed
+
+(zeitgeist-fts:2020): GLib-GIO-WARNING **: Error releasing name org.gnome.zeitgeist.SimpleIndexer: The connection is closed
+
+** (zeitgeist-fts:2020): WARNING **: zeitgeist-fts.vala:252: The connection is closed

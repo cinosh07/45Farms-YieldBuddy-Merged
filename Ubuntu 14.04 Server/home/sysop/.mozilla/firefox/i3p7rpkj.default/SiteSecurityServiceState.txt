@@ -1,0 +1,1 @@
+productsearch.ubuntu.com:HSTS	0	16882	1461266093592,1,0

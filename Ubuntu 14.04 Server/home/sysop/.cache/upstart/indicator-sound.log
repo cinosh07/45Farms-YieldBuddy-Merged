@@ -1,0 +1,2 @@
+
+(process:1646): GLib-GObject-CRITICAL **: g_object_unref: assertion 'G_IS_OBJECT (object)' failed

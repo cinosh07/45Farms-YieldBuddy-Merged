@@ -1,0 +1,21 @@
+<monitors version="1">
+  <configuration>
+      <clone>no</clone>
+      <output name="DVI-I-1">
+          <vendor>GSM</vendor>
+          <product>0x4b7a</product>
+          <serial>0x0000026c</serial>
+          <width>1440</width>
+          <height>900</height>
+          <rate>60</rate>
+          <x>0</x>
+          <y>0</y>
+          <rotation>normal</rotation>
+          <reflect_x>no</reflect_x>
+          <reflect_y>no</reflect_y>
+          <primary>yes</primary>
+      </output>
+      <output name="DVI-I-2">
+      </output>
+  </configuration>
+</monitors>

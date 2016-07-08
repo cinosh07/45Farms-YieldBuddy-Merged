@@ -101,20 +101,15 @@ exit_loop_light:;
   }
 
   //Check Pump Timers
-
   int Pump_hour_on;
   int Pump_min_on;
   int Pump_hour_off;
   int Pump_min_off;
-
   int TurnPumpOn = 2;  //0: Turn Off  1: Turn On  2: Unsure
-
-
   int i = 0;
   //  Serial1.println();
   //  Serial1.print("Water Pump Timers: ");
   //  Serial1.println();
-
   for(i=0;i<Pump_times;i++){
     Pump_hour_on = Pump_hour_array[i];
     Pump_min_on  = Pump_min_array[i]; 
@@ -229,11 +224,9 @@ exit_loop_pump:;
 
 void SwitchPump(int TurnPumpOn){
   //  Serial1.print("TurnPumpOn: ");
-  //  Serial1.println(TurnPumpOn);
-  
+  //  Serial1.println(TurnPumpOn);  
   //Reset pump activity timer.
-  pumpActivityCounter = 10;
-  
+  pumpActivityCounter = 10;  
   if (TurnPumpOn == 1) {
     if (Relay1_isAuto == 1) {
       Relay1_State = 1;

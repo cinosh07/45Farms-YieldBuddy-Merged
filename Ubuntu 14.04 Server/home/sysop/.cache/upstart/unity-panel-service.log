@@ -1,0 +1,13 @@
+
+(unity-panel-service:1485): Indicator-Appmenu-CRITICAL **: menus_destroyed: assertion 'wm != NULL' failed
+
+(unity-panel-service:1485): Indicator-Appmenu-CRITICAL **: menus_destroyed: assertion 'wm != NULL' failed
+
+(unity-panel-service:1485): Indicator-Appmenu-CRITICAL **: menus_destroyed: assertion 'wm != NULL' failed
+
+(unity-panel-service:1485): Indicator-Appmenu-WARNING **: Already have a menu for window ID 58720479 with path /com/canonical/menu/38000DF from :1.124, unregistering that one
+g_dbus_connection_real_closed: Remote peer vanished with error: Underlying GIOStream returned 0 bytes on an async read (g-io-error-quark, 0). Exiting.
+
+** (unity-panel-service:1485): WARNING **: Unable to emit ReSync signal: The connection is closed
+
+(unity-panel-service:1485): Indicator-Appmenu-CRITICAL **: OMG! Unable to get a connection to DBus

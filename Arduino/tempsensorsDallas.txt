@@ -1,0 +1,7 @@
+Found device 0 with address: 28 FF B8 14 71 15 02 E4
+
+Found device 1 with address: 28 FF F9 1E 71 15 02 DB
+
+Found device 2 with address: 28 FF 6F 28 71 15 02 B1
+
+Found device 3 with address: 28 FF BF 86 71 15 01 B1

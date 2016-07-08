@@ -1,0 +1,26 @@
+ERROR 2016-03-22 12:56:57 unity <unknown>:0 atk_object_ref_state_set: assertion 'ATK_IS_OBJECT (accessible)' failed
+ERROR 2016-03-22 12:56:57 unity <unknown>:0 atk_state_set_contains_state: assertion 'ATK_IS_STATE_SET (set)' failed
+ERROR 2016-03-22 12:56:57 unityy <unknown>:0 g_object_unref: assertion 'G_IS_OBJECT (object)' failed
+WARN  2016-03-22 13:33:55 unity.iconloader IconLoader.cpp:755 Unable to load icon file:/// at size -1x22: Can't open directory
+
+(gnome-terminal:10518): GLib-GIO-CRITICAL **: g_settings_get: the format string may not contain '&' (key 'monospace-font-name' from schema 'org.gnome.desktop.interface'). This call will probably stop working with a future version of glib.
+ERROR 2016-03-22 13:39:45 unity <unknown>:0 atk_object_ref_state_set: assertion 'ATK_IS_OBJECT (accessible)' failed
+ERROR 2016-03-22 13:39:45 unity <unknown>:0 atk_state_set_contains_state: assertion 'ATK_IS_STATE_SET (set)' failed
+ERROR 2016-03-22 13:39:45 unityy <unknown>:0 g_object_unref: assertion 'G_IS_OBJECT (object)' failed
+ERROR 2016-03-22 14:34:48 unity <unknown>:0 atk_object_ref_state_set: assertion 'ATK_IS_OBJECT (accessible)' failed
+ERROR 2016-03-22 14:34:48 unity <unknown>:0 atk_state_set_contains_state: assertion 'ATK_IS_STATE_SET (set)' failed
+ERROR 2016-03-22 14:34:48 unityy <unknown>:0 g_object_unref: assertion 'G_IS_OBJECT (object)' failed
+ERROR 2016-03-22 15:15:25 unityfree <unknown>:0 g_sequence_get: assertion '!is_end (iter)' failed
+ERROR 2016-03-22 15:15:25 unityyzer (self) <unknown>:0 Unable to get value. NULL row data in DeeSequenceModel@0x2a383f0 at position 11. The row has probably been removed
+ERROR 2016-03-22 15:15:25 unityyzer (self) <unknown>:0 Unable to get string. Column 5 in DeeSequenceModel@0x2a383f0 holds a NULL value in row 11
+
+(polkit-gnome-authentication-agent-1:1888): polkit-gnome-1-WARNING **: Couldn't open user icon: Failed to open file '/home/sysop/.face': No such file or directory
+
+(polkit-gnome-authentication-agent-1:1888): polkit-gnome-1-WARNING **: Couldn't open user icon: Failed to open file '/home/renegade/.face': No such file or directory
+ERROR 2016-03-22 15:16:52 unity <unknown>:0 bamf_application_load_data_from_file: assertion 'G_IS_DESKTOP_APP_INFO (desktop_info)' failed
+
+(nautilus:1893): GLib-CRITICAL **: Source ID 274 was not found when attempting to remove it
+
+(nautilus:1893): GLib-CRITICAL **: Source ID 275 was not found when attempting to remove it
+
+(nautilus:1893): GLib-CRITICAL **: Source ID 276 was not found when attempting to remove it

@@ -7,7 +7,47 @@
  */
  
 
+#define NUM_READS 5
 
+//The Arduino Map function but for floats
+//From: http://forum.arduino.cc/index.php?topic=3922.0
+float mapfloat(float x, float in_min, float in_max, float out_min, float out_max)
+{
+  return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+}
+
+
+float readTemperature(int sensorpin){
+   // read multiple values and sort them to take the mode
+   int sortedValues[NUM_READS];
+   for(int i=0;i<NUM_READS;i++){
+     int value = analogRead(sensorpin);
+     int j;
+     if(value<sortedValues[0] || i==0){
+        j=0; //insert at first position
+     }
+     else{
+       for(j=1;j<i;j++){
+          if(sortedValues[j-1]<=value && sortedValues[j]>=value){
+            // j is insert position
+            break;
+          }
+       }
+     }
+     for(int k=i;k>j;k--){
+       // move all values higher than current reading up one position
+       sortedValues[k]=sortedValues[k-1];
+     }
+     sortedValues[j]=value; //insert current reading
+   }
+   //return scaled mode of 10 values
+   float returnval = 0;
+   for(int i=NUM_READS/2-5;i<(NUM_READS/2+5);i++){
+     returnval +=sortedValues[i];
+   }
+   returnval = returnval/10;
+   return returnval*1100/1023;
+}
 
 
 
@@ -25,7 +65,7 @@ float read_water_sensor (int tpin, int epin) {
   digitalWrite(tpin, LOW);
   
   //measure time back
-  duration = pulseIn(epin, HIGH);
+  duration = pulseIn(epin, HIGH,50000);
 
   //Calculate the distance (in inches) based on the speed of sound.
   distance = duration/148;
@@ -52,9 +92,7 @@ float read_water_sensor (int tpin, int epin) {
 }
 
 
-
-
-//READ ALL SENSOR VALUES AND CONVERT FOR LCD DISPLAY
+//*****************************READ ALL SENSOR VALUES AND CONVERT FOR LCD DISPLAY********************************
 void updateSensorValues() {
  
   analogReference(DEFAULT);  //Seems more accurate.
@@ -63,23 +101,23 @@ void updateSensorValues() {
    !!PH SENSORS!!PH SENSORS!!PH SENSORS!!PH SENSORS!!PH SENSORS!!PH SENSORS!!PH SENSORS!!PH SENSORS!!PH SENSORS!!
    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
  
-  
+ 
   /*PH1------------------------------------------------*/
-  
+#if defined(ph1_on)  
   float pH1Sum = 0;
   int j = 0;
   analogRead(pH1Pin);  //Get ADC to switch to correct pin
-  delay(20); //Wait for Pin to Change
-  
+  delay(20); //Wait for Pin to Change  
   while(j<30) {
     pH1Sum = pH1Sum + analogRead(pH1Pin);
     j++;
   }
   pH1RawValue = pH1Sum/30;
-
-//  pH1Value = (pHSlope * pH1RawValue + pHOffset);
-  pH1Value = 0;
-    
+  pH1Value = (pHSlope * pH1RawValue + pHOffset);
+#else
+  pH1RawValue = 0;
+  pH1Value = 0;  
+#endif    
   if(isnan(pH1Value)){
     pH1Value = 0;        
   }
@@ -91,25 +129,23 @@ void updateSensorValues() {
   else {
     my_pH1_string.println(pH1Value);
   }
-  
-  
-  
+ 
   /*PH2------------------------------------------------*/
-  
+#if defined(ph2_on)   
   float pH2Sum = 0;
   j = 0;
   analogRead(pH2Pin);  //Get ADC to switch to correct pin
   delay(15); //Wait for Pin to Change
-
   while(j<30) {
     pH2Sum = pH2Sum + analogRead(pH2Pin);
     j++;
   }
   pH2RawValue = pH2Sum/30;
-
-//  pH2Value = (pHSlope * pH2RawValue + pHOffset);
+  pH2Value = (pHSlope * pH2RawValue + pHOffset);
+#else
+  pH2RawValue = 0;
   pH2Value = 0;
-    
+#endif      
   if(isnan(pH2Value)){
     pH2Value = 0;        
   }
@@ -127,30 +163,145 @@ void updateSensorValues() {
  /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
    !!TEMPERATURE SENSOR!!TEMPERATURE SENSOR!!TEMPERATURE SENSOR!!TEMPERATURE SENSOR!!TEMPERATURE SENSOR!!
    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-  TempRawValue = dht.readTemperature(); //to use the DHT22
+#if defined (dht_temp_on)
+  TempRawValue = dht.readTemperature(); //to use the DHT22  
+#if defined(dht_tempF_on)
+  TempValue = (TempRawValue*9+2)/5+32;
+#else  
   TempValue = TempRawValue;
+#endif
+#else
+  TempRawValue = 0;
+  TempValue = 0;
+#endif
+
   if(isnan(TempValue)){
     TempValue = 0;        
   }
   PString my_Temp_string(Temp_char, sizeof(Temp_char));
   my_Temp_string.print(TempValue);
   my_Temp_string.println(" C"); 
+
+
+  sensors.requestTemperatures();   
+  //********************************WaterTempP1
+#if defined (WaterTempP1_on)
+  WaterTempP1RawValue = sensors.getTempC(WaterTempP1_addr);  
+#if defined(WaterTempP1F_on)
+  WaterTempP1Value = (WaterTempP1RawValue*9+2)/5+32;
+#else  
+  WaterTempP1Value = WaterTempP1RawValue;
+#endif
+#else
+  WaterTempP1RawValue = 0;
+  WaterTempP1Value = 0;
+#endif
+
+  if(isnan(WaterTempP1Value)){
+    WaterTempP1Value = 0;        
+  }
+  PString my_WaterTempP1_string(WaterTempP1_char, sizeof(WaterTempP1_char));
+  my_WaterTempP1_string.print(WaterTempP1Value);
+  my_WaterTempP1_string.println(" C"); 
+
+  //********************************WaterTempP2
+#if defined (WaterTempP2_on)
+  WaterTempP2RawValue = sensors.getTempC(WaterTempP2_addr);  
+#if defined(WaterTempP2F_on)
+  WaterTempP2Value = (WaterTempP2RawValue*9+2)/5+32;
+#else  
+  WaterTempP2Value = WaterTempP2RawValue;
+#endif
+#else
+  WaterTempP2RawValue = 0;
+  WaterTempP2Value = 0;
+#endif
+
+  if(isnan(WaterTempP2Value)){
+    WaterTempP2Value = 0;        
+  }
+  PString my_WaterTempP2_string(WaterTempP2_char, sizeof(WaterTempP2_char));
+  my_WaterTempP2_string.print(WaterTempP2Value);
+  my_WaterTempP2_string.println(" C"); 
+
+  //*********************************WaterTempP3
+#if defined (WaterTempP3_on)
+  WaterTempP3RawValue = sensors.getTempC(WaterTempP3_addr);  
+#if defined(WaterTempP3F_on)
+  WaterTempP3Value = (WaterTempP3RawValue*9+2)/5+32;
+#else  
+  WaterTempP3Value = WaterTempP3RawValue;
+#endif
+#else
+  WaterTempP3RawValue = 0;
+  WaterTempP3Value = 0;
+#endif
+
+  if(isnan(WaterTempP3Value)){
+    WaterTempP3Value = 0;        
+  }
+  PString my_WaterTempP3_string(WaterTempP3_char, sizeof(WaterTempP3_char));
+  my_WaterTempP3_string.print(WaterTempP3Value);
+  my_WaterTempP3_string.println(" C"); 
+
+  //**********************************WaterTempP4
+#if defined (WaterTempP4_on)
+  WaterTempP4RawValue = sensors.getTempC(WaterTempP4_addr);  
+#if defined(WaterTempP4F_on)
+  WaterTempP4Value = (WaterTempP4RawValue*9+2)/5+32;
+#else  
+  WaterTempP4Value = WaterTempP4RawValue;
+#endif
+#else
+  WaterTempP4RawValue = 0;
+  WaterTempP4Value = 0;
+#endif
+
+  if(isnan(WaterTempP4Value)){
+    WaterTempP4Value = 0;        
+  }
+  PString my_WaterTempP4_string(WaterTempP4_char, sizeof(WaterTempP4_char));
+  my_WaterTempP4_string.print(WaterTempP4Value);
+  my_WaterTempP4_string.println(" C"); 
   
  /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
- !!WATER TANK LEVEL SCAN
+ !!PING ALL WATER TANKS
  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-// delays are needed for testing as i am only using 1 phsical sensor for test. Remove when 4 sensors wired
-//  delay(50);
+
+#if defined(tank1_on)
   Tank1RawValue = (read_water_sensor(Tank1TrigPin, Tank1EchoPin));
-//  delay(50);
+#else
+  Tank1RawValue = 0;
+  Tank1Value =0;
+#endif
+
+#if defined(tank2_on)
   Tank2RawValue = (read_water_sensor(Tank2TrigPin, Tank2EchoPin));
-//  delay(50);
+#else
+  Tank2RawValue = 0;
+  Tank2Value =0;
+#endif
+
+#if defined(tank3_on)
   Tank3RawValue = (read_water_sensor(Tank3TrigPin, Tank3EchoPin));
-//  delay(50);
+#else
+  Tank3RawValue = 0;
+  Tank3Value =0;
+#endif
+
+#if defined(tank4_on)
   Tank4RawValue = (read_water_sensor(Tank4TrigPin, Tank4EchoPin));
-  
+#else
+  Tank4RawValue = 0;
+  Tank4Value =0;
+#endif
+
+#if defined(tanktotal_on)  
   TankTotalRawValue = Tank1RawValue + Tank2RawValue + Tank3RawValue + Tank4RawValue;
-  
+#else
+  TankTotalRawValue = 0;
+  TankTotalValue = 0;
+#endif  
 
   Tank1Value = Tank1RawValue;
   PString my_Tank1_string(Tank1_char, sizeof(Tank1_char));
@@ -177,24 +328,68 @@ void updateSensorValues() {
   my_TankTotal_string.print(TankTotalValue);
   my_TankTotal_string.println("L");  
   
+ /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+   !!CO2 SENSOR!!CO2 SENSOR!!CO2 SENSOR!!CO2 SENSOR!!CO2 SENSOR!!CO2 SENSOR!!CO2 SENSOR!!CO2 SENSOR!!CO2 SENSOR!!
+   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+#if defined (co2_on)  
+  float CO2Sum = 0;
+  int j = 0;
+  analogRead(CO2Pin);  //Get ADC to switch to correct pin
+  delay(15); //Wait for Pin to Change
+  while(j<10) {
+    CO2Sum = CO2Sum + analogRead(CO2Pin);
+    j++;
+  }
+//  CO2RawValue = CO2Sum/((j-1) * 2);
+  CO2RawValue = CO2Sum/(j-1);
+//  CO2Value = ((CO2RawValue * 10)/1024.0);
+  CO2Value = CO2RawValue;
+#else
+  CO2RawValue = 0;
+  CO2Value = 0;
+#endif  
+  if(isnan(CO2Value)){
+    CO2Value = 0;        
+  }
+  PString my_CO2_string(CO2_char, sizeof(CO2_char));
+  my_CO2_string.print(CO2Value);
+  my_CO2_string.println(" ppm"); 
+
   
  /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
  !!WATER LEVEL SENSOR! WATER LEVEL SENSOR! WATER LEVEL SENSOR! WATER LEVEL SENSOR! WATER LEVEL SENSOR! 
  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+#if defined(soilhumidity_on)
   float WaterSum = 0;
-  j = 0;
+  int j = 0;
   analogRead(WaterPin);  //Get ADC to switch to correct pin
   delay(15); //Wait for Pin to Change
 
   while(j<10) {
     WaterSum = WaterSum + analogRead(WaterPin);
     j++;
-  }
-  WaterRawValue = WaterSum/10;
-//  WaterRawValue = WaterSum/((j-1) * 2);
-//  WaterValue = ((5.00 * WaterRawValue)/1024.0);
-//  WaterValue = map(WaterRawValue, 0, 1023, 0, 100);
+  } 
+  WaterRawValue = WaterSum/(j-1);
+  
+  if (WaterRawValue < 0){
+    WaterRawValue = -WaterRawValue;
+  }  
+  //Use the 3.3V power pin as a reference to get a very accurate output value from sensor
+  //Using Co2 pin for reference voltage input
+  float outputVoltage = 3.3 / CO2Value * WaterRawValue;
+ 
+  if (outputVoltage < 0){
+    outputVoltage = -outputVoltage;
+   } 
+     
+  float uvIntensity = mapfloat(outputVoltage, 0.99, 2.9, 0.0, 15.0);  
+
+  WaterValue = uvIntensity;
+#else
+  WaterRawValue = 0;
   WaterValue = 0;
+#endif
  
   if(isnan(WaterValue)){
     WaterValue = 0;        
@@ -213,11 +408,17 @@ void updateSensorValues() {
  /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
    !!HUMIDITY DHT11 SENSOR!!HUMIDITY DHT11 SENSOR!!HUMIDITY DHT11 SENSOR!!HUMIDITY DHT11 SENSOR!!HUMIDITY DHT11!!
    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-
+#if defined(dht_humidity_on)
   dht.readHumidity();  //The DHT11 Sensor works differently, but for 'good measure'.
   delay(15); //Wait for Pin to Change
   RHRawValue = dht.readHumidity();
   RHValue = RHRawValue;
+#else
+  RHRawValue = 0;
+  RHValue = 0;
+#endif
+
+  
   if (isnan(RHValue)) {
     RHValue = 0;
   } 
@@ -231,44 +432,83 @@ void updateSensorValues() {
     my_RH_string.println("%"); 
   }
 
+// ******************AS3935*******************************
+
+ // now get interrupt source
+  uint8_t int_src = lightning0.AS3935_GetInterruptSrc();
+  if(0 == int_src)
+  {
+    MagXValue = -1;
+  }
+  else if(1 == int_src)
+  {
+    //this value will be magz for now
+    uint8_t lightning_dist_km = lightning0.AS3935_GetLightningDistKm();
+//    Serial.print("Lightning detected! Distance to strike: ");
+//    Serial.print(lightning_dist_km);
+//    Serial.println(" kilometers");
+    MagXValue = lightning_dist_km;
+    // this value will me magY for now
+    uint32_t nrgy_val = lightning0.AS3935_GetStrikeEnergyRaw();
+//    Serial.print("Raw Energy: ");
+//    Serial.println(nrgy_val);
+    MagYValue = nrgy_val;
+  }
+  else if(2 == int_src)
+  {
+    Serial.println("Disturber detected");
+    MagZValue = 63;
+  }
+  else if(3 == int_src)
+  {
+    Serial.println("Noise level too high");
+    MagXValue = -5;
+    MagYValue = -5;
+    MagZValue = -5;
+  }
+
+
+
   
 // ******************magnetometer sensor******************
 
-//  MagnetometerScaled scaled = compass.ReadScaledAxis();
-//  
-//  MagXRawValue = scaled.XAxis;
-//  MagYRawValue = scaled.YAxis;
-//  MagZRawValue = scaled.ZAxis;
-
-
+#if defined(magnetometer_on)
+  MagnetometerScaled scaled = compass.ReadScaledAxis();  
+  MagXRawValue = scaled.XAxis;
+  MagYRawValue = scaled.YAxis;
+  MagZRawValue = scaled.ZAxis;
+//  MagXValue = MagXRawValue;
+//  MagYValue = MagYRawValue;
+//  MagZValue = MagZRawValue;
+//  MagXValue = 0;
+//  MagYValue = 0;
+//  MagZValue = 0;  
+#else
+  MagXRawValue = 0;
+  MagYRawValue = 0;
+  MagZRawValue = 0;
   MagXValue = 0;
   MagYValue = 0;
   MagZValue = 0;
+#endif
 
-//  MagXValue = MagXRawValue;
   PString my_MagX_string(MagX_char, sizeof(MagX_char));
   my_MagX_string.print(MagXValue);
   my_MagX_string.println("Guass");
   
-//  MagYValue = MagYRawValue;
   PString my_MagY_string(MagY_char, sizeof(MagY_char));
   my_MagY_string.print(MagYValue);
   my_MagY_string.println("Guass");
-    
-//  MagZValue = MagZRawValue;
+  
   PString my_MagZ_string(MagZ_char, sizeof(MagZ_char));
   my_MagZ_string.print(MagZValue);
   my_MagZ_string.println("Guass");
-
-
-
-
-
 //******************************************************  
   
  /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
    !!TDS1 SENSOR!!TDS1 SENSOR!!TDS1 SENSOR!!TDS1 SENSOR!!TDS1 SENSOR!!TDS1 SENSOR!!TDS1 SENSOR!!TDS1 SENSOR!!TDS1 SENSOR!!
    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+#if defined (tds1_on)
   float TDS1Sum = 0;
   j = 0;
   analogRead(TDS1Pin);  //Get ADC to switch to correct pin
@@ -280,8 +520,11 @@ void updateSensorValues() {
   }
 
   TDS1RawValue = TDS1Sum/((j-1) * 2);
-//  TDS1Value = ((TDS1RawValue * 100.0)/1024.0);
+  TDS1Value = ((TDS1RawValue * 100.0)/1024.0);
+#else
+  TDS1RawValue = 0;
   TDS1Value = 0;
+#endif
   
   if(isnan(TDS1Value)){
     TDS1Value = 0;        
@@ -294,19 +537,21 @@ void updateSensorValues() {
  /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
    !!TDS2 SENSOR!!TDS2 SENSOR!!TDS2 SENSOR!!TDS2 SENSOR!!TDS2 SENSOR!!TDS2 SENSOR!!TDS2 SENSOR!!TDS2 SENSOR!!TDS2 SENSOR!!
    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+#if defined (tds2_on)
   float TDS2Sum = 0;
   j = 0;
   analogRead(TDS2Pin);  //Get ADC to switch to correct pin
   delay(15); //Wait for Pin to Change
-
   while(j<10) {
     TDS2Sum = TDS2Sum + analogRead(TDS2Pin);
     j++;
   }
-
   TDS2RawValue = TDS2Sum/((j-1) * 2);
-//  TDS2Value = ((TDS2RawValue * 100.0)/1024.0);
+  TDS2Value = ((TDS2RawValue * 100.0)/1024.0);
+#else
+  TDS2RawValue = 0;
   TDS2Value = 0;
+#endif
 
   if(isnan(TDS2Value)){
     TDS2Value = 0;        
@@ -315,29 +560,7 @@ void updateSensorValues() {
   my_TDS2_string.print(TDS2Value);
   my_TDS2_string.println(" ppm"); 
   
- /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-   !!CO2 SENSOR!!CO2 SENSOR!!CO2 SENSOR!!CO2 SENSOR!!CO2 SENSOR!!CO2 SENSOR!!CO2 SENSOR!!CO2 SENSOR!!CO2 SENSOR!!
-   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-  float CO2Sum = 0;
-  j = 0;
-  analogRead(CO2Pin);  //Get ADC to switch to correct pin
-  delay(15); //Wait for Pin to Change
 
-  while(j<10) {
-    CO2Sum = CO2Sum + analogRead(CO2Pin);
-    j++;
-  }
-
-  CO2RawValue = CO2Sum/((j-1) * 2);
-//  CO2Value = ((CO2RawValue * 100.0)/1024.0);
-  CO2Value = 0;
-  
-  if(isnan(CO2Value)){
-    CO2Value = 0;        
-  }
-  PString my_CO2_string(CO2_char, sizeof(CO2_char));
-  my_CO2_string.print(CO2Value);
-  my_CO2_string.println(" ppm"); 
   
   
  /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -345,27 +568,33 @@ void updateSensorValues() {
    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
  //******************************* GY-30 DIGITAL LIGHT SENSOR ***************************
 
-
+#if defined(light_on)
   Wire.begin();
   BH1750_Init(BH1750_address); 
   delay(200);
-  float valf=0;
-   
+  long valf=0;   
   if(BH1750_Read(BH1750_address)==2){
     
     valf=((buff[0]<<8)|buff[1])/1.2;
-    
-    if(valf<0){
-    valf = 30000;
-    }
   }
-  
-  LightRawValue = (int)valf,DEC;
-//  LightValue = LightRawValue;
+  LightRawValue = valf; 
+  if (LightRawValue < 0){
+    LightRawValue = 100000;
+  }
+  if (hour() >= 7 && hour() <= 20 && LightRawValue == 0){
+    LightRawValue = 100000;
+          }
+  if (hour() >= 21 && hour() <= 24 || hour() >= 0 && hour() < 7  && LightRawValue == 0){
+    LightRawValue = 0;
+          }
+  else         
+  LightValue = LightRawValue;
+#else
+  LightRawValue = 0;
   LightValue = 0;
-  
+#endif  
   if (isnan(LightValue)) {
-    LightValue = 0;
+    LightValue = 100000;
   } 
   PString my_Light_string(Light_char, sizeof(Light_char));
   my_Light_string.print(LightValue);
@@ -376,12 +605,11 @@ void updateSensorValues() {
     my_Light_string.println("%"); 
   }
 
-
+ /***************************Status Indicator Tests******************************** 
  /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
    !!ph!!
    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
   
-
 
   //pH
   if (pH1Value < pH1Value_Low) {

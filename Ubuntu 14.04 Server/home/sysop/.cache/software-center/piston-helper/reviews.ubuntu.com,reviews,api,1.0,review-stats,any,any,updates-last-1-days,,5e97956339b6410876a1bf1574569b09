@@ -1,0 +1,18 @@
+status: 301
+content-length: 375
+content-location: http://reviews.ubuntu.com/reviews/api/1.0/review-stats/any/any/updates-last-1-days/
+server: Apache/2.4.7 (Ubuntu)
+location: https://reviews.ubuntu.com/reviews/api/1.0/review-stats/any/any/updates-last-1-days/
+date: Tue, 22 Mar 2016 19:16:21 GMT
+-x-permanent-redirect-url: https://reviews.ubuntu.com/reviews/api/1.0/review-stats/any/any/updates-last-1-days/
+content-type: text/html; charset=iso-8859-1
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="https://reviews.ubuntu.com/reviews/api/1.0/review-stats/any/any/updates-last-1-days/">here</a>.</p>
+<hr>
+<address>Apache/2.4.7 (Ubuntu) Server at reviews.ubuntu.com Port 80</address>
+</body></html>

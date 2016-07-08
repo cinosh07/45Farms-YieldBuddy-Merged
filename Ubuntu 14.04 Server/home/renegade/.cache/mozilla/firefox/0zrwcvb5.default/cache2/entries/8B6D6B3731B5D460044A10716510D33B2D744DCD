@@ -1,0 +1,412 @@
+/********Basic settings**********/
+*{
+    margin: 0;
+    padding: 0;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+html {
+    box-sizing: border-box;
+}
+body{
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; color: #FFFFFF;
+} 
+
+img{
+  border: 0px;
+}
+a{
+  text-decoration: none;
+}
+#ad{
+   -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   -o-user-select: none;
+   user-select: none;
+}
+#banner{  
+  width: 300px; 
+  height: 250px;
+  display: block;
+  cursor: pointer;  
+  overflow: hidden;
+  position:absolute;
+  visibility: visible;  
+  border: 1px #ffffff solid;
+  background: #000000;
+  color: #FFFFFF; 
+}
+#all-animation,
+#frm-1,
+#frm-2,
+#frm-3,
+#frm-4,
+#frm-5,
+#frm-6 {  
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+#banner * {
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+}
+#banner.is-visible * {
+    -webkit-animation-play-state: running;
+            animation-play-state: running;
+}
+/* ie-fallback */
+.ie-fallback{
+	position: absolute;
+	z-index: 999;
+	top: 0;
+	left: 0;
+}
+/* clickTAG   */
+#clickTAG {
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   opacity: 0;
+   width: 100%;
+   height: 100%;
+   z-index: 9;
+   cursor:pointer;
+   margin: 0;
+}
+/* START:frm-1*/
+  sup{
+  line-height:5px;
+  position:relative;
+  top:1px;
+}
+
+.aw-logo{
+  top:76px;
+  left: 129px;
+  position:absolute;
+	-webkit-animation: aw-logo 2.5s both;
+			    animation: aw-logo 2.5s both;
+}
+
+.vndr-logo{
+  bottom:15px;
+  left: 14px;
+  position:absolute;
+	-webkit-animation: vndr-logo 2.5s both ;
+			    animation: vndr-logo 2.5s both ;
+}
+
+.vndr-copy{
+  font-size: 10px;
+  text-align: left;
+  line-height: 11px;
+  bottom:15px;
+  left: 117px;
+  color: #ffffff;
+  width: 87px;
+  position:absolute;
+	-webkit-animation: vndr-logo 2.5s both;
+			    animation: vndr-logo 2.5s both;
+}
+/*END:frm-1*/
+
+/* START:frm-2*/
+.aw-product{
+  bottom:0px;
+  left:0px;
+  position:absolute;
+  -webkit-animation: aw-product 8.3s linear 1.8s both;
+          animation: aw-product 8.3s linear 1.8s both;
+}
+
+.aw-product2{
+  bottom:0px;
+  left:0px;
+  position:absolute;
+
+  -webkit-animation: aw-product2 5.3s linear 9.5s both;
+          animation: aw-product2 5.3s linear 9.5s both;
+}
+
+.frm-2-text {
+  top: 16px;
+  left:0px;
+  width:280px;
+  font-size: 19px;
+  line-height: 22px;
+  text-align:left;
+  font-weight: bold;
+  opacity:0;
+  position: absolute;
+  text-transform: uppercase;
+  -webkit-animation: text-anim  2.5s ease-in-out 2.5s  both;
+           animation: text-anim  2.5s ease-in-out 2.5s both;
+}
+/* END:frm-2*/
+/* START:frm-3*/
+.frm-3-text {
+  position: absolute;
+  top: 16px;
+  left:0px;
+  width:280px;
+  font-size: 19px;
+  line-height: 22px;
+  text-align:left;
+  font-weight: bold;
+  opacity:0;
+  text-transform: uppercase;
+  -webkit-animation: text-anim  2.5s ease-in-out 5s  both;
+          animation: text-anim  2.5s ease-in-out 5s both;
+}
+/* END:frm-3*/
+
+/* START:frm-4*/
+.frm-4-text {
+  position: absolute;
+  top: 16px;
+  left:0px;
+  width:290px;
+  font-size: 19px;
+  line-height: 22px;
+  text-align:left;
+  font-weight: bold;
+  opacity:0;
+  text-transform: uppercase;
+  -webkit-animation: text-anim  2.5s ease-in-out 7.5s  both;
+          animation: text-anim  2.5s ease-in-out 7.5s both;
+}
+
+/* END:frm-4*/
+
+/* START:frm-5*/
+.frm-5-text {
+  position: absolute;
+  bottom: 13px;
+  left:0px;
+  width:280px;
+  font-size: 19px;
+  line-height: 22px;
+  text-align:left;
+  font-weight: bold;
+  opacity:0;
+  text-transform: uppercase;
+  -webkit-animation: text-anim  2.5s ease-in-out 10s  both;
+          animation: text-anim  2.5s ease-in-out 10s both;
+}
+.alien-logo {
+  position: absolute;
+  left: 14px;
+  top: 18px;
+  -webkit-animation: fade-in  0.5s linear 12.5s  both;
+          animation: fade-in  0.5s linear 12.5s both;
+}
+
+
+.cta{
+  position: absolute;
+  left: 14px;
+  top: 130px;
+  -webkit-animation: fade-in 0.5s linear 12.5s both;
+          animation: fade-in 0.5s linear 12.5s both;
+}
+.cta ul {
+  list-style-type: none;
+  background: #f00000;
+}
+.cta ul li {
+  float: left;
+}
+.cta ul li.cta-text {
+  background: #f00000;
+  font-size: 12px;
+  color: #000000;
+  height: 21px;
+  padding: 4px 0px;
+  font-weight: 700;
+
+}
+
+.vndr-logo-2{
+  bottom:15px;
+  left: 14px;
+  position:absolute;
+  -webkit-animation: fade-in 0.5s linear 12.5s both ;
+          animation: fade-in 0.5s linear 12.5s both ;
+}
+.vndr-copy-2{
+  font-size: 10px;
+  text-align: left;
+  line-height: 11px;
+  bottom:16px;
+  left: 117px;
+  width: 90px;
+  color: #ffffff;
+  position: absolute;
+  -webkit-animation: fade-in  0.5s linear 12.5s  both;
+          animation: fade-in  0.5s linear 12.5s  both;
+}
+
+/* ENDfrm-5*/
+
+/* START:frm-6*/
+.frm-6-text {
+  position: absolute;
+  top: 78px;
+  left:0px;
+  width:150px;
+  font-size: 19px;
+  line-height: 22px;
+  text-align:left;
+  font-weight: bold;
+  text-transform: uppercase;
+  -webkit-animation: text-anim-2  2.5s ease-in-out 12.5s  both;
+          animation: text-anim-2  2.5s ease-in-out 12.5s both;
+}
+
+.featuring-copy{
+  font-size: 12px;
+  text-align: left;
+  line-height: 15px;
+  top:82px;
+  left: 18px;
+  color: #ffffff;
+  position: absolute;
+  -webkit-animation: fade-in  0.5s linear 12.5s  both;
+          animation: fade-in  0.5s linear 12.5s  both;
+}
+
+/* ENDfrm-6*/
+
+/* START:animation*/
+@-webkit-keyframes aw-logo {
+  0%{opacity:0; }
+  10%{opacity:1; }
+  90%{opacity:1; } 
+  100%{opacity:0; }
+}
+@keyframes aw-logo {
+  0%{opacity:0; }
+  10%{opacity:1; }
+  90%{opacity:1; } 
+  100%{opacity:0; }
+}
+@-webkit-keyframes vndr-logo {
+  0%{opacity:0; }
+  15%{opacity:1; }
+  85%{opacity:1; } 
+  100%{opacity:0; }
+}
+@keyframes vndr-logo {
+  0%{opacity:0; }
+  15%{opacity:1; }
+  85%{opacity:1; } 
+  100%{opacity:0; }
+}
+@-webkit-keyframes vndr-copy {
+  0%{opacity:1;}
+  10%{opacity:1;}
+  15%{opacity:0;}
+  90%{opacity:0;}
+  100%{opacity:0;}
+}
+@keyframes vndr-copy {
+  0%{opacity:1;}
+  10%{opacity:1;}
+  15%{opacity:0;}
+  90%{opacity:0;}
+  100%{opacity:0;}
+}
+
+@-webkit-keyframes aw-product {
+  0%{transform:translate(300px,-10px) scale(1,1); opacity: 1;}
+  75%{transform:translate(-21px,35px) scale(0.7,0.7); opacity: 1;}
+  95%{transform:translate(-21px,35px) scale(0.7,0.7); opacity: 1;}
+  100%{transform:translate(-320px,35px) scale(0.7,0.7); opacity: 0;}
+}
+@keyframes aw-product {
+  0%{transform:translate(300px,-10px) scale(1,1); opacity: 1;}
+  75%{transform:translate(-21px,35px) scale(0.7,0.7); opacity: 1;}
+  95%{transform:translate(-21px,35px) scale(0.7,0.7); opacity: 1;}
+  100%{transform:translate(-320px,35px) scale(0.7,0.7); opacity: 0;}
+}
+
+@-webkit-keyframes aw-product2 {
+  0%{transform:translate(300px,20px) scale(0.7,0.7); }
+  20%{transform:translate(43px,20px) scale(0.7,0.7); }
+  55%{transform:translate(43px,20px) scale(0.7,0.7); }
+  60%{transform:translate(0px,0px) scale(1,1); }
+  100%{transform:translate(0px,0px) scale(1,1); }
+
+}
+@keyframes aw-product2 {
+  0%{transform:translate(300px,20px) scale(0.7,0.7); }
+  20%{transform:translate(43px,20px) scale(0.7,0.7); }
+  55%{transform:translate(43px,20px) scale(0.7,0.7); }
+  60%{transform:translate(0px,0px) scale(1,1); }
+  100%{transform:translate(0px,0px) scale(1,1); }
+}
+
+@-webkit-keyframes text-anim {
+  0%{opacity:0; left: -50px}
+  10%{opacity:1; left: 13px}
+  90%{opacity:1; left: 13px}
+  100%{opacity:0; left: 50px}
+}
+@keyframes text-anim {
+  0%{opacity:0; left: -50px}
+  10%{opacity:1; left: 13px}
+  90%{opacity:1; left: 13px}
+  100%{opacity:0; left: 50px}
+}
+@-webkit-keyframes text-anim-2 {
+  0%{opacity:0; left: -50px}
+  10%{opacity:1; left: 14px}
+  90%{opacity:1; left: 14px}
+  100%{opacity:1; left: 14px}
+}
+@keyframes text-anim-2 {
+  0%{opacity:0; left: -50px}
+  10%{opacity:1; left: 14px}
+  90%{opacity:1; left: 14px}
+  100%{opacity:1; left: 14px}
+}
+
+@-webkit-keyframes badge-frm-last {
+  0%{left:-250px; top:26px;}
+  100%{left:10px; top:26px;}
+}
+@keyframes badge-frm-last {
+  0%{left:-250px; top:26px;}
+  100%{left:10px; top:26px;}
+}
+@-webkit-keyframes fade-in {
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}
+@keyframes fade-in {
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}
+
+@-webkit-keyframes fade-out {
+  0%{opacity: 1;}
+  100%{opacity: 0;}
+}
+@keyframes fade-out {
+  0%{opacity: 1;}
+  100%{opacity: 0;}
+}Ù¿%•b      Wl%ûWl%û<òºZWmtÕ   v    :https://img.mediaplex.com/content/0/12308/222786/190040_ca_cs_co_dir_fy17q2w01_oa_aw-alpha-r2-en_300x250_vr_style.css necko:classified 1 security-info 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 request-method GET response-head HTTP/1.1 200 OK
+Date: Thu, 23 Jun 2016 18:09:29 GMT
+Server: Apache
+Last-Modified: Mon, 13 Jun 2016 19:48:11 GMT
+Etag: "1074c84-2188-5352e2b1d30d6"
+Accept-Ranges: bytes
+Content-Length: 8584
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+Content-Type: text/css
+ uncompressed-len 0   !à

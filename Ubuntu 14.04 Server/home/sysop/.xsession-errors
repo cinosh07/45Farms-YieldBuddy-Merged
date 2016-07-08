@@ -1,0 +1,12 @@
+Script for ibus started at run_im.
+Script for auto started at run_im.
+Script for default started at run_im.
+init: unity-settings-daemon main process ended, respawning
+init: unity-settings-daemon main process (16225) killed by TERM signal
+init: indicator-power main process (1587) killed by TERM signal
+init: indicator-bluetooth main process (1580) killed by TERM signal
+init: indicator-datetime main process (1631) killed by TERM signal
+init: indicator-printers main process (1652) killed by TERM signal
+init: indicator-session main process (1661) killed by TERM signal
+init: Disconnected from notified D-Bus bus
+init: indicator-application main process (1686) killed by TERM signal

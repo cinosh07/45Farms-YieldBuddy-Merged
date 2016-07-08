@@ -1,0 +1,136 @@
+status: 200
+content-length: 3160
+expires: Tue, 22 Mar 2016 23:14:30 GMT
+content-location: https://reviews.ubuntu.com/reviews/api/1.0/review-stats/any/any/updates-last-1-days/
+strict-transport-security: max-age=15768000; includeSubDomains; preload
+vary: Accept,Accept-Encoding
+server: gunicorn/19.3.0
+last-modified: Tue, 22 Mar 2016 19:14:30 GMT
+-content-encoding: gzip
+x-bzr-revision-number: 313
+cache-control: max-age=14400
+date: Tue, 22 Mar 2016 19:16:21 GMT
+content-type: application/json; charset=utf-8
+-varied-accept-encoding: gzip, deflate
+
+[
+    {
+        "ratings_total": 10, 
+        "ratings_average": "3.70", 
+        "app_name": "", 
+        "package_name": "foobillardplus", 
+        "histogram": "[2, 0, 1, 3, 4]"
+    }, 
+    {
+        "ratings_total": 368, 
+        "ratings_average": "4.46", 
+        "app_name": "", 
+        "package_name": "pidgin", 
+        "histogram": "[16, 11, 18, 67, 256]"
+    }, 
+    {
+        "ratings_total": 17, 
+        "ratings_average": "3.12", 
+        "app_name": "", 
+        "package_name": "unity-control-center", 
+        "histogram": "[6, 0, 3, 2, 6]"
+    }, 
+    {
+        "ratings_total": 61, 
+        "ratings_average": "3.51", 
+        "app_name": "", 
+        "package_name": "smtube", 
+        "histogram": "[17, 5, 0, 8, 31]"
+    }, 
+    {
+        "ratings_total": 118, 
+        "ratings_average": "3.45", 
+        "app_name": "", 
+        "package_name": "abiword", 
+        "histogram": "[18, 18, 13, 31, 38]"
+    }, 
+    {
+        "ratings_total": 135, 
+        "ratings_average": "4.04", 
+        "app_name": "", 
+        "package_name": "keepass2", 
+        "histogram": "[11, 8, 19, 23, 74]"
+    }, 
+    {
+        "ratings_total": 80, 
+        "ratings_average": "4.38", 
+        "app_name": "", 
+        "package_name": "gthumb", 
+        "histogram": "[3, 6, 1, 18, 52]"
+    }, 
+    {
+        "ratings_total": 51, 
+        "ratings_average": "4.20", 
+        "app_name": "", 
+        "package_name": "mysql-workbench", 
+        "histogram": "[5, 2, 1, 13, 30]"
+    }, 
+    {
+        "ratings_total": 16, 
+        "ratings_average": "3.38", 
+        "app_name": "", 
+        "package_name": "tomatoes", 
+        "histogram": "[2, 4, 0, 6, 4]"
+    }, 
+    {
+        "ratings_total": 175, 
+        "ratings_average": "4.60", 
+        "app_name": "", 
+        "package_name": "codeblocks", 
+        "histogram": "[3, 4, 10, 26, 132]"
+    }, 
+    {
+        "ratings_total": 222, 
+        "ratings_average": "3.59", 
+        "app_name": "", 
+        "package_name": "deja-dup", 
+        "histogram": "[47, 21, 15, 33, 106]"
+    }, 
+    {
+        "ratings_total": 46, 
+        "ratings_average": "4.80", 
+        "app_name": "", 
+        "package_name": "kid3-qt", 
+        "histogram": "[1, 0, 1, 3, 41]"
+    }, 
+    {
+        "ratings_total": 299, 
+        "ratings_average": "4.65", 
+        "app_name": "", 
+        "package_name": "blender", 
+        "histogram": "[10, 5, 11, 28, 245]"
+    }, 
+    {
+        "ratings_total": 163, 
+        "ratings_average": "3.64", 
+        "app_name": "", 
+        "package_name": "clamtk", 
+        "histogram": "[22, 14, 21, 49, 57]"
+    }, 
+    {
+        "ratings_total": 2090, 
+        "ratings_average": "4.76", 
+        "app_name": "", 
+        "package_name": "vlc", 
+        "histogram": "[42, 21, 51, 159, 1817]"
+    }, 
+    {
+        "ratings_total": 1330, 
+        "ratings_average": "4.34", 
+        "app_name": "", 
+        "package_name": "firefox", 
+        "histogram": "[97, 46, 87, 183, 917]"
+    }, 
+    {
+        "ratings_total": 1, 
+        "ratings_average": "1.00", 
+        "app_name": "", 
+        "package_name": "fonts-paktype", 
+        "histogram": "[1, 0, 0, 0, 0]"
+    }
+]

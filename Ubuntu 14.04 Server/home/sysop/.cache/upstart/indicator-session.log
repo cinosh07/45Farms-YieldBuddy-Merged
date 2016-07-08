@@ -1,0 +1,72 @@
+
+(unity-control-center:22080): screen-cc-panel-WARNING **: Error getting brightness: GDBus.Error:org.gtk.GDBus.UnmappedGError.Quark._gsd_5fpower_5fmanager_5ferror.Code0: Screen backlight not available
+
+(unity-control-center:22215): screen-cc-panel-WARNING **: Error getting brightness: GDBus.Error:org.gtk.GDBus.UnmappedGError.Quark._gsd_5fpower_5fmanager_5ferror.Code0: Screen backlight not available
+**** Incorrect IEEE 1284 Device ID: [u'drv:///hpcups.drv/hp-laserjet_1020.ppd']
+**** Actual ID is MFG:Hewlett-Packard;MDL:HP LaserJet 1020;
+**** Please report a bug against the HPLIP component
+**** Incorrect IEEE 1284 Device ID: [u'drv:///hpcups.drv/hp-laserjet_1020.ppd']
+**** Actual ID is MFG:Hewlett-Packard;MDL:HP LaserJet 1020;
+**** Please report a bug against the HPLIP component
+Unknown value for media-col: (unknown IPP value tag 0x34)
+Choices: [u'media-bottom-margin', u'media-left-margin', u'media-right-margin', u'media-size', u'media-source', u'media-top-margin', u'media-type']
+Selecting from choices: media-bottom-margin
+Unknown value for media-col: (unknown IPP value tag 0x34)
+Choices: [u'media-bottom-margin', u'media-left-margin', u'media-right-margin', u'media-size', u'media-source', u'media-top-margin', u'media-type']
+Selecting from choices: media-bottom-margin
+/usr/share/system-config-printer/monitor.py:757: Warning: Source ID 478 was not found when attempting to remove it
+  GLib.source_remove (self.update_timer)
+/usr/share/system-config-printer/monitor.py:757: Warning: Source ID 3457 was not found when attempting to remove it
+  GLib.source_remove (self.update_timer)
+/usr/share/system-config-printer/system-config-printer.py:2067: Warning: Source ID 479 was not found when attempting to remove it
+  GLib.source_remove (self.populateList_timer)
+/usr/share/system-config-printer/system-config-printer.py:2067: Warning: Source ID 3481 was not found when attempting to remove it
+  GLib.source_remove (self.populateList_timer)
+/usr/share/system-config-printer/monitor.py:757: Warning: Source ID 489 was not found when attempting to remove it
+  GLib.source_remove (self.update_timer)
+/usr/share/system-config-printer/monitor.py:757: Warning: Source ID 3583 was not found when attempting to remove it
+  GLib.source_remove (self.update_timer)
+/usr/share/system-config-printer/system-config-printer.py:2067: Warning: Source ID 492 was not found when attempting to remove it
+  GLib.source_remove (self.populateList_timer)
+/usr/share/system-config-printer/system-config-printer.py:2067: Warning: Source ID 3739 was not found when attempting to remove it
+  GLib.source_remove (self.populateList_timer)
+/usr/share/system-config-printer/monitor.py:757: Warning: Source ID 495 was not found when attempting to remove it
+  GLib.source_remove (self.update_timer)
+/usr/share/system-config-printer/monitor.py:757: Warning: Source ID 4628 was not found when attempting to remove it
+  GLib.source_remove (self.update_timer)
+Unknown value for media-col: (unknown IPP value tag 0x34)
+Choices: [u'media-bottom-margin', u'media-left-margin', u'media-right-margin', u'media-size', u'media-source', u'media-top-margin', u'media-type']
+Selecting from choices: media-bottom-margin
+/usr/share/system-config-printer/monitor.py:757: Warning: Source ID 500 was not found when attempting to remove it
+  GLib.source_remove (self.update_timer)
+/usr/share/system-config-printer/system-config-printer.py:2067: Warning: Source ID 496 was not found when attempting to remove it
+  GLib.source_remove (self.populateList_timer)
+/usr/share/system-config-printer/monitor.py:757: Warning: Source ID 503 was not found when attempting to remove it
+  GLib.source_remove (self.update_timer)
+/usr/share/system-config-printer/monitor.py:757: Warning: Source ID 5889 was not found when attempting to remove it
+  GLib.source_remove (self.update_timer)
+/usr/share/system-config-printer/system-config-printer.py:2067: Warning: Source ID 4666 was not found when attempting to remove it
+  GLib.source_remove (self.populateList_timer)
+/usr/share/system-config-printer/monitor.py:757: Warning: Source ID 506 was not found when attempting to remove it
+  GLib.source_remove (self.update_timer)
+/usr/share/system-config-printer/monitor.py:757: Warning: Source ID 6581 was not found when attempting to remove it
+  GLib.source_remove (self.update_timer)
+/usr/share/system-config-printer/system-config-printer.py:2067: Warning: Source ID 505 was not found when attempting to remove it
+  GLib.source_remove (self.populateList_timer)
+/usr/share/system-config-printer/system-config-printer.py:2067: Warning: Source ID 6614 was not found when attempting to remove it
+  GLib.source_remove (self.populateList_timer)
+Unknown value for media-col: (unknown IPP value tag 0x34)
+Choices: [u'media-bottom-margin', u'media-left-margin', u'media-right-margin', u'media-size', u'media-source', u'media-top-margin', u'media-type']
+Selecting from choices: media-bottom-margin
+/usr/share/system-config-printer/monitor.py:757: Warning: Source ID 509 was not found when attempting to remove it
+  GLib.source_remove (self.update_timer)
+/usr/share/system-config-printer/monitor.py:757: Warning: Source ID 6871 was not found when attempting to remove it
+  GLib.source_remove (self.update_timer)
+/usr/share/system-config-printer/system-config-printer.py:2067: Warning: Source ID 510 was not found when attempting to remove it
+  GLib.source_remove (self.populateList_timer)
+/usr/share/system-config-printer/system-config-printer.py:2067: Warning: Source ID 6944 was not found when attempting to remove it
+  GLib.source_remove (self.populateList_timer)
+/usr/share/system-config-printer/monitor.py:190: Warning: Source ID 8947 was not found when attempting to remove it
+  GLib.source_remove (timer)
+/usr/share/system-config-printer/monitor.py:190: Warning: Source ID 517 was not found when attempting to remove it
+  GLib.source_remove (timer)
