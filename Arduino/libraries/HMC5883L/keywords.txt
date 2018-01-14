@@ -1,23 +1,31 @@
 #######################################
-# Syntax Coloring Map For DS1307RTC
+# Syntax Coloring Map For Matrix
 #######################################
 
 #######################################
 # Datatypes (KEYWORD1)
 #######################################
 
+HMC5883L			KEYWORD1
+MagnetometerRaw		KEYWORD1
+MagnetometerScaled	KEYWORD1
+
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
-get	KEYWORD2
-set	KEYWORD2
-read	KEYWORD2
-write	KEYWORD2
-chipPresent	KEYWORD2
-#######################################
-# Instances (KEYWORD2)
-#######################################
-RTC	KEYWORD2
+
+ReadRawAxis			KEYWORD2
+ReadScaledAxis		KEYWORD2
+SetMeasurementMode	KEYWORD2
+SetScale			KEYWORD2
+
+XAxis	KEYWORD2
+YAxis	KEYWORD2
+ZAxis	KEYWORD2
+
 #######################################
 # Constants (LITERAL1)
 #######################################
+
+Measurement_Continuous	LITERAL1
+Measurement_SingleShot	LITERAL1
