@@ -862,7 +862,10 @@ app_path = str( os.path.dirname(os.path.realpath(__file__)) )+"/"
 print 'Application Path: ' + app_path + '\n'
 
 
-device_path='/dev/yieldbuddytty'    #override device_path (no user input)
+#device_path='/dev/yieldbuddytty'    #override device_path (no user input)
+#device_path='/dev/ttyAMA0'    #override device_path (no user input)
+device_path='/dev/ttyACM0'
+#device_path='/dev/ttyS0'
 device_path = device_path.strip("\n")
 try:
 	ser = serial.Serial(device_path,115200,timeout=10)
