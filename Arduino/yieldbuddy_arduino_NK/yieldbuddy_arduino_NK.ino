@@ -16,7 +16,7 @@
 
 // setup CS pins used for the connection with the sensor
 // other connections are controlled by the SPI library)
-int8_t CS_PIN  = 49;
+int8_t CS_PIN  = 4;
 int8_t SI_PIN  = 3;
 int8_t IRQ_PIN = 2;                       // digital pins 2 and 3 are available for interrupt capability
 volatile int8_t AS3935_ISR_Trig = 0;
@@ -40,20 +40,20 @@ PWF_AS3935  lightning0(CS_PIN, IRQ_PIN, SI_PIN);
 
 //#define tds1_on
 //#define tds2_on
-//#define ph1_on
+#define ph1_on
 //#define ph2_on
 //#define co2_on
 #define dht_temp_on
-#define dht_tempF_on
+//#define dht_tempF_on
 #define dht_humidity_on
 #define soilhumidity_on
 #define light_on
-//#define tank1_on
-//#define tank2_on
+#define tank1_on
+#define tank2_on
 //#define tank3_on
 //#define tank4_on
 //#define tanktotal_on
-#define magnetometer_on
+//#define magnetometer_on
 //#define WaterTempP1_on
 //#define WaterTempP1F_on
 //#define WaterTempP2_on
@@ -480,14 +480,14 @@ int Tank4EchoPin = A15;
 //int Tank4TrigPin = A8;
 //int Tank4EchoPin = A9;
 
-int Relay1_Pin = 22;  // Tank1Pump-FEED-PODS            //Water Pump
-int Relay2_Pin = 23;  // Tank2Pump-XFER-Tank3           //Water Supply
-int Relay3_Pin = 24;  // Tank3Pump-XFER-Tank1           //pH down
-int Relay4_Pin = 25;  // Tank4Pump-XFER-Tank2           //Nute 1
-int Relay5_Pin = 26;  // Nute 2
-int Relay6_Pin = 27;  // Dehumidifier
-int Relay7_Pin = 28;  // Humidifier                     //AC
-int Relay8_Pin = 29;  // Light
+int Relay1_Pin = 53;  // Tank1Pump-FEED-PODS            //Water Pump
+int Relay2_Pin = 52;  // Tank2Pump-XFER-Tank3           //Water Supply
+int Relay3_Pin = 51;  // Tank3Pump-XFER-Tank1           //pH down
+int Relay4_Pin = 50;  // Tank4Pump-XFER-Tank2           //Nute 1
+int Relay5_Pin = 49;  // Nute 2
+int Relay6_Pin = 48;  // Dehumidifier
+int Relay7_Pin = 47;  // Humidifier                     //AC
+int Relay8_Pin = 46;  // Light
 
 int Relay1_State = 0;
 int Relay2_State = 0;
@@ -500,16 +500,16 @@ int Relay8_State = 0;
 
 int Relay1_isAuto = 1;  // Tank1Pump-FEED-PODS           //Water Pump
 int Relay2_isAuto = 1;  // Tank2Pump-XFER-Tank3 || Tank1 //Water Supply
-int Relay3_isAuto = 1;  // Tank4Pump-XFER-Tank2          //pH down
-int Relay4_isAuto = 1;  // Nute 1
-int Relay5_isAuto = 1;  // Nute 2
+int Relay3_isAuto = 0;  // Tank4Pump-XFER-Tank2          //pH down
+int Relay4_isAuto = 0;  // Nute 1
+int Relay5_isAuto = 0;  // Nute 2
 int Relay6_isAuto = 1;  // Dehumidifier
 int Relay7_isAuto = 1;  // Humidifier                    //AC
 int Relay8_isAuto = 1;  // Light
 
 //**added arduino ethernet shield
 int inet_on = 10;
-int sdcard_on = 4;
+int sdcard_on = 5;
 
 /*
   /!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -795,7 +795,7 @@ void setup()
   setSyncProvider(RTC.get);
 
   Serial.begin(115200);
-  Serial1.begin(115200);
+  //Serial.begin(115200);
 //  attachInterrupt(0, AS3935_ISR, RISING);
   lightning0.AS3935_PrintAllRegs(); // for debug...
 

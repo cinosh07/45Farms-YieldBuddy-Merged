@@ -32,7 +32,7 @@ void CheckTimers(){
 
 
 
-    int TurnLightOn = 2;  //0: Turn Off  1: Turn On
+    int TurnLightOn = 0;  //0: Turn Off  1: Turn On
 
     if (Light_ON_hour < Light_OFF_hour) {
       if (hour() >= Light_ON_hour && hour() <= Light_OFF_hour) {
@@ -48,6 +48,11 @@ void CheckTimers(){
           TurnLightOn = 1;
           goto exit_loop_light;
         }
+      } else {
+
+        TurnLightOn = 0;
+        goto exit_loop_light;
+
       }
     }
 
@@ -71,6 +76,11 @@ void CheckTimers(){
             goto exit_loop_light;
           }
         }
+      } else {
+
+        TurnLightOn = 0;
+        goto exit_loop_light;
+
       }
     }
 

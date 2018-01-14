@@ -362,15 +362,15 @@ void updateSensorValues() {
  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 #if defined(soilhumidity_on)
   float WaterSum = 0;
-  int j = 0;
+  int jj = 0;
   analogRead(WaterPin);  //Get ADC to switch to correct pin
   delay(15); //Wait for Pin to Change
 
-  while(j<10) {
+  while(jj<10) {
     WaterSum = WaterSum + analogRead(WaterPin);
-    j++;
+    jj++;
   } 
-  WaterRawValue = WaterSum/(j-1);
+  WaterRawValue = WaterSum/(jj-1);
   
   if (WaterRawValue < 0){
     WaterRawValue = -WaterRawValue;

@@ -6,43 +6,43 @@
 void RestoreDefaults() {
 
   //**Temporary placeholders for Time Settings Screen
-  tmp_month = 3;
-  tmp_day = 14;
-  tmp_year = 2015;
+  tmp_month = 1;
+  tmp_day = 8;
+  tmp_year = 2018;
   tmp_hour = 9;
   tmp_minute = 26;
   tmp_second = 53;
 
   //**Note: Committed Time Settings are stored as their associated month(), day(), year(), etc... as per <Time.h>
 
-  tmp_Light_ON_hour = 12;
+  tmp_Light_ON_hour = 6;
   tmp_Light_ON_min = 0;
   tmp_Light_OFF_hour = 23;
-  tmp_Light_OFF_min = 59;
+  tmp_Light_OFF_min = 00;
 
   //**Committed Light Settings
-  Light_ON_hour = 12;
+  Light_ON_hour = 6;
   Light_ON_min = 0;
   Light_OFF_hour = 23;
-  Light_OFF_min = 59;
+  Light_OFF_min = 00;
 
   //**Temporary placeholders for Pump Schedule Screen
-  tmp_Pump_start_hour = 11;
-  tmp_Pump_start_min = 45;
+  tmp_Pump_start_hour = 7;
+  tmp_Pump_start_min = 15;
   tmp_Pump_start_isAM = true;
   tmp_Pump_every_hours = 2;
   tmp_Pump_every_mins = 30;
   tmp_Pump_for = 15; //In Minutes
-  tmp_Pump_times = 1; //Number of times per day
+  tmp_Pump_times = 11; //Number of times per day
 
   //**Committed Pump Schedule Settings
-  Pump_start_hour = 11;
-  Pump_start_min = 45;
+  Pump_start_hour = 7;
+  Pump_start_min = 15;
   Pump_start_isAM = true;
   Pump_every_hours = 2;
   Pump_every_mins = 30;
   Pump_for = 15; //In Minutes
-  Pump_times = 1; //Number of times per day
+  Pump_times = 11; //Number of times per day
 
   //**SENSOR VARIABLES
 
