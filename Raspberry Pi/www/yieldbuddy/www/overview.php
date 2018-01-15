@@ -93,188 +93,188 @@ if (!file_exists($_SERVER['DOCUMENT_ROOT'] . '/yieldbuddy2/www/users/' . $_SESSI
         <script language="javascript" type="text/javascript">
 <!-- 
 //Browser Support Code
-    var graphloopcount = 20;
-    var PastResponseText_Relays;
+            var graphloopcount = 20;
+            var PastResponseText_Relays;
 
-    var int = self.setInterval(function () {
-        loop()
-    }, 2000);
-    function loop() {
-        updateRaspberryPiTime();
-        updateArduinoTime();
-        updateSensorInfo();
-        updateRelayInfo();
-    }
+            var int = self.setInterval(function () {
+                loop()
+            }, 2000);
+            function loop() {
+                updateRaspberryPiTime();
+                updateArduinoTime();
+                updateSensorInfo();
+                updateRelayInfo();
+            }
 
-    function updateRaspberryPiTime() {
-        var ajaxRequest;  // The variable that makes Ajax possible!
+            function updateRaspberryPiTime() {
+                var ajaxRequest;  // The variable that makes Ajax possible!
 
-        try {
-            // Opera 8.0+, Firefox, Safari
-            ajaxRequest = new XMLHttpRequest();
-        } catch (e) {
-            // Internet Explorer Browsers
-            try {
-                ajaxRequest = new ActiveXObject("Msxml2.XMLHTTP");
-            } catch (e) {
                 try {
-                    ajaxRequest = new ActiveXObject("Microsoft.XMLHTTP");
+                    // Opera 8.0+, Firefox, Safari
+                    ajaxRequest = new XMLHttpRequest();
                 } catch (e) {
-                    // Something went wrong
-                    alert("Your browser broke!");
-                    return false;
+                    // Internet Explorer Browsers
+                    try {
+                        ajaxRequest = new ActiveXObject("Msxml2.XMLHTTP");
+                    } catch (e) {
+                        try {
+                            ajaxRequest = new ActiveXObject("Microsoft.XMLHTTP");
+                        } catch (e) {
+                            // Something went wrong
+                            alert("Your browser broke!");
+                            return false;
+                        }
+                    }
                 }
-            }
-        }
-        // Create a function that will receive data sent from the server
-        ajaxRequest.onreadystatechange = function () {
-            if (ajaxRequest.readyState == 4) {
-                if (ajaxRequest.responseText != "") {
-                    document.getElementById("RaspberryPiTime").innerHTML = ajaxRequest.responseText;
+                // Create a function that will receive data sent from the server
+                ajaxRequest.onreadystatechange = function () {
+                    if (ajaxRequest.readyState == 4) {
+                        if (ajaxRequest.responseText != "") {
+                            document.getElementById("RaspberryPiTime").innerHTML = ajaxRequest.responseText;
+                        }
+                    }
                 }
+                ajaxRequest.open("GET", "updateRaspberryPiTime.php", true);
+                ajaxRequest.send(null);
+
             }
-        }
-        ajaxRequest.open("GET", "updateRaspberryPiTime.php", true);
-        ajaxRequest.send(null);
 
-    }
+            function updateArduinoTime() {
+                var ajaxRequest;  // The variable that makes Ajax possible!
 
-    function updateArduinoTime() {
-        var ajaxRequest;  // The variable that makes Ajax possible!
-
-        try {
-            // Opera 8.0+, Firefox, Safari
-            ajaxRequest = new XMLHttpRequest();
-        } catch (e) {
-            // Internet Explorer Browsers
-            try {
-                ajaxRequest = new ActiveXObject("Msxml2.XMLHTTP");
-            } catch (e) {
                 try {
-                    ajaxRequest = new ActiveXObject("Microsoft.XMLHTTP");
+                    // Opera 8.0+, Firefox, Safari
+                    ajaxRequest = new XMLHttpRequest();
                 } catch (e) {
-                    // Something went wrong
-                    alert("Your browser broke!");
-                    return false;
+                    // Internet Explorer Browsers
+                    try {
+                        ajaxRequest = new ActiveXObject("Msxml2.XMLHTTP");
+                    } catch (e) {
+                        try {
+                            ajaxRequest = new ActiveXObject("Microsoft.XMLHTTP");
+                        } catch (e) {
+                            // Something went wrong
+                            alert("Your browser broke!");
+                            return false;
+                        }
+                    }
                 }
-            }
-        }
-        // Create a function that will receive data sent from the server
-        ajaxRequest.onreadystatechange = function () {
-            if (ajaxRequest.readyState == 4) {
-                if (ajaxRequest.responseText != "") {
-                    document.getElementById("ArduinoTime").innerHTML = ajaxRequest.responseText;
+                // Create a function that will receive data sent from the server
+                ajaxRequest.onreadystatechange = function () {
+                    if (ajaxRequest.readyState == 4) {
+                        if (ajaxRequest.responseText != "") {
+                            document.getElementById("ArduinoTime").innerHTML = ajaxRequest.responseText;
+                        }
+                    }
                 }
+                ajaxRequest.open("GET", "updateArduinoTime.php", true);
+                ajaxRequest.send(null);
+
             }
-        }
-        ajaxRequest.open("GET", "updateArduinoTime.php", true);
-        ajaxRequest.send(null);
 
-    }
+            function updateSensorInfo() {
+                var ajaxRequest;  // The variable that makes Ajax possible!
 
-    function updateSensorInfo() {
-        var ajaxRequest;  // The variable that makes Ajax possible!
-
-        try {
-            // Opera 8.0+, Firefox, Safari
-            ajaxRequest = new XMLHttpRequest();
-        } catch (e) {
-            // Internet Explorer Browsers
-            try {
-                ajaxRequest = new ActiveXObject("Msxml2.XMLHTTP");
-            } catch (e) {
                 try {
-                    ajaxRequest = new ActiveXObject("Microsoft.XMLHTTP");
+                    // Opera 8.0+, Firefox, Safari
+                    ajaxRequest = new XMLHttpRequest();
                 } catch (e) {
-                    // Something went wrong
-                    alert("Your browser broke!");
-                    return false;
+                    // Internet Explorer Browsers
+                    try {
+                        ajaxRequest = new ActiveXObject("Msxml2.XMLHTTP");
+                    } catch (e) {
+                        try {
+                            ajaxRequest = new ActiveXObject("Microsoft.XMLHTTP");
+                        } catch (e) {
+                            // Something went wrong
+                            alert("Your browser broke!");
+                            return false;
+                        }
+                    }
                 }
-            }
-        }
-        // Create a function that will receive data sent from the server
-        ajaxRequest.onreadystatechange = function () {
-            if (ajaxRequest.readyState == 4) {
-                if (ajaxRequest.responseText != "") {
-                    document.getElementById("sensorInfo").innerHTML = ajaxRequest.responseText;
+                // Create a function that will receive data sent from the server
+                ajaxRequest.onreadystatechange = function () {
+                    if (ajaxRequest.readyState == 4) {
+                        if (ajaxRequest.responseText != "") {
+                            document.getElementById("sensorInfo").innerHTML = ajaxRequest.responseText;
+                        }
+                    }
                 }
+                ajaxRequest.open("GET", "updateSensors.php", true);
+                ajaxRequest.send(null);
             }
-        }
-        ajaxRequest.open("GET", "updateSensors.php", true);
-        ajaxRequest.send(null);
-    }
 
-    function updateRelayInfo() {
-        var ajaxRequest;  // The variable that makes Ajax possible!
+            function updateRelayInfo() {
+                var ajaxRequest;  // The variable that makes Ajax possible!
 
-        try {
-            // Opera 8.0+, Firefox, Safari
-            ajaxRequest = new XMLHttpRequest();
-        } catch (e) {
-            // Internet Explorer Browsers
-            try {
-                ajaxRequest = new ActiveXObject("Msxml2.XMLHTTP");
-            } catch (e) {
                 try {
-                    ajaxRequest = new ActiveXObject("Microsoft.XMLHTTP");
+                    // Opera 8.0+, Firefox, Safari
+                    ajaxRequest = new XMLHttpRequest();
                 } catch (e) {
-                    // Something went wrong
-                    alert("Your browser broke!");
-                    return false;
+                    // Internet Explorer Browsers
+                    try {
+                        ajaxRequest = new ActiveXObject("Msxml2.XMLHTTP");
+                    } catch (e) {
+                        try {
+                            ajaxRequest = new ActiveXObject("Microsoft.XMLHTTP");
+                        } catch (e) {
+                            // Something went wrong
+                            alert("Your browser broke!");
+                            return false;
+                        }
+                    }
                 }
-            }
-        }
-        // Create a function that will receive data sent from the server
-        ajaxRequest.onreadystatechange = function () {
-            if (ajaxRequest.readyState == 4) {
-                if (ajaxRequest.responseText != document.getElementById("relayInfo").innerHTML) {
-                    document.getElementById("relayInfo").innerHTML = ajaxRequest.responseText;
+                // Create a function that will receive data sent from the server
+                ajaxRequest.onreadystatechange = function () {
+                    if (ajaxRequest.readyState == 4) {
+                        if (ajaxRequest.responseText != document.getElementById("relayInfo").innerHTML) {
+                            document.getElementById("relayInfo").innerHTML = ajaxRequest.responseText;
+                        }
+                    }
                 }
+                ajaxRequest.open("GET", "updateRelays.php", true);
+                ajaxRequest.send(null);
             }
-        }
-        ajaxRequest.open("GET", "updateRelays.php", true);
-        ajaxRequest.send(null);
-    }
 
-    function TurnRelay(number, on_off) {
-        var xmlhttp;
-        if (window.XMLHttpRequest)
-        {// code for IE7+, Firefox, Chrome, Opera, Safari
-            xmlhttp = new XMLHttpRequest();
-        } else
-        {// code for IE6, IE5
-            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-        }
-        xmlhttp.onreadystatechange = function ()
-        {
-            if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
-            {
-                document.getElementById("myDiv").innerHTML = xmlhttp.responseText;
+            function TurnRelay(number, on_off) {
+                var xmlhttp;
+                if (window.XMLHttpRequest)
+                {// code for IE7+, Firefox, Chrome, Opera, Safari
+                    xmlhttp = new XMLHttpRequest();
+                } else
+                {// code for IE6, IE5
+                    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                xmlhttp.onreadystatechange = function ()
+                {
+                    if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
+                    {
+                        document.getElementById("myDiv").innerHTML = xmlhttp.responseText;
+                    }
+                }
+                xmlhttp.open("GET", "command.php?command=Relay" + number + " " + on_off, true);
+                xmlhttp.send();
             }
-        }
-        xmlhttp.open("GET", "command.php?command=Relay" + number + " " + on_off, true);
-        xmlhttp.send();
-    }
 
-    function TurnAuto(number, isAuto) {
-        var xmlhttp;
-        if (window.XMLHttpRequest)
-        {// code for IE7+, Firefox, Chrome, Opera, Safari
-            xmlhttp = new XMLHttpRequest();
-        } else
-        {// code for IE6, IE5
-            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-        }
-        xmlhttp.onreadystatechange = function ()
-        {
-            if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
-            {
-                document.getElementById("myDiv").innerHTML = xmlhttp.responseText;
+            function TurnAuto(number, isAuto) {
+                var xmlhttp;
+                if (window.XMLHttpRequest)
+                {// code for IE7+, Firefox, Chrome, Opera, Safari
+                    xmlhttp = new XMLHttpRequest();
+                } else
+                {// code for IE6, IE5
+                    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                xmlhttp.onreadystatechange = function ()
+                {
+                    if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
+                    {
+                        document.getElementById("myDiv").innerHTML = xmlhttp.responseText;
+                    }
+                }
+                xmlhttp.open("GET", "command.php?command=Relay" + number + " isAuto " + isAuto, true);
+                xmlhttp.send();
             }
-        }
-        xmlhttp.open("GET", "command.php?command=Relay" + number + " isAuto " + isAuto, true);
-        xmlhttp.send();
-    }
 //-->
 </script>
 
@@ -333,8 +333,15 @@ if (!file_exists($_SERVER['DOCUMENT_ROOT'] . '/yieldbuddy2/www/users/' . $_SESSI
                                 </tr>
                                 <tr>
                                     <td height="2" colspan="2" valign="top">
+                                        <?php
+                                        include $_SERVER['DOCUMENT_ROOT'] . '/yieldbuddy2/www/sql/sql_camera_firstrow.php';
 
-                                        <iframe src="http://192.168.0.14:8081" 
+                                        if (session_status() == PHP_SESSION_NONE) {
+                                            session_start();
+                                        }
+                                        $camera_address = trim($_SESSION['camera_address']);
+                                        ?>
+                                        <iframe src="<?php echo $camera_address; ?>" 
                                                 width="640" 
                                                 height="480" 
                                                 style="border:2px solid orange">
