@@ -55,7 +55,7 @@ PWF_AS3935  lightning0(CS_PIN, IRQ_PIN, SI_PIN);
 //#define tank4_on
 //#define tanktotal_on
 //#define magnetometer_on
-//#define WaterTempP1_on
+#define WaterTempP1_on
 //#define WaterTempP1F_on
 //#define WaterTempP2_on
 //#define WaterTempP2F_on
@@ -436,7 +436,7 @@ byte BH1750_Read(int address) {
 */
 
 //**Dallas Temperature
-#define ONE_WIRE_PIN 8
+#define ONE_WIRE_PIN 3
 #define TEMPERATURE_PRECISION 9
 
 byte WaterTempP1_addr[] = {0x28, 0xFF, 0xB8, 0x14, 0x71, 0x15, 0x02, 0xE4};
@@ -449,7 +449,7 @@ OneWire  ds(ONE_WIRE_PIN);
 DallasTemperature sensors(&ds);
 
 //**RH AM2301
-#define DHTPIN 11
+#define DHTPIN 12
 #define DHTTYPE DHT22
 DHT dht(DHTPIN, DHTTYPE);
 
