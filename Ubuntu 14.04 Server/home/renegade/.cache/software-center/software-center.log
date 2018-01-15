@@ -1,1 +1,0 @@
-2016-03-25 00:08:42,239 - softwarecenter.region - WARNING - failed to use geoclue: 'org.freedesktop.Geoclue.Error.notAvailable: Geoclue master client has no usable Address providers'
