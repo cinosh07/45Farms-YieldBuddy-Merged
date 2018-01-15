@@ -9,7 +9,7 @@ if(!file_exists('users/' . $_SESSION['username'] . '.xml')){
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <LINK REL="SHORTCUT ICON"
-       HREF="/yieldbuddy/favicon.ico">
+       HREF="/yieldbuddy2/favicon.ico">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Sending Command</title>
 <style type="text/css">

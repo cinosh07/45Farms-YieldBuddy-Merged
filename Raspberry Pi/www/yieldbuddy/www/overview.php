@@ -4,7 +4,7 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 $username = $_SESSION['username'];
-if(!file_exists($_SERVER['DOCUMENT_ROOT']. '/yieldbuddy/www/users/' . $_SESSION['username']. '.xml')){
+if(!file_exists($_SERVER['DOCUMENT_ROOT']. '/yieldbuddy2/www/users/' . $_SESSION['username']. '.xml')){
 	header('Location: index.php');
 	die;
 }
@@ -17,7 +17,7 @@ if(!file_exists($_SERVER['DOCUMENT_ROOT']. '/yieldbuddy/www/users/' . $_SESSION[
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <LINK REL="SHORTCUT ICON"
-       HREF="/yieldbuddy/www/img/favicon.ico">
+       HREF="/yieldbuddy2/www/img/favicon.ico">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>yieldbuddy</title>
 <style type="text/css">
@@ -285,7 +285,7 @@ function TurnAuto(number, isAuto) {
     <img src="img/banner.png" width="280" height="52" />
     <color class="white">
     <?php
-    include $_SERVER['DOCUMENT_ROOT']. '/yieldbuddy/www/version.php';
+    include $_SERVER['DOCUMENT_ROOT']. '/yieldbuddy2/www/version.php';
     ?>
     </color>
     </td>

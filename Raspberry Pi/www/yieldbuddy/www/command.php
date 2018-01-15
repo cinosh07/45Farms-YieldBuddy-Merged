@@ -9,7 +9,7 @@ if(!file_exists('users/' . $_SESSION['username'] . '.xml')){
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <LINK REL="SHORTCUT ICON"
-       HREF="/yieldbuddy/www/img/favicon.ico">
+       HREF="/yieldbuddy2/www/img/favicon.ico">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Sending Command</title>
 <style type="text/css">
@@ -102,7 +102,7 @@ body,td,th {
 		
 		session_start();
 
-		$db = new SQLite3($_SERVER['DOCUMENT_ROOT'].'/yieldbuddy/www/sql/yieldbuddy.sqlite3');
+		$db = new SQLite3($_SERVER['DOCUMENT_ROOT'].'/yieldbuddy2/www/sql/yieldbuddy.sqlite3');
 		$db->busyTimeout(4000);
 		$alarmsql_query = "UPDATE Camera SET connectback_address='" . $camera_address ."'";
 		$query = $db->exec($alarmsql_query);
@@ -279,7 +279,7 @@ body,td,th {
 	}
 
 	//SEND COMMAND
-	$myFile = $_SERVER['DOCUMENT_ROOT'] . "/yieldbuddy/Command";
+	$myFile = $_SERVER['DOCUMENT_ROOT'] . "/yieldbuddy2/Command";
 	$file_command=fopen($myFile, "w") or exit("Unable to open file! '" .$myFile."'");
         fwrite($file_command, $command);
 	echo "Command Sent.";

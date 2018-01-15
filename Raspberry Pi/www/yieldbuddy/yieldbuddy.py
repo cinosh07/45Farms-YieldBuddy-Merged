@@ -543,6 +543,7 @@ def checkSerial():
 				#print("%s"%(line))  For Debugging
 				SetPoint_pH2,pH2Value_Low,pH2Value_High,pH2_Status=line.split(",")
 				SetPoint_pH2 = SetPoint_pH2.replace("Read fail", "")
+                                pH2Value_Low = pH2Value_Low.replace("ovf", "0")
 				pH2_Status = pH2_Status.rstrip()
 				print("\033[16;0H                                                                                                                       ")
 				print("\033[16;0H(" + now.strftime("%Y/%m/%d %H:%M:%S") + ") SetPoint_pH2: %s,%s,%s"%(pH2Value_Low,pH2Value_High,pH2_Status))
@@ -563,9 +564,12 @@ def checkSerial():
 		elif 'SetPoint_Temp' in line:
 			if oldSetPoint_Temp != line:
 				oldSetPoint_Temp = line
-				#print("%s"%(line))  For Debugging
+				#print("%s"%(line))  #For Debugging
 				SetPoint_Temp,TempValue_Low,TempValue_High,Heater_ON,Heater_OFF,AC_ON,AC_OFF,Temp_Status=line.split(",")
 				SetPoint_Temp = SetPoint_Temp.replace("Read fail", "")
+                                SetPoint_Temp = SetPoint_Temp.replace("ovf", "0.00")
+                                TempValue_Low = TempValue_Low.replace("ovf", "0.00")
+                                TempValue_High = TempValue_High.replace("ovf", "0.00")
 				Temp_Status = Temp_Status.rstrip()
 				print("\033[17;0H                                                                                                                       ")
 				print("\033[17;0H(" + now.strftime("%Y/%m/%d %H:%M:%S") + ") SetPoint_Temp: %s,%s,%s,%s,%s,%s,%s"%(TempValue_Low,TempValue_High,Heater_ON,Heater_OFF,AC_ON,AC_OFF,Temp_Status))

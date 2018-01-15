@@ -3,7 +3,7 @@
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
-include $_SERVER['DOCUMENT_ROOT'].'/yieldbuddy/www/sql/sql_alarms.php';
+include $_SERVER['DOCUMENT_ROOT'].'/yieldbuddy2/www/sql/sql_alarms.php';
 if(!file_exists('users/' . $_SESSION['username'] . '.xml')){
 	header('Location: index.php');
 	die;
@@ -49,7 +49,7 @@ function alarm_sql(sensorname, alarmname, alarmvalue) {
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <LINK REL="SHORTCUT ICON"
-       HREF="/yieldbuddy/www/img/favicon.ico">
+       HREF="/yieldbuddy2/www/img/favicon.ico">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>yieldbuddy</title>
 <style type="text/css">

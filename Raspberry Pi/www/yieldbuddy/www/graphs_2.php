@@ -16,7 +16,7 @@ if(!file_exists('users/' . $_SESSION['username'] . '.xml')){
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <LINK REL="SHORTCUT ICON"
-       HREF="/yieldbuddy/www/img/favicon.ico">
+       HREF="/yieldbuddy2/www/img/favicon.ico">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>yieldbuddy</title>
 <style type="text/css">
@@ -88,7 +88,7 @@ a:active {
     <img src="img/banner.png" width="280" height="52" />
     <color class="white">
     <?php
-    include $_SERVER['DOCUMENT_ROOT']. '/yieldbuddy/www/version.php';
+    include $_SERVER['DOCUMENT_ROOT']. '/yieldbuddy2/www/version.php';
     ?>
     </color>
     </td>
@@ -122,7 +122,7 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
-$db = new SQLite3($_SERVER['DOCUMENT_ROOT'].'/yieldbuddy/www/sql/yieldbuddy.sqlite3');
+$db = new SQLite3($_SERVER['DOCUMENT_ROOT'].'/yieldbuddy2/www/sql/yieldbuddy.sqlite3');
 $db->busyTimeout(2000);
 $results = $db->query('SELECT *	FROM Sensors_Log');
 

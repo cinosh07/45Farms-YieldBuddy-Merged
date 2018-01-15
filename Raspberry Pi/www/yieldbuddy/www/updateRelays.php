@@ -46,7 +46,7 @@ alert("ok!");
 
 session_start();
 
-include ($_SERVER['DOCUMENT_ROOT'].'/yieldbuddy/www/sql/sql_relays_firstrow.php');
+include ($_SERVER['DOCUMENT_ROOT'].'/yieldbuddy2/www/sql/sql_relays_firstrow.php');
 if ($_SESSION['Relay1'] > 1) {
 	exit();
 }

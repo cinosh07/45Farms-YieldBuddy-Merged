@@ -3,9 +3,9 @@
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
-include $_SERVER['DOCUMENT_ROOT'].'/yieldbuddy/www/sql/sql_arduino_firstrow.php';
-include $_SERVER['DOCUMENT_ROOT'].'/yieldbuddy/www/sql/sql_email_firstrow.php';
-include $_SERVER['DOCUMENT_ROOT'].'/yieldbuddy/www/sql/sql_camera_firstrow.php';
+include $_SERVER['DOCUMENT_ROOT'].'/yieldbuddy2/www/sql/sql_arduino_firstrow.php';
+include $_SERVER['DOCUMENT_ROOT'].'/yieldbuddy2/www/sql/sql_email_firstrow.php';
+include $_SERVER['DOCUMENT_ROOT'].'/yieldbuddy2/www/sql/sql_camera_firstrow.php';
 if(!file_exists('users/' . $_SESSION['username'] . '.xml')){
 	header('Location: index.php');
 	die;
@@ -19,7 +19,7 @@ if(!file_exists('users/' . $_SESSION['username'] . '.xml')){
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <LINK REL="SHORTCUT ICON"
-       HREF="/yieldbuddy/www/img/favicon.ico">
+       HREF="/yieldbuddy2/www/img/favicon.ico">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>yieldbuddy</title>
 <style type="text/css">
@@ -92,7 +92,7 @@ a:active {
     <img src="img/banner.png" width="280" height="52" />
     <color class="white">
     <?php
-    include $_SERVER['DOCUMENT_ROOT']. '/yieldbuddy/www/version.php';
+    include $_SERVER['DOCUMENT_ROOT']. '/yieldbuddy2/www/version.php';
     ?>
     </color>
   </tr>
@@ -411,7 +411,7 @@ a:active {
               function RestoreDefaultsConfirm() {
               var r=confirm("Restore Defaults?", "Confirm");
               if (r==true) {
-                window.location.assign("/yieldbuddy/www/command.php?submit=Restore Defaults")
+                window.location.assign("/yieldbuddy2/www/command.php?submit=Restore Defaults")
               }
             }
             </script>
@@ -529,7 +529,7 @@ Log
 
 <textarea width="900" height="400" name="logfiletextarea" class="textarea">
 <?php
-	$myFile = $_SERVER['DOCUMENT_ROOT']. "/yieldbuddy/log.txt";
+	$myFile = $_SERVER['DOCUMENT_ROOT']. "/yieldbuddy2/log.txt";
 	$file_log=fopen($myFile, "r") or exit("Unable to open file! '" .$myFile."'");
 	$contents = fread($file_log, filesize($myFile));
 	echo $contents;
