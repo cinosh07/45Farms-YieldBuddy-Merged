@@ -21,7 +21,7 @@ def drawInterface():
 	print("\033[0;0H")
 	os.system('clear')
 	#os.system('cat splashscreen')
-	print("\033[3;78Hyieldbuddy v1.17a")
+	print("\033[3;78Hyieldbuddy v2.00a")
 	print("\033[5;75H[Interface IP Addresses]")
 	print("\033[39;0H[  Lastest Messages  ]-------------------------------------------------------------------------------------")
 	print '\033[0m' #Un-Bold
@@ -861,7 +861,7 @@ for i in range(0, 9):
 	i=i+1
 	messagelog[i] = " "
 
-print 'yieldbuddy v1.17a\r\n'
+print 'yieldbuddy v2.00a\r\n'
 app_path = str( os.path.dirname(os.path.realpath(__file__)) )+"/"
 print 'Application Path: ' + app_path + '\n'
 
