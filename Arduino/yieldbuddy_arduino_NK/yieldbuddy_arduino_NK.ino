@@ -1,3 +1,4 @@
+#include <Arduino.h>
 #include <Time.h>
 #include <PString.h>
 #include <DHT.h>
@@ -8,7 +9,7 @@
 #include <DS1307RTC.h>
 #include <HMC5883L.h>
 #include <avr/pgmspace.h>
-#include "Arduino.h"
+
 
 #include "SPI.h"
 // include Playing With Fusion AXS3935 libraries
@@ -17,7 +18,7 @@
 // setup CS pins used for the connection with the sensor
 // other connections are controlled by the SPI library)
 int8_t CS_PIN  = 4;
-int8_t SI_PIN  = 3;
+int8_t SI_PIN  = 5;
 int8_t IRQ_PIN = 2;                       // digital pins 2 and 3 are available for interrupt capability
 volatile int8_t AS3935_ISR_Trig = 0;
 
@@ -26,7 +27,7 @@ volatile int8_t AS3935_ISR_Trig = 0;
 #define AS3935_OUTDOORS      0
 #define AS3935_DIST_DIS      1
 #define AS3935_DIST_EN       1
-#define AS3935_CAPACITANCE   80      // <-- SET THIS VALUE TO THE NUMBER LISTED ON YOUR BOARD 
+#define AS3935_CAPACITANCE   80      // <-- SET THIS VALUE TO THE NUMBER LISTED ON YOUR BOARD
 // prototypes
 void AS3935_ISR();
 
@@ -535,7 +536,7 @@ void setup()
   digitalWrite(sdcard_on, HIGH);
 
   sensors.begin();
-  
+
   //**Initialize Magnetometer
   compass = HMC5883L(); // Construct a new HMC5883 compass.
   Serial.println("Setting scale to +/- 1.3 Ga");
@@ -552,9 +553,9 @@ void setup()
   SPI.setClockDivider(SPI_CLOCK_DIV16);   // SPI speed to SPI_CLOCK_DIV16/1MHz (max 2MHz, NEVER 500kHz!)
   SPI.setDataMode(SPI_MODE1);             // MAX31855 is a Mode 1 device
                                           //    --> clock starts low, read on rising edge
-  SPI.setBitOrder(MSBFIRST);              // data sent to chip MSb first 
-  
-  lightning0.AS3935_DefInit();                        // set registers to default  
+  SPI.setBitOrder(MSBFIRST);              // data sent to chip MSb first
+
+  lightning0.AS3935_DefInit();                        // set registers to default
   // now update sensor cal for your application and power up chip
   lightning0.AS3935_ManualCal(AS3935_CAPACITANCE, AS3935_OUTDOORS, AS3935_DIST_EN);
                   // AS3935_ManualCal Parameters:
@@ -562,10 +563,10 @@ void setup()
                   //   --> indoors/outdoors (AS3935_INDOORS:0 / AS3935_OUTDOORS:1)
                   //   --> disturbers (AS3935_DIST_EN:1 / AS3935_DIST_DIS:2)
                   // function also powers up the chip
-                  
+
   // enable interrupt (hook IRQ pin to Arduino Uno/Mega interrupt input: 0 -> pin 2, 1 -> pin 3 )
 
-    
+
 
   //******COMMENT OUT THIS SECTION ON FIRST START UP!!-----------------------------------
 
@@ -576,7 +577,7 @@ void setup()
   int eeprom_day = EEPROM.read(3);
   int eeprom_month = EEPROM.read(4);
   int eeprom_yr = EEPROM.read(5);
-  
+
   //**EEPROM RELAYS
   Relay1_State = 0; //EEPROM.read(6);     //Water-Pump 1
   Relay2_State = 0; //EEPROM.read(7);     //Water supply
@@ -586,7 +587,7 @@ void setup()
   Relay6_State = 0; //EEPROM.read(11);    //Dehumidifier
   Relay7_State = 0; //EEPROM.read(12);    //AC
   Relay8_State = 0; //EEPROM.read(13);    //Light
-  
+
   //**Safe-Route ---> Disregard last known states and turn all relays off (auto will take over):
   turnRelay(1, 0);
   turnRelay(2, 0);
@@ -596,7 +597,7 @@ void setup()
   turnRelay(6, 0);
   turnRelay(7, 0);
   turnRelay(8, 0);
-  
+
   Relay1_isAuto = EEPROM.read(22);        //Water Pump 1
   Relay2_isAuto = EEPROM.read(23);        //Water Pump 2
   Relay3_isAuto = EEPROM.read(24);        //ph down
@@ -690,7 +691,7 @@ void setup()
   else {
     CO2_Enabled = false;
   }
-  
+
   //**EEPROM Light Settings
   LightValue_Low = eepromReadFloat(228);
   LightValue_High = eepromReadFloat(232);
@@ -813,7 +814,7 @@ void loop()
 //      EEPROM.write(i, 0);
 //    }
 //    delay(1000);
-//  
+//
 //    RestoreDefaults();
 //    turnRelay(1,1);
 //    delay(1000);
