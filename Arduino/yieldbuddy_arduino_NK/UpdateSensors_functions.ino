@@ -435,74 +435,74 @@ void updateSensorValues() {
 // ******************AS3935*******************************
 
  // now get interrupt source
-  uint8_t int_src = lightning0.AS3935_GetInterruptSrc();
-  if(0 == int_src)
-  {
-    MagXValue = -1;
-  }
-  else if(1 == int_src)
-  {
-    //this value will be magz for now
-    uint8_t lightning_dist_km = lightning0.AS3935_GetLightningDistKm();
-//    Serial.print("Lightning detected! Distance to strike: ");
-//    Serial.print(lightning_dist_km);
-//    Serial.println(" kilometers");
-    MagXValue = lightning_dist_km;
-    // this value will me magY for now
-    uint32_t nrgy_val = lightning0.AS3935_GetStrikeEnergyRaw();
-//    Serial.print("Raw Energy: ");
-//    Serial.println(nrgy_val);
-    MagYValue = nrgy_val;
-  }
-  else if(2 == int_src)
-  {
-    Serial.println("Disturber detected");
-    MagZValue = 63;
-  }
-  else if(3 == int_src)
-  {
-    Serial.println("Noise level too high");
-    MagXValue = -5;
-    MagYValue = -5;
-    MagZValue = -5;
-  }
+//  uint8_t int_src = lightning0.AS3935_GetInterruptSrc();
+//  if(0 == int_src)
+//  {
+//    MagXValue = -1;
+//  }
+//  else if(1 == int_src)
+//  {
+//    //this value will be magz for now
+//    uint8_t lightning_dist_km = lightning0.AS3935_GetLightningDistKm();
+////    Serial.print("Lightning detected! Distance to strike: ");
+////    Serial.print(lightning_dist_km);
+////    Serial.println(" kilometers");
+//    MagXValue = lightning_dist_km;
+//    // this value will me magY for now
+//    uint32_t nrgy_val = lightning0.AS3935_GetStrikeEnergyRaw();
+////    Serial.print("Raw Energy: ");
+////    Serial.println(nrgy_val);
+//    MagYValue = nrgy_val;
+//  }
+//  else if(2 == int_src)
+//  {
+//    Serial.println("Disturber detected");
+//    MagZValue = 63;
+//  }
+//  else if(3 == int_src)
+//  {
+//    Serial.println("Noise level too high");
+//    MagXValue = -5;
+//    MagYValue = -5;
+//    MagZValue = -5;
+//  }
 
 
 
   
 // ******************magnetometer sensor******************
 
-#if defined(magnetometer_on)
-  MagnetometerScaled scaled = compass.ReadScaledAxis();  
-  MagXRawValue = scaled.XAxis;
-  MagYRawValue = scaled.YAxis;
-  MagZRawValue = scaled.ZAxis;
-//  MagXValue = MagXRawValue;
-//  MagYValue = MagYRawValue;
-//  MagZValue = MagZRawValue;
+//#if defined(magnetometer_on)
+//  MagnetometerScaled scaled = compass.ReadScaledAxis();  
+//  MagXRawValue = scaled.XAxis;
+//  MagYRawValue = scaled.YAxis;
+//  MagZRawValue = scaled.ZAxis;
+////  MagXValue = MagXRawValue;
+////  MagYValue = MagYRawValue;
+////  MagZValue = MagZRawValue;
+////  MagXValue = 0;
+////  MagYValue = 0;
+////  MagZValue = 0;  
+//#else
+//  MagXRawValue = 0;
+//  MagYRawValue = 0;
+//  MagZRawValue = 0;
 //  MagXValue = 0;
 //  MagYValue = 0;
-//  MagZValue = 0;  
-#else
-  MagXRawValue = 0;
-  MagYRawValue = 0;
-  MagZRawValue = 0;
-  MagXValue = 0;
-  MagYValue = 0;
-  MagZValue = 0;
-#endif
-
-  PString my_MagX_string(MagX_char, sizeof(MagX_char));
-  my_MagX_string.print(MagXValue);
-  my_MagX_string.println("Guass");
-  
-  PString my_MagY_string(MagY_char, sizeof(MagY_char));
-  my_MagY_string.print(MagYValue);
-  my_MagY_string.println("Guass");
-  
-  PString my_MagZ_string(MagZ_char, sizeof(MagZ_char));
-  my_MagZ_string.print(MagZValue);
-  my_MagZ_string.println("Guass");
+//  MagZValue = 0;
+//#endif
+//
+//  PString my_MagX_string(MagX_char, sizeof(MagX_char));
+//  my_MagX_string.print(MagXValue);
+//  my_MagX_string.println("Guass");
+//  
+//  PString my_MagY_string(MagY_char, sizeof(MagY_char));
+//  my_MagY_string.print(MagYValue);
+//  my_MagY_string.println("Guass");
+//  
+//  PString my_MagZ_string(MagZ_char, sizeof(MagZ_char));
+//  my_MagZ_string.print(MagZValue);
+//  my_MagZ_string.println("Guass");
 //******************************************************  
   
  /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

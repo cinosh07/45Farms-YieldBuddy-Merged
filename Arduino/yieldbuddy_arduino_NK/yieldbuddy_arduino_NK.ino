@@ -7,31 +7,31 @@
 #include <OneWire.h>
 #include <DallasTemperature.h>
 #include <DS1307RTC.h>
-#include <HMC5883L.h>
+//#include <HMC5883L.h>
 #include <avr/pgmspace.h>
 
 
 #include "SPI.h"
 // include Playing With Fusion AXS3935 libraries
-#include "PWFusion_AS3935.h"
+//#include "PWFusion_AS3935.h"
 
 // setup CS pins used for the connection with the sensor
 // other connections are controlled by the SPI library)
-int8_t CS_PIN  = 4;
-int8_t SI_PIN  = 5;
-int8_t IRQ_PIN = 2;                       // digital pins 2 and 3 are available for interrupt capability
-volatile int8_t AS3935_ISR_Trig = 0;
+//int8_t CS_PIN  = 4;
+//int8_t SI_PIN  = 5;
+//int8_t IRQ_PIN = 2;                       // digital pins 2 and 3 are available for interrupt capability
+//volatile int8_t AS3935_ISR_Trig = 0;
 
 // #defines
-#define AS3935_INDOORS       1
-#define AS3935_OUTDOORS      0
-#define AS3935_DIST_DIS      1
-#define AS3935_DIST_EN       1
-#define AS3935_CAPACITANCE   80      // <-- SET THIS VALUE TO THE NUMBER LISTED ON YOUR BOARD
+//#define AS3935_INDOORS       1
+//#define AS3935_OUTDOORS      0
+//#define AS3935_DIST_DIS      1
+//#define AS3935_DIST_EN       1
+//#define AS3935_CAPACITANCE   80      // <-- SET THIS VALUE TO THE NUMBER LISTED ON YOUR BOARD
 // prototypes
-void AS3935_ISR();
+//void AS3935_ISR();
 
-PWF_AS3935  lightning0(CS_PIN, IRQ_PIN, SI_PIN);
+//PWF_AS3935  lightning0(CS_PIN, IRQ_PIN, SI_PIN);
 
 
 //*********************************************************
@@ -47,10 +47,10 @@ PWF_AS3935  lightning0(CS_PIN, IRQ_PIN, SI_PIN);
 #define dht_temp_on
 //#define dht_tempF_on
 #define dht_humidity_on
-#define soilhumidity_on
-#define light_on
-#define tank1_on
-#define tank2_on
+//#define soilhumidity_on
+//#define light_on
+//#define tank1_on
+//#define tank2_on
 //#define tank3_on
 //#define tank4_on
 //#define tanktotal_on
@@ -232,8 +232,8 @@ float echo = 0; // returned value in litres
 
 
 //**HMC5883L Magnetometer
-HMC5883L compass;
-int error = 0;
+//HMC5883L compass;
+//int error = 0;
 
 //**Tank 1
 String Tank1_Status = "OK";
@@ -509,8 +509,8 @@ int Relay7_isAuto = 1;  // Humidifier                    //AC
 int Relay8_isAuto = 1;  // Light
 
 //**added arduino ethernet shield
-int inet_on = 10;
-int sdcard_on = 5;
+//int inet_on = 10;
+//int sdcard_on = 5;
 
 /*
   /!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -530,23 +530,23 @@ void setup()
   pinMode(Relay8_Pin, OUTPUT);
 
   //**disable both ethernet and sdcard chips
-  pinMode(inet_on, OUTPUT);
-  pinMode(sdcard_on, OUTPUT);
-  digitalWrite(inet_on, HIGH);
-  digitalWrite(sdcard_on, HIGH);
+  //pinMode(inet_on, OUTPUT);
+  //pinMode(sdcard_on, OUTPUT);
+  //digitalWrite(inet_on, HIGH);
+  //digitalWrite(sdcard_on, HIGH);
 
   sensors.begin();
 
   //**Initialize Magnetometer
-  compass = HMC5883L(); // Construct a new HMC5883 compass.
-  Serial.println("Setting scale to +/- 1.3 Ga");
-  error = compass.SetScale(5.6); // Set the scale of the compass.
-  if (error != 0) // If there is an error, print it out.
-    Serial.println(compass.GetErrorText(error));
-  Serial.println("Setting measurement mode to continous.");
-  error = compass.SetMeasurementMode(Measurement_Continuous); // Set the measurement mode to Continuous
-  if (error != 0) // If there is an error, print it out.
-    Serial.println(compass.GetErrorText(error));
+  //compass = HMC5883L(); // Construct a new HMC5883 compass.
+//  Serial.println("Setting scale to +/- 1.3 Ga");
+//  //error = compass.SetScale(5.6); // Set the scale of the compass.
+//  if (error != 0) // If there is an error, print it out.
+//    Serial.println(compass.GetErrorText(error));
+//  Serial.println("Setting measurement mode to continous.");
+//  error = compass.SetMeasurementMode(Measurement_Continuous); // Set the measurement mode to Continuous
+//  if (error != 0) // If there is an error, print it out.
+//    Serial.println(compass.GetErrorText(error));
 
  // setup for the the SPI library:
   SPI.begin();                            // begin SPI
@@ -555,9 +555,9 @@ void setup()
                                           //    --> clock starts low, read on rising edge
   SPI.setBitOrder(MSBFIRST);              // data sent to chip MSb first
 
-  lightning0.AS3935_DefInit();                        // set registers to default
+  //lightning0.AS3935_DefInit();                        // set registers to default
   // now update sensor cal for your application and power up chip
-  lightning0.AS3935_ManualCal(AS3935_CAPACITANCE, AS3935_OUTDOORS, AS3935_DIST_EN);
+  //lightning0.AS3935_ManualCal(AS3935_CAPACITANCE, AS3935_OUTDOORS, AS3935_DIST_EN);
                   // AS3935_ManualCal Parameters:
                   //   --> capacitance, in pF (marked on package)
                   //   --> indoors/outdoors (AS3935_INDOORS:0 / AS3935_OUTDOORS:1)
@@ -798,7 +798,7 @@ void setup()
   Serial.begin(115200);
   //Serial.begin(115200);
 //  attachInterrupt(0, AS3935_ISR, RISING);
-  lightning0.AS3935_PrintAllRegs(); // for debug...
+  //lightning0.AS3935_PrintAllRegs(); // for debug...
 
 }
 
