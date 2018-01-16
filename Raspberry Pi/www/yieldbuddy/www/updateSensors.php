@@ -4,8 +4,8 @@ session_start();
 include $_SERVER['DOCUMENT_ROOT'].'/yieldbuddy2/www/sql/sql_sensors_firstrow.php';
 	  $pH1=$_SESSION['Sensors_pH1'];
           echo '<input type="hidden" id="ph1ValueInput" value="'.$pH1.'"/>';
-	  echo "pH1: ";
-	  echo $pH1. "<br />";
+//	  echo "pH1: ";
+//	  echo $pH1. "<br />";
 	  
 //	  $pH2=$_SESSION['Sensors_pH2'];
 //	  echo "pH2: ";
@@ -13,13 +13,13 @@ include $_SERVER['DOCUMENT_ROOT'].'/yieldbuddy2/www/sql/sql_sensors_firstrow.php
 
 	  $Temp=$_SESSION['Sensors_Temp'];
           echo '<input type="hidden" id="tempValueInput" value="'.$Temp.'"/>';
-	  echo "Temp: ";
-	  echo $Temp. "<br />";
+//	  echo "Temp: ";
+//	  echo $Temp. "<br />";
 
 	  $RH=$_SESSION['Sensors_RH'];
           echo '<input type="hidden" id="rhValueInput" value="'.$RH.'"/>';
-	  echo "RH: ";
-	  echo $RH. "<br />";
+//	  echo "RH: ";
+//	  echo $RH. "<br />";
 
 //	  $TDS1=$_SESSION['Sensors_TDS1'];
 //	  echo "TDS1: ";
@@ -39,8 +39,8 @@ include $_SERVER['DOCUMENT_ROOT'].'/yieldbuddy2/www/sql/sql_sensors_firstrow.php
 	  
 	  $Water=$_SESSION['Sensors_Water'];
           echo '<input type="hidden" id="waterValueInput" value="'.$Water.'"/>';
-	  echo "Water: ";
-	  echo $Water. "<br />";
+//	  echo "Water: ";
+//	  echo $Water. " || ";
 	  
 //	  $MagX=$_SESSION['Sensors_MagX'];
 //	  echo "MagX: ";
@@ -60,13 +60,13 @@ include $_SERVER['DOCUMENT_ROOT'].'/yieldbuddy2/www/sql/sql_sensors_firstrow.php
 	  
 	  $Tank1=$_SESSION['Sensors_Tank1'];
           echo '<input type="hidden" id="tank1ValueInput" value="'.$Tank1.'"/>';
-	  echo "Tank1: ";
-	  echo $Tank1. "<br />";
+//	  echo "Tank1: ";
+//	  echo $Tank1. " || ";
 	  
 	  $Tank2=$_SESSION['Sensors_Tank2'];
           echo '<input type="hidden" id="tank2ValueInput" value="'.$Tank2.'"/>';
-	  echo "Tank2: ";
-	  echo $Tank2. "<br />";
+//	  echo "Tank2: ";
+//	  echo $Tank2. "";
 	  
 //	  $Tank3=$_SESSION['Sensors_Tank3'];
 //	  echo "Tank3: ";
@@ -78,8 +78,8 @@ include $_SERVER['DOCUMENT_ROOT'].'/yieldbuddy2/www/sql/sql_sensors_firstrow.php
           
           $WaterTempP1=$_SESSION['Sensors_WaterTempP1'];
           echo '<input type="hidden" id="waterTemp1ValueInput" value="'.$WaterTempP1.'"/>';
-	  echo "WaterTempP1: ";
-	  echo $WaterTempP1. "<br />";
+//	  echo "WaterTempP1: ";
+//	  echo $WaterTempP1. "<br />";
           
 //          $WaterTempP2=$_SESSION['Sensors_WaterTempP2'];
 //	  echo "WaterTempP2: ";

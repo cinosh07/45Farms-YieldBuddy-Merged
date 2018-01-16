@@ -42,6 +42,29 @@ if (!file_exists($_SERVER['DOCUMENT_ROOT'] . '/yieldbuddy2/www/users/' . $_SESSI
                 .description {
                     font-size: 9px;
                 }
+                .onoff
+                {
+                width:120px;
+                height:60px;
+                padding:1px 2px 3px 3px;	
+                font-size:12px;
+                background:lightgray;
+                text-align:center;	
+                }
+                .onoff div
+                {
+                width:106px;
+                height:46px;
+                min-height:46px;	
+                background:red;
+                overflow:hidden;
+                border-top:1px solid gray;
+                border-right:1px solid white;
+                border-bottom:1px solid white;
+                border-left:1px solid gray;			
+                margin:0 auto;
+                color:gray;
+                }
                 a:link {
                     color: #999;
                     text-decoration: none;
@@ -142,7 +165,49 @@ e[d]=g}}e=new Gauge(e);k.getAttribute("data-value")&&e.setRawValue(parseFloat(k.
                 updateSensorInfo();
                 updateRelayInfo();
             }
-
+            var buttonstate=0;
+            function updateTank1(element)
+                {
+                  //buttonstate= 1 - buttonstate;
+                  var blabel, bstyle, bcolor;
+                  if($('#tank1ValueInput').val() === "1")
+                  {
+                    //blabel="on";
+                    bstyle="red";
+                    bcolor="lightgreen";
+                  }
+                  else if($('#tank1ValueInput').val() === "0")
+                  {
+                    //blabel="off";
+                    bstyle="green";
+                    bcolor="gray";
+                  }
+                  var child=element.firstChild;
+                  child.style.background=bstyle;
+                  child.style.color=bcolor;
+                  //child.innerHTML=blabel;
+                }
+            function updateTank2(element)
+                {
+                  //buttonstate= 1 - buttonstate;
+                  var blabel, bstyle, bcolor;
+                  if($('#tank2ValueInput').val() === "1")
+                  {
+                    //blabel="on";
+                    bstyle="red";
+                    bcolor="lightgreen";
+                  }
+                  else if($('#tank2ValueInput').val() === "1")
+                  {
+                    blabel="off";
+                    bstyle="green";
+                    bcolor="gray";
+                  }
+                  var child=element.firstChild;
+                  child.style.background=bstyle;
+                  child.style.color=bcolor;
+                  //child.innerHTML=blabel;
+                }
             function updateRaspberryPiTime() {
                 var ajaxRequest;  // The variable that makes Ajax possible!
 
@@ -350,26 +415,29 @@ e[d]=g}}e=new Gauge(e);k.getAttribute("data-value")&&e.setRawValue(parseFloat(k.
                     </tr>
                 </table>
     
-                <table width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
-                    <td width="1000" align="center"><div class="cssbox">
-                            <table>
+                <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <td width="100%" align="center"><div class="cssbox">
+                            <table width="100%" border="0" align="center">
                                 <tr>
-                                    <td width="456" height="20" align="left" valign="top">
+                                    <td width="50%" height="20" align="left" valign="top">
                                         <p id="RaspberryPiTime">  </p>
                                     </td>
-                                    <td width="456" height="20" align="right" valign="middle">
+                                    <td width="50%" height="20" align="right" valign="top">
                                         <p id="ArduinoTime">  </p>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td height="38" colspan="2"><table width="900" height="44" border="0">
+                                    <td height="38" colspan="2"><table width="100%" height="44" border="0">
                                             <tr>
-                                                <td height="40" valign="top"><p><strong>Sensor Information</strong></p>
+                                                <td height="40" align="left" valign="top"><p><strong>Sensor Information</strong></p>
                                                     <p id="sensorInfo"></p>
                                                     <canvas id="an_gauge_1" data-title="Air Temp" data-units="Temp. &deg;C" width="150" height="150" data-major-ticks="0 5 10 15 20 25 30 35 40" data-type="canv-gauge" data-min-value="0" data-max-value="40" data-highlights="0 10 #4D89F2, 10 20 #25B8D9, 20 28 #0BB950, 28 35 #cc5, 35 40 #f33" data-onready="setInterval( function() { Gauge.Collection.get('an_gauge_1').setValue(airTempVal);}, 200);"></canvas>
                                                     <canvas id="an_gauge_2" data-title="Water Temp" data-units="Temp. &deg;C" width="150" height="150" data-major-ticks="0 5 10 15 20 25 30 35 40" data-type="canv-gauge" data-min-value="0" data-max-value="40" data-highlights="0 10 #4D89F2, 10 20 #25B8D9, 20 28 #0BB950, 28 35 #cc5, 35 40 #f33" data-onready="setInterval( function() { Gauge.Collection.get('an_gauge_2').setValue(waterTemp1Val);}, 200);"></canvas>
                                                     <canvas id="an_gauge_3" data-title="PH" width="150" height="150"  data-major-ticks="0 100 200 300 400 500 600 700 800 900 1000 1023" data-type="canv-gauge" data-min-value="0" data-max-value="1023" data-onready="setInterval( function() { Gauge.Collection.get('an_gauge_3').setValue(ph1Val);}, 200);"></canvas>
                                                     <canvas id="an_gauge_4" data-title="Humidity" width="150" height="150"  data-major-ticks="0 100 200 300 400 500 600 700 800 900 1000 1023" data-type="canv-gauge" data-min-value="0" data-max-value="1023" data-onready="setInterval( function() { Gauge.Collection.get('an_gauge_4').setValue(rhVal);}, 200);"></canvas>
+                                                    <button id="tank1Gauge" class="onoff" onclick="updateTank1(this)"><div>Tank 1</div></button>
+                                                    <button id="tank2Gauge" class="onoff" onclick="updateTank2(this)"><div>Tank 2</div></button>
+
 <!--                                                    <canvas data-type="linear-gauge"
                                                         data-width="120"
                                                         data-height="400"
@@ -396,7 +464,7 @@ e[d]=g}}e=new Gauge(e);k.getAttribute("data-value")&&e.setRawValue(parseFloat(k.
                                                         data-bar-width="10"
                                                         data-value="35" ></canvas>-->
                                                 </td>
-                                                <td align="right" valign="top" width="456">        
+                                                <td align="right" valign="top">        
                                                     <p align="right" id="relayInfo"></p>
                                                 </td>
                                             </tr>
@@ -404,7 +472,7 @@ e[d]=g}}e=new Gauge(e);k.getAttribute("data-value")&&e.setRawValue(parseFloat(k.
                                 </tr>
                                 <tr>
                                     
-                                    <td height="2" colspan="2" valign="top">
+                                    <td height="2" colspan="2" align="center" valign="top">
                                         <?php
                                         include $_SERVER['DOCUMENT_ROOT'] . '/yieldbuddy2/www/sql/sql_camera_firstrow.php';
 

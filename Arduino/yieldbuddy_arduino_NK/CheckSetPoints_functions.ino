@@ -36,6 +36,32 @@ void CheckSetPoints() {
     #endif
   #endif
 
+  // Turn A/C - Intake Fan On
+ if (Relay7_isAuto == 1) {
+   if ((TempValue >= AC_ON) || (TempValue <= AC_OFF)) {
+
+     if (TempValue <= AC_OFF) {
+       turnRelay(7, 0);
+     }
+     if (TempValue >= AC_ON) {
+       turnRelay(7, 1);
+     }
+   }
+ }
+
+  //Humidifier
+ if (Relay6_isAuto == 1) {
+   if ((RHValue >= Humidifier_ON) || (RHValue <= Humidifier_OFF)) {
+
+     if (RHValue <= Humidifier_OFF - 1) {
+       turnRelay(6, 0);
+     }
+     if (RHValue >= Humidifier_ON + 1) {
+       turnRelay(6, 1);
+     }
+   }
+ }
+
   //  if(pumpActivityCounter <= 0){
   //
   //    if (pH1_Status == "LOW"){
@@ -87,30 +113,6 @@ void CheckSetPoints() {
 //    }
 //  }
 
-  // Turn A/C - Intake Fan On
- if (Relay7_isAuto == 1) {
-   if ((TempValue >= AC_ON) || (TempValue <= AC_OFF)) {
 
-     if (TempValue <= AC_OFF) {
-       turnRelay(7, 0);
-     }
-     if (TempValue >= AC_ON) {
-       turnRelay(7, 1);
-     }
-   }
- }
-
-  //Humidifier
- if (Relay6_isAuto == 1) {
-   if ((RHValue >= Humidifier_ON) || (RHValue <= Humidifier_OFF)) {
-
-     if (RHValue <= Humidifier_OFF - 1) {
-       turnRelay(6, 0);
-     }
-     if (RHValue >= Humidifier_ON + 1) {
-       turnRelay(6, 1);
-     }
-   }
- }
 
 }
