@@ -10,6 +10,32 @@
 
 void CheckSetPoints() {
 
+  // Open fresh water solenoid on relay 2 to Tank 1
+  #if defined(tank1_limit_switch_on)
+    #if defined(tank1_on)
+       if (Relay2_isAuto == 1) {
+         if (Tank1_Status == "OK") {
+             turnRelay(2, 0);
+           } else {
+             turnRelay(2, 1);
+           }
+         }
+      #endif
+  #endif
+
+  // Close Tap Water Revese Osmosis solenoid on relay 4 to Tank 2
+  #if defined(tank2_limit_switch_on)
+    #if defined(tank2_on)
+       if (Relay4_isAuto == 1) {
+         if (Tank2_Status == "OK") {
+             turnRelay(4, 1);
+           } else {
+             turnRelay(4, 0);
+           }
+         }
+    #endif
+  #endif
+
   //  if(pumpActivityCounter <= 0){
   //
   //    if (pH1_Status == "LOW"){
@@ -88,4 +114,3 @@ void CheckSetPoints() {
 //  }
 
 }
-
