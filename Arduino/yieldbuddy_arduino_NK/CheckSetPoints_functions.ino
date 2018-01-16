@@ -100,17 +100,17 @@ void CheckSetPoints() {
 //    }
 //  }
 
-  // Humidifier
-//  if (Relay7_isAuto == 1) {
-//    if ((RHValue >= Humidifier_ON) || (RHValue <= Humidifier_OFF)) {
-//
-//      if (RHValue <= Humidifier_OFF - 1) {
-//        turnRelay(7, 0);
-//      }
-//      if (RHValue >= Humidifier_ON + 1) {
-//        turnRelay(7, 1);
-//      }
-//    }
-//  }
+  //Humidifier
+ if (Relay6_isAuto == 1) {
+   if ((RHValue >= Humidifier_ON) || (RHValue <= Humidifier_OFF)) {
+
+     if (RHValue <= Humidifier_OFF - 1) {
+       turnRelay(6, 0);
+     }
+     if (RHValue >= Humidifier_ON + 1) {
+       turnRelay(6, 1);
+     }
+   }
+ }
 
 }

@@ -99,13 +99,13 @@ int Tank3LimitSwitchPin = 32;
 int Tank4LimitSwitchPin = 33;
 
 
-int Relay1_Pin = 25;  // Tank1Pump-FEED-PODS            //Water Aeroponic Pump
-int Relay2_Pin = 24;  // Tank2Pump-XFER-Tank3           //Water Supply
-int Relay3_Pin = 23;  // Tank3Pump-XFER-Tank1           //pH down
-int Relay4_Pin = 22;  // Tank4Pump-XFER-Tank2           //Nute 1
-int Relay5_Pin = 49;  // Nute 2
-int Relay6_Pin = 48;  // Dehumidifier
-int Relay7_Pin = 47;  // Humidifier                     //AC - Intake Fan
+int Relay1_Pin = 25;  //Water Aeroponic Pump
+int Relay2_Pin = 24;  //Water Supply Solenoid
+int Relay3_Pin = 23;  //pH up
+int Relay4_Pin = 22;  // Tap Water Solenoid    
+int Relay5_Pin = 49;  // Exhaust Fan
+int Relay6_Pin = 48;  // Humidifier
+int Relay7_Pin = 47;  //AC - Intake Fan
 int Relay8_Pin = 46;  // Light
 
 int Relay1_State = 0;
