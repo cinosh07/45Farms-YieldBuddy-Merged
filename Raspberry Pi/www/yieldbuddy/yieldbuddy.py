@@ -481,7 +481,7 @@ def checkSerial():
 			elapsedTime = now-startTime
 			elapsedSeconds = (elapsedTime.microseconds+(elapsedTime.days*24*3600+elapsedTime.seconds)*10**6)/10**6
 			print("\033[10;0H\r")
-			print("\033[10;0H(" + now.strftime("%Y/%m/%d %H:%M:%S") + ") Sensors: %s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s"%(pH1,pH2,Temp,RH,TDS1,TDS2,CO2,Light,Water,MagX,MagY,MagZ,TankTotal,Tank1,Tank2,Tank3,Tank4))
+			print("\033[10;0H(" + now.strftime("%Y/%m/%d %H:%M:%S") + ") Sensors: %s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s"%(pH1,pH2,Temp,RH,TDS1,TDS2,CO2,Light,Water,MagX,MagY,MagZ,TankTotal,Tank1,Tank2,Tank3,Tank4,WaterTempP1,WaterTempP2,WaterTempP3,WaterTempP4))
 			now = datetime.now()
 			delta = float(now.strftime('%s')) - float(LastDataPoint_Time.strftime('%s'))
 			if (delta < 0):
@@ -496,12 +496,12 @@ def checkSerial():
 #                                print("######### Sensor Log Line #########")
 #                                print((now.strftime("%Y-%m-%d %H:%M:%S")) + "," + pH1 + "," + pH2+ "," + Temp + "," + RH + "," + TDS1 + "," + TDS2 + "," + CO2 + "," + Light  + "," + Water + "," + MagX + "," + MagY + "," + MagZ + "," + TankTotal + "," + Tank1 + "," + Tank2 + "," + Tank3 + "," + Tank4 )
 #                                print("######### End Sensor Log Line #########")
-				update_sql("INSERT INTO 'Sensors_Log' (Time,pH1,pH2,Temp,RH,TDS1,TDS2,CO2,Light,Water,MagX,MagY,MagZ,TankTotal,Tank1,Tank2,Tank3,Tank4) VALUES ('" + now.strftime("%Y-%m-%d %H:%M:%S") + "'," + pH1 + "," + pH2+ "," + Temp + "," + RH + "," + TDS1 + "," + TDS2 + "," + CO2 + "," + Light  + "," + Water + "," + MagX + "," + MagY + "," + MagZ + "," + TankTotal + "," + Tank1 + "," + Tank2 + "," + Tank3 + "," + Tank4 +")")
+				update_sql("INSERT INTO 'Sensors_Log' (Time,pH1,pH2,Temp,RH,TDS1,TDS2,CO2,Light,Water,MagX,MagY,MagZ,TankTotal,Tank1,Tank2,Tank3,Tank4,WaterTempP1,WaterTempP2,WaterTempP3,WaterTempP4) VALUES ('" + now.strftime("%Y-%m-%d %H:%M:%S") + "'," + pH1 + "," + pH2+ "," + Temp + "," + RH + "," + TDS1 + "," + TDS2 + "," + CO2 + "," + Light  + "," + Water + "," + MagX + "," + MagY + "," + MagZ + "," + TankTotal + "," + Tank1 + "," + Tank2 + "," + Tank3 + "," + Tank4 + "," + WaterTempP1 + "," + WaterTempP2 + "," + WaterTempP3 + "," + WaterTempP4 +")")
 				LastDataPoint_Time = datetime.now()
 				timesync = 0 #do a timesync
 				Datapoint_count = Datapoint_count + 1
 			#SENSOR VALUES
-			update_sql("UPDATE `Sensors` SET pH1 = " + pH1 + ", pH2 = " + pH2 + ", Temp = " + Temp + ", RH = " + RH + ", TDS1 = " + TDS1 + ", TDS2 = " + TDS2 + ", CO2 = " + CO2 + ", Light = " + Light + ", Water = " + Water + ", MagX = " + MagX + ", MagY = " + MagY + ", MagZ = " + MagZ + ", TankTotal = " + TankTotal + ", Tank1 = " + Tank1 + ", Tank2 = " + Tank2 + ", Tank3 = " + Tank3 + ", Tank4 = " + Tank4 + "")
+			update_sql("UPDATE `Sensors` SET pH1 = " + pH1 + ", pH2 = " + pH2 + ", Temp = " + Temp + ", RH = " + RH + ", TDS1 = " + TDS1 + ", TDS2 = " + TDS2 + ", CO2 = " + CO2 + ", Light = " + Light + ", Water = " + Water + ", MagX = " + MagX + ", MagY = " + MagY + ", MagZ = " + MagZ + ", TankTotal = " + TankTotal + ", Tank1 = " + Tank1 + ", Tank2 = " + Tank2 + ", Tank3 = " + Tank3 + ", Tank4 = " + Tank4 + ", WaterTempP1 = " + WaterTempP1 + ", WaterTempP2 = " + WaterTempP2 + ", WaterTempP3 = " + WaterTempP3 + ", WaterTempP4 = " + WaterTempP4 + "")
 			db.commit()
 		elif 'Relays' in line:
 			if oldRelays != line:

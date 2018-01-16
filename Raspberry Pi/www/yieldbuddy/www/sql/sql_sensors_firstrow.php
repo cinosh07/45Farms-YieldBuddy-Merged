@@ -1,8 +1,9 @@
 <?php
+
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
-include($_SERVER['DOCUMENT_ROOT'].'/yieldbuddy2/www/sql/new_SQLite3.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/yieldbuddy2/www/sql/new_SQLite3.php');
 $db->busyTimeout(2000);
 $results = $db->query('SELECT *	FROM Sensors_Log');
 $column_to_session_value = array(
@@ -16,34 +17,38 @@ $column_to_session_value = array(
     "7" => "Sensors_CO2",
     "8" => "Sensors_Light",
     "9" => "Sensors_Water",
-	"10" => "Sensors_MagX",
-	"11" => "Sensors_MagY",
-	"12" => "Sensors_MagZ",
-	"13" => "Sensors_TankTotal",
-	"14" => "Sensors_Tank1",
-	"15" => "Sensors_Tank2",
-	"16" => "Sensors_Tank3",
-	"17" => "Sensors_Tank4",
-	
+    "10" => "Sensors_MagX",
+    "11" => "Sensors_MagY",
+    "12" => "Sensors_MagZ",
+    "13" => "Sensors_TankTotal",
+    "14" => "Sensors_Tank1",
+    "15" => "Sensors_Tank2",
+    "16" => "Sensors_Tank3",
+    "17" => "Sensors_Tank4",
+    
+    "18" => "Sensors_Tank4",
+    "19" => "Sensors_Tank4",
+    "20" => "Sensors_Tank4",
+    "21" => "Sensors_Tank4",
 );
 
 while ($row = $results->fetchArray()) {
 //	var_dump($row);
 
-	$i=0;
-	while($i < 18){
+    $i = 0;
+    while ($i < 18) {
 //	echo "<p></p>";
 //	echo '\'';
 //	echo $column_to_session_value[$i];
 //	echo '\'';
 //	echo ": ";
 //	echo $row[$i];
-	$session_string = $column_to_session_value[$i];
+        $session_string = $column_to_session_value[$i];
 //	echo "   Session String: ";
 //	echo $session_string;
-	$_SESSION[$session_string] = $row[$i];
-	$i=$i+1;
-	}
+        $_SESSION[$session_string] = $row[$i];
+        $i = $i + 1;
+    }
 }
 
 //echo $_SESSION['Sensors_pH1'];
