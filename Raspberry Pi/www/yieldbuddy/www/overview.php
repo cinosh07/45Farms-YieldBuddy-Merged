@@ -332,6 +332,7 @@ if (!file_exists($_SERVER['DOCUMENT_ROOT'] . '/yieldbuddy2/www/users/' . $_SESSI
                                     </td>
                                 </tr>
                                 <tr>
+                                    
                                     <td height="2" colspan="2" valign="top">
                                         <?php
                                         include $_SERVER['DOCUMENT_ROOT'] . '/yieldbuddy2/www/sql/sql_camera_firstrow.php';
@@ -341,9 +342,10 @@ if (!file_exists($_SERVER['DOCUMENT_ROOT'] . '/yieldbuddy2/www/users/' . $_SESSI
                                         }
                                         $camera_address = trim($_SESSION['camera_address']);
                                         ?>
+                                        <p><strong>Camera</strong></p>
                                         <iframe src="<?php echo $camera_address; ?>" 
                                                 width="640" 
-                                                height="480" 
+                                                height="360" 
                                                 style="border:2px solid orange">
                                         </iframe>
 
