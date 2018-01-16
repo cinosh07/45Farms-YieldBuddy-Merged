@@ -7,32 +7,8 @@
 #include <OneWire.h>
 #include <DallasTemperature.h>
 #include <DS1307RTC.h>
-//#include <HMC5883L.h>
 #include <avr/pgmspace.h>
-
-
 #include "SPI.h"
-// include Playing With Fusion AXS3935 libraries
-//#include "PWFusion_AS3935.h"
-
-// setup CS pins used for the connection with the sensor
-// other connections are controlled by the SPI library)
-//int8_t CS_PIN  = 4;
-//int8_t SI_PIN  = 5;
-//int8_t IRQ_PIN = 2;                       // digital pins 2 and 3 are available for interrupt capability
-//volatile int8_t AS3935_ISR_Trig = 0;
-
-// #defines
-//#define AS3935_INDOORS       1
-//#define AS3935_OUTDOORS      0
-//#define AS3935_DIST_DIS      1
-//#define AS3935_DIST_EN       1
-//#define AS3935_CAPACITANCE   80      // <-- SET THIS VALUE TO THE NUMBER LISTED ON YOUR BOARD
-// prototypes
-//void AS3935_ISR();
-
-//PWF_AS3935  lightning0(CS_PIN, IRQ_PIN, SI_PIN);
-
 
 //*********************************************************
 // Comment out any sensors that are not attached
@@ -50,9 +26,17 @@
 //#define soilhumidity_on
 //#define light_on
 //#define tank1_on
+//#define tank1_limit_switch_on
+//#define tank1_limit_switch_reverse
 //#define tank2_on
+//#define tank2_limit_switch_on
+//#define tank2_limit_switch_reverse
 //#define tank3_on
+//#define tank3_limit_switch_on
+//#define tank3_limit_switch_reverse
 //#define tank4_on
+//#define tank4_limit_switch_on
+//#define tank4_limit_switch_reverse
 //#define tanktotal_on
 //#define magnetometer_on
 #define WaterTempP1_on
@@ -63,6 +47,84 @@
 //#define WaterTempP3F_on
 //#define WaterTempP4_on
 //#define WaterTempP4F_on
+
+/*
+  /!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  /!!PIN DEFINITIONS!!PIN DEFINITIONS!!PIN DEFINITIONS!!PIN DEFINITIONS!!PIN DEFINITIONS!!PIN DEFINITIONS!!
+  /!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+*/
+
+//**Dallas Temperature
+#define ONE_WIRE_PIN 3
+#define TEMPERATURE_PRECISION 9
+
+byte WaterTempP1_addr[] = {0x28, 0xFF, 0xB8, 0x14, 0x71, 0x15, 0x02, 0xE4};
+byte WaterTempP2_addr[] = {0x28, 0xFF, 0xF9, 0x1E, 0x71, 0x15, 0x02, 0xDB};
+byte WaterTempP3_addr[] = {0x28, 0xFF, 0x6F, 0x28, 0x71, 0x15, 0x02, 0xB1};
+byte WaterTempP4_addr[] = {0x28, 0xFF, 0xBF, 0x86, 0x71, 0x15, 0x01, 0xB1};
+
+// Initialize One Wire
+OneWire  ds(ONE_WIRE_PIN);
+DallasTemperature sensors(&ds);
+
+//**RH AM2301
+#define DHTPIN 12
+#define DHTTYPE DHT22
+DHT dht(DHTPIN, DHTTYPE);
+
+//**Analog Sensors
+int TempPin = A0;
+int CO2Pin = A1;
+int LightPin = A2;
+int pH1Pin = A3;
+int pH2Pin = A4;
+int TDS1Pin = A5;
+int TDS2Pin = A6;
+int WaterPin = A7;
+
+//**utlrasonic tank sensors if limit switch tank is disabled
+int Tank1TrigPin = A8;
+int Tank1EchoPin = A9;
+int Tank2TrigPin = A10;
+int Tank2EchoPin = A11;
+int Tank3TrigPin = A12;
+int Tank3EchoPin = A13;
+int Tank4TrigPin = A14;
+int Tank4EchoPin = A15;
+
+//**tank limit switch tank is enabled
+int Tank1LimitSwitchPin = 30;
+int Tank2LimitSwitchPin = 31;
+int Tank3LimitSwitchPin = 32;
+int Tank4LimitSwitchPin = 33;
+
+
+int Relay1_Pin = 25;  // Tank1Pump-FEED-PODS            //Water Aeroponic Pump
+int Relay2_Pin = 24;  // Tank2Pump-XFER-Tank3           //Water Supply
+int Relay3_Pin = 23;  // Tank3Pump-XFER-Tank1           //pH down
+int Relay4_Pin = 22;  // Tank4Pump-XFER-Tank2           //Nute 1
+int Relay5_Pin = 49;  // Nute 2
+int Relay6_Pin = 48;  // Dehumidifier
+int Relay7_Pin = 47;  // Humidifier                     //AC - Intake Fan
+int Relay8_Pin = 46;  // Light
+
+int Relay1_State = 0;
+int Relay2_State = 0;
+int Relay3_State = 0;
+int Relay4_State = 0;
+int Relay5_State = 0;
+int Relay6_State = 0;
+int Relay7_State = 0;
+int Relay8_State = 0;
+
+int Relay1_isAuto = 1;  // Tank1Pump-FEED-PODS           //Water Pump
+int Relay2_isAuto = 1;  // Tank2Pump-XFER-Tank3 || Tank1 //Water Supply
+int Relay3_isAuto = 0;  // Tank4Pump-XFER-Tank2          //pH down
+int Relay4_isAuto = 0;  // Nute 1
+int Relay5_isAuto = 0;  // Nute 2
+int Relay6_isAuto = 1;  // Dehumidifier
+int Relay7_isAuto = 1;  // Humidifier                    //AC
+int Relay8_isAuto = 1;  // Light
 
 /*
   /!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -425,93 +487,6 @@ byte BH1750_Read(int address) {
 }
 
 
-
-
-
-
-/*
-  /!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-  /!!PIN DEFINITIONS!!PIN DEFINITIONS!!PIN DEFINITIONS!!PIN DEFINITIONS!!PIN DEFINITIONS!!PIN DEFINITIONS!!
-  /!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-*/
-
-//**Dallas Temperature
-#define ONE_WIRE_PIN 3
-#define TEMPERATURE_PRECISION 9
-
-byte WaterTempP1_addr[] = {0x28, 0xFF, 0xB8, 0x14, 0x71, 0x15, 0x02, 0xE4};
-byte WaterTempP2_addr[] = {0x28, 0xFF, 0xF9, 0x1E, 0x71, 0x15, 0x02, 0xDB};
-byte WaterTempP3_addr[] = {0x28, 0xFF, 0x6F, 0x28, 0x71, 0x15, 0x02, 0xB1};
-byte WaterTempP4_addr[] = {0x28, 0xFF, 0xBF, 0x86, 0x71, 0x15, 0x01, 0xB1};
-
-// Initialize One Wire
-OneWire  ds(ONE_WIRE_PIN);
-DallasTemperature sensors(&ds);
-
-//**RH AM2301
-#define DHTPIN 12
-#define DHTTYPE DHT22
-DHT dht(DHTPIN, DHTTYPE);
-
-//**Analog Sensors
-int TempPin = A0;
-int CO2Pin = A1;
-int LightPin = A2;
-int pH1Pin = A3;
-int pH2Pin = A4;
-int TDS1Pin = A5;
-int TDS2Pin = A6;
-int WaterPin = A7;
-
-//**added utlrasonic tank sensors
-int Tank1TrigPin = A8;
-int Tank1EchoPin = A9;
-int Tank2TrigPin = A10;
-int Tank2EchoPin = A11;
-int Tank3TrigPin = A12;
-int Tank3EchoPin = A13;
-int Tank4TrigPin = A14;
-int Tank4EchoPin = A15;
-
-//**testing
-//int Tank2TrigPin = A8;
-//int Tank2EchoPin = A9;
-//int Tank3TrigPin = A8;
-//int Tank3EchoPin = A9;
-//int Tank4TrigPin = A8;
-//int Tank4EchoPin = A9;
-
-int Relay1_Pin = 25;  // Tank1Pump-FEED-PODS            //Water Pump
-int Relay2_Pin = 24;  // Tank2Pump-XFER-Tank3           //Water Supply
-int Relay3_Pin = 23;  // Tank3Pump-XFER-Tank1           //pH down
-int Relay4_Pin = 22;  // Tank4Pump-XFER-Tank2           //Nute 1
-int Relay5_Pin = 49;  // Nute 2
-int Relay6_Pin = 48;  // Dehumidifier
-int Relay7_Pin = 47;  // Humidifier                     //AC
-int Relay8_Pin = 46;  // Light
-
-int Relay1_State = 0;
-int Relay2_State = 0;
-int Relay3_State = 0;
-int Relay4_State = 0;
-int Relay5_State = 0;
-int Relay6_State = 0;
-int Relay7_State = 0;
-int Relay8_State = 0;
-
-int Relay1_isAuto = 1;  // Tank1Pump-FEED-PODS           //Water Pump
-int Relay2_isAuto = 1;  // Tank2Pump-XFER-Tank3 || Tank1 //Water Supply
-int Relay3_isAuto = 0;  // Tank4Pump-XFER-Tank2          //pH down
-int Relay4_isAuto = 0;  // Nute 1
-int Relay5_isAuto = 0;  // Nute 2
-int Relay6_isAuto = 1;  // Dehumidifier
-int Relay7_isAuto = 1;  // Humidifier                    //AC
-int Relay8_isAuto = 1;  // Light
-
-//**added arduino ethernet shield
-//int inet_on = 10;
-//int sdcard_on = 5;
-
 /*
   /!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
   /!!SETUP!!SETUP!!SETUP!!SETUP!!SETUP!!SETUP!!SETUP!!SETUP!!SETUP!!SETUP!!SETUP!!SETUP!!SETUP!!SETUP!!!!SETUP!!SETUP!!SETUP!!SETUP!!SETUP!!SETUP!!SETUP!!SETUP!!SETUP!!SETUP!!SETUP!!SETUP!!SETUP!!SETUP!!
@@ -529,24 +504,7 @@ void setup()
   pinMode(Relay7_Pin, OUTPUT);
   pinMode(Relay8_Pin, OUTPUT);
 
-  //**disable both ethernet and sdcard chips
-  //pinMode(inet_on, OUTPUT);
-  //pinMode(sdcard_on, OUTPUT);
-  //digitalWrite(inet_on, HIGH);
-  //digitalWrite(sdcard_on, HIGH);
-
   sensors.begin();
-
-  //**Initialize Magnetometer
-  //compass = HMC5883L(); // Construct a new HMC5883 compass.
-//  Serial.println("Setting scale to +/- 1.3 Ga");
-//  //error = compass.SetScale(5.6); // Set the scale of the compass.
-//  if (error != 0) // If there is an error, print it out.
-//    Serial.println(compass.GetErrorText(error));
-//  Serial.println("Setting measurement mode to continous.");
-//  error = compass.SetMeasurementMode(Measurement_Continuous); // Set the measurement mode to Continuous
-//  if (error != 0) // If there is an error, print it out.
-//    Serial.println(compass.GetErrorText(error));
 
  // setup for the the SPI library:
   SPI.begin();                            // begin SPI
@@ -554,19 +512,6 @@ void setup()
   SPI.setDataMode(SPI_MODE1);             // MAX31855 is a Mode 1 device
                                           //    --> clock starts low, read on rising edge
   SPI.setBitOrder(MSBFIRST);              // data sent to chip MSb first
-
-  //lightning0.AS3935_DefInit();                        // set registers to default
-  // now update sensor cal for your application and power up chip
-  //lightning0.AS3935_ManualCal(AS3935_CAPACITANCE, AS3935_OUTDOORS, AS3935_DIST_EN);
-                  // AS3935_ManualCal Parameters:
-                  //   --> capacitance, in pF (marked on package)
-                  //   --> indoors/outdoors (AS3935_INDOORS:0 / AS3935_OUTDOORS:1)
-                  //   --> disturbers (AS3935_DIST_EN:1 / AS3935_DIST_DIS:2)
-                  // function also powers up the chip
-
-  // enable interrupt (hook IRQ pin to Arduino Uno/Mega interrupt input: 0 -> pin 2, 1 -> pin 3 )
-
-
 
   //******COMMENT OUT THIS SECTION ON FIRST START UP!!-----------------------------------
 
@@ -695,7 +640,7 @@ void setup()
   //**EEPROM Light Settings
   LightValue_Low = eepromReadFloat(228);
   LightValue_High = eepromReadFloat(232);
-  
+
   //**added ultrasonic tank sensors
   //
   //**Water Tank 1
@@ -796,9 +741,6 @@ void setup()
   setSyncProvider(RTC.get);
 
   Serial.begin(115200);
-  //Serial.begin(115200);
-//  attachInterrupt(0, AS3935_ISR, RISING);
-  //lightning0.AS3935_PrintAllRegs(); // for debug...
 
 }
 
@@ -816,32 +758,7 @@ void loop()
 //    delay(1000);
 //
 //    RestoreDefaults();
-//    turnRelay(1,1);
-//    delay(1000);
-//    turnRelay(1,0);
-//    turnRelay(2,1);
-//    delay(1000);
-//    turnRelay(2,0);
-//    turnRelay(3,1);
-//    delay(1000);
-//    turnRelay(3,0);
-//    turnRelay(4,1);
-//    delay(1000);
-//    turnRelay(4,0);
-//    turnRelay(5,1);
-//    delay(1000);
-//    turnRelay(5,0);
-//    turnRelay(6,1);
-//    delay(1000);
-//    turnRelay(6,0);
-//    turnRelay(7,1);
-//    delay(1000);
-//    turnRelay(7,0);
-//    turnRelay(8,1);
-//    delay(1000);
-//    turnRelay(8,0);
-//    delay(30000);
-//    delay(30000);
+
 
   while (1) {
     updatelongdate();
@@ -854,21 +771,5 @@ void loop()
     pumpActivityCounter--;
   }
 
-} // end point
-
-//// this is irq handler for AS3935 interrupts, has to return void and take no arguments
-//// always make code in interrupt handlers fast and short
-//void AS3935_ISR()
-//{
-//  AS3935_ISR_Trig = 1;
-//}
-
-
-
-
-
-
-
-
-
-
+}
+// end point
