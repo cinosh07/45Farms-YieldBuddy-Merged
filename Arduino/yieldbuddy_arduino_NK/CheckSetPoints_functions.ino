@@ -87,18 +87,18 @@ void CheckSetPoints() {
 //    }
 //  }
 
-  // Demumidifier
-//  if (Relay6_isAuto == 1) {
-//    if ((RHValue >= Dehumidifier_ON) || (RHValue <= Dehumidifier_OFF)) {
-//
-//      if (RHValue <= Dehumidifier_OFF - 1) {
-//        turnRelay(6, 0);
-//      }
-//      if (RHValue >= Dehumidifier_ON + 1) {
-//        turnRelay(6, 1);
-//      }
-//    }
-//  }
+  // Turn A/C - Intake Fan On
+ if (Relay7_isAuto == 1) {
+   if ((TempValue >= AC_ON) || (TempValue <= AC_OFF)) {
+
+     if (TempValue <= AC_OFF) {
+       turnRelay(7, 0);
+     }
+     if (TempValue >= AC_ON) {
+       turnRelay(7, 1);
+     }
+   }
+ }
 
   //Humidifier
  if (Relay6_isAuto == 1) {
