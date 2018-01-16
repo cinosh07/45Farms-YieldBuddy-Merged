@@ -68,6 +68,22 @@ include $_SERVER['DOCUMENT_ROOT'].'/yieldbuddy2/www/sql/sql_sensors_firstrow.php
 
 	  $Tank4=$_SESSION['Sensors_Tank4'];
 	  echo "Tank4: ";
-	  echo $Tank4. "<br />";	  
+	  echo $Tank4. "<br />";	
+          
+          $WaterTempP1=$_SESSION['Sensors_WaterTempP1'];
+	  echo "WaterTempP1: ";
+	  echo $WaterTempP1. "<br />";
+          
+          $WaterTempP2=$_SESSION['Sensors_WaterTempP2'];
+	  echo "WaterTempP2: ";
+	  echo $WaterTempP2. "<br />";
+          
+          $WaterTempP3=$_SESSION['Sensors_WaterTempP3'];
+	  echo "WaterTempP3: ";
+	  echo $WaterTempP3. "<br />";
+          
+          $WaterTempP4=$_SESSION['Sensors_WaterTempP4'];
+	  echo "WaterTempP4: ";
+	  echo $WaterTempP4. "<br />";
 	  
 ?>

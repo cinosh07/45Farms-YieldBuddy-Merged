@@ -219,7 +219,7 @@ if ($_SESSION['Relay1'] > 1) {
 	  try
 	  {
 	  echo "<tr>";
-	  echo "<td>Relay 7 (A/C): </td>";
+	  echo "<td>Relay 7 (A/C - Intake Fan): </td>";
 	  $Relay7=$_SESSION['Relay7'];
 	  //echo $Relay7. "<br />";
 
