@@ -118,7 +118,7 @@ if ($_SESSION['Relay1'] > 1) {
 	  try
 	  {
       echo "<tr>";
-	  echo "<td>Relay 3 (pH Down) </td>";
+	  echo "<td>Relay 3 (pH UP) </td>";
 	  $Relay3=$_SESSION['Relay3'];
 	  //echo $Relay3. "<br />";
 
@@ -144,7 +144,7 @@ if ($_SESSION['Relay1'] > 1) {
 	  try
 	  {
       echo "<tr>";
-	  echo "<td>Relay 4 (Spare 12V Relay): </td>";
+	  echo "<td>Relay 4 (Tap Water Solenoid): </td>";
 	  $Relay4=$_SESSION['Relay4'];
 	  //echo $Relay4. "<br />";
 
@@ -194,7 +194,7 @@ if ($_SESSION['Relay1'] > 1) {
 	  try
 	  {
 	  echo "<tr>";
-	  echo "<td>Relay 6 (Dehumidifier): </td>";
+	  echo "<td>Relay 6 (Humidifier): </td>";
 	  $Relay6=$_SESSION['Relay6'];
 	  //echo $Relay6. "<br />";
 
