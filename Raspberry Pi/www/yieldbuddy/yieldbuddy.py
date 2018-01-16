@@ -472,7 +472,10 @@ def checkSerial():
 				timesync = 0
 			timesync = timesync + 1
 		elif 'Sensors' in line:
-			Sensors,pH1,pH2,Temp,RH,TDS1,TDS2,CO2,Light,Water,MagX,MagY,MagZ,TankTotal,Tank1,Tank2,Tank3,Tank4=line.split(",")
+                        print("######### Sensor Line #########")
+                        print(line)
+                        print("######### End Sensor Line #########")
+			Sensors,pH1,pH2,Temp,RH,TDS1,TDS2,CO2,Light,Water,MagX,MagY,MagZ,TankTotal,Tank1,Tank2,Tank3,Tank4,WaterTempP1,WaterTempP2,WaterTempP3,WaterTempP4=line.split(",")
 			Sensors = Sensors.replace("Read fail", "")
 			Light = Light.rstrip()
 			elapsedTime = now-startTime
@@ -490,6 +493,9 @@ def checkSerial():
 			if (delta >= TakeDataPoint_Every) or (Datapoint_count == 0 and first_timesync == True):
 				addMessageLog("Added a data point to the sensor values log.")
 				printMessageLog()
+                                print("######### Sensor Log Line #########")
+                                print((now.strftime("%Y-%m-%d %H:%M:%S")) + "," + pH1 + "," + pH2+ "," + Temp + "," + RH + "," + TDS1 + "," + TDS2 + "," + CO2 + "," + Light  + "," + Water + "," + MagX + "," + MagY + "," + MagZ + "," + TankTotal + "," + Tank1 + "," + Tank2 + "," + Tank3 + "," + Tank4 )
+                                print("######### End Sensor Log Line #########")
 				update_sql("INSERT INTO 'Sensors_Log' (Time,pH1,pH2,Temp,RH,TDS1,TDS2,CO2,Light,Water,MagX,MagY,MagZ,TankTotal,Tank1,Tank2,Tank3,Tank4) VALUES ('" + now.strftime("%Y-%m-%d %H:%M:%S") + "'," + pH1 + "," + pH2+ "," + Temp + "," + RH + "," + TDS1 + "," + TDS2 + "," + CO2 + "," + Light  + "," + Water + "," + MagX + "," + MagY + "," + MagZ + "," + TankTotal + "," + Tank1 + "," + Tank2 + "," + Tank3 + "," + Tank4 +")")
 				LastDataPoint_Time = datetime.now()
 				timesync = 0 #do a timesync
@@ -500,7 +506,9 @@ def checkSerial():
 		elif 'Relays' in line:
 			if oldRelays != line:
 				oldRelays = line
-				#print("%s"%(line))  For Debugging
+				print("######### Relays Line #########")
+                                print(line)
+                                print("######### End Relays Line #########")
 				Relays,Relay1,Relay2,Relay3,Relay4,Relay5,Relay6,Relay7,Relay8=line.split(",")
 				Relays = Relays.replace("Read fail", "")
 				Relay8 = Relay8.rstrip()
@@ -511,7 +519,9 @@ def checkSerial():
 				db.commit()
 		elif 'Relay_isAuto' in line:
 			if oldRelay_isAuto != line:
-				#print("%s"%(line))  For Debugging
+				print("######### Relays Is Auto Line #########")
+                                print(line)
+                                print("######### End Relays Is Auto Line #########")
 				oldRelay_isAuto = line
 				Relay_isAuto,Relay1_isAuto,Relay2_isAuto,Relay3_isAuto,Relay4_isAuto,Relay5_isAuto,Relay6_isAuto,Relay7_isAuto,Relay8_isAuto=line.split(",")
 				Relay_isAuto = Relay_isAuto.replace("Read fail", "")
@@ -524,7 +534,9 @@ def checkSerial():
 		elif 'Light_Schedule' in line:
 			if oldLight_Schedule != line:
 				oldLight_Schedule = line
-				#print("%s"%(line))  For Debugging
+				print("######### Light Schedule Line #########")
+                                print(line)
+                                print("######### End Light Schedule Line #########")
 				Lighting,Light_ON_hour,Light_ON_min,Light_OFF_hour,Light_OFF_min=line.split(",")
 				Lighting = Lighting.replace("Read fail", "")
 				Light_OFF_min = Light_OFF_min.rstrip()
@@ -535,7 +547,9 @@ def checkSerial():
 		elif 'Watering_Schedule' in line:
 			if oldWatering_Schedule != line:
 				oldWatering_Schedule = line
-				#print("%s"%(line))  For Debugging
+				print("######### Water Schedule Line #########")
+                                print(line)
+                                print("######### Water Light Schedule Line #########")
 				Watering,Pump_start_hour,Pump_start_min,Pump_start_isAM,Pump_every_hours,Pump_every_mins,Pump_for,Pump_times=line.split(",")
 				Watering = Watering.replace("Read fail", "")
 				Pump_times = Pump_times.rstrip()
@@ -546,7 +560,9 @@ def checkSerial():
 		elif 'SetPoint_pH1' in line:
 			if oldSetPoint_pH1 != line:
 				oldSetPoint_pH1 = line
-				#print("%s"%(line))  For Debugging
+				print("######### PH1 setpoint Line #########")
+                                print(line)
+                                print("######### End PH1 setpoint Line #########")
 				SetPoint_pH1,pH1Value_Low,pH1Value_High,pH1_Status=line.split(",")
 				SetPoint_pH1 = SetPoint_pH1.replace("Read fail", "")
 				pH1_Status = pH1_Status.rstrip()
@@ -571,7 +587,9 @@ def checkSerial():
 		elif 'SetPoint_pH2' in line:
 			if oldSetPoint_pH2 != line:
 				oldSetPoint_pH2 = line
-				#print("%s"%(line))  For Debugging
+				print("######### PH2 setpoint Line #########")
+                                print(line)
+                                print("######### End PH2 setpoint Line #########")
 				SetPoint_pH2,pH2Value_Low,pH2Value_High,pH2_Status=line.split(",")
 				SetPoint_pH2 = SetPoint_pH2.replace("Read fail", "")
                                 pH2Value_Low = pH2Value_Low.replace("ovf", "0")
@@ -597,7 +615,9 @@ def checkSerial():
 		elif 'SetPoint_Temp' in line:
 			if oldSetPoint_Temp != line:
 				oldSetPoint_Temp = line
-				#print("%s"%(line))  #For Debugging
+				print("######### Temp setpoint Line #########")
+                                print(line)
+                                print("######### End Temp setpoint Line #########")
 				SetPoint_Temp,TempValue_Low,TempValue_High,Heater_ON,Heater_OFF,AC_ON,AC_OFF,Temp_Status=line.split(",")
 				SetPoint_Temp = SetPoint_Temp.replace("Read fail", "")
                                 SetPoint_Temp = SetPoint_Temp.replace("ovf", "0.00")
@@ -625,7 +645,9 @@ def checkSerial():
 		elif 'SetPoint_RH' in line:
 			if oldSetPoint_RH != line:
 				oldSetPoint_RH = line
-				#print("%s"%(line))  For Debugging
+				print("######### RH setpoint Line #########")
+                                print(line)
+                                print("######### End RH setpoint Line #########")
 				SetPoint_RH,RHValue_Low,RHValue_High,Humidifier_ON,Humidifier_OFF,Dehumidifier_ON,Dehumidifier_OFF,RH_Status=line.split(",")
 				SetPoint_RH = SetPoint_RH.replace("Read fail", "")
 				RH_Status = RH_Status.rstrip()
@@ -650,7 +672,9 @@ def checkSerial():
 		elif 'SetPoint_TDS1' in line:
 			if oldSetPoint_TDS1 != line:
 				oldSetPoint_TDS1 = line
-				#print("%s"%(line))  For Debugging
+				print("######### TDS1 setpoint Line #########")
+                                print(line)
+                                print("######### End TDS1 setpoint Line #########")
 				SetPoint_TDS1,TDS1Value_Low,TDS1Value_High,NutePump1_ON,NutePump1_OFF,MixPump1_Enabled,TDS1_Status=line.split(",")
 				SetPoint_TDS1 = SetPoint_TDS1.replace("Read fail", "")
 				TDS1_Status = TDS1_Status.rstrip()
@@ -675,7 +699,9 @@ def checkSerial():
 		elif 'SetPoint_TDS2' in line:
 			if oldSetPoint_TDS2 != line:
 				oldSetPoint_TDS2 = line
-				#print("%s"%(line))  For Debugging
+				print("######### TDS2 setpoint Line #########")
+                                print(line)
+                                print("######### End TDS2 setpoint Line #########")
 				SetPoint_TDS2,TDS2Value_Low,TDS2Value_High,NutePump2_ON,NutePump2_OFF,MixPump2_Enabled,TDS2_Status=line.split(",")
 				SetPoint_TDS2 = SetPoint_TDS2.replace("Read fail", "")
 				TDS2_Status = TDS2_Status.rstrip()
@@ -700,7 +726,9 @@ def checkSerial():
 		elif 'SetPoint_CO2' in line:
 			if oldSetPoint_CO2 != line:
 				oldSetPoint_CO2 = line
-				#print("%s"%(line))  For Debugging
+				print("######### CO2 setpoint Line #########")
+                                print(line)
+                                print("######### End CO2 setpoint Line #########")
 				SetPoint_CO2,CO2Value_Low,CO2Value_High,CO2_ON,CO2_OFF,CO2_Enabled,CO2_Status=line.split(",")
 				SetPoint_CO2 = SetPoint_CO2.replace("Read fail", "")
 				CO2_Status = CO2_Status.rstrip()
@@ -725,7 +753,9 @@ def checkSerial():
 		elif 'SetPoint_Light' in line:
 			if oldSetPoint_Light != line:
 				oldSetPoint_Light = line
-				#print("%s"%(line))  For Debugging
+				print("######### Light setpoint Line #########")
+                                print(line)
+                                print("######### End Light setpoint Line #########")
 				SetPoint_Light,LightValue_Low,LightValue_High,Light_Status=line.split(",")
 				SetPoint_Light = SetPoint_Light.replace("Read fail", "")
 				Light_Status = Light_Status.rstrip()
@@ -750,7 +780,9 @@ def checkSerial():
 		elif 'SetPoint_Water' in line:
 			if oldSetPoint_Water != line:
 				oldSetPoint_Water = line
-				#print("%s"%(line))  For Debugging
+				print("######### Water setpoint Line #########")
+                                print(line)
+                                print("######### End Water setpoint Line #########")
 				SetPoint_Water,WaterValue_Low,WaterValue_High,Water_Status=line.split(",")
 				SetPoint_Water = SetPoint_Water.replace("Read fail", "")
 				Water_Status = Water_Status.rstrip()
@@ -775,7 +807,9 @@ def checkSerial():
 		elif 'SetPoint_TankTotal' in line:
 			if oldSetPoint_TankTotal != line:
 				oldSetPoint_TankTotal = line
-				#print("%s"%(line))  For Debugging
+				print("######### Tank Total setpoint Line #########")
+                                print(line)
+                                print("######### End Tank Total setpoint Line #########")
 				SetPoint_TankTotal,TankTotalValue_Low,TankTotalValue_High,TankTotal_Status=line.split(",")
 				SetPoint_TankTotal = SetPoint_TankTotal.replace("Read fail", "")
 				TankTotal_Status = TankTotal_Status.rstrip()
@@ -800,7 +834,9 @@ def checkSerial():
 		elif 'SetPoint_Tank1' in line:
 			if oldSetPoint_Tank1 != line:
 				oldSetPoint_Tank1 = line
-				#print("%s"%(line))  For Debugging
+				print("######### Tank1 setpoint Line #########")
+                                print(line)
+                                print("######### End Tank1 setpoint Line #########")
 				SetPoint_Tank1,Tank1Value_Low,Tank1Value_High,Tank1Pump_ON,Tank1Pump_OFF,Tank1MixPump_Enabled,Tank1_Status=line.split(",")
 				SetPoint_Tank1 = SetPoint_Tank1.replace("Read fail", "")
 				Tank1_Status = Tank1_Status.rstrip()
@@ -825,7 +861,9 @@ def checkSerial():
 		elif 'SetPoint_Tank2' in line:
 			if oldSetPoint_Tank2 != line:
 				oldSetPoint_Tank2 = line
-				#print("%s"%(line))  For Debugging
+				print("######### Tank2 setpoint Line #########")
+                                print(line)
+                                print("######### End Tank2 setpoint Line #########")
 				SetPoint_Tank2,Tank2Value_Low,Tank2Value_High,Tank2Pump_ON,Tank2Pump_OFF,Tank2MixPump_Enabled,Tank2_Status=line.split(",")
 				SetPoint_Tank2 = SetPoint_Tank2.replace("Read fail", "")
 				Tank2_Status = Tank2_Status.rstrip()
@@ -850,7 +888,9 @@ def checkSerial():
 		elif 'SetPoint_Tank3' in line:
 			if oldSetPoint_Tank3 != line:
 				oldSetPoint_Tank3 = line
-				#print("%s"%(line))  For Debugging
+				print("######### Tank3 setpoint Line #########")
+                                print(line)
+                                print("######### End Tank3 setpoint Line #########")
 				SetPoint_Tank3,Tank3Value_Low,Tank3Value_High,Tank3Pump_ON,Tank3Pump_OFF,Tank3MixPump_Enabled,Tank3_Status=line.split(",")
 				SetPoint_Tank3 = SetPoint_Tank3.replace("Read fail", "")
 				Tank3_Status = Tank3_Status.rstrip()
@@ -875,7 +915,9 @@ def checkSerial():
 		elif 'SetPoint_Tank4' in line:
 			if oldSetPoint_Tank4 != line:
 				oldSetPoint_Tank4 = line
-				#print("%s"%(line))  For Debugging
+				print("######### Tank4 setpoint Line #########")
+                                print(line)
+                                print("######### End Tank4 setpoint Line #########")
 				SetPoint_Tank4,Tank4Value_Low,Tank4Value_High,Tank4Pump_ON,Tank4Pump_OFF,Tank4MixPump_Enabled,Tank4_Status=line.split(",")
 				SetPoint_Tank4 = SetPoint_Tank4.replace("Read fail", "")
 				Tank4_Status = Tank4_Status.rstrip()
