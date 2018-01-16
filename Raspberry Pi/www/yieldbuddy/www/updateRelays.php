@@ -144,7 +144,7 @@ if ($_SESSION['Relay1'] > 1) {
 	  try
 	  {
       echo "<tr>";
-	  echo "<td>Relay 4 (Nute 1): </td>";
+	  echo "<td>Relay 4 (Spare 12V Relay): </td>";
 	  $Relay4=$_SESSION['Relay4'];
 	  //echo $Relay4. "<br />";
 
@@ -169,7 +169,7 @@ if ($_SESSION['Relay1'] > 1) {
 	  try
 	  {
       echo "<tr>";
-	  echo "<td>Relay 5 (Nute 2): </td>";
+	  echo "<td>Relay 5 (Exhaust Fan): </td>";
 	  $Relay5=$_SESSION['Relay5'];
 	  //echo $Relay5. "<br />";
 

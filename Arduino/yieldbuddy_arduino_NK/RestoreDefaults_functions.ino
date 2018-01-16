@@ -141,13 +141,13 @@ void RestoreDefaults() {
 
   //**WaterTempP1
   WaterTempP1_Status = "OK";
-  WaterTempP1Value_Low = 40.00;
-  WaterTempP1Value_High = 80.00;
+  WaterTempP1Value_Low = 19.00;
+  WaterTempP1Value_High = 25.00;
     //Accessory ON/OFF Values
-  WaterTempP1Heater_ON = 35.00;
-  WaterTempP1Heater_OFF = 45.00;
-  WaterTempP1AC_ON = 85.00;
-  WaterTempP1AC_OFF = 75.00;
+  WaterTempP1Heater_ON = 18.00;
+  WaterTempP1Heater_OFF = 21.00;
+  WaterTempP1AC_ON = 25.00;
+  WaterTempP1AC_OFF = 23.00;
 
   //**WaterTempP2
   WaterTempP2_Status = "OK";
@@ -191,23 +191,23 @@ void RestoreDefaults() {
 
   //**AirTEMP
   Temp_Status = "OK";
-  TempValue_Low = 40.00;
-  TempValue_High = 80;
+  TempValue_Low = 19.00;
+  TempValue_High = 29;
   //Accessory ON/OFF Values
-  Heater_ON = 35.00;
-  Heater_OFF = 45.00;
-  AC_ON = 85.00;
-  AC_OFF = 75.00;
+  Heater_ON = 16.00;
+  Heater_OFF = 23.00;
+  AC_ON = 27.00;
+  AC_OFF = 25.00;
   
   //**HUMIDITY
   RH_Status = "OK";
   RHValue_Low = 30.00;
-  RHValue_High = 95.00;
+  RHValue_High = 60.00;
   //Accessory ON/OFF Values
   Humidifier_ON = 25.00;
-  Humidifier_OFF = 30.00;
-  Dehumidifier_ON = 75.00;
-  Dehumidifier_OFF = 60.00;
+  Humidifier_OFF = 40.00;
+  Dehumidifier_ON = 50.00;
+  Dehumidifier_OFF = 41.00;
 
   //**TDS1
   TDS1_Status = "OK";
@@ -273,14 +273,14 @@ void RestoreDefaults() {
   EEPROM.write(12, 0);
   EEPROM.write(13, 0);
 
-  int Relay1_isAuto = 0;  //Water Pump 1
-  int Relay2_isAuto = 0;  //Water Supply
+  int Relay1_isAuto = 1;  //Water Pump 1
+  int Relay2_isAuto = 1;  //Water Supply
   int Relay3_isAuto = 0;  //pH down
   int Relay4_isAuto = 0;  //Nute 1
   int Relay5_isAuto = 0;  //Nute 2
-  int Relay6_isAuto = 0;  //Dehumidifier
-  int Relay7_isAuto = 0;  //AC
-  int Relay8_isAuto = 0;  //Light
+  int Relay6_isAuto = 1;  //Dehumidifier
+  int Relay7_isAuto = 1;  //AC
+  int Relay8_isAuto = 1;  //Light
 
   //Relay isAuto
   EEPROM.write(22, Relay1_isAuto);

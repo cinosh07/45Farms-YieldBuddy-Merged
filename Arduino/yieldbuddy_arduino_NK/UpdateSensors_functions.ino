@@ -187,6 +187,7 @@ void updateSensorValues() {
   //********************************WaterTempP1
 #if defined (WaterTempP1_on)
   WaterTempP1RawValue = sensors.getTempC(WaterTempP1_addr);  
+  //WaterTempP1RawValue = sensors.getTempCByIndex(0);
 #if defined(WaterTempP1F_on)
   WaterTempP1Value = (WaterTempP1RawValue*9+2)/5+32;
 #else  

@@ -481,10 +481,10 @@ int Tank4EchoPin = A15;
 //int Tank4TrigPin = A8;
 //int Tank4EchoPin = A9;
 
-int Relay1_Pin = 53;  // Tank1Pump-FEED-PODS            //Water Pump
-int Relay2_Pin = 52;  // Tank2Pump-XFER-Tank3           //Water Supply
-int Relay3_Pin = 51;  // Tank3Pump-XFER-Tank1           //pH down
-int Relay4_Pin = 50;  // Tank4Pump-XFER-Tank2           //Nute 1
+int Relay1_Pin = 25;  // Tank1Pump-FEED-PODS            //Water Pump
+int Relay2_Pin = 24;  // Tank2Pump-XFER-Tank3           //Water Supply
+int Relay3_Pin = 23;  // Tank3Pump-XFER-Tank1           //pH down
+int Relay4_Pin = 22;  // Tank4Pump-XFER-Tank2           //Nute 1
 int Relay5_Pin = 49;  // Nute 2
 int Relay6_Pin = 48;  // Dehumidifier
 int Relay7_Pin = 47;  // Humidifier                     //AC
@@ -579,14 +579,14 @@ void setup()
   int eeprom_yr = EEPROM.read(5);
 
   //**EEPROM RELAYS
-  Relay1_State = 0; //EEPROM.read(6);     //Water-Pump 1
-  Relay2_State = 0; //EEPROM.read(7);     //Water supply
-  Relay3_State = 0; //EEPROM.read(8);     //ph Down
-  Relay4_State = 0; //EEPROM.read(9);     //Nute 1
-  Relay5_State = 0; //EEPROM.read(10);    //Nute 2
-  Relay6_State = 0; //EEPROM.read(11);    //Dehumidifier
-  Relay7_State = 0; //EEPROM.read(12);    //AC
-  Relay8_State = 0; //EEPROM.read(13);    //Light
+  Relay1_State = 0;// EEPROM.read(6);     //Water-Pump 1
+  Relay2_State = 0;// EEPROM.read(7);     //Water supply
+  Relay3_State = 0;// EEPROM.read(8);     //ph Down
+  Relay4_State = 0;// EEPROM.read(9);     //Nute 1
+  Relay5_State = 0;// EEPROM.read(10);    //Nute 2
+  Relay6_State = 0;// EEPROM.read(11);    //Dehumidifier
+  Relay7_State = 0;// EEPROM.read(12);    //AC
+  Relay8_State = 0;// EEPROM.read(13);    //Light
 
   //**Safe-Route ---> Disregard last known states and turn all relays off (auto will take over):
   turnRelay(1, 0);
@@ -809,7 +809,7 @@ void setup()
 */
 void loop()
 {
-//  //  Clear the EEPROM and then write defaults.
+  //  Clear the EEPROM and then write defaults.
 //    for (int i = 0; i < 4096; i++) {
 //      EEPROM.write(i, 0);
 //    }
