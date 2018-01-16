@@ -47,9 +47,13 @@ if (!file_exists($_SERVER['DOCUMENT_ROOT'] . '/yieldbuddy2/www/users/' . $_SESSI
                 width:120px;
                 height:60px;
                 padding:1px 2px 3px 3px;	
-                font-size:12px;
+                font-size:24px;
+                font-weight: bold;
                 background:lightgray;
-                text-align:center;	
+                text-align:center ! important;
+                position:relative;
+
+                
                 }
                 .onoff div
                 {
@@ -63,7 +67,7 @@ if (!file_exists($_SERVER['DOCUMENT_ROOT'] . '/yieldbuddy2/www/users/' . $_SESSI
                 border-bottom:1px solid white;
                 border-left:1px solid gray;			
                 margin:0 auto;
-                color:gray;
+                color:white;
                 }
                 a:link {
                     color: #999;
@@ -174,17 +178,17 @@ e[d]=g}}e=new Gauge(e);k.getAttribute("data-value")&&e.setRawValue(parseFloat(k.
                   {
                     //blabel="on";
                     bstyle="red";
-                    bcolor="lightgreen";
+                    //bcolor="lightgreen";
                   }
-                  else if($('#tank1ValueInput').val() === "0")
+                  else
                   {
                     //blabel="off";
                     bstyle="green";
-                    bcolor="gray";
+                    //bcolor="gray";
                   }
                   var child=element.firstChild;
                   child.style.background=bstyle;
-                  child.style.color=bcolor;
+                  //child.style.color=bcolor;
                   //child.innerHTML=blabel;
                 }
             function updateTank2(element)
@@ -195,17 +199,17 @@ e[d]=g}}e=new Gauge(e);k.getAttribute("data-value")&&e.setRawValue(parseFloat(k.
                   {
                     //blabel="on";
                     bstyle="red";
-                    bcolor="lightgreen";
+                    //bcolor="lightgreen";
                   }
-                  else if($('#tank2ValueInput').val() === "1")
+                  else
                   {
-                    blabel="off";
+                    //blabel="off";
                     bstyle="green";
-                    bcolor="gray";
+                    //bcolor="gray";
                   }
                   var child=element.firstChild;
                   child.style.background=bstyle;
-                  child.style.color=bcolor;
+                  //child.style.color=bcolor;
                   //child.innerHTML=blabel;
                 }
             function updateRaspberryPiTime() {
@@ -303,6 +307,8 @@ e[d]=g}}e=new Gauge(e);k.getAttribute("data-value")&&e.setRawValue(parseFloat(k.
                             waterTemp1TempVal = parseFloat($('#waterTemp1ValueInput').val());
                             ph1Val = parseFloat($('#ph1ValueInput').val());
                             rhVal = parseFloat($('#rhValueInput').val());
+                            $( "#tank1Gauge" ).trigger( "click" );
+                            $( "#tank2Gauge" ).trigger( "click" );
                         }
                     }
                 }
@@ -435,34 +441,9 @@ e[d]=g}}e=new Gauge(e);k.getAttribute("data-value")&&e.setRawValue(parseFloat(k.
                                                     <canvas id="an_gauge_2" data-title="Water Temp" data-units="Temp. &deg;C" width="150" height="150" data-major-ticks="0 5 10 15 20 25 30 35 40" data-type="canv-gauge" data-min-value="0" data-max-value="40" data-highlights="0 10 #4D89F2, 10 20 #25B8D9, 20 28 #0BB950, 28 35 #cc5, 35 40 #f33" data-onready="setInterval( function() { Gauge.Collection.get('an_gauge_2').setValue(waterTemp1Val);}, 200);"></canvas>
                                                     <canvas id="an_gauge_3" data-title="PH" width="150" height="150"  data-major-ticks="0 100 200 300 400 500 600 700 800 900 1000 1023" data-type="canv-gauge" data-min-value="0" data-max-value="1023" data-onready="setInterval( function() { Gauge.Collection.get('an_gauge_3').setValue(ph1Val);}, 200);"></canvas>
                                                     <canvas id="an_gauge_4" data-title="Humidity" width="150" height="150"  data-major-ticks="0 100 200 300 400 500 600 700 800 900 1000 1023" data-type="canv-gauge" data-min-value="0" data-max-value="1023" data-onready="setInterval( function() { Gauge.Collection.get('an_gauge_4').setValue(rhVal);}, 200);"></canvas>
-                                                    <button id="tank1Gauge" class="onoff" onclick="updateTank1(this)"><div>Tank 1</div></button>
-                                                    <button id="tank2Gauge" class="onoff" onclick="updateTank2(this)"><div>Tank 2</div></button>
+                                                    <button id="tank1Gauge" class="onoff" onclick="updateTank1(this)"><div style="vertical-align: middle">Tank 1</div></button>
+                                                    <button id="tank2Gauge" class="onoff" onclick="updateTank2(this)"><div style="vertical-align: middle">Tank 2</div></button>
 
-<!--                                                    <canvas data-type="linear-gauge"
-                                                        data-width="120"
-                                                        data-height="400"
-                                                        data-units="°C"
-                                                        data-min-value="0"
-                                                        data-start-angle="90"
-                                                        data-ticks-angle="180"
-                                                        data-value-box="false"
-                                                        data-max-value="220"
-                                                        data-major-ticks="0,20,40,60,80,100,120,140,160,180,200,220"
-                                                        data-minor-ticks="2"
-                                                        data-stroke-ticks="true"
-                                                        data-highlights='[ {"from": 100, "to": 220, "color": "rgba(200, 50, 50, .75)"} ]'
-                                                        data-color-plate="#fff"
-                                                        data-border-shadow-width="0"
-                                                        data-borders="false"
-                                                        data-needle-type="arrow"
-                                                        data-needle-width="2"
-                                                        data-needle-circle-size="7"
-                                                        data-needle-circle-outer="true"
-                                                        data-needle-circle-inner="false"
-                                                        data-animation-duration="1500"
-                                                        data-animation-rule="linear"
-                                                        data-bar-width="10"
-                                                        data-value="35" ></canvas>-->
                                                 </td>
                                                 <td align="right" valign="top">        
                                                     <p align="right" id="relayInfo"></p>
