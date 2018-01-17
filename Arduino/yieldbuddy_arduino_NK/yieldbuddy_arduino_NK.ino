@@ -550,7 +550,7 @@ void setup()
   Relay5_isAuto = EEPROM.read(26);        //nute 2
   Relay6_isAuto = EEPROM.read(27);        //dehumid
   Relay7_isAuto = EEPROM.read(28);        //AC
-  Relay8_isAuto = EEPROM.read(29);        //Light
+  Relay8_isAuto = 1;//EEPROM.read(29);        //Light
 
 
 
