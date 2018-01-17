@@ -177,6 +177,126 @@ if (!file_exists($_SERVER['DOCUMENT_ROOT'] . '/yieldbuddy2/www/users/' . $_SESSI
                         
 /*                        padding: 20px 0 0;*/
                     }
+                    
+                    /* Absolute Center Spinner */
+                    .loading {
+                      position: fixed;
+                      z-index: 999;
+                      height: 2em;
+                      width: 2em;
+                      overflow: show;
+                      margin: auto;
+                      top: 0;
+                      left: 0;
+                      bottom: 0;
+                      right: 0;
+                    }
+
+                    /* Transparent Overlay */
+                    .loading:before {
+                      content: '';
+                      display: block;
+                      position: fixed;
+                      top: 0;
+                      left: 0;
+                      width: 100%;
+                      height: 100%;
+                      background-color: rgba(0,0,0,0.3);
+                    }
+
+                    /* :not(:required) hides these rules from IE9 and below */
+                    .loading:not(:required) {
+                      /* hide "loading..." text */
+                      font: 0/0 a;
+                      color: transparent;
+                      text-shadow: none;
+                      background-color: transparent;
+                      border: 0;
+                    }
+
+                    .loading:not(:required):after {
+                      content: '';
+                      display: block;
+                      font-size: 10px;
+                      width: 1em;
+                      height: 1em;
+                      margin-top: -0.5em;
+                      -webkit-animation: spinner 1500ms infinite linear;
+                      -moz-animation: spinner 1500ms infinite linear;
+                      -ms-animation: spinner 1500ms infinite linear;
+                      -o-animation: spinner 1500ms infinite linear;
+                      animation: spinner 1500ms infinite linear;
+                      border-radius: 0.5em;
+                      -webkit-box-shadow: rgba(0, 0, 0, 0.75) 1.5em 0 0 0, rgba(0, 0, 0, 0.75) 1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) 0 1.5em 0 0, rgba(0, 0, 0, 0.75) -1.1em 1.1em 0 0, rgba(0, 0, 0, 0.5) -1.5em 0 0 0, rgba(0, 0, 0, 0.5) -1.1em -1.1em 0 0, rgba(0, 0, 0, 0.75) 0 -1.5em 0 0, rgba(0, 0, 0, 0.75) 1.1em -1.1em 0 0;
+                      box-shadow: rgba(0, 0, 0, 0.75) 1.5em 0 0 0, rgba(0, 0, 0, 0.75) 1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) 0 1.5em 0 0, rgba(0, 0, 0, 0.75) -1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) -1.5em 0 0 0, rgba(0, 0, 0, 0.75) -1.1em -1.1em 0 0, rgba(0, 0, 0, 0.75) 0 -1.5em 0 0, rgba(0, 0, 0, 0.75) 1.1em -1.1em 0 0;
+                    }
+
+                    /* Animation */
+
+                    @-webkit-keyframes spinner {
+                      0% {
+                        -webkit-transform: rotate(0deg);
+                        -moz-transform: rotate(0deg);
+                        -ms-transform: rotate(0deg);
+                        -o-transform: rotate(0deg);
+                        transform: rotate(0deg);
+                      }
+                      100% {
+                        -webkit-transform: rotate(360deg);
+                        -moz-transform: rotate(360deg);
+                        -ms-transform: rotate(360deg);
+                        -o-transform: rotate(360deg);
+                        transform: rotate(360deg);
+                      }
+                    }
+                    @-moz-keyframes spinner {
+                      0% {
+                        -webkit-transform: rotate(0deg);
+                        -moz-transform: rotate(0deg);
+                        -ms-transform: rotate(0deg);
+                        -o-transform: rotate(0deg);
+                        transform: rotate(0deg);
+                      }
+                      100% {
+                        -webkit-transform: rotate(360deg);
+                        -moz-transform: rotate(360deg);
+                        -ms-transform: rotate(360deg);
+                        -o-transform: rotate(360deg);
+                        transform: rotate(360deg);
+                      }
+                    }
+                    @-o-keyframes spinner {
+                      0% {
+                        -webkit-transform: rotate(0deg);
+                        -moz-transform: rotate(0deg);
+                        -ms-transform: rotate(0deg);
+                        -o-transform: rotate(0deg);
+                        transform: rotate(0deg);
+                      }
+                      100% {
+                        -webkit-transform: rotate(360deg);
+                        -moz-transform: rotate(360deg);
+                        -ms-transform: rotate(360deg);
+                        -o-transform: rotate(360deg);
+                        transform: rotate(360deg);
+                      }
+                    }
+                    @keyframes spinner {
+                      0% {
+                        -webkit-transform: rotate(0deg);
+                        -moz-transform: rotate(0deg);
+                        -ms-transform: rotate(0deg);
+                        -o-transform: rotate(0deg);
+                        transform: rotate(0deg);
+                      }
+                      100% {
+                        -webkit-transform: rotate(360deg);
+                        -moz-transform: rotate(360deg);
+                        -ms-transform: rotate(360deg);
+                        -o-transform: rotate(360deg);
+                        transform: rotate(360deg);
+                      }
+                    }
             </style>
     </head>
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
@@ -260,6 +380,7 @@ e[d]=g}}e=new Gauge(e);k.getAttribute("data-value")&&e.setRawValue(parseFloat(k.
                 updateSensorInfo();
                 updateRelayInfo();
                 updateTime();
+                $("#busyIcon").css("display","none");
             }
             var buttonstate=0;
             function updateTank1(element)
@@ -433,6 +554,7 @@ e[d]=g}}e=new Gauge(e);k.getAttribute("data-value")&&e.setRawValue(parseFloat(k.
                     if (ajaxRequest.readyState == 4) {
                         if (ajaxRequest.responseText != document.getElementById("relayInfo").innerHTML) {
                             document.getElementById("relayInfo").innerHTML = ajaxRequest.responseText;
+                            $("#busyIcon").css("display","none");
                         }
                     }
                 }
@@ -441,6 +563,7 @@ e[d]=g}}e=new Gauge(e);k.getAttribute("data-value")&&e.setRawValue(parseFloat(k.
             }
 
             function TurnRelay(number, on_off) {
+                $("#busyIcon").css("display","block");
                 var xmlhttp;
                 if (window.XMLHttpRequest)
                 {// code for IE7+, Firefox, Chrome, Opera, Safari
@@ -454,6 +577,7 @@ e[d]=g}}e=new Gauge(e);k.getAttribute("data-value")&&e.setRawValue(parseFloat(k.
                     if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
                     {
                         document.getElementById("myDiv").innerHTML = xmlhttp.responseText;
+                        $("#busyIcon").css("display","none");
                     }
                 }
                 xmlhttp.open("GET", "command.php?command=Relay" + number + " " + on_off, true);
@@ -461,6 +585,7 @@ e[d]=g}}e=new Gauge(e);k.getAttribute("data-value")&&e.setRawValue(parseFloat(k.
             }
 
             function TurnAuto(number, isAuto) {
+                $("#busyIcon").css("display","block");
                 var xmlhttp;
                 if (window.XMLHttpRequest)
                 {// code for IE7+, Firefox, Chrome, Opera, Safari
@@ -481,7 +606,7 @@ e[d]=g}}e=new Gauge(e);k.getAttribute("data-value")&&e.setRawValue(parseFloat(k.
             }
 //-->
 </script>
-
+            <div id="busyIcon" class="loading" style="display: none">Loading&#8230;</div>
             <table width="850" border="0" align="center" cellpadding="0" cellspacing="0">
                     <tr>
                         <td height="100" colspan="2" align="center" valign="bottom"><br />
@@ -590,12 +715,22 @@ e[d]=g}}e=new Gauge(e);k.getAttribute("data-value")&&e.setRawValue(parseFloat(k.
                                         $camera_address = trim($_SESSION['camera_address']);
                                         ?>
                                         <p><strong>Camera</strong></p>
+                                        
                                         <iframe src="<?php echo $camera_address; ?>" 
                                                 width="640" 
                                                 height="360" 
                                                 style="border:2px solid orange">
                                         </iframe>
-
+                                        <br></br>
+                                        <button onclick="RestartCam()">Restart Camera</button> <button onclick="StopCam()">Stop Camera</button>
+                                        <script language="javascript" type="text/javascript">
+                            			function RestartCam() {
+                            			  window.location.assign("/yieldbuddy2/www/command.php?command=restart cam");
+                            			};
+                            			function StopCam() {
+                            			  window.location.assign("/yieldbuddy2/www/command.php?command=stop cam");
+                            			};
+                                        </script>
                                     </td>
                                 </tr>
                             </table>
