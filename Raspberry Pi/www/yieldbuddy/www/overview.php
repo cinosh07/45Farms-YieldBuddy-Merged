@@ -52,7 +52,7 @@ if (!file_exists($_SERVER['DOCUMENT_ROOT'] . '/yieldbuddy2/www/users/' . $_SESSI
                     font-weight: bold;
                     background:lightgray;
                     text-align:center ! important;
-
+                    
     /*                position:relative;*/
     /*                display: block;*/
 
@@ -61,6 +61,7 @@ if (!file_exists($_SERVER['DOCUMENT_ROOT'] . '/yieldbuddy2/www/users/' . $_SESSI
 
                 
                 }
+                
                 .onoff div
                 {
                     width:116px;
@@ -74,6 +75,8 @@ if (!file_exists($_SERVER['DOCUMENT_ROOT'] . '/yieldbuddy2/www/users/' . $_SESSI
                     border-left:1px solid gray;			
                     margin:0 auto;
                     color:white;
+                    line-height: 57px;
+                    
 
                 
                 }
