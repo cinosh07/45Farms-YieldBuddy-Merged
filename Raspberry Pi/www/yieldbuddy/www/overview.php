@@ -105,7 +105,10 @@ if (!file_exists($_SERVER['DOCUMENT_ROOT'] . '/yieldbuddy2/www/users/' . $_SESSI
                     font-family: Verdana, Geneva, sans-serif;
                     border: 2px solid #444 ;
                     border-radius: 40px ;
-                    padding: 20px ;
+                    padding-top: 20px;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    padding-bottom: 20px;
 /*                    background-color: #051005 ;*/
                     	
                     /* IE10 Consumer Preview */ 
@@ -141,6 +144,7 @@ if (!file_exists($_SERVER['DOCUMENT_ROOT'] . '/yieldbuddy2/www/users/' . $_SESSI
                     color: #daf6ff;
                     text-shadow: 0 0 20px rgba(10, 175, 230, 1),  0 0 20px rgba(10, 175, 230, 0);
                     
+                    
                 }
                 
                 #ArduinoClock {
@@ -154,19 +158,23 @@ if (!file_exists($_SERVER['DOCUMENT_ROOT'] . '/yieldbuddy2/www/users/' . $_SESSI
                     color: #daf6ff;
                     text-shadow: 0 0 20px rgba(10, 175, 230, 1),  0 0 20px rgba(10, 175, 230, 0);
                     
+                    
                 }
                 .time {
                         letter-spacing: 0.05em;
                         font-size: 40px;
+                        
 /*                        padding: 5px 0;*/
                     }
                     .date {
                         letter-spacing: 0.1em;
-                        font-size: 24px;
+                        font-size: 20px;
+                        
                     }
                     .text {
                         letter-spacing: 0.1em;
                         font-size: 12px;
+                        
 /*                        padding: 20px 0 0;*/
                     }
             </style>
@@ -509,26 +517,26 @@ e[d]=g}}e=new Gauge(e);k.getAttribute("data-value")&&e.setRawValue(parseFloat(k.
                     <td width="100%" align="center"><div class="cssbox">
                             <table width="100%" border="0" align="center">
                                 <tr>
-                                    <td width="50%" height="20" align="left" valign="top">
-                                        <p id="RaspberryPiTime">  </p>
+                                    <td width="50%" height="20" align="left" valign="top" style="border: 2px solid #ccc ; border-radius: 20px ; padding: 10px">
+                                        <p id="RaspberryPiTime" style="display: none">  </p>
                                         <div id="RaspberryPiClock">
-                                            <p id="RaspberryPiClockDate" class="date"></p>
-                                            <p id="RaspberryPiClockTime" class="time"></p>
-                                            <p class="text">RaspberryPi Time</p>
+                                            <div id="RaspberryPiClockDate" class="date"></div>
+                                            <div id="RaspberryPiClockTime" class="time"></div>
+                                            <div class="text">RaspberryPi Time</div>
                                         </div>
                                     </td>
-                                    <td width="50%" height="20" align="right" valign="top">
-                                        <p id="ArduinoTime">  </p>
-                                        <div id="ArduinoClock">
-                                            <p id="ArduinoClockDate" class="date"></p>
-                                            <p id="ArduinoClockTime" class="time"></p>
-                                            <p class="text">Arduino Time</p>
+                                    <td width="50%" height="20" align="right" valign="top"  style="border: 2px solid #ccc ; border-radius: 20px ; padding: 10px">
+                                        <p id="ArduinoTime" style="display: none">  </p>
+                                        <div id="ArduinoClock" >
+                                            <div id="ArduinoClockDate" class="date"></div>
+                                            <div id="ArduinoClockTime" class="time"></div>
+                                            <div class="text">Arduino Time</div>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td height="38" colspan="2">
-                                        <table width="100%" height="44" style="border: 2px solid #ccc ; border-radius: 40px ; padding-bottom: 20px; padding-left: 20px;padding-right: 20px;padding-top: 10px">
+                                        <table width="100%" height="44" style="border: 2px solid #ccc ; border-radius: 20px ; padding-bottom: 20px; padding-left: 20px;padding-right: 20px;padding-top: 10px">
                                             <tr >
                                                 <td height="200" align="left"  valign="top"><p><strong>Sensor Information</strong></p>
                                                     <p id="sensorInfo"></p>
@@ -572,7 +580,7 @@ e[d]=g}}e=new Gauge(e);k.getAttribute("data-value")&&e.setRawValue(parseFloat(k.
                                 </tr>
                                 <tr>
                                     
-                                    <td height="2" colspan="2" align="center" valign="top">
+                                    <td height="2" colspan="2" align="center" valign="top" style="border: 2px solid #ccc ; border-radius: 20px ; padding-bottom: 20px; padding-left: 20px;padding-right: 20px;padding-top: 10px">
                                         <?php
                                         include $_SERVER['DOCUMENT_ROOT'] . '/yieldbuddy2/www/sql/sql_camera_firstrow.php';
 
