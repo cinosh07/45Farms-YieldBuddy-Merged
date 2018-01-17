@@ -346,8 +346,14 @@ e[d]=g}}e=new Gauge(e);k.getAttribute("data-value")&&e.setRawValue(parseFloat(k.
     function updateTime() {
         
         var cd = new Date();
-        $("#ArduinoClockTime").html($("#ArduinoHour").val() + ':' + $("#ArduinoMinute").val() + ':' + $("#ArduinoSecond").val());
-        $("#ArduinoClockDate").html($("#ArduinoYear").val() + '-' + $("#ArduinoMonth").val() + '-' + $("#ArduinoDay").val())  ;
+        if ($("#ArduinoHour").val() !== undefined) {
+            $("#ArduinoClockTime").html($("#ArduinoHour").val() + ':' + $("#ArduinoMinute").val() + ':' + $("#ArduinoSecond").val());
+            $("#ArduinoClockDate").html($("#ArduinoYear").val() + '-' + $("#ArduinoMonth").val() + '-' + $("#ArduinoDay").val())  ;
+        } else {
+            $("#ArduinoClockTime").html('00' + ':' + '00' + ':' + '00');
+            $("#ArduinoClockDate").html('000' + '-' + '00' + '-' + '00');
+        }
+        
         $("#RaspberryPiClockTime").html(zeroPadding(cd.getHours(), 2) + ':' + zeroPadding(cd.getMinutes(), 2) + ':' + zeroPadding(cd.getSeconds(), 2));
         $("#RaspberryPiClockDate").html(zeroPadding(cd.getFullYear(), 4) + '-' + zeroPadding(cd.getMonth()+1, 2) + '-' + zeroPadding(cd.getDate(), 2));
     };
