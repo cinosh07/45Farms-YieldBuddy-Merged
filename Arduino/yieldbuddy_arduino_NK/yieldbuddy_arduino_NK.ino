@@ -25,12 +25,12 @@
 #define dht_humidity_on
 //#define soilhumidity_on
 //#define light_on
-//#define tank1_on
-//#define tank1_limit_switch_on
+#define tank1_on
+#define tank1_limit_switch_on
 //#define tank1_limit_switch_reverse
-//#define tank2_on
-//#define tank2_limit_switch_on
-//#define tank2_limit_switch_reverse
+#define tank2_on
+#define tank2_limit_switch_on
+#define tank2_limit_switch_reverse
 //#define tank3_on
 //#define tank3_limit_switch_on
 //#define tank3_limit_switch_reverse
@@ -55,7 +55,7 @@
 */
 
 //**Dallas Temperature
-#define ONE_WIRE_PIN 3
+#define ONE_WIRE_PIN 33
 #define TEMPERATURE_PRECISION 9
 
 byte WaterTempP1_addr[] = {0x28, 0xFF, 0xB8, 0x14, 0x71, 0x15, 0x02, 0xE4};
@@ -93,10 +93,10 @@ int Tank4TrigPin = A14;
 int Tank4EchoPin = A15;
 
 //**tank limit switch tank is enabled
-int Tank1LimitSwitchPin = 30;
-int Tank2LimitSwitchPin = 31;
-int Tank3LimitSwitchPin = 32;
-int Tank4LimitSwitchPin = 33;
+int Tank1LimitSwitchPin = 40;
+int Tank2LimitSwitchPin = 41;
+int Tank3LimitSwitchPin = 42;
+int Tank4LimitSwitchPin = 43;
 
 
 int Relay1_Pin = 25;  //Water Aeroponic Pump
@@ -524,23 +524,23 @@ void setup()
   int eeprom_yr = EEPROM.read(5);
 
   //**EEPROM RELAYS
-  Relay1_State = 0;// EEPROM.read(6);     //Water-Pump 1
-  Relay2_State = 0;// EEPROM.read(7);     //Water supply
-  Relay3_State = 0;// EEPROM.read(8);     //ph Down
-  Relay4_State = 0;// EEPROM.read(9);     //Nute 1
-  Relay5_State = 0;// EEPROM.read(10);    //Nute 2
-  Relay6_State = 0;// EEPROM.read(11);    //Dehumidifier
-  Relay7_State = 0;// EEPROM.read(12);    //AC
-  Relay8_State = 0;// EEPROM.read(13);    //Light
+  Relay1_State =  EEPROM.read(6);     //Water-Pump 1
+  Relay2_State =  EEPROM.read(7);     //Water supply
+  Relay3_State =  EEPROM.read(8);     //ph Down
+  Relay4_State =  EEPROM.read(9);     //Nute 1
+  Relay5_State =  EEPROM.read(10);    //Nute 2
+  Relay6_State =  EEPROM.read(11);    //Dehumidifier
+  Relay7_State =  EEPROM.read(12);    //AC
+  Relay8_State =  EEPROM.read(13);    //Light
 
   //**Safe-Route ---> Disregard last known states and turn all relays off (auto will take over):
   turnRelay(1, 0);
   turnRelay(2, 0);
   turnRelay(3, 0);
   turnRelay(4, 0);
-  turnRelay(5, 0);
+  turnRelay(5, 1);
   turnRelay(6, 0);
-  turnRelay(7, 0);
+  turnRelay(7, 1);
   turnRelay(8, 0);
 
   Relay1_isAuto = EEPROM.read(22);        //Water Pump 1

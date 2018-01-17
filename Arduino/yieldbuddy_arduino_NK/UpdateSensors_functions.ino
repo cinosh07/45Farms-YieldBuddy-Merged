@@ -186,8 +186,8 @@ void updateSensorValues() {
   sensors.requestTemperatures();
   //********************************WaterTempP1
 #if defined (WaterTempP1_on)
-  WaterTempP1RawValue = sensors.getTempC(WaterTempP1_addr);
-  //WaterTempP1RawValue = sensors.getTempCByIndex(0);
+  //WaterTempP1RawValue = sensors.getTempC(WaterTempP1_addr);
+  WaterTempP1RawValue = sensors.getTempCByIndex(0);
 #if defined(WaterTempP1F_on)
   WaterTempP1Value = (WaterTempP1RawValue*9+2)/5+32;
 #else
@@ -707,7 +707,7 @@ void updateSensorValues() {
 
   //Tank1
   #if defined(tank1_limit_switch_on)
-    #if define (tank1_limit_switch_reverse)
+    #if defined (tank1_limit_switch_reverse)
       if (Tank1Value == LOW) {
         Tank1_Status = "OK";
       } else {
@@ -734,7 +734,7 @@ void updateSensorValues() {
 
   //Tank2
   #if defined(tank2_limit_switch_on)
-    #if define (tank2_limit_switch_reverse)
+    #if defined (tank2_limit_switch_reverse)
       if (Tank2Value == LOW) {
         Tank2_Status = "OK";
       } else {
@@ -761,7 +761,7 @@ void updateSensorValues() {
 
   //Tank3
   #if defined(tank3_limit_switch_on)
-    #if define (tank3_limit_switch_reverse)
+    #if defined (tank3_limit_switch_reverse)
       if (Tank3Value == LOW) {
         Tank3_Status = "OK";
       } else {
@@ -788,7 +788,7 @@ void updateSensorValues() {
 
   //Tank4
   #if defined(tank4_limit_switch_on)
-    #if define (tank4_limit_switch_reverse)
+    #if defined (tank4_limit_switch_reverse)
       if (Tank4Value == LOW) {
         Tank4_Status = "OK";
       } else {

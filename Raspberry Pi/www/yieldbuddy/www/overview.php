@@ -45,7 +45,7 @@ if (!file_exists($_SERVER['DOCUMENT_ROOT'] . '/yieldbuddy2/www/users/' . $_SESSI
                 .onoff
                 {
                 width:120px;
-                height:60px;
+                height:120px;
                 padding:1px 2px 3px 3px;	
                 font-size:24px;
                 font-weight: bold;
@@ -58,8 +58,8 @@ if (!file_exists($_SERVER['DOCUMENT_ROOT'] . '/yieldbuddy2/www/users/' . $_SESSI
                 .onoff div
                 {
                 width:106px;
-                height:46px;
-                min-height:46px;	
+                height:106px;
+                min-height:106px;	
                 background:red;
                 overflow:hidden;
                 border-top:1px solid gray;
@@ -176,20 +176,20 @@ e[d]=g}}e=new Gauge(e);k.getAttribute("data-value")&&e.setRawValue(parseFloat(k.
                   var blabel, bstyle, bcolor;
                   if($('#tank1ValueInput').val() === "1")
                   {
-                    //blabel="on";
-                    bstyle="red";
+                    blabel="Tank 1 OK";
+                    bstyle="green";
                     //bcolor="lightgreen";
                   }
                   else
                   {
-                    //blabel="off";
-                    bstyle="green";
+                    blabel="Tank 1 Refill";
+                    bstyle="red";
                     //bcolor="gray";
                   }
                   var child=element.firstChild;
                   child.style.background=bstyle;
                   //child.style.color=bcolor;
-                  //child.innerHTML=blabel;
+                  child.innerHTML=blabel;
                 }
             function updateTank2(element)
                 {
@@ -197,20 +197,20 @@ e[d]=g}}e=new Gauge(e);k.getAttribute("data-value")&&e.setRawValue(parseFloat(k.
                   var blabel, bstyle, bcolor;
                   if($('#tank2ValueInput').val() === "1")
                   {
-                    //blabel="on";
+                    blabel="Tank 2 Overflow";
                     bstyle="red";
                     //bcolor="lightgreen";
                   }
                   else
                   {
-                    //blabel="off";
+                    blabel="Tank2 OK";
                     bstyle="green";
                     //bcolor="gray";
                   }
                   var child=element.firstChild;
                   child.style.background=bstyle;
                   //child.style.color=bcolor;
-                  //child.innerHTML=blabel;
+                  child.innerHTML=blabel;
                 }
             function updateRaspberryPiTime() {
                 var ajaxRequest;  // The variable that makes Ajax possible!
@@ -441,8 +441,8 @@ e[d]=g}}e=new Gauge(e);k.getAttribute("data-value")&&e.setRawValue(parseFloat(k.
                                                     <canvas id="an_gauge_2" data-title="Water Temp" data-units="Temp. &deg;C" width="150" height="150" data-major-ticks="0 5 10 15 20 25 30 35 40" data-type="canv-gauge" data-min-value="0" data-max-value="40" data-highlights="0 10 #4D89F2, 10 20 #25B8D9, 20 28 #0BB950, 28 35 #cc5, 35 40 #f33" data-onready="setInterval( function() { Gauge.Collection.get('an_gauge_2').setValue(waterTemp1Val);}, 200);"></canvas>
                                                     <canvas id="an_gauge_3" data-title="PH" width="150" height="150"  data-major-ticks="0 1 2 3 4 5 6 7 8 9 10 11 12 13 14" data-type="canv-gauge" data-min-value="0" data-max-value="14" data-highlights="1 4 #f33, 4 5 #cc5, 5 7 #0BB950, 7 8 #cc5, 8 14 #f33" data-onready="setInterval( function() { Gauge.Collection.get('an_gauge_3').setValue(ph1Val);}, 200);"></canvas>
                                                     <canvas id="an_gauge_4" data-title="Humidity" width="150" height="150"  data-major-ticks="0 10 20 30 40 50 60 70 80 90 100" data-type="canv-gauge" data-min-value="0" data-max-value="100" data-highlights="0 20 #f33, 20 30 #25B8D9, 30 60 #0BB950, 60 80 #cc5, 80 100 #f33" data-onready="setInterval( function() { Gauge.Collection.get('an_gauge_4').setValue(rhVal);}, 200);"></canvas>
-                                                    <button id="tank1Gauge" class="onoff" onclick="updateTank1(this)"><div style="vertical-align: middle">Tank 1</div></button>
-                                                    <button id="tank2Gauge" class="onoff" onclick="updateTank2(this)"><div style="vertical-align: middle">Tank 2</div></button>
+                                                    <button id="tank1Gauge" class="onoff" onclick="updateTank1(this)"><div style="vertical-align: middle">Tank 1 Refill</div></button>
+                                                    <button id="tank2Gauge" class="onoff" onclick="updateTank2(this)"><div style="vertical-align: middle">Tank 2 Overflow</div></button>
 
                                                 </td>
                                                 <td align="right" valign="top">        
