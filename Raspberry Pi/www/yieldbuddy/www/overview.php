@@ -36,7 +36,7 @@ if (!file_exists($_SERVER['DOCUMENT_ROOT'] . '/yieldbuddy2/www/users/' . $_SESSI
                     font-family: Arial, Helvetica, sans-serif;
                     color: #FFF;
                     font-weight: bold;
-                    position: relative;
+/*                    position: relative;*/
                     font-size: 10px;
                 }
                 .description {
@@ -435,12 +435,12 @@ e[d]=g}}e=new Gauge(e);k.getAttribute("data-value")&&e.setRawValue(parseFloat(k.
                                 <tr>
                                     <td height="38" colspan="2"><table width="100%" height="44" border="0">
                                             <tr>
-                                                <td height="40" align="left" valign="top"><p><strong>Sensor Information</strong></p>
+                                                <td height="40" align="left" style="text-align: center;vertical-align: middle" valign="top"><p><strong>Sensor Information</strong></p>
                                                     <p id="sensorInfo"></p>
                                                     <canvas id="an_gauge_1" data-title="Air Temp" data-units="Temp. &deg;C" width="150" height="150" data-major-ticks="0 5 10 15 20 25 30 35 40" data-type="canv-gauge" data-min-value="0" data-max-value="40" data-highlights="0 10 #4D89F2, 10 20 #25B8D9, 20 28 #0BB950, 28 35 #cc5, 35 40 #f33" data-onready="setInterval( function() { Gauge.Collection.get('an_gauge_1').setValue(airTempVal);}, 200);"></canvas>
                                                     <canvas id="an_gauge_2" data-title="Water Temp" data-units="Temp. &deg;C" width="150" height="150" data-major-ticks="0 5 10 15 20 25 30 35 40" data-type="canv-gauge" data-min-value="0" data-max-value="40" data-highlights="0 10 #4D89F2, 10 20 #25B8D9, 20 28 #0BB950, 28 35 #cc5, 35 40 #f33" data-onready="setInterval( function() { Gauge.Collection.get('an_gauge_2').setValue(waterTemp1Val);}, 200);"></canvas>
-                                                    <canvas id="an_gauge_3" data-title="PH" width="150" height="150"  data-major-ticks="0 100 200 300 400 500 600 700 800 900 1000 1023" data-type="canv-gauge" data-min-value="0" data-max-value="1023" data-onready="setInterval( function() { Gauge.Collection.get('an_gauge_3').setValue(ph1Val);}, 200);"></canvas>
-                                                    <canvas id="an_gauge_4" data-title="Humidity" width="150" height="150"  data-major-ticks="0 100 200 300 400 500 600 700 800 900 1000 1023" data-type="canv-gauge" data-min-value="0" data-max-value="1023" data-onready="setInterval( function() { Gauge.Collection.get('an_gauge_4').setValue(rhVal);}, 200);"></canvas>
+                                                    <canvas id="an_gauge_3" data-title="PH" width="150" height="150"  data-major-ticks="0 1 2 3 4 5 6 7 8 9 10 11 12 13 14" data-type="canv-gauge" data-min-value="0" data-max-value="14" data-highlights="1 4 #f33, 4 5 #cc5, 5 7 #0BB950, 7 8 #cc5, 8 14 #f33" data-onready="setInterval( function() { Gauge.Collection.get('an_gauge_3').setValue(ph1Val);}, 200);"></canvas>
+                                                    <canvas id="an_gauge_4" data-title="Humidity" width="150" height="150"  data-major-ticks="0 10 20 30 40 50 60 70 80 90 100" data-type="canv-gauge" data-min-value="0" data-max-value="100" data-highlights="0 20 #f33, 20 30 #25B8D9, 30 60 #0BB950, 60 80 #cc5, 80 100 #f33" data-onready="setInterval( function() { Gauge.Collection.get('an_gauge_4').setValue(rhVal);}, 200);"></canvas>
                                                     <button id="tank1Gauge" class="onoff" onclick="updateTank1(this)"><div style="vertical-align: middle">Tank 1</div></button>
                                                     <button id="tank2Gauge" class="onoff" onclick="updateTank2(this)"><div style="vertical-align: middle">Tank 2</div></button>
 
