@@ -130,46 +130,35 @@ if (!file_exists($_SERVER['DOCUMENT_ROOT'] . '/yieldbuddy2/www/users/' . $_SESSI
                     margin-left: auto ;
                     margin-right: auto ;
                 }
-                #RaspberrPiClock {
+                #RaspberryPiClock {
                     font-family: 'Share Tech Mono', monospace;
                     color: #ffffff;
                     text-align: center;
-                    position: absolute;
-                    left: 50%;
-                    top: 50%;
-                    transform: translate(-50%, -50%);
+/*                    position: absolute;*/
+/*                    left: 50%;
+                    top: 50%;*/
+/*                    transform: translate(-50%, -50%);*/
                     color: #daf6ff;
                     text-shadow: 0 0 20px rgba(10, 175, 230, 1),  0 0 20px rgba(10, 175, 230, 0);
-                    .time {
-                        letter-spacing: 0.05em;
-                        font-size: 80px;
-                        padding: 5px 0;
-                    }
-                    .date {
-                        letter-spacing: 0.1em;
-                        font-size: 24px;
-                    }
-                    .text {
-                        letter-spacing: 0.1em;
-                        font-size: 12px;
-                        padding: 20px 0 0;
-                    }
+                    
                 }
                 
                 #ArduinoClock {
                     font-family: 'Share Tech Mono', monospace;
                     color: #ffffff;
                     text-align: center;
-                    position: absolute;
-                    left: 50%;
-                    top: 50%;
-                    transform: translate(-50%, -50%);
+/*                    position: absolute;*/
+/*                    left: 50%;
+                    top: 50%;*/
+/*                    transform: translate(-50%, -50%);*/
                     color: #daf6ff;
                     text-shadow: 0 0 20px rgba(10, 175, 230, 1),  0 0 20px rgba(10, 175, 230, 0);
-                    .time {
+                    
+                }
+                .time {
                         letter-spacing: 0.05em;
-                        font-size: 80px;
-                        padding: 5px 0;
+                        font-size: 40px;
+/*                        padding: 5px 0;*/
                     }
                     .date {
                         letter-spacing: 0.1em;
@@ -178,9 +167,8 @@ if (!file_exists($_SERVER['DOCUMENT_ROOT'] . '/yieldbuddy2/www/users/' . $_SESSI
                     .text {
                         letter-spacing: 0.1em;
                         font-size: 12px;
-                        padding: 20px 0 0;
+/*                        padding: 20px 0 0;*/
                     }
-                }
             </style>
     </head>
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
@@ -225,18 +213,24 @@ g.substr(0,5)){var d=g.substr(5,g.length-5).toLowerCase().split("-");if(g=k.getA
 s[0]&&""!=s[0]&&(x.from=s[0]);s[1]&&""!=s[1]&&(x.to=s[1]);s[2]&&""!=s[2]&&(x.color=s[2]);e.highlights.push(x)}break;case "animation":d[1]&&(e.animation||(e.animation={}),"fn"==d[1]&&/^\s*function\s*\(/.test(g)&&(g=eval("("+g+")")),e.animation[d[1]]=g);break;default:d=b(d);if("onready"==d)continue;if("majorTicks"==d)g=g.split(/\s+/);else if("strokeTicks"==d||"glow"==d)g="true"==g?!0:!1;else if("valueFormat"==d)if(g=g.split("."),2==g.length)g={"int":parseInt(g[0],10),dec:parseInt(g[1],10)};else continue;
 e[d]=g}}e=new Gauge(e);k.getAttribute("data-value")&&e.setRawValue(parseFloat(k.getAttribute("data-value")));k.getAttribute("data-onready")&&(e.onready=function(){eval(this.config.renderTo.getAttribute("data-onready"))});e.draw()}});window.Gauge=Gauge;
 <!-- Gauge Code Ends -->
-  
-    updateTime();
+    
+    
     function updateTime() {
         
-        
-        $("#ArduinoClockTime").val($("#Arduino_Hour").val() + ':' + $("#Arduino_Minute").val() + ':' + $("#Arduino_Second").val());
-        $("#ArduinoClockDate").val($("#Arduino_Year").val() + '-' + $("#Arduino_Month").val() + '-' + $("#Arduino_Day").val())  ;
-        $("#RaspberryPiClockTime").val("");
-        $("#RaspberryPiClockDate").val("");
+        var cd = new Date();
+        $("#ArduinoClockTime").html($("#ArduinoHour").val() + ':' + $("#ArduinoMinute").val() + ':' + $("#ArduinoSecond").val());
+        $("#ArduinoClockDate").html($("#ArduinoYear").val() + '-' + $("#ArduinoMonth").val() + '-' + $("#ArduinoDay").val())  ;
+        $("#RaspberryPiClockTime").html(zeroPadding(cd.getHours(), 2) + ':' + zeroPadding(cd.getMinutes(), 2) + ':' + zeroPadding(cd.getSeconds(), 2));
+        $("#RaspberryPiClockDate").html(zeroPadding(cd.getFullYear(), 4) + '-' + zeroPadding(cd.getMonth()+1, 2) + '-' + zeroPadding(cd.getDate(), 2));
     };
 
-   
+   function zeroPadding(num, digit) {
+        var zero = '';
+        for(var i = 0; i < digit; i++) {
+            zero += '0';
+        }
+        return (zero + num).slice(-digit);
+    }
 		
     </script>
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
@@ -526,8 +520,8 @@ e[d]=g}}e=new Gauge(e);k.getAttribute("data-value")&&e.setRawValue(parseFloat(k.
                                     <td width="50%" height="20" align="right" valign="top">
                                         <p id="ArduinoTime">  </p>
                                         <div id="ArduinoClock">
-                                            <p class="ArduinoClockDate"></p>
-                                            <p class="ArduinoClockTime"></p>
+                                            <p id="ArduinoClockDate" class="date"></p>
+                                            <p id="ArduinoClockTime" class="time"></p>
                                             <p class="text">Arduino Time</p>
                                         </div>
                                     </td>
