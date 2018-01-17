@@ -104,16 +104,41 @@ void updateSensorValues() {
 
   /*PH1------------------------------------------------*/
 #if defined(ph1_on)
-  float pH1Sum = 0;
-  int j = 0;
-  analogRead(pH1Pin);  //Get ADC to switch to correct pin
-  delay(20); //Wait for Pin to Change
-  while(j<30) {
-    pH1Sum = pH1Sum + analogRead(pH1Pin);
-    j++;
+//  float pH1Sum = 0;
+//  int j = 0;
+//  analogRead(pH1Pin);  //Get ADC to switch to correct pin
+//  delay(20); //Wait for Pin to Change
+//  while(j<30) {
+//    pH1Sum = pH1Sum + analogRead(pH1Pin);
+//    j++;
+//  }
+//  pH1RawValue = pH1Sum/30;
+//  pH1Value = (pHSlope * pH1RawValue + pHOffset);
+  unsigned long int avgValue;  //Store the average value of the sensor feedback
+  float b;
+  int buf[10],temp;
+  for(int i=0;i<10;i++)       //Get 10 sample value from the sensor for smooth the value
+  { 
+    buf[i]=analogRead(pH1Pin);
+    delay(10);
   }
-  pH1RawValue = pH1Sum/30;
-  pH1Value = (pHSlope * pH1RawValue + pHOffset);
+  for(int i=0;i<9;i++)        //sort the analog from small to large
+  {
+    for(int j=i+1;j<10;j++)
+    {
+      if(buf[i]>buf[j])
+      {
+        temp=buf[i];
+        buf[i]=buf[j];
+        buf[j]=temp;
+      }
+    }
+  }
+  avgValue=0;
+  for(int i=2;i<8;i++)                      //take the average value of 6 center sample
+    avgValue+=buf[i];
+  pH1Value=(float)avgValue*5.0/1024/6; //convert the analog into millivolt
+  pH1Value=(3.5*pH1Value)-0.2;
 #else
   pH1RawValue = 0;
   pH1Value = 0;
