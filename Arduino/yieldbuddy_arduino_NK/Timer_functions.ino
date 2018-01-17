@@ -115,7 +115,7 @@ exit_loop_light:;
   int Pump_min_on;
   int Pump_hour_off;
   int Pump_min_off;
-  int TurnPumpOn = 2;  //0: Turn Off  1: Turn On  2: Unsure
+  int TurnPumpOn = 1;  //0: Turn Off  1: Turn On  2: Unsure
   int i = 0;
   //  Serial1.println();
   //  Serial1.print("Water Pump Timers: ");
