@@ -17,24 +17,25 @@ if (!file_exists($_SERVER['DOCUMENT_ROOT'] . '/yieldbuddy2/www/users/' . $_SESSI
     <head>
         <LINK REL="SHORTCUT ICON"
               HREF="/yieldbuddy2/www/img/favicon.ico">
+            <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Share+Tech+Mono'>
             <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
             <title>yieldbuddy</title>
             <style type="text/css">
                 body {
-                    background-image: url(img/background.png);
+/*                    background-image: url(img/background.png);*/
                     margin-top: 0px;
                     background-color: #000;
                 }
                 body, td,th {
                     font-family: Arial, Helvetica, sans-serif;
-                    color: #000;
+                    color: #CCC;
                     font-weight: bold;
                     position: relative;
                     font-size: 14px;
                 }
                 color.white {
                     font-family: Arial, Helvetica, sans-serif;
-                    color: #FFF;
+                    color: #CCC;
                     font-weight: bold;
 /*                    position: relative;*/
                     font-size: 10px;
@@ -102,17 +103,88 @@ if (!file_exists($_SERVER['DOCUMENT_ROOT'] . '/yieldbuddy2/www/users/' . $_SESSI
             <style type="text/css">
                 div.cssbox {
                     font-family: Verdana, Geneva, sans-serif;
-                    border: 2px solid #000000 ;
+                    border: 2px solid #444 ;
                     border-radius: 40px ;
                     padding: 20px ;
-                    background-color: #FFFFFF ;
-                    color: #000 ;
+/*                    background-color: #051005 ;*/
+                    	
+                    /* IE10 Consumer Preview */ 
+                    background-image: -ms-radial-gradient(center top, circle farthest-side, #556055 0%, #051005 100%);
+
+                    /* Mozilla Firefox */ 
+                    background-image: -moz-radial-gradient(center top, circle farthest-side, #556055 0%, #051005 100%);
+
+                    /* Opera */ 
+                    background-image: -o-radial-gradient(center top, circle farthest-side, #556055 0%, #051005 100%);
+
+                    /* Webkit (Safari/Chrome 10) */ 
+                    background-image: -webkit-gradient(radial, center top, 0, center top, 487, color-stop(0, #556055), color-stop(1, #051005));
+
+                    /* Webkit (Chrome 11+) */ 
+                    background-image: -webkit-radial-gradient(center top, circle farthest-side, #556055 0%, #051005 100%);
+
+                    /* W3C Markup, IE10 Release Preview */ 
+                    background-image: radial-gradient(circle farthest-side at center top, #556055 0%, #051005 100%);
+                    color: #CCC ;
                     width: 90% ;
                     margin-left: auto ;
                     margin-right: auto ;
                 }
+                #RaspberrPiClock {
+                    font-family: 'Share Tech Mono', monospace;
+                    color: #ffffff;
+                    text-align: center;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    color: #daf6ff;
+                    text-shadow: 0 0 20px rgba(10, 175, 230, 1),  0 0 20px rgba(10, 175, 230, 0);
+                    .time {
+                        letter-spacing: 0.05em;
+                        font-size: 80px;
+                        padding: 5px 0;
+                    }
+                    .date {
+                        letter-spacing: 0.1em;
+                        font-size: 24px;
+                    }
+                    .text {
+                        letter-spacing: 0.1em;
+                        font-size: 12px;
+                        padding: 20px 0 0;
+                    }
+                }
+                
+                #ArduinoClock {
+                    font-family: 'Share Tech Mono', monospace;
+                    color: #ffffff;
+                    text-align: center;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    color: #daf6ff;
+                    text-shadow: 0 0 20px rgba(10, 175, 230, 1),  0 0 20px rgba(10, 175, 230, 0);
+                    .time {
+                        letter-spacing: 0.05em;
+                        font-size: 80px;
+                        padding: 5px 0;
+                    }
+                    .date {
+                        letter-spacing: 0.1em;
+                        font-size: 24px;
+                    }
+                    .text {
+                        letter-spacing: 0.1em;
+                        font-size: 12px;
+                        padding: 20px 0 0;
+                    }
+                }
             </style>
     </head>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <script language = "JavaScript">
         function preloader()
         {
@@ -153,11 +225,21 @@ g.substr(0,5)){var d=g.substr(5,g.length-5).toLowerCase().split("-");if(g=k.getA
 s[0]&&""!=s[0]&&(x.from=s[0]);s[1]&&""!=s[1]&&(x.to=s[1]);s[2]&&""!=s[2]&&(x.color=s[2]);e.highlights.push(x)}break;case "animation":d[1]&&(e.animation||(e.animation={}),"fn"==d[1]&&/^\s*function\s*\(/.test(g)&&(g=eval("("+g+")")),e.animation[d[1]]=g);break;default:d=b(d);if("onready"==d)continue;if("majorTicks"==d)g=g.split(/\s+/);else if("strokeTicks"==d||"glow"==d)g="true"==g?!0:!1;else if("valueFormat"==d)if(g=g.split("."),2==g.length)g={"int":parseInt(g[0],10),dec:parseInt(g[1],10)};else continue;
 e[d]=g}}e=new Gauge(e);k.getAttribute("data-value")&&e.setRawValue(parseFloat(k.getAttribute("data-value")));k.getAttribute("data-onready")&&(e.onready=function(){eval(this.config.renderTo.getAttribute("data-onready"))});e.draw()}});window.Gauge=Gauge;
 <!-- Gauge Code Ends -->
+  
+    updateTime();
+    function updateTime() {
         
+        
+        $("#ArduinoClockTime").val($("#Arduino_Hour").val() + ':' + $("#Arduino_Minute").val() + ':' + $("#Arduino_Second").val());
+        $("#ArduinoClockDate").val($("#Arduino_Year").val() + '-' + $("#Arduino_Month").val() + '-' + $("#Arduino_Day").val())  ;
+        $("#RaspberryPiClockTime").val("");
+        $("#RaspberryPiClockDate").val("");
+    };
 
+   
 		
     </script>
-	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <body onLoad="javascript:preloader()">
 
@@ -175,6 +257,7 @@ e[d]=g}}e=new Gauge(e);k.getAttribute("data-value")&&e.setRawValue(parseFloat(k.
                 updateArduinoTime();
                 updateSensorInfo();
                 updateRelayInfo();
+                updateTime();
             }
             var buttonstate=0;
             function updateTank1(element)
@@ -434,17 +517,28 @@ e[d]=g}}e=new Gauge(e);k.getAttribute("data-value")&&e.setRawValue(parseFloat(k.
                                 <tr>
                                     <td width="50%" height="20" align="left" valign="top">
                                         <p id="RaspberryPiTime">  </p>
+                                        <div id="RaspberryPiClock">
+                                            <p id="RaspberryPiClockDate" class="date"></p>
+                                            <p id="RaspberryPiClockTime" class="time"></p>
+                                            <p class="text">RaspberryPi Time</p>
+                                        </div>
                                     </td>
                                     <td width="50%" height="20" align="right" valign="top">
                                         <p id="ArduinoTime">  </p>
+                                        <div id="ArduinoClock">
+                                            <p class="ArduinoClockDate"></p>
+                                            <p class="ArduinoClockTime"></p>
+                                            <p class="text">Arduino Time</p>
+                                        </div>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td height="38" colspan="2"><table width="100%" height="44" border="0">
-                                            <tr>
-                                                <td height="200" align="left" style="" valign="top"><p><strong>Sensor Information</strong></p>
+                                    <td height="38" colspan="2">
+                                        <table width="100%" height="44" style="border: 2px solid #ccc ; border-radius: 40px ; padding-bottom: 20px; padding-left: 20px;padding-right: 20px;padding-top: 10px">
+                                            <tr >
+                                                <td height="200" align="left"  valign="top"><p><strong>Sensor Information</strong></p>
                                                     <p id="sensorInfo"></p>
-                                                    <div height="150" >
+                                                    <div height="150"  >
                                                         
                                                         <div width="150" height="150" style="display: inline-block" >
                                                             <canvas id="an_gauge_1" data-title="Air Temp" data-units="Temp. &deg;C" width="150" height="150" data-major-ticks="0 5 10 15 20 25 30 35 40" data-type="canv-gauge" data-min-value="0" data-max-value="40" data-highlights="0 10 #f33, 10 20 #cc5, 20 28 #0BB950, 28 35 #cc5, 35 40 #f33" data-onready="setInterval( function() { Gauge.Collection.get('an_gauge_1').setValue(airTempVal);}, 200);"></canvas>
@@ -479,6 +573,7 @@ e[d]=g}}e=new Gauge(e);k.getAttribute("data-value")&&e.setRawValue(parseFloat(k.
                                                     <p align="right" id="relayInfo"></p>
                                                 </td>
                                             </tr>
+                                          </table>
                                     </td>
                                 </tr>
                                 <tr>
