@@ -19,7 +19,7 @@ if (!file_exists($_SERVER['DOCUMENT_ROOT'] . '/yieldbuddy2/www/users/' . $_SESSI
               HREF="/yieldbuddy2/www/img/favicon.ico">
             <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Share+Tech+Mono'>
             <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-            <title>yieldbuddy</title>
+            <title>YieldBuddy V2</title>
             <style type="text/css">
                 body {
 /*                    background-image: url(img/background.png);*/
@@ -45,35 +45,35 @@ if (!file_exists($_SERVER['DOCUMENT_ROOT'] . '/yieldbuddy2/www/users/' . $_SESSI
                 }
                 .onoff
                 {
-                width:130px;
-                height:130px;
-                padding:1px 2px 3px 3px;	
-                font-size:26px;
-                font-weight: bold;
-                background:lightgray;
-                text-align:center ! important;
-                
-/*                position:relative;*/
-/*                display: block;*/
-                
-                margin-top: 10px;
-                margin-left: 10px;
+                    width:130px;
+                    height:130px;
+                    padding:1px 2px 3px 3px;	
+                    font-size:26px;
+                    font-weight: bold;
+                    background:lightgray;
+                    text-align:center ! important;
+
+    /*                position:relative;*/
+    /*                display: block;*/
+
+                    margin-top: 10px;
+                    margin-left: 10px;
 
                 
                 }
                 .onoff div
                 {
-                width:116px;
-                height:116px;
-                min-height:116px;	
-                background:red;
-                overflow:hidden;
-                border-top:1px solid gray;
-                border-right:1px solid white;
-                border-bottom:1px solid white;
-                border-left:1px solid gray;			
-                margin:0 auto;
-                color:white;
+                    width:116px;
+                    height:116px;
+                    min-height:116px;	
+                    background:red;
+                    overflow:hidden;
+                    border-top:1px solid gray;
+                    border-right:1px solid white;
+                    border-bottom:1px solid white;
+                    border-left:1px solid gray;			
+                    margin:0 auto;
+                    color:white;
 
                 
                 }
@@ -611,23 +611,25 @@ e[d]=g}}e=new Gauge(e);k.getAttribute("data-value")&&e.setRawValue(parseFloat(k.
                 xmlhttp.send();
             }
 //-->
-</script>
-            <div id="busyIcon" class="loading" style="display: none">Loading&#8230;</div>
-            <table width="850" border="0" align="center" cellpadding="0" cellspacing="0">
-                    <tr>
-                        <td height="100" colspan="2" align="center" valign="bottom"><br />
+            </script>
+                <div id="busyIcon" class="loading" style="display: none">Loading&#8230;</div>
+                <table width="850" border="0" align="center" cellpadding="0" cellspacing="0">
+<!--                    <tr>
+                        <td  colspan="2" align="center" valign="top">
                             <img src="img/banner.png" width="280" height="52" />
+                                                        <h2 id="titlePage">Les Jardins de Sylvie</h2>
+                            <br>
                             <color class="white">
                                 <?php
                                 include $_SERVER['DOCUMENT_ROOT'] . '/yieldbuddy2/www/version.php';
                                 ?>
                             </color>
                         </td>
-                    </tr>
+                    </tr>-->
                     <tr>
-                        <td height="20" colspan="2" align="center" valign="top">
+                        <td  colspan="2" align="center" valign="top">
 
-                            <table width="700" border="0">
+                            <table width="750" border="0">
                                 <tr class="CenterPageTitles">
                                     <td width="104" height="34" align="left" valign="bottom">Overview</td>
                                     <td width="150" valign="bottom"><a href="timers.php">Timers</a></td>
@@ -739,7 +741,20 @@ e[d]=g}}e=new Gauge(e);k.getAttribute("data-value")&&e.setRawValue(parseFloat(k.
                                         </script>
                                     </td>
                                 </tr>
+                                
                             </table>
+                            <tr>
+                        <td  colspan="2" align="center" valign="top">
+<!--                            <img src="img/banner.png" width="280" height="52" />-->
+                            <!--                            <h2 id="titlePage">Les Jardins de Sylvie</h2>-->
+                            <br>
+                            <color class="white">
+                                <?php
+                                include $_SERVER['DOCUMENT_ROOT'] . '/yieldbuddy2/www/version.php';
+                                ?>
+                            </color>
+                        </td>
+                    </tr>
                             </table>
                             </body>
                             </html>
