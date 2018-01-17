@@ -44,22 +44,27 @@ if (!file_exists($_SERVER['DOCUMENT_ROOT'] . '/yieldbuddy2/www/users/' . $_SESSI
                 }
                 .onoff
                 {
-                width:120px;
-                height:120px;
+                width:130px;
+                height:130px;
                 padding:1px 2px 3px 3px;	
-                font-size:24px;
+                font-size:26px;
                 font-weight: bold;
                 background:lightgray;
                 text-align:center ! important;
-                position:relative;
+                
+/*                position:relative;*/
+/*                display: block;*/
+                
+                margin-top: 10px;
+                margin-left: 10px;
 
                 
                 }
                 .onoff div
                 {
-                width:106px;
-                height:106px;
-                min-height:106px;	
+                width:116px;
+                height:116px;
+                min-height:116px;	
                 background:red;
                 overflow:hidden;
                 border-top:1px solid gray;
@@ -68,6 +73,8 @@ if (!file_exists($_SERVER['DOCUMENT_ROOT'] . '/yieldbuddy2/www/users/' . $_SESSI
                 border-left:1px solid gray;			
                 margin:0 auto;
                 color:white;
+
+                
                 }
                 a:link {
                     color: #999;
@@ -133,7 +140,7 @@ a.beginPath();a.rotate(e(90));a.arc(0,0,h,k-0.2,r+0.2,!1);a.restore();a.closePat
 0);a.lineTo(-1,c);a.lineTo(1,c);a.lineTo(k,0);a.lineTo(r,-d);a.closePath();a.fillStyle=g(b.colors.needle.start,b.colors.needle.end,c-d);a.fill();a.beginPath();a.lineTo(-0.5,c);a.lineTo(-1,c);a.lineTo(-k,0);a.lineTo(-r,-d);a.lineTo(r/2-2,-d);a.closePath();a.fillStyle="rgba(255, 255, 255, 0.2)";a.fill();a.restore();l();a.beginPath();a.arc(0,0,m,0,2*Math.PI,!0);a.fillStyle=g("#f0f0f0","#ccc",m);a.fill();a.restore();a.beginPath();a.arc(0,0,h,0,2*Math.PI,!0);a.fillStyle=g("#e8e8e8","#f5f5f5",h);a.fill()}
 function L(){a.save();a.font=40*(f/200)+"px Led";var b=x(y),h=a.measureText("-"+x(0)).width,c=f-33*(f/100),g=0.12*f;a.save();var d=-h/2-0.025*f,e=c-g-0.04*f,h=h+0.05*f,g=g+0.07*f,k=0.025*f;a.beginPath();a.moveTo(d+k,e);a.lineTo(d+h-k,e);a.quadraticCurveTo(d+h,e,d+h,e+k);a.lineTo(d+h,e+g-k);a.quadraticCurveTo(d+h,e+g,d+h-k,e+g);a.lineTo(d+k,e+g);a.quadraticCurveTo(d,e+g,d,e+g-k);a.lineTo(d,e+k);a.quadraticCurveTo(d,e,d+k,e);a.closePath();d=a.createRadialGradient(0,c-0.12*f-0.025*f+(0.12*f+0.045*f)/
 2,f/10,0,c-0.12*f-0.025*f+(0.12*f+0.045*f)/2,f/5);d.addColorStop(0,"#888");d.addColorStop(1,"#666");a.strokeStyle=d;a.lineWidth=0.05*f;a.stroke();a.shadowBlur=0.012*f;a.shadowColor="rgba(0, 0, 0, 1)";a.fillStyle="#babab2";a.fill();a.restore();a.shadowOffsetX=0.004*f;a.shadowOffsetY=0.004*f;a.shadowBlur=0.012*f;a.shadowColor="rgba(0, 0, 0, 0.3)";a.fillStyle="#444";a.textAlign="center";a.fillText(b,-0,c);a.restore()}Gauge.Collection.push(this);this.config={renderTo:null,width:200,height:200,title:!1,
-maxValue:100,minValue:0,majorTicks:[],minorTicks:10,strokeTicks:!0,units:!1,valueFormat:{"int":3,dec:2},majorTicksFormat:{"int":1,dec:0},glow:!0,animation:{delay:10,duration:250,fn:"cycle"},colors:{plate:"#fff",majorTicks:"#444",minorTicks:"#666",title:"#888",units:"#888",numbers:"#444",needle:{start:"rgba(240, 128, 128, 1)",end:"rgba(255, 160, 122, .9)"}},highlights:[{from:20,to:60,color:"#eee"},{from:60,to:80,color:"#ccc"},{from:80,to:100,color:"#999"}]};var y=0,E=this,n=0,I=0,H=!1;this.setValue=
+maxValue:100,minValue:0,majorTicks:[],minorTicks:10,strokeTicks:!0,units:!1,valueFormat:{"int":3,dec:2},majorTicksFormat:{"int":1,dec:0},glow:!0,animation:{delay:10,duration:250,fn:"cycle"},colors:{plate:"#fff",majorTicks:"#444",minorTicks:"#666",title:"#444",units:"#444",numbers:"#444",needle:{start:"rgba(240, 128, 128, 1)",end:"rgba(255, 160, 122, .9)"}},highlights:[{from:20,to:60,color:"#eee"},{from:60,to:80,color:"#ccc"},{from:80,to:100,color:"#999"}]};var y=0,E=this,n=0,I=0,H=!1;this.setValue=
 function(a){n=b.animation?y:a;var d=(b.maxValue-b.minValue)/100;I=a>b.maxValue?b.maxValue+d:a<b.minValue?b.minValue-d:a;y=a;b.animation?k():this.draw();return this};this.setRawValue=function(a){n=y=a;this.draw();return this};this.clear=function(){y=n=I=this.config.minValue;this.draw();return this};this.getValue=function(){return y};this.onready=function(){};l(this.config,b);this.config.minValue=parseFloat(this.config.minValue);this.config.maxValue=parseFloat(this.config.maxValue);b=this.config;n=
 y=b.minValue;if(!b.renderTo)throw Error("Canvas element was not specified when creating the Gauge object!");var z=b.renderTo.tagName?b.renderTo:document.getElementById(b.renderTo),a=z.getContext("2d"),A,C,D,t,u,f,B;q();this.updateConfig=function(a){l(this.config,a);q();this.draw();return this};var M={linear:function(a){return a},quad:function(a){return Math.pow(a,2)},quint:function(a){return Math.pow(a,5)},cycle:function(a){return 1-Math.sin(Math.acos(a))},bounce:function(a){a:{a=1-a;for(var b=0,
 c=1;;b+=c,c/=2)if(a>=(7-4*b)/11){a=-Math.pow((11-6*b-11*a)/4,2)+Math.pow(c,2);break a}a=void 0}return 1-a},elastic:function(a){a=1-a;return 1-Math.pow(2,10*(a-1))*Math.cos(30*Math.PI/3*a)}},G=null;a.lineCap="round";this.draw=function(){if(!A.i8d){B.clearRect(-t,-u,C,D);B.save();var g={ctx:a};a=B;p();N();J();d();s();b.title&&(a.save(),a.font=24*(f/200)+"px Arial",a.fillStyle=b.colors.title,a.textAlign="center",a.fillText(b.title,0,-f/4.25),a.restore());b.units&&(a.save(),a.font=22*(f/200)+"px Arial",
@@ -435,15 +442,38 @@ e[d]=g}}e=new Gauge(e);k.getAttribute("data-value")&&e.setRawValue(parseFloat(k.
                                 <tr>
                                     <td height="38" colspan="2"><table width="100%" height="44" border="0">
                                             <tr>
-                                                <td height="40" align="left" style="text-align: center;vertical-align: middle" valign="top"><p><strong>Sensor Information</strong></p>
+                                                <td height="200" align="left" style="" valign="top"><p><strong>Sensor Information</strong></p>
                                                     <p id="sensorInfo"></p>
-                                                    <canvas id="an_gauge_1" data-title="Air Temp" data-units="Temp. &deg;C" width="150" height="150" data-major-ticks="0 5 10 15 20 25 30 35 40" data-type="canv-gauge" data-min-value="0" data-max-value="40" data-highlights="0 10 #4D89F2, 10 20 #25B8D9, 20 28 #0BB950, 28 35 #cc5, 35 40 #f33" data-onready="setInterval( function() { Gauge.Collection.get('an_gauge_1').setValue(airTempVal);}, 200);"></canvas>
-                                                    <canvas id="an_gauge_2" data-title="Water Temp" data-units="Temp. &deg;C" width="150" height="150" data-major-ticks="0 5 10 15 20 25 30 35 40" data-type="canv-gauge" data-min-value="0" data-max-value="40" data-highlights="0 10 #4D89F2, 10 20 #25B8D9, 20 28 #0BB950, 28 35 #cc5, 35 40 #f33" data-onready="setInterval( function() { Gauge.Collection.get('an_gauge_2').setValue(waterTemp1Val);}, 200);"></canvas>
-                                                    <canvas id="an_gauge_3" data-title="PH" width="150" height="150"  data-major-ticks="0 1 2 3 4 5 6 7 8 9 10 11 12 13 14" data-type="canv-gauge" data-min-value="0" data-max-value="14" data-highlights="1 4 #f33, 4 5 #cc5, 5 7 #0BB950, 7 8 #cc5, 8 14 #f33" data-onready="setInterval( function() { Gauge.Collection.get('an_gauge_3').setValue(ph1Val);}, 200);"></canvas>
-                                                    <canvas id="an_gauge_4" data-title="Humidity" width="150" height="150"  data-major-ticks="0 10 20 30 40 50 60 70 80 90 100" data-type="canv-gauge" data-min-value="0" data-max-value="100" data-highlights="0 20 #f33, 20 30 #25B8D9, 30 60 #0BB950, 60 80 #cc5, 80 100 #f33" data-onready="setInterval( function() { Gauge.Collection.get('an_gauge_4').setValue(rhVal);}, 200);"></canvas>
-                                                    <button id="tank1Gauge" class="onoff" onclick="updateTank1(this)"><div style="vertical-align: middle">Tank 1 Refill</div></button>
-                                                    <button id="tank2Gauge" class="onoff" onclick="updateTank2(this)"><div style="vertical-align: middle">Tank 2 Overflow</div></button>
+                                                    <div height="150" >
+                                                        
+                                                        <div width="150" height="150" style="display: inline-block" >
+                                                            <canvas id="an_gauge_1" data-title="Air Temp" data-units="Temp. &deg;C" width="150" height="150" data-major-ticks="0 5 10 15 20 25 30 35 40" data-type="canv-gauge" data-min-value="0" data-max-value="40" data-highlights="0 10 #f33, 10 20 #cc5, 20 28 #0BB950, 28 35 #cc5, 35 40 #f33" data-onready="setInterval( function() { Gauge.Collection.get('an_gauge_1').setValue(airTempVal);}, 200);"></canvas>
+                                                        </div>
+                                                        
+                                                        <div width="150" height="150" style="display: inline-block" >
+                                                            <canvas id="an_gauge_4" data-title="Humidity" data-units="RH %" width="150" height="150"  data-major-ticks="0 10 20 30 40 50 60 70 80 90 100" data-type="canv-gauge" data-min-value="0" data-max-value="100" data-highlights="0 20 #f33, 20 30 #cc5, 30 60 #0BB950, 60 80 #cc5, 80 100 #f33" data-onready="setInterval( function() { Gauge.Collection.get('an_gauge_4').setValue(rhVal);}, 200);"></canvas>
+                                                        </div>
+                                                        
+                                                        <div width="150" height="150" style="display: inline-block">
+                                                            <canvas id="an_gauge_2" data-title="Water Temp" data-units="Temp. &deg;C" width="150" height="150" data-major-ticks="0 5 10 15 20 25 30 35 40" data-type="canv-gauge" data-min-value="0" data-max-value="40" data-highlights="0 10 #f33, 10 20 #cc5, 20 28 #0BB950, 28 35 #cc5, 35 40 #f33" data-onready="setInterval( function() { Gauge.Collection.get('an_gauge_2').setValue(waterTemp1Val);}, 200);"></canvas>
+                                                        </div>
+                                                        
+                                                        <div width="150" height="150" style="display: inline-block">
+                                                            <canvas id="an_gauge_3" data-title="PH 1" width="150" height="150"  data-major-ticks="2 3 4 5 6 7 8 9 10" data-type="canv-gauge" data-min-value="2" data-max-value="10" data-highlights="2 4 #f33, 4 5.4 #cc5, 5.4 7 #0BB950, 7 8 #cc5, 8 10 #f33" data-onready="setInterval( function() { Gauge.Collection.get('an_gauge_3').setValue(ph1Val);}, 200);"></canvas>
+                                                        </div>
+                                                                                                                
+                                                        <div width="150" height="150" style="display: inline-block; max-height: 150px;vertical-align: top">
 
+                                                            <button id="tank1Gauge" class="onoff" onclick="updateTank1(this)"><div >Tank 1 Refill</div></button>
+
+                                                        </div>
+
+                                                        <div width="150" height="150" style="display: inline-block; max-height: 150px;vertical-align: top">
+
+                                                            <button id="tank2Gauge" class="onoff" onclick="updateTank2(this)"><div >Tank 2 Overflow</div></button>
+
+                                                        </div>
+                                                    </div>
                                                 </td>
                                                 <td align="right" valign="top">        
                                                     <p align="right" id="relayInfo"></p>
