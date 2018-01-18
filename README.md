@@ -1,4 +1,4 @@
-YieldBuddy V1
+# YieldBuddy V2
 
 Modernized and adapted to Raspberry Pi 3
 
