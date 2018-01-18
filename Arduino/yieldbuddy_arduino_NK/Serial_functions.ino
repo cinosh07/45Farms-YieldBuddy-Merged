@@ -141,7 +141,7 @@ void sendserialmessages(){
     Serial.print(",");
     Serial.print(Tank4Value);
     Serial.print(",");    
-    Serial.print(WaterTempP1Value);
+    Serial.print(WaterTempP1RawValue);
     Serial.print(",");
     Serial.print(WaterTempP2Value);
     Serial.print(",");

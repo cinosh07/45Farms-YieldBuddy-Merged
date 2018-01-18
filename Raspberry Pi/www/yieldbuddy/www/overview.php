@@ -425,7 +425,7 @@ e[d]=g}}e=new Gauge(e);k.getAttribute("data-value")&&e.setRawValue(parseFloat(k.
                   }
                   else
                   {
-                    blabel="Tank2 OK";
+                    blabel="Tank 2 OK";
                     bstyle="green";
                     //bcolor="gray";
                   }
@@ -526,7 +526,7 @@ e[d]=g}}e=new Gauge(e);k.getAttribute("data-value")&&e.setRawValue(parseFloat(k.
                         if (ajaxRequest.responseText != "") {
                             document.getElementById("sensorInfo").innerHTML = ajaxRequest.responseText;
                             airTempVal = parseFloat($('#tempValueInput').val());
-                            waterTemp1TempVal = parseFloat($('#waterTemp1ValueInput').val());
+                            waterTemp1Val = parseFloat($('#waterTemp1ValueInput').val());
                             ph1Val = parseFloat($('#ph1ValueInput').val());
                             rhVal = parseFloat($('#rhValueInput').val());
                             $( "#tank1Gauge" ).trigger( "click" );
@@ -617,18 +617,6 @@ e[d]=g}}e=new Gauge(e);k.getAttribute("data-value")&&e.setRawValue(parseFloat(k.
             </script>
                 <div id="busyIcon" class="loading" style="display: none">Loading&#8230;</div>
                 <table width="850" border="0" align="center" cellpadding="0" cellspacing="0">
-<!--                    <tr>
-                        <td  colspan="2" align="center" valign="top">
-                            <img src="img/banner.png" width="280" height="52" />
-                                                        <h2 id="titlePage">Les Jardins de Sylvie</h2>
-                            <br>
-                            <color class="white">
-                                <?php
-                                include $_SERVER['DOCUMENT_ROOT'] . '/yieldbuddy2/www/version.php';
-                                ?>
-                            </color>
-                        </td>
-                    </tr>-->
                     <tr>
                         <td  colspan="2" align="center" valign="top">
 

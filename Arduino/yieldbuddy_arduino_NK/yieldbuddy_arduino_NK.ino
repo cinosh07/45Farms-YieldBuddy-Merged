@@ -55,7 +55,7 @@
 */
 
 //**Dallas Temperature
-#define ONE_WIRE_PIN 33
+#define ONE_WIRE_PIN 2
 #define TEMPERATURE_PRECISION 9
 
 byte WaterTempP1_addr[] = {0x28, 0xFF, 0xB8, 0x14, 0x71, 0x15, 0x02, 0xE4};
@@ -292,10 +292,6 @@ float filledvolume = 0; // amount of tank volume filled with water
 float water_litres = 0; // amount of tank volume filled in litres
 float echo = 0; // returned value in litres
 
-
-//**HMC5883L Magnetometer
-//HMC5883L compass;
-//int error = 0;
 
 //**Tank 1
 String Tank1_Status = "OK";
