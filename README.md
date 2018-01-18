@@ -1,4 +1,4 @@
-# 45Farms-YieldBuddy-Merged
+YieldBuddy V1
 
 Modernized and adapted to Raspberry Pi 3
 
