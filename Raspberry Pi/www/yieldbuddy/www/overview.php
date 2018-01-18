@@ -662,7 +662,7 @@ e[d]=g}}e=new Gauge(e);k.getAttribute("data-value")&&e.setRawValue(parseFloat(k.
                                     <td height="38" colspan="2">
                                         <table width="100%" height="44" style="border: 2px solid #ccc ; border-radius: 20px ; padding-bottom: 20px; padding-left: 20px;padding-right: 20px;padding-top: 10px">
                                             <tr >
-                                                <td height="200" align="left"  valign="top"><p><strong>Sensor Information</strong></p>
+                                                <td height="200" align="left"  valign="top"><p><strong>Sensors Information</strong></p>
                                                     <p id="sensorInfo"></p>
                                                     <div height="150"  >
                                                         
