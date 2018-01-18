@@ -721,7 +721,7 @@ e[d]=g}}e=new Gauge(e);k.getAttribute("data-value")&&e.setRawValue(parseFloat(k.
                                                 style="border:2px solid orange">
                                         </iframe>
                                         <br></br>
-                                        <button onclick="RestartCam()">Restart Camera</button> <button onclick="StopCam()">Stop Camera</button>
+<!--                                        <button onclick="RestartCam()">Restart Camera</button> <button onclick="StopCam()">Stop Camera</button>-->
                                         <script language="javascript" type="text/javascript">
                             			function RestartCam() {
                             			  window.location.assign("/yieldbuddy2/www/command.php?command=restart cam");
