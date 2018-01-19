@@ -117,7 +117,7 @@ a:active {
           <td height="77" colspan="2">
           
             <div align="center">
-            <h6>Note: Low / High Values are used for alerts and for logging purposes.<br>
+            <h6>Note: Low / High Values are used for alerts and for logging purposes.<br>Please use pH 7 Calibration Solution to calibrate pH sensors
             </h6>
             </div>
             <h4>
@@ -153,7 +153,7 @@ a:active {
                   <?php
 
 		echo "<td width=\"300\"><div align=\"right\">";
-                echo "use pH 7 Solution: &nbsp;&nbsp;&nbsp;";
+//                echo "use pH 7 Solution: &nbsp;&nbsp;&nbsp;";
 		echo "</td>";
 		
 		echo "<tr><td></td>";
@@ -195,7 +195,7 @@ a:active {
                   <?php
 
 		echo "<td width=\"300\"><div align=\"right\">";
-                echo "use pH 7 Solution: &nbsp;&nbsp;&nbsp;";
+//                echo "use pH 7 Solution: &nbsp;&nbsp;&nbsp;";
 		echo "</td>";
 		echo "<tr><td></td>";
 		echo "<td><div align=\"right\">";
