@@ -35,7 +35,7 @@ body,td,th {
     }
 
 	$command=$_GET["command"];
-    $submit=$_GET["submit"];
+        $submit=$_GET["submit"];
 
 
 	echo "Submit:  " .$submit. "<br>";
@@ -116,13 +116,17 @@ body,td,th {
 	$pH1Value_High = $_GET["pH1Value_High"];
 	$command="setpH1," .$pH1Value_Low. "," .$pH1Value_High;
 	}
-	
+	if ($submit == "Calibrate pH1"){
+	$command="calibratepH1";
+	}
 	if ($submit == "Save pH2 Settings"){
 	$pH2Value_Low = $_GET["pH2Value_Low"];
 	$pH2Value_High = $_GET["pH2Value_High"];
 	$command="setpH2," .$pH2Value_Low. "," .$pH2Value_High;
 	}
-	
+	if ($submit == "Calibrate pH2"){
+	$command="calibratepH2";
+	}
 	if ($submit == "Save Temp Settings"){
 	$TempValue_Low = $_GET["TempValue_Low"];
 	$TempValue_High = $_GET["TempValue_High"];

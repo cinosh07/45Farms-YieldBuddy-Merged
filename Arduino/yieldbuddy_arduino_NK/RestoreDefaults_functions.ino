@@ -56,7 +56,7 @@ void RestoreDefaults() {
   CO2RawValue = 0;
   LightRawValue = 0;
   WaterRawValue = 0;
-  
+
   //**added ultrasonic tank sensors
   Tank1RawValue = 0;
   Tank2RawValue = 0;
@@ -69,7 +69,7 @@ void RestoreDefaults() {
   WaterTempP2RawValue = 0;
   WaterTempP3RawValue = 0;
   WaterTempP4RawValue = 0;
-  
+
 
   //**Values the humans see
   pH1Value = 0;
@@ -81,7 +81,7 @@ void RestoreDefaults() {
   CO2Value = 0;
   LightValue = 0;
   WaterValue = 0;
-  
+
   //**added ultrasonic tank sensors
   Tank1Value = 0;
   Tank2Value = 0;
@@ -94,7 +94,7 @@ void RestoreDefaults() {
   WaterTempP2Value = 0;
   WaterTempP3Value = 0;
   WaterTempP4Value = 0;
-  
+
 
   //**STATUS INDICATOR VALUES
 
@@ -183,11 +183,14 @@ void RestoreDefaults() {
   pH1_Status = "OK";
   pH1Value_Low = 5.80;
   pH1Value_High = 6.20;
-  
+  pH1Offset = 0.0;
+
+
   //**PH2
   pH2_Status = "OK";
   pH2Value_Low = 5.80;
   pH2Value_High = 6.2;
+  pH2Offset = 0.0;
 
   //**AirTEMP
   Temp_Status = "OK";
@@ -198,7 +201,7 @@ void RestoreDefaults() {
   Heater_OFF = 23.00;
   AC_ON = 27.00;
   AC_OFF = 25.00;
-  
+
   //**HUMIDITY
   RH_Status = "OK";
   RHValue_Low = 30.00;
@@ -226,7 +229,7 @@ void RestoreDefaults() {
   NutePump2_ON = 1;
   NutePump2_OFF = 16;
   MixPump2_Enabled = false;
-  
+
   //**Co2
   CO2_Status = "OK";
   CO2Value_Low = 40.00;
@@ -235,7 +238,7 @@ void RestoreDefaults() {
   CO2_ON = 40.00;
   CO2_OFF = 45.00 ;
   CO2_Enabled = false;
-    
+
   //**LIGHT
   Light_Status = "OK";
   LightValue_Low = 5.00;
@@ -296,8 +299,11 @@ void RestoreDefaults() {
   //**pH
   eepromWriteFloat(113, pH1Value_Low);
   eepromWriteFloat(117, pH1Value_High);
+  eepromWriteFloat(400, pH1Offset);
   eepromWriteFloat(121, pH2Value_Low);
   eepromWriteFloat(125, pH2Value_High);
+  eepromWriteFloat(410, pH2Offset);
+
 
   //**Temp
   eepromWriteFloat(129, TempValue_Low);
@@ -351,7 +357,7 @@ void RestoreDefaults() {
     EEPROM.write(227, 0);
   }
 
-  
+
   //**Light
   eepromWriteFloat(228, LightValue_Low);
   eepromWriteFloat(232, LightValue_High);
@@ -457,7 +463,7 @@ void RestoreDefaults() {
   eepromWriteFloat(556, WaterTempP3Heater_ON);
   eepromWriteFloat(560, WaterTempP3Heater_OFF);
   eepromWriteFloat(564, WaterTempP3AC_ON);
-  eepromWriteFloat(568, WaterTempP3AC_OFF);  
+  eepromWriteFloat(568, WaterTempP3AC_OFF);
 
   //**WaterTempP4
   eepromWriteFloat(572, WaterTempP4Value_Low);
@@ -465,7 +471,7 @@ void RestoreDefaults() {
   eepromWriteFloat(580, WaterTempP4Heater_ON);
   eepromWriteFloat(584, WaterTempP4Heater_OFF);
   eepromWriteFloat(588, WaterTempP4AC_ON);
-  eepromWriteFloat(592, WaterTempP4AC_OFF);  
+  eepromWriteFloat(592, WaterTempP4AC_OFF);
 
   //Save Time Settings
   EEPROM.write(0, tmp_hour);
@@ -478,4 +484,3 @@ void RestoreDefaults() {
   setSyncProvider(RTC.get);
 
 }
-

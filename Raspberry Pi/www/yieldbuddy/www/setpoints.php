@@ -148,6 +148,21 @@ a:active {
 		?>
                 </form>
               </tr>
+              <tr>
+                <form action="command.php" method="get">
+                  <?php
+
+		echo "<td width=\"300\"><div align=\"right\">";
+                echo "use pH 7 Solution: &nbsp;&nbsp;&nbsp;";
+		echo "</td>";
+		
+		echo "<tr><td></td>";
+		echo "<td><div align=\"right\">";
+		echo "<input type=\"submit\"  name=\"submit\" value=\"Calibrate pH1\" /></div></td>";
+		echo "</tr>";
+		?>
+                </form>
+              </tr>
             </table>
             <br />
             pH2
@@ -161,7 +176,7 @@ a:active {
 		$pH2Value_Low=$_SESSION['pH2Value_Low'];
 		$pH2Value_High=$_SESSION['pH2Value_High'];
 		echo "<td width=\"300\"><div align=\"right\">";
-        echo "Low: &nbsp;&nbsp;&nbsp;";
+                echo "Low: &nbsp;&nbsp;&nbsp;";
 		echo "<input type=\"text\" name=\"pH2Value_Low\" size=\"6\" value=\"" . $pH2Value_Low . "\" /></div>";
 		echo "</td>";
 		echo "<td><div align=\"right\">";
@@ -171,6 +186,20 @@ a:active {
 		echo "<tr><td></td>";
 		echo "<td><div align=\"right\">";
 		echo "<input type=\"submit\"  name=\"submit\" value=\"Save pH2 Settings\" /></div></td>";
+		echo "</tr>";
+		?>
+                </form>
+              </tr>
+              <tr>
+                <form action="command.php" method="get">
+                  <?php
+
+		echo "<td width=\"300\"><div align=\"right\">";
+                echo "use pH 7 Solution: &nbsp;&nbsp;&nbsp;";
+		echo "</td>";
+		echo "<tr><td></td>";
+		echo "<td><div align=\"right\">";
+		echo "<input type=\"submit\"  name=\"submit\" value=\"Calibrate pH2\" /></div></td>";
 		echo "</tr>";
 		?>
                 </form>
@@ -188,10 +217,10 @@ a:active {
 		$TempValue_Low=$_SESSION['TempValue_Low'];
 		$TempValue_High=$_SESSION['TempValue_High'];
 		echo "<td width=\"300\"><div align=\"right\">";
-        echo "Low: &nbsp;&nbsp;&nbsp;";
+                echo "Low: &nbsp;&nbsp;&nbsp;";
 		echo "<input type=\"text\" name=\"TempValue_Low\" size=\"6\" value=\"" . $TempValue_Low . "\" />";
 		echo "</td>";
-     	echo "<td><div align=\"right\">";
+                echo "<td><div align=\"right\">";
 		echo "High: &nbsp;&nbsp;&nbsp;";
 		echo "<input type=\"text\" name=\"TempValue_High\" size=\"6\" value=\"" . $TempValue_High . "\" /></div></td>";
 		echo "</tr>";
@@ -199,7 +228,7 @@ a:active {
 		$Heater_ON=$_SESSION['Heater_ON'];
 		$Heater_OFF=$_SESSION['Heater_OFF'];
 		echo "<tr>";
-        echo "<td><div align=\"right\">Heater On: &nbsp;&nbsp;&nbsp;";
+                echo "<td><div align=\"right\">Heater On: &nbsp;&nbsp;&nbsp;";
 		echo "<input type=\"text\" name=\"Heater_ON\" size=\"6\" value=\"" . $Heater_ON . "\" /></div>";
 		echo "</td>";
 		echo "<td><div align=\"right\">Heater Off: &nbsp;&nbsp;&nbsp;";
@@ -208,7 +237,7 @@ a:active {
 		$AC_ON=$_SESSION['AC_ON'];
 		$AC_OFF=$_SESSION['AC_OFF'];
 		echo "<tr>";
-        echo "<td><div align=\"right\">AC On: &nbsp;&nbsp;&nbsp;";
+                echo "<td><div align=\"right\">AC On: &nbsp;&nbsp;&nbsp;";
 		echo "<input type=\"text\" name=\"AC_ON\" size=\"6\" value=\"" . $AC_ON . "\" /></div>";
 		echo "</td>";
 		echo "<td><div align=\"right\">AC Off: &nbsp;&nbsp;&nbsp;";

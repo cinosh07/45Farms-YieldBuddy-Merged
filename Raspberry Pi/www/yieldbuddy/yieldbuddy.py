@@ -950,27 +950,6 @@ AESkey=f_AESkey.readline()
 AESkey=AESkey.rstrip('\n')
 f_AESkey.close()
 
-#Load SQL Settings (MySQL)
-#f_sql_address=open(app_path+'www/settings/sql/address','r+')
-#sql_address=f_sql_address.readline()
-#sql_address=sql_address.rstrip('\n')
-#f_sql_address.close()
-
-#f_sql_username=open(app_path+'www/settings/sql/username','r+')
-#sql_username=f_sql_username.readline()
-#sql_username=sql_username.rstrip('\n')
-#f_sql_username.close()
-
-#f_sql_password=open(app_path+'www/settings/sql/password','r+')
-#sql_password=f_sql_password.readline()
-#sql_password=sql_password.rstrip('\n')
-#f_sql_password.close()
-
-#f_sql_database=open(app_path+'www/settings/sql/database','r+')
-#sql_database=f_sql_database.readline()
-#sql_database=sql_database.rstrip('\n')
-#f_sql_database.close()
-
 # Open database connection
 db = lite.connect(app_path+'www/sql/yieldbuddy.sqlite3', timeout=10)
 

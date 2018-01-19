@@ -118,9 +118,9 @@ void updateSensorValues() {
   float b;
   int buf[10],temp;
   for(int i=0;i<10;i++)       //Get 10 sample value from the sensor for smooth the value
-  { 
+  {
     buf[i]=analogRead(pH1Pin);
-    delay(10);
+    delay(15);
   }
   for(int i=0;i<9;i++)        //sort the analog from small to large
   {
@@ -138,7 +138,7 @@ void updateSensorValues() {
   for(int i=2;i<8;i++)                      //take the average value of 6 center sample
     avgValue+=buf[i];
   pH1Value=(float)avgValue*5.0/1024/6; //convert the analog into millivolt
-  pH1Value=(3.5*pH1Value)-0.2;
+  pH1Value=(3.5*pH1Value) + pH1Offset;
 #else
   pH1RawValue = 0;
   pH1Value = 0;
@@ -166,7 +166,7 @@ void updateSensorValues() {
     j++;
   }
   pH2RawValue = pH2Sum/30;
-  pH2Value = (pHSlope * pH2RawValue + pHOffset);
+  pH2Value = (pHSlope * pH2RawValue + pH2Offset);
 #else
   pH2RawValue = 0;
   pH2Value = 0;

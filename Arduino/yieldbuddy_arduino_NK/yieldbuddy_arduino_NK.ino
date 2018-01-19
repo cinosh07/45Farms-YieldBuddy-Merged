@@ -102,7 +102,7 @@ int Tank4LimitSwitchPin = 43;
 int Relay1_Pin = 25;  //Water Aeroponic Pump
 int Relay2_Pin = 24;  //Water Supply Solenoid
 int Relay3_Pin = 23;  //pH up
-int Relay4_Pin = 22;  // Tap Water Solenoid    
+int Relay4_Pin = 22;  // Tap Water Solenoid
 int Relay5_Pin = 49;  // Exhaust Fan
 int Relay6_Pin = 48;  // Humidifier
 int Relay7_Pin = 47;  //AC - Intake Fan
@@ -389,7 +389,8 @@ float CalPoint_4 = 2221;  //Write here your measured value in mV of pH 4
 float CalPoint_7 = 2104;  //Write here your measured value in mV of pH 7
 float CalPoint_10 = 2031; //Write here your measured value in mV of pH 10
 float pHSlope = 0.0178; //slope from sensor calibration. Calculate from values above in the future (NK)
-float pHOffset = 0.0; //slope from sensor calibration. Calculate from values above in the future (NK)
+float pH1Offset = 0.0; //slope from sensor calibration. Calculate from values above in the future (NK)
+float pH2Offset = 0.0; //slope from sensor calibration. Calculate from values above in the future (NK)
 
 
 //**Air Temperature
@@ -575,10 +576,12 @@ void setup()
   //**EEPROM pH1 Settings
   pH1Value_Low = eepromReadFloat(113);
   pH1Value_High = eepromReadFloat(117);
+  pH1Offset = eepromReadFloat(400);
 
   //**EEPROM pH2 Settings
   pH2Value_Low = eepromReadFloat(121);
   pH2Value_High = eepromReadFloat(125);
+  pH2Offset = eepromReadFloat(410);
 
   //**EEPROM Temp Settings
   TempValue_Low  = eepromReadFloat(129);

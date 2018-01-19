@@ -8,56 +8,56 @@ void sendRelayMessages() {
     Serial.print("Relays,");
     if (digitalRead(Relay1_Pin) == LOW){
       Serial.print(1);
-    } 
+    }
     else if (digitalRead(Relay1_Pin) == HIGH) {
       Serial.print(0);
     }
     Serial.print(",");
     if (digitalRead(Relay2_Pin) == LOW){
       Serial.print(1);
-    } 
+    }
     else if (digitalRead(Relay2_Pin) == HIGH) {
       Serial.print(0);
     }
     Serial.print(",");
     if (digitalRead(Relay3_Pin) == LOW){
       Serial.print(1);
-    } 
+    }
     else if (digitalRead(Relay3_Pin) == HIGH) {
       Serial.print(0);
     }
     Serial.print(",");
     if (digitalRead(Relay4_Pin) == LOW){
       Serial.print(1);
-    } 
+    }
     else if (digitalRead(Relay4_Pin) == HIGH) {
       Serial.print(0);
     }
     Serial.print(",");
     if (digitalRead(Relay5_Pin) == LOW){
       Serial.print(1);
-    } 
+    }
     else if (digitalRead(Relay5_Pin) == HIGH) {
       Serial.print(0);
     }
     Serial.print(",");
     if (digitalRead(Relay6_Pin) == LOW){
       Serial.print(1);
-    } 
+    }
     else if (digitalRead(Relay6_Pin) == HIGH) {
       Serial.print(0);
     }
     Serial.print(",");
     if (digitalRead(Relay7_Pin) == LOW){
       Serial.print(1);
-    } 
+    }
     else if (digitalRead(Relay7_Pin) == HIGH) {
       Serial.print(0);
     }
    Serial.print(",");   //This Relay is opposite
     if (digitalRead(Relay8_Pin) == LOW){
       Serial.println(1);
-    } 
+    }
     else if (digitalRead(Relay8_Pin) == HIGH) {
       Serial.println(0);
     }
@@ -74,13 +74,13 @@ void sendRelayMessages() {
     Serial.print(",");
     Serial.print(Relay5_isAuto);
     Serial.print(",");
-    Serial.print(Relay6_isAuto);  
+    Serial.print(Relay6_isAuto);
     Serial.print(",");
     Serial.print(Relay7_isAuto);
     Serial.print(",");
     Serial.println(Relay8_isAuto);
 }
- 
+
 void sendserialmessages(){
 
   //The purpose of 'serialcounter' is so that serial messages are not sent as one big chunk of data every 'loop()', instead they are split up
@@ -90,7 +90,7 @@ void sendserialmessages(){
   if (serialcounter == 1 || serialcounter == 3 || serialcounter == 5 || serialcounter == 7 || serialcounter == 9 || serialcounter == 11 || serialcounter == 13 || serialcounter == 15 || serialcounter == 17|| serialcounter == 19 || serialcounter == 21){
     //*****SEND TIMESTAMP
     updatelongdate();
-    Serial.println(); 
+    Serial.println();
     Serial.print("Time,");
     Serial.print(longdate);
     Serial.print(",");
@@ -104,7 +104,7 @@ void sendserialmessages(){
     Serial.print(",");
     Serial.print(minute());
     Serial.print(",");
-    Serial.println(second());  
+    Serial.println(second());
     //*****SENSOR VALUES
     Serial.print("Sensors,");
     Serial.print(pH1Value);
@@ -124,15 +124,15 @@ void sendserialmessages(){
     Serial.print(LightValue);
     Serial.print(",");
     Serial.print(WaterValue);
-    Serial.print(",");    
+    Serial.print(",");
     Serial.print(MagXValue);
     Serial.print(",");
     Serial.print(MagYValue);
     Serial.print(",");
     Serial.print(MagZValue);
     Serial.print(",");
-    Serial.print(TankTotalValue);            
-    Serial.print(",");    
+    Serial.print(TankTotalValue);
+    Serial.print(",");
     Serial.print(Tank1Value);
     Serial.print(",");
     Serial.print(Tank2Value);
@@ -140,18 +140,18 @@ void sendserialmessages(){
     Serial.print(Tank3Value);
     Serial.print(",");
     Serial.print(Tank4Value);
-    Serial.print(",");    
+    Serial.print(",");
     Serial.print(WaterTempP1RawValue);
     Serial.print(",");
     Serial.print(WaterTempP2Value);
     Serial.print(",");
     Serial.print(WaterTempP3Value);
     Serial.print(",");
-    Serial.println(WaterTempP4Value);   
+    Serial.println(WaterTempP4Value);
     sendRelayMessages(); //<<---- Relays and Relay_isAutoMessages
   }
- //******Schedules**************** 
-  if (serialcounter == 3) { 
+ //******Schedules****************
+  if (serialcounter == 3) {
 
 
     //*****LIGHTS
@@ -163,17 +163,17 @@ void sendserialmessages(){
     Serial.print(Light_OFF_hour);
     Serial.print(",");
     Serial.println(Light_OFF_min);
-    
+
     //*****WATERING
     Serial.print("Watering_Schedule,");
     Serial.print(Pump_start_hour);
     Serial.print(",");
     Serial.print(Pump_start_min);
     Serial.print(",");
-    
+
     if (Pump_start_isAM == true) {
       Serial.print("1,");
-    } 
+    }
     else {
       Serial.print("0,");
     }
@@ -185,10 +185,10 @@ void sendserialmessages(){
     Serial.print(",");
     Serial.println(Pump_times);
   }
- //******SETPOINTS****************  
-  if (serialcounter == 4) {    
+ //******SETPOINTS****************
+  if (serialcounter == 4) {
 
-    //*****pH1    
+    //*****pH1
     Serial.print("SetPoint_pH1,");
     Serial.print(pH1Value_Low);
     Serial.print(",");
@@ -196,9 +196,9 @@ void sendserialmessages(){
     Serial.print(",");
     Serial.println(pH1_Status);
   }
-  if (serialcounter == 5) { 
+  if (serialcounter == 5) {
 
-    //*****pH2    
+    //*****pH2
     Serial.print("SetPoint_pH2,");
     Serial.print(pH2Value_Low);
     Serial.print(",");
@@ -206,9 +206,9 @@ void sendserialmessages(){
     Serial.print(",");
     Serial.println(pH2_Status);
   }
-  if (serialcounter == 6) { 
+  if (serialcounter == 6) {
 
-    //*****Temp   
+    //*****Temp
     Serial.print("SetPoint_Temp,");
     Serial.print(TempValue_Low);
     Serial.print(",");
@@ -223,10 +223,10 @@ void sendserialmessages(){
     Serial.print(AC_OFF);
     Serial.print(",");
     Serial.println(Temp_Status);
-  } 
-  if (serialcounter == 7) { 
- 
-    //*****RH    
+  }
+  if (serialcounter == 7) {
+
+    //*****RH
     Serial.print("SetPoint_RH,");
     Serial.print(RHValue_Low);
     Serial.print(",");
@@ -239,12 +239,12 @@ void sendserialmessages(){
     Serial.print(Dehumidifier_ON);
     Serial.print(",");
     Serial.print(Dehumidifier_OFF);
-    Serial.print(",");        
+    Serial.print(",");
     Serial.println(RH_Status);
   }
-  if (serialcounter == 8) { 
+  if (serialcounter == 8) {
 
-    //*****TDS1    
+    //*****TDS1
     Serial.print("SetPoint_TDS1,");
     Serial.print(TDS1Value_Low);
     Serial.print(",");
@@ -258,9 +258,9 @@ void sendserialmessages(){
     Serial.print(",");
     Serial.println(TDS1_Status);
   }
-  if (serialcounter == 9) { 
+  if (serialcounter == 9) {
 
-    //*****TDS2   
+    //*****TDS2
     Serial.print("SetPoint_TDS2,");
     Serial.print(TDS2Value_Low);
     Serial.print(",");
@@ -274,9 +274,9 @@ void sendserialmessages(){
     Serial.print(",");
     Serial.println(TDS2_Status);
   }
-  if (serialcounter == 10) { 
+  if (serialcounter == 10) {
 
-   //*****CO2    
+   //*****CO2
     Serial.print("SetPoint_CO2,");
     Serial.print(CO2Value_Low);
     Serial.print(",");
@@ -290,20 +290,20 @@ void sendserialmessages(){
     Serial.print(",");
     Serial.println(CO2_Status);
   }
-  if (serialcounter == 11) { 
- 
-    //*****Light   
+  if (serialcounter == 11) {
+
+    //*****Light
     Serial.print("SetPoint_Light,");
     Serial.print(LightValue_Low);
     Serial.print(",");
     Serial.print(LightValue_High);
     Serial.print(",");
-    Serial.println(Light_Status); 
+    Serial.println(Light_Status);
 
   }
-  if (serialcounter == 13) {    
+  if (serialcounter == 13) {
 
-    //*****Water    
+    //*****Water
     Serial.print("SetPoint_Water,");
     Serial.print(WaterValue_Low);
     Serial.print(",");
@@ -311,9 +311,9 @@ void sendserialmessages(){
     Serial.print(",");
     Serial.println(Water_Status);
   }
-  if (serialcounter == 14) { 
+  if (serialcounter == 14) {
 
-    //*****Tank Total    
+    //*****Tank Total
     Serial.print("SetPoint_TankTotal,");
     Serial.print(TankTotalValue_Low);
     Serial.print(",");
@@ -321,9 +321,9 @@ void sendserialmessages(){
     Serial.print(",");
     Serial.println(TankTotal_Status);
   }
-  if (serialcounter == 15) { 
+  if (serialcounter == 15) {
 
-    //*****Tank 1   
+    //*****Tank 1
     Serial.print("SetPoint_Tank1,");
     Serial.print(Tank1Value_Low);
     Serial.print(",");
@@ -337,9 +337,9 @@ void sendserialmessages(){
     Serial.print(",");
     Serial.println(Tank1_Status);
   }
-  if (serialcounter == 16) { 
- 
-    //*****Tank 2   
+  if (serialcounter == 16) {
+
+    //*****Tank 2
     Serial.print("SetPoint_Tank2,");
     Serial.print(Tank2Value_Low);
     Serial.print(",");
@@ -353,9 +353,9 @@ void sendserialmessages(){
     Serial.print(",");
     Serial.println(Tank2_Status);
   }
-  if (serialcounter == 17) { 
+  if (serialcounter == 17) {
 
-    //*****Tank 3    
+    //*****Tank 3
     Serial.print("SetPoint_Tank3,");
     Serial.print(Tank3Value_Low);
     Serial.print(",");
@@ -369,9 +369,9 @@ void sendserialmessages(){
     Serial.print(",");
     Serial.println(Tank3_Status);
   }
-  if (serialcounter == 18) { 
+  if (serialcounter == 18) {
 
-    //*****Tank 4    
+    //*****Tank 4
     Serial.print("SetPoint_Tank4,");
     Serial.print(Tank4Value_Low);
     Serial.print(",");
@@ -386,7 +386,7 @@ void sendserialmessages(){
     Serial.println(Tank4_Status);
     serialcounter = 0;
   }
-  if (serialcounter == 19) { 
+  if (serialcounter == 19) {
 
     Serial.print("SetPoint_WaterTempP1,");
     Serial.print(WaterTempP1Value_Low);
@@ -404,7 +404,7 @@ void sendserialmessages(){
     Serial.println(WaterTempP1_Status);
 
   }
-  if (serialcounter == 20) { 
+  if (serialcounter == 20) {
 
     Serial.print("SetPoint_WaterTempP2,");
     Serial.print(WaterTempP2Value_Low);
@@ -423,7 +423,7 @@ void sendserialmessages(){
 
 
   }
-  if (serialcounter == 21) { 
+  if (serialcounter == 21) {
 
     Serial.print("SetPoint_WaterTempP3,");
     Serial.print(WaterTempP3Value_Low);
@@ -441,7 +441,7 @@ void sendserialmessages(){
     Serial.println(WaterTempP3_Status);
 
   }
-  if (serialcounter == 22) { 
+  if (serialcounter == 22) {
 
     Serial.print("SetPoint_WaterTempP4,");
     Serial.print(WaterTempP4Value_Low);
@@ -458,7 +458,7 @@ void sendserialmessages(){
     Serial.print(",");
     Serial.println(WaterTempP4_Status);
     serialcounter = 0;
-  }    
+  }
   serialcounter++;
 }
 
@@ -470,7 +470,7 @@ void sendserialmessages(){
 void serialEvent() {
   while (Serial.available() > 0) {
     // get the new byte:
-    char inChar = (char)Serial.read(); 
+    char inChar = (char)Serial.read();
 
     // if the incoming character is a newline, set a flag
     // so the main loop can do something about it:
@@ -483,7 +483,7 @@ void serialEvent() {
         EEPROM.write(6,1);
         turnRelay(1, 1);
         sendRelayMessages();
-      } 
+      }
       else if (Serial_inString == "Relay1 off" && Relay1_isAuto == 0) {
         Relay1_State = 0;
         EEPROM.write(6,0);
@@ -495,7 +495,7 @@ void serialEvent() {
         EEPROM.write(7,1);
         turnRelay(2, 1);
         sendRelayMessages();
-      } 
+      }
       else if (Serial_inString == "Relay2 off" && Relay2_isAuto == 0) {
         Relay2_State = 0;
         EEPROM.write(7,0);
@@ -507,7 +507,7 @@ void serialEvent() {
         EEPROM.write(8,1);
         turnRelay(3, 1);
         sendRelayMessages();
-      } 
+      }
       else if (Serial_inString == "Relay3 off" && Relay3_isAuto == 0) {
         Relay3_State = 0;
         EEPROM.write(8,0);
@@ -519,7 +519,7 @@ void serialEvent() {
         EEPROM.write(9,1);
         turnRelay(4, 1);
         sendRelayMessages();
-      } 
+      }
       else if (Serial_inString == "Relay4 off" && Relay4_isAuto == 0) {
         Relay4_State = 0;
         EEPROM.write(9,0);
@@ -531,7 +531,7 @@ void serialEvent() {
         EEPROM.write(10,1);
         turnRelay(5, 1);
         sendRelayMessages();
-      } 
+      }
       else if (Serial_inString == "Relay5 off" && Relay5_isAuto == 0) {
         Relay5_State = 0;
         EEPROM.write(10,0);
@@ -544,7 +544,7 @@ void serialEvent() {
         turnRelay(6, 1);
         sendRelayMessages();
 
-      } 
+      }
       else if (Serial_inString == "Relay6 off" && Relay6_isAuto == 0) {
         Relay6_State = 0;
         EEPROM.write(11,0);
@@ -556,7 +556,7 @@ void serialEvent() {
         EEPROM.write(12,1);
         turnRelay(7, 1);
         sendRelayMessages();
-      } 
+      }
       else if (Serial_inString == "Relay7 off" && Relay7_isAuto == 0) {
         Relay7_State = 0;
         EEPROM.write(12,0);
@@ -569,7 +569,7 @@ void serialEvent() {
         turnRelay(8, 1);
         sendRelayMessages();
 
-      } 
+      }
       else if (Serial_inString == "Relay8 off" && Relay8_isAuto == 0) {
         Relay8_State = 0;
         EEPROM.write(13,0);
@@ -580,7 +580,7 @@ void serialEvent() {
         Relay1_isAuto = 1;
         EEPROM.write(22,1);
         sendRelayMessages();
-      } 
+      }
       else if (Serial_inString == "Relay1 isAuto 0") {
         Relay1_isAuto = 0;
         EEPROM.write(22,0);
@@ -590,7 +590,7 @@ void serialEvent() {
         Relay2_isAuto = 1;
         EEPROM.write(23,1);
         sendRelayMessages();
-      } 
+      }
       else if (Serial_inString == "Relay2 isAuto 0") {
         Relay2_isAuto = 0;
         EEPROM.write(23,0);
@@ -600,7 +600,7 @@ void serialEvent() {
         Relay3_isAuto = 1;
         EEPROM.write(24,1);
         sendRelayMessages();
-      } 
+      }
       else if (Serial_inString == "Relay3 isAuto 0") {
         Relay3_isAuto = 0;
         EEPROM.write(24,0);
@@ -610,7 +610,7 @@ void serialEvent() {
         Relay4_isAuto = 1;
         EEPROM.write(25,1);
         sendRelayMessages();
-      } 
+      }
       else if (Serial_inString == "Relay4 isAuto 0") {
         Relay4_isAuto = 0;
         EEPROM.write(25,0);
@@ -620,7 +620,7 @@ void serialEvent() {
         Relay5_isAuto = 1;
         EEPROM.write(26,1);
         sendRelayMessages();
-      } 
+      }
       else if (Serial_inString == "Relay5 isAuto 0") {
         Relay5_isAuto = 0;
         EEPROM.write(26,0);
@@ -630,7 +630,7 @@ void serialEvent() {
         Relay6_isAuto = 1;
         EEPROM.write(27,1);
         sendRelayMessages();
-      } 
+      }
       else if (Serial_inString == "Relay6 isAuto 0") {
         Relay6_isAuto = 0;
         EEPROM.write(27,0);
@@ -640,7 +640,7 @@ void serialEvent() {
         Relay7_isAuto = 1;
         EEPROM.write(28,1);
         sendRelayMessages();
-      } 
+      }
       else if (Serial_inString == "Relay7 isAuto 0") {
         Relay7_isAuto = 0;
         EEPROM.write(28,0);
@@ -650,7 +650,7 @@ void serialEvent() {
         Relay8_isAuto = 1;
         EEPROM.write(29,1);
         sendRelayMessages();
-      } 
+      }
       else if (Serial_inString == "Relay8 isAuto 0") {
         Relay8_isAuto = 0;
         EEPROM.write(29,0);
@@ -658,7 +658,7 @@ void serialEvent() {
       }
       if (Serial_inString == "restoredefaults") {
         RestoreDefaults();
-      }    
+      }
       if(Serial_inString.indexOf("setdate") >=0) {
         //      Serial.println("YESSS");
         char datechar[Serial_inString.length()+1];
@@ -690,8 +690,8 @@ void serialEvent() {
 
         //      Serial.print("Split:");
         //      Serial.println(Serial_inString);
-        //        
-        //     
+        //
+        //
         //      Serial.println("Month");
         //      Serial.println(datestring[1]);
         //      Serial.println("Day");
@@ -704,7 +704,7 @@ void serialEvent() {
         //      Serial.println(datestring[5]);
         //      Serial.println("Sec");
         //      Serial.println(datestring[6]);
-        //      
+        //
         int parsed_month = datestring[1].toInt();
         int parsed_day = datestring[2].toInt();
         int parsed_year = datestring[3].toInt();
@@ -718,7 +718,7 @@ void serialEvent() {
         EEPROM.write(3,parsed_day);
         EEPROM.write(4,parsed_month);
         EEPROM.write(5,parsed_year);
-        setTime(parsed_hour,parsed_minute,parsed_second,parsed_day,parsed_month,parsed_year);   
+        setTime(parsed_hour,parsed_minute,parsed_second,parsed_day,parsed_month,parsed_year);
         RTC.set(now());
       }
       if(Serial_inString.indexOf("setlightschedule") >=0) {
@@ -891,8 +891,14 @@ void serialEvent() {
         pH1Value_High = parsed_pH1Value_High;
 
         eepromWriteFloat(113, parsed_pH1Value_Low);
-        eepromWriteFloat(117, parsed_pH1Value_High);  
+        eepromWriteFloat(117, parsed_pH1Value_High);
 
+      }
+      if(Serial_inString.indexOf("calibratepH1") >=0) {
+
+        pH1Offset = -(pH1Value - 7.00);
+
+        eepromWriteFloat(400, pH1Offset);
       }
       if(Serial_inString.indexOf("setpH2") >=0) {
         char serialchar[Serial_inString.length()+1];
@@ -927,8 +933,14 @@ void serialEvent() {
         pH2Value_High = parsed_pH2Value_High;
 
         eepromWriteFloat(121, parsed_pH2Value_Low);
-        eepromWriteFloat(125, parsed_pH2Value_High);  
+        eepromWriteFloat(125, parsed_pH2Value_High);
 
+      }
+      if(Serial_inString.indexOf("calibratepH2") >=0) {
+
+        pH2Offset = -(pH2Value - 7.00);
+
+        eepromWriteFloat(410, pH2Offset);
       }
       if(Serial_inString.indexOf("setTemp") >=0) {
         char serialchar[Serial_inString.length()+1];
@@ -984,11 +996,11 @@ void serialEvent() {
         AC_OFF = parsed_AC_OFF;
 
         eepromWriteFloat(129, parsed_TempValue_Low);
-        eepromWriteFloat(133, parsed_TempValue_High);  
+        eepromWriteFloat(133, parsed_TempValue_High);
         eepromWriteFloat(137, parsed_Heater_ON);
-        eepromWriteFloat(141, parsed_Heater_OFF);  
+        eepromWriteFloat(141, parsed_Heater_OFF);
         eepromWriteFloat(145, parsed_AC_ON);
-        eepromWriteFloat(149, parsed_AC_OFF);  
+        eepromWriteFloat(149, parsed_AC_OFF);
 
       }
       if(Serial_inString.indexOf("setWaterTempP1") >=0) {
@@ -1045,11 +1057,11 @@ void serialEvent() {
         WaterTempP1AC_OFF = parsed_WaterTempP1AC_OFF;
 
         eepromWriteFloat(500, parsed_WaterTempP1Value_Low);
-        eepromWriteFloat(504, parsed_WaterTempP1Value_High);  
+        eepromWriteFloat(504, parsed_WaterTempP1Value_High);
         eepromWriteFloat(508, parsed_WaterTempP1Heater_ON);
-        eepromWriteFloat(512, parsed_WaterTempP1Heater_OFF);  
+        eepromWriteFloat(512, parsed_WaterTempP1Heater_OFF);
         eepromWriteFloat(516, parsed_WaterTempP1AC_ON);
-        eepromWriteFloat(520, parsed_WaterTempP1AC_OFF);  
+        eepromWriteFloat(520, parsed_WaterTempP1AC_OFF);
 
       }
       if(Serial_inString.indexOf("setWaterTempP2") >=0) {
@@ -1106,11 +1118,11 @@ void serialEvent() {
         WaterTempP2AC_OFF = parsed_WaterTempP2AC_OFF;
 
         eepromWriteFloat(524, parsed_WaterTempP2Value_Low);
-        eepromWriteFloat(528, parsed_WaterTempP2Value_High);  
+        eepromWriteFloat(528, parsed_WaterTempP2Value_High);
         eepromWriteFloat(532, parsed_WaterTempP2Heater_ON);
-        eepromWriteFloat(536, parsed_WaterTempP2Heater_OFF);  
+        eepromWriteFloat(536, parsed_WaterTempP2Heater_OFF);
         eepromWriteFloat(540, parsed_WaterTempP2AC_ON);
-        eepromWriteFloat(544, parsed_WaterTempP2AC_OFF);  
+        eepromWriteFloat(544, parsed_WaterTempP2AC_OFF);
 
       }
       if(Serial_inString.indexOf("setWaterTempP3") >=0) {
@@ -1167,11 +1179,11 @@ void serialEvent() {
         WaterTempP3AC_OFF = parsed_WaterTempP3AC_OFF;
 
         eepromWriteFloat(548, parsed_WaterTempP3Value_Low);
-        eepromWriteFloat(552, parsed_WaterTempP3Value_High);  
+        eepromWriteFloat(552, parsed_WaterTempP3Value_High);
         eepromWriteFloat(556, parsed_WaterTempP3Heater_ON);
-        eepromWriteFloat(560, parsed_WaterTempP3Heater_OFF);  
+        eepromWriteFloat(560, parsed_WaterTempP3Heater_OFF);
         eepromWriteFloat(564, parsed_WaterTempP3AC_ON);
-        eepromWriteFloat(568, parsed_WaterTempP3AC_OFF);  
+        eepromWriteFloat(568, parsed_WaterTempP3AC_OFF);
 
       }
       if(Serial_inString.indexOf("setWaterTempP4") >=0) {
@@ -1228,13 +1240,13 @@ void serialEvent() {
         WaterTempP4AC_OFF = parsed_WaterTempP4AC_OFF;
 
         eepromWriteFloat(572, parsed_WaterTempP4Value_Low);
-        eepromWriteFloat(576, parsed_WaterTempP4Value_High);  
+        eepromWriteFloat(576, parsed_WaterTempP4Value_High);
         eepromWriteFloat(580, parsed_WaterTempP4Heater_ON);
-        eepromWriteFloat(584, parsed_WaterTempP4Heater_OFF);  
+        eepromWriteFloat(584, parsed_WaterTempP4Heater_OFF);
         eepromWriteFloat(588, parsed_WaterTempP4AC_ON);
-        eepromWriteFloat(592, parsed_WaterTempP4AC_OFF);  
+        eepromWriteFloat(592, parsed_WaterTempP4AC_OFF);
 
-      } 
+      }
       if(Serial_inString.indexOf("setRH") >=0) {
         char serialchar[Serial_inString.length()+1];
         Serial_inString.toCharArray(serialchar, Serial_inString.length()+1);
@@ -1289,11 +1301,11 @@ void serialEvent() {
         Dehumidifier_OFF = parsed_Dehumidifier_OFF;
 
         eepromWriteFloat(153, parsed_RHValue_Low);
-        eepromWriteFloat(157, parsed_RHValue_High);  
+        eepromWriteFloat(157, parsed_RHValue_High);
         eepromWriteFloat(161, parsed_Humidifier_ON);
-        eepromWriteFloat(165, parsed_Humidifier_OFF);  
+        eepromWriteFloat(165, parsed_Humidifier_OFF);
         eepromWriteFloat(169, parsed_Dehumidifier_ON);
-        eepromWriteFloat(173, parsed_Dehumidifier_OFF);  
+        eepromWriteFloat(173, parsed_Dehumidifier_OFF);
 
       }
       if(Serial_inString.indexOf("setTDS1") >=0) {
@@ -1344,16 +1356,16 @@ void serialEvent() {
         if (parsed_MixPump1_Enabled == 1) {
           MixPump1_Enabled = true;
           EEPROM.write(193, 1);
-        } 
+        }
         else if(parsed_MixPump1_Enabled == 0) {
           MixPump1_Enabled = false;
-          EEPROM.write(193, 0);            
+          EEPROM.write(193, 0);
         }
 
         eepromWriteFloat(177, parsed_TDS1Value_Low);
-        eepromWriteFloat(181, parsed_TDS1Value_High);  
+        eepromWriteFloat(181, parsed_TDS1Value_High);
         eepromWriteFloat(185, parsed_NutePump1_ON);
-        eepromWriteFloat(189, parsed_NutePump1_OFF);  
+        eepromWriteFloat(189, parsed_NutePump1_OFF);
 
       }
       if(Serial_inString.indexOf("setTDS2") >=0) {
@@ -1404,16 +1416,16 @@ void serialEvent() {
         if (parsed_MixPump2_Enabled == 1) {
           MixPump2_Enabled = true;
           EEPROM.write(208, 1);
-        } 
+        }
         else if(parsed_MixPump2_Enabled == 0) {
           MixPump2_Enabled = false;
-          EEPROM.write(208, 0);            
+          EEPROM.write(208, 0);
         }
 
         eepromWriteFloat(194, parsed_TDS2Value_Low);
-        eepromWriteFloat(198, parsed_TDS2Value_High);  
+        eepromWriteFloat(198, parsed_TDS2Value_High);
         eepromWriteFloat(202, parsed_NutePump2_ON);
-        eepromWriteFloat(206, parsed_NutePump2_OFF);  
+        eepromWriteFloat(206, parsed_NutePump2_OFF);
 
       }
       if(Serial_inString.indexOf("setCO2") >=0) {
@@ -1459,10 +1471,10 @@ void serialEvent() {
         if (parsed_CO2_Enabled == 1) {
           CO2_Enabled = true;
           EEPROM.write(227, 1);
-        } 
+        }
         else if(parsed_CO2_Enabled == 0) {
           CO2_Enabled = false;
-          EEPROM.write(227, 0);            
+          EEPROM.write(227, 0);
         }
 
         CO2Value_Low = parsed_CO2Value_Low;
@@ -1472,9 +1484,9 @@ void serialEvent() {
 
 
         eepromWriteFloat(211, parsed_CO2Value_Low);
-        eepromWriteFloat(215, parsed_CO2Value_High);  
+        eepromWriteFloat(215, parsed_CO2Value_High);
         eepromWriteFloat(219, parsed_CO2_ON);
-        eepromWriteFloat(223, parsed_CO2_OFF);  
+        eepromWriteFloat(223, parsed_CO2_OFF);
 
       }
       if(Serial_inString.indexOf("setLight") >=0) {
@@ -1512,7 +1524,7 @@ void serialEvent() {
         LightValue_High = parsed_LightValue_High;
 
         eepromWriteFloat(228, parsed_LightValue_Low);
-        eepromWriteFloat(232, parsed_LightValue_High);  
+        eepromWriteFloat(232, parsed_LightValue_High);
 
       }
       if(Serial_inString.indexOf("setTank1") >=0) {
@@ -1551,7 +1563,7 @@ void serialEvent() {
 
         char char_Tank1Pump_OFF[splitstring[4].length() + 1];
         splitstring[4].toCharArray(char_Tank1Pump_OFF, sizeof(char_Tank1Pump_OFF));
-        
+
         float parsed_Tank1Pump_OFF = atof(char_Tank1Pump_OFF);
         int parsed_Tank1MixPump_Enabled = splitstring[5].toInt();
 
@@ -1563,16 +1575,16 @@ void serialEvent() {
         if (parsed_Tank1MixPump_Enabled == 1) {
           Tank1MixPump_Enabled = true;
           EEPROM.write(252, 1);
-        } 
+        }
         else if(parsed_Tank1MixPump_Enabled == 0) {
          Tank1MixPump_Enabled = false;
-          EEPROM.write(252, 0);            
+          EEPROM.write(252, 0);
         }
 
         eepromWriteFloat(236, parsed_Tank1Value_Low);
-        eepromWriteFloat(240, parsed_Tank1Value_High);  
+        eepromWriteFloat(240, parsed_Tank1Value_High);
         eepromWriteFloat(244, parsed_Tank1Pump_ON);
-        eepromWriteFloat(248, parsed_Tank1Pump_OFF);  
+        eepromWriteFloat(248, parsed_Tank1Pump_OFF);
 
       }
       if(Serial_inString.indexOf("setTank2") >=0) {
@@ -1611,7 +1623,7 @@ void serialEvent() {
 
         char char_Tank2Pump_OFF[splitstring[4].length() + 1];
         splitstring[4].toCharArray(char_Tank2Pump_OFF, sizeof(char_Tank2Pump_OFF));
-        
+
         float parsed_Tank2Pump_OFF = atof(char_Tank2Pump_OFF);
         int parsed_Tank2MixPump_Enabled = splitstring[5].toInt();
 
@@ -1623,16 +1635,16 @@ void serialEvent() {
         if (parsed_Tank2MixPump_Enabled == 1) {
           Tank2MixPump_Enabled = true;
           EEPROM.write(269, 1);
-        } 
+        }
         else if(parsed_Tank2MixPump_Enabled == 0) {
          Tank2MixPump_Enabled = false;
-          EEPROM.write(269, 0);            
+          EEPROM.write(269, 0);
         }
 
         eepromWriteFloat(253, parsed_Tank2Value_Low);
-        eepromWriteFloat(257, parsed_Tank2Value_High);  
+        eepromWriteFloat(257, parsed_Tank2Value_High);
         eepromWriteFloat(261, parsed_Tank2Pump_ON);
-        eepromWriteFloat(265, parsed_Tank2Pump_OFF);  
+        eepromWriteFloat(265, parsed_Tank2Pump_OFF);
 
       }
       if(Serial_inString.indexOf("setTank3") >=0) {
@@ -1671,7 +1683,7 @@ void serialEvent() {
 
         char char_Tank3Pump_OFF[splitstring[4].length() + 1];
         splitstring[4].toCharArray(char_Tank3Pump_OFF, sizeof(char_Tank3Pump_OFF));
-        
+
         float parsed_Tank3Pump_OFF = atof(char_Tank3Pump_OFF);
         int parsed_Tank3MixPump_Enabled = splitstring[5].toInt();
 
@@ -1683,16 +1695,16 @@ void serialEvent() {
         if (parsed_Tank3MixPump_Enabled == 1) {
           Tank3MixPump_Enabled = true;
           EEPROM.write(286, 1);
-        } 
+        }
         else if(parsed_Tank3MixPump_Enabled == 0) {
          Tank3MixPump_Enabled = false;
-          EEPROM.write(286, 0);            
+          EEPROM.write(286, 0);
         }
 
         eepromWriteFloat(270, parsed_Tank3Value_Low);
-        eepromWriteFloat(274, parsed_Tank3Value_High);  
+        eepromWriteFloat(274, parsed_Tank3Value_High);
         eepromWriteFloat(278, parsed_Tank3Pump_ON);
-        eepromWriteFloat(282, parsed_Tank3Pump_OFF);  
+        eepromWriteFloat(282, parsed_Tank3Pump_OFF);
 
       }
       if(Serial_inString.indexOf("setTank4") >=0) {
@@ -1731,7 +1743,7 @@ void serialEvent() {
 
         char char_Tank4Pump_OFF[splitstring[4].length() + 1];
         splitstring[4].toCharArray(char_Tank4Pump_OFF, sizeof(char_Tank4Pump_OFF));
-        
+
         float parsed_Tank4Pump_OFF = atof(char_Tank4Pump_OFF);
         int parsed_Tank4MixPump_Enabled = splitstring[5].toInt();
 
@@ -1743,16 +1755,16 @@ void serialEvent() {
         if (parsed_Tank4MixPump_Enabled == 1) {
           Tank4MixPump_Enabled = true;
           EEPROM.write(303, 1);
-        } 
+        }
         else if(parsed_Tank4MixPump_Enabled == 0) {
          Tank4MixPump_Enabled = false;
-          EEPROM.write(303, 0);            
+          EEPROM.write(303, 0);
         }
 
         eepromWriteFloat(287, parsed_Tank4Value_Low);
-        eepromWriteFloat(291, parsed_Tank4Value_High);  
+        eepromWriteFloat(291, parsed_Tank4Value_High);
         eepromWriteFloat(295, parsed_Tank4Pump_ON);
-        eepromWriteFloat(299, parsed_Tank4Pump_OFF);  
+        eepromWriteFloat(299, parsed_Tank4Pump_OFF);
 
       }
       if(Serial_inString.indexOf("setTankTotal") >=0) {
@@ -1788,7 +1800,7 @@ void serialEvent() {
         TankTotalValue_High = parsed_TankTotalValue_High;
 
         eepromWriteFloat(304, parsed_TankTotalValue_Low);
-        eepromWriteFloat(308, parsed_TankTotalValue_High);  
+        eepromWriteFloat(308, parsed_TankTotalValue_High);
 
       }
       if(Serial_inString.indexOf("setWater") >=0) {
@@ -1824,19 +1836,17 @@ void serialEvent() {
         WaterValue_High = parsed_WaterValue_High;
 
         eepromWriteFloat(312, parsed_WaterValue_Low);
-        eepromWriteFloat(316, parsed_WaterValue_High);  
+        eepromWriteFloat(316, parsed_WaterValue_High);
       }
 
 
       Serial_inString = "";
       serialcounter = 1;
       sendserialmessages();
-    } 
+    }
     else {
       // add it to the inputString:
-      Serial_inString += inChar;  
+      Serial_inString += inChar;
     }
   }
 }
-
-
