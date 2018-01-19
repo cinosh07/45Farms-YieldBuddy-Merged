@@ -37,10 +37,10 @@ tempEmailAlert = 1
 rhEmailAlert = 1
 co2EmailAlert = 0
 lightEmailAlert = 0
-waterEmailAlert = 1
+waterEmailAlert = 0
 tanktotalEmailAlert = 0
-tank1EmailAlert = 0
-tank2EmailAlert = 0
+tank1EmailAlert = 1
+tank2EmailAlert = 1
 tank3EmailAlert = 0
 tank4EmailAlert = 0
 
@@ -562,18 +562,17 @@ def checkSerial():
 				update_sql("UPDATE `pH1` SET Low='" + pH1Value_Low + "', High='" + pH1Value_High + "', Status='" + pH1_Status + "'")
 				pH1_Low_Alarm = fetch_sql("SELECT Low_Alarm FROM pH1")
 				pH1_High_Alarm = fetch_sql("SELECT High_Alarm FROM pH1")
-				if pH1_Low_Alarm[0] == 1:
-                                        if ph1EmailAlert == 1: 
-                                                if email_message_tls(login_address,email_password,to_address,"pH1 Low",smtp_server, smtp_port) == 1:
+				if ph1EmailAlert == 1:
+                                    if pH1_Low_Alarm[0] == 1:
+                                         if email_message_tls(login_address,email_password,to_address,"pH1 Low",smtp_server, smtp_port) == 1:
                                                         update_sql("UPDATE `pH1` SET Low_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if pH1_High_Alarm[0] == 1:
-                                        if ph1EmailAlert == 1:
-                                                if email_message_tls(login_address,email_password,to_address,"pH1 High",smtp_server, smtp_port) == 1:
-                                                        update_sql("UPDATE `pH1` SET High_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if 'LOW' in pH1_Status and pH1_Low_Alarm[0] == 0:
-					update_sql("UPDATE `pH1` SET Low_Alarm = 1, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if 'HIGH' in pH1_Status and pH1_High_Alarm[0] == 0:
-					update_sql("UPDATE `pH1` SET High_Alarm = 1, High_Time= '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")					
+                                    if pH1_High_Alarm[0] == 1:
+                                           if email_message_tls(login_address,email_password,to_address,"pH1 High",smtp_server, smtp_port) == 1:
+                                                            update_sql("UPDATE `pH1` SET High_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
+                                    if 'LOW' in pH1_Status and pH1_Low_Alarm[0] == 0:
+                                            update_sql("UPDATE `pH1` SET Low_Alarm = 1, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
+                                    if 'HIGH' in pH1_Status and pH1_High_Alarm[0] == 0:
+                                            update_sql("UPDATE `pH1` SET High_Alarm = 1, High_Time= '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")					
 		elif 'SetPoint_pH2' in line:
 			if oldSetPoint_pH2 != line:
 				oldSetPoint_pH2 = line
@@ -588,18 +587,17 @@ def checkSerial():
 				update_sql("UPDATE `pH2` SET Low='" + pH2Value_Low + "',High='" + pH2Value_High + "',Status='" + pH2_Status + "'")
 				pH2_Low_Alarm = fetch_sql("SELECT Low_Alarm FROM pH2")
 				pH2_High_Alarm = fetch_sql("SELECT High_Alarm FROM pH2")
-				if pH2_Low_Alarm[0] == 1:
-                                        if ph2EmailAlert == 1:
-                                                if email_message_tls(login_address,email_password,to_address,"pH2 Low",smtp_server, smtp_port) == 1:
+				if ph2EmailAlert == 1:
+                                    if pH2_Low_Alarm[0] == 1:
+                                        if email_message_tls(login_address,email_password,to_address,"pH2 Low",smtp_server, smtp_port) == 1:
                                                         update_sql("UPDATE `pH2` SET Low_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if pH2_High_Alarm[0] == 1:
-                                        if ph2EmailAlert == 1:
+                                        if pH2_High_Alarm[0] == 1:
                                                 if email_message_tls(login_address,email_password,to_address,"pH2 High",smtp_server, smtp_port) == 1:
-                                                        update_sql("UPDATE `pH2` SET High_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if 'LOW' in pH2_Status and pH2_Low_Alarm[0] == 0:
-					update_sql("UPDATE `pH2` SET Low_Alarm = 1, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if 'HIGH' in pH2_Status and pH2_High_Alarm[0] == 0:
-					update_sql("UPDATE `pH2` SET High_Alarm = 1, High_Time= '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
+                                                                update_sql("UPDATE `pH2` SET High_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
+                                        if 'LOW' in pH2_Status and pH2_Low_Alarm[0] == 0:
+                                                update_sql("UPDATE `pH2` SET Low_Alarm = 1, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
+                                        if 'HIGH' in pH2_Status and pH2_High_Alarm[0] == 0:
+                                                update_sql("UPDATE `pH2` SET High_Alarm = 1, High_Time= '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
 		elif 'SetPoint_Temp' in line:
 			if oldSetPoint_Temp != line:
 				oldSetPoint_Temp = line
@@ -616,18 +614,17 @@ def checkSerial():
 				update_sql("UPDATE `Temp` SET Low = " + TempValue_Low + ", High = " + TempValue_High + ", Heater_ON = " + Heater_ON + ", Heater_OFF = " + Heater_OFF + ", AC_ON =" + AC_ON + ", AC_OFF =" + AC_OFF + ", Status ='" + Temp_Status + "'")
 				Temp_Low_Alarm = fetch_sql("SELECT Low_Alarm FROM Temp")
 				Temp_High_Alarm = fetch_sql("SELECT High_Alarm FROM Temp")
-				if Temp_Low_Alarm[0] == 1:
-                                        if tempEmailAlert == 1:
-                                                if email_message_tls(login_address,email_password,to_address,"Temp Low",smtp_server, smtp_port) == 1:
-                                                        update_sql("UPDATE `Temp` SET Low_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if Temp_High_Alarm[0] == 1:
-                                        if tempEmailAlert == 1:
-                                                if email_message_tls(login_address,email_password,to_address,"Temp High",smtp_server, smtp_port) == 1:
-                                                        update_sql("UPDATE `Temp` SET High_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if 'LOW' in Temp_Status and Temp_Low_Alarm[0] == 0:
-					update_sql("UPDATE `Temp` SET Low_Alarm = 1, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if 'HIGH' in Temp_Status and Temp_High_Alarm[0] == 0:
-					update_sql("UPDATE `Temp` SET High_Alarm = 1, High_Time= '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
+				if tempEmailAlert == 1:
+                                    if Temp_Low_Alarm[0] == 1:
+                                            if email_message_tls(login_address,email_password,to_address,"Temp Low",smtp_server, smtp_port) == 1:
+                                                            update_sql("UPDATE `Temp` SET Low_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
+                                            if Temp_High_Alarm[0] == 1:
+                                                    if email_message_tls(login_address,email_password,to_address,"Temp High",smtp_server, smtp_port) == 1:
+                                                                    update_sql("UPDATE `Temp` SET High_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
+                                            if 'LOW' in Temp_Status and Temp_Low_Alarm[0] == 0:
+                                                    update_sql("UPDATE `Temp` SET Low_Alarm = 1, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
+                                            if 'HIGH' in Temp_Status and Temp_High_Alarm[0] == 0:
+                                                    update_sql("UPDATE `Temp` SET High_Alarm = 1, High_Time= '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
 		elif 'SetPoint_RH' in line:
 			if oldSetPoint_RH != line:
 				oldSetPoint_RH = line
@@ -641,18 +638,17 @@ def checkSerial():
 				update_sql("UPDATE `RH` SET Low = " + RHValue_Low + ", High = " + RHValue_High + ", Humidifier_ON = " + Humidifier_ON + ", Humidifier_OFF = " + Humidifier_OFF + ", Dehumidifier_ON =" + Dehumidifier_ON + ", Dehumidifier_OFF =" + Dehumidifier_OFF + ", Status ='" + RH_Status + "'")
 				RH_Low_Alarm = fetch_sql("SELECT Low_Alarm FROM RH")
 				RH_High_Alarm = fetch_sql("SELECT High_Alarm FROM RH")
-				if RH_Low_Alarm[0] == 1:
-                                        if rhEmailAlert == 1:
-                                                if email_message_tls(login_address,email_password,to_address,"RH Low",smtp_server, smtp_port) == 1:
-                                                        update_sql("UPDATE `RH` SET Low_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if RH_High_Alarm[0] == 1:
-                                        if rhEmailAlert == 1:
-                                                if email_message_tls(login_address,email_password,to_address,"RH High",smtp_server, smtp_port) == 1:
-                                                        update_sql("UPDATE `RH` SET High_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if 'LOW' in RH_Status and RH_Low_Alarm[0] == 0:
-					update_sql("UPDATE `RH` SET Low_Alarm = 1, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if 'HIGH' in RH_Status and RH_High_Alarm[0] == 0:
-					update_sql("UPDATE `RH` SET High_Alarm = 1, High_Time= '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
+				if rhEmailAlert == 1:
+                                    if RH_Low_Alarm[0] == 1:
+                                            if email_message_tls(login_address,email_password,to_address,"RH Low",smtp_server, smtp_port) == 1:
+                                                            update_sql("UPDATE `RH` SET Low_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
+                                    if RH_High_Alarm[0] == 1:
+                                            if email_message_tls(login_address,email_password,to_address,"RH High",smtp_server, smtp_port) == 1:
+                                                            update_sql("UPDATE `RH` SET High_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
+                                    if 'LOW' in RH_Status and RH_Low_Alarm[0] == 0:
+                                            update_sql("UPDATE `RH` SET Low_Alarm = 1, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
+                                    if 'HIGH' in RH_Status and RH_High_Alarm[0] == 0:
+                                            update_sql("UPDATE `RH` SET High_Alarm = 1, High_Time= '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
 		elif 'SetPoint_TDS1' in line:
 			if oldSetPoint_TDS1 != line:
 				oldSetPoint_TDS1 = line
@@ -666,18 +662,17 @@ def checkSerial():
 				update_sql("UPDATE `TDS1` SET Low = " + TDS1Value_Low + ", High = " + TDS1Value_High + ", NutePump1_ON = " + NutePump1_ON + ", NutePump1_OFF = " + NutePump1_OFF + ", MixPump1_Enabled =" + MixPump1_Enabled + ", Status ='" + TDS1_Status + "'")
 				TDS1_Low_Alarm = fetch_sql("SELECT Low_Alarm FROM TDS1")
 				TDS1_High_Alarm = fetch_sql("SELECT High_Alarm FROM TDS1")
-				if TDS1_Low_Alarm[0] == 1:
-                                        if tds1EmailAlert == 1:
-                                                if email_message_tls(login_address,email_password,to_address,"TDS1 Low",smtp_server, smtp_port) == 1:
-                                                        update_sql("UPDATE `TDS1` SET Low_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if TDS1_High_Alarm[0] == 1:
-                                        if tds1EmailAlert == 1:
-                                                if email_message_tls(login_address,email_password,to_address,"TDS1 High",smtp_server, smtp_port) == 1:
-                                                        update_sql("UPDATE `TDS1` SET High_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if 'LOW' in TDS1_Status and TDS1_Low_Alarm[0] == 0:
-					update_sql("UPDATE `TDS1` SET Low_Alarm = 1, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if 'HIGH' in TDS1_Status and TDS1_High_Alarm[0] == 0:
-					update_sql("UPDATE `TDS1` SET High_Alarm = 1, High_Time= '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")					
+				if tds1EmailAlert == 1:
+                                    if TDS1_Low_Alarm[0] == 1:
+                                            if email_message_tls(login_address,email_password,to_address,"TDS1 Low",smtp_server, smtp_port) == 1:
+                                                            update_sql("UPDATE `TDS1` SET Low_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
+                                    if TDS1_High_Alarm[0] == 1:
+                                            if email_message_tls(login_address,email_password,to_address,"TDS1 High",smtp_server, smtp_port) == 1:
+                                                            update_sql("UPDATE `TDS1` SET High_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
+                                    if 'LOW' in TDS1_Status and TDS1_Low_Alarm[0] == 0:
+                                            update_sql("UPDATE `TDS1` SET Low_Alarm = 1, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
+                                    if 'HIGH' in TDS1_Status and TDS1_High_Alarm[0] == 0:
+                                            update_sql("UPDATE `TDS1` SET High_Alarm = 1, High_Time= '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")					
 		elif 'SetPoint_TDS2' in line:
 			if oldSetPoint_TDS2 != line:
 				oldSetPoint_TDS2 = line
@@ -691,18 +686,17 @@ def checkSerial():
 				update_sql("UPDATE `TDS2` SET Low = " + TDS2Value_Low + ", High = " + TDS2Value_High + ", NutePump2_ON = " + NutePump2_ON + ", NutePump2_OFF = " + NutePump2_OFF + ", MixPump2_Enabled =" + MixPump2_Enabled + ", Status ='" + TDS2_Status + "'")
 				TDS2_Low_Alarm = fetch_sql("SELECT Low_Alarm FROM TDS2")
 				TDS2_High_Alarm = fetch_sql("SELECT High_Alarm FROM TDS2")
-				if TDS2_Low_Alarm[0] == 1:
-                                        if tds2EmailAlert == 1:
-                                                if email_message_tls(login_address,email_password,to_address,"TDS2 Low",smtp_server, smtp_port) == 1:
+				if tds2EmailAlert == 1:
+                                    if TDS2_Low_Alarm[0] == 1:
+                                            if email_message_tls(login_address,email_password,to_address,"TDS2 Low",smtp_server, smtp_port) == 1:
                                                         update_sql("UPDATE `TDS2` SET Low_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if TDS2_High_Alarm[0] == 1:
-                                        if tds2EmailAlert == 1:
-                                                if email_message_tls(login_address,email_password,to_address,"TDS2 High",smtp_server, smtp_port) == 1:
-                                                        update_sql("UPDATE `TDS2` SET High_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if 'LOW' in TDS2_Status and TDS2_Low_Alarm[0] == 0:
-					update_sql("UPDATE `TDS2` SET Low_Alarm = 1, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if 'HIGH' in TDS2_Status and TDS2_High_Alarm[0] == 0:
-					update_sql("UPDATE `TDS2` SET High_Alarm = 1, High_Time= '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
+                                    if TDS2_High_Alarm[0] == 1:
+                                            if email_message_tls(login_address,email_password,to_address,"TDS2 High",smtp_server, smtp_port) == 1:
+                                                            update_sql("UPDATE `TDS2` SET High_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
+                                    if 'LOW' in TDS2_Status and TDS2_Low_Alarm[0] == 0:
+                                            update_sql("UPDATE `TDS2` SET Low_Alarm = 1, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
+                                    if 'HIGH' in TDS2_Status and TDS2_High_Alarm[0] == 0:
+                                            update_sql("UPDATE `TDS2` SET High_Alarm = 1, High_Time= '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
 		elif 'SetPoint_CO2' in line:
 			if oldSetPoint_CO2 != line:
 				oldSetPoint_CO2 = line
@@ -716,18 +710,17 @@ def checkSerial():
 				update_sql("UPDATE `CO2` SET Low = " + CO2Value_Low + ", High = " + CO2Value_High + ", CO2_ON = " + CO2_ON + ", CO2_OFF = " + CO2_OFF + ", CO2_Enabled =" + CO2_Enabled + ", Status = '" + CO2_Status + "'")
 				CO2_Low_Alarm = fetch_sql("SELECT Low_Alarm FROM CO2")
 				CO2_High_Alarm = fetch_sql("SELECT High_Alarm FROM CO2")
-				if CO2_Low_Alarm[0] == 1:
-                                        if co2EmailAlert == 1:
-                                                if email_message_tls(login_address,email_password,to_address,"CO2 Low",smtp_server, smtp_port) == 1:
-                                                        update_sql("UPDATE `CO2` SET Low_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if CO2_High_Alarm[0] == 1:
-                                        if co2EmailAlert == 1:
-                                                if email_message_tls(login_address,email_password,to_address,"CO2 High",smtp_server, smtp_port) == 1:
-                                                        update_sql("UPDATE `CO2` SET High_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if 'LOW' in CO2_Status and CO2_Low_Alarm[0] == 0:
-					update_sql("UPDATE `CO2` SET Low_Alarm = 1, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if 'HIGH' in CO2_Status and CO2_High_Alarm[0] == 0:
-					update_sql("UPDATE `CO2` SET High_Alarm = 1, High_Time= '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
+				if co2EmailAlert == 1:
+                                    if CO2_Low_Alarm[0] == 1:
+                                            if email_message_tls(login_address,email_password,to_address,"CO2 Low",smtp_server, smtp_port) == 1:
+                                                            update_sql("UPDATE `CO2` SET Low_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
+                                    if CO2_High_Alarm[0] == 1:
+                                            if email_message_tls(login_address,email_password,to_address,"CO2 High",smtp_server, smtp_port) == 1:
+                                                            update_sql("UPDATE `CO2` SET High_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
+                                    if 'LOW' in CO2_Status and CO2_Low_Alarm[0] == 0:
+                                            update_sql("UPDATE `CO2` SET Low_Alarm = 1, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
+                                    if 'HIGH' in CO2_Status and CO2_High_Alarm[0] == 0:
+                                            update_sql("UPDATE `CO2` SET High_Alarm = 1, High_Time= '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
 		elif 'SetPoint_Light' in line:
 			if oldSetPoint_Light != line:
 				oldSetPoint_Light = line
@@ -741,18 +734,17 @@ def checkSerial():
 				update_sql("UPDATE `Light` SET Low = '" + LightValue_Low + "', High = '" + LightValue_High + "', Status = '" + Light_Status + "'")
 				Light_Low_Alarm = fetch_sql("SELECT Low_Alarm FROM Light")
 				Light_High_Alarm = fetch_sql("SELECT High_Alarm FROM Light")
-				if Light_Low_Alarm[0] == 1:
-                                        if lightEmailAlert == 1:
-                                                if email_message_tls(login_address,email_password,to_address,"Light Low",smtp_server, smtp_port) == 1:
-                                                        update_sql("UPDATE `Light` SET Low_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if Light_High_Alarm[0] == 1:
-                                        if lightEmailAlert == 1:
-                                                if email_message_tls(login_address,email_password,to_address,"Light High",smtp_server, smtp_port) == 1:
-                                                        update_sql("UPDATE `Light` SET High_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if 'LOW' in Light_Status and Light_Low_Alarm[0] == 0:
-					update_sql("UPDATE `Light` SET Low_Alarm = 1, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if 'HIGH' in Light_Status and Light_High_Alarm[0] == 0:
-					update_sql("UPDATE `Light` SET High_Alarm = 1, High_Time= '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
+				if lightEmailAlert == 1:
+                                    if Light_Low_Alarm[0] == 1:
+                                            if email_message_tls(login_address,email_password,to_address,"Light Low",smtp_server, smtp_port) == 1:
+                                                            update_sql("UPDATE `Light` SET Low_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
+                                    if Light_High_Alarm[0] == 1:
+                                            if email_message_tls(login_address,email_password,to_address,"Light High",smtp_server, smtp_port) == 1:
+                                                            update_sql("UPDATE `Light` SET High_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
+                                    if 'LOW' in Light_Status and Light_Low_Alarm[0] == 0:
+                                            update_sql("UPDATE `Light` SET Low_Alarm = 1, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
+                                    if 'HIGH' in Light_Status and Light_High_Alarm[0] == 0:
+                                            update_sql("UPDATE `Light` SET High_Alarm = 1, High_Time= '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
 		elif 'SetPoint_Water' in line:
 			if oldSetPoint_Water != line:
 				oldSetPoint_Water = line
@@ -766,18 +758,17 @@ def checkSerial():
 				update_sql("UPDATE `Water` SET Low='" + WaterValue_Low + "',High='" + WaterValue_High + "',Status='" + Water_Status + "'")
 				Water_Low_Alarm = fetch_sql("SELECT Low_Alarm FROM Water")
 				Water_High_Alarm = fetch_sql("SELECT High_Alarm FROM Water")
-				if Water_Low_Alarm[0] == 1:
-                                        if waterEmailAlert == 1:
-                                                if email_message_tls(login_address,email_password,to_address,"Water Low",smtp_server, smtp_port) == 1:
-                                                        update_sql("UPDATE `Water` SET Low_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if Water_High_Alarm[0] == 1:
-                                        if waterEmailAlert == 1:
-                                                if email_message_tls(login_address,email_password,to_address,"Water High",smtp_server, smtp_port) == 1:
-                                                        update_sql("UPDATE `Water` SET High_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if 'LOW' in Water_Status and Water_Low_Alarm[0] == 0:
-					update_sql("UPDATE `Water` SET Low_Alarm = 1, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if 'HIGH' in Water_Status and Water_High_Alarm[0] == 0:
-					update_sql("UPDATE `Water` SET High_Alarm = 1, High_Time= '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
+				if waterEmailAlert == 1:
+                                    if Water_Low_Alarm[0] == 1:
+                                            if email_message_tls(login_address,email_password,to_address,"Water Low",smtp_server, smtp_port) == 1:
+                                                            update_sql("UPDATE `Water` SET Low_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
+                                    if Water_High_Alarm[0] == 1:
+                                            if email_message_tls(login_address,email_password,to_address,"Water High",smtp_server, smtp_port) == 1:
+                                                            update_sql("UPDATE `Water` SET High_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
+                                    if 'LOW' in Water_Status and Water_Low_Alarm[0] == 0:
+                                            update_sql("UPDATE `Water` SET Low_Alarm = 1, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
+                                    if 'HIGH' in Water_Status and Water_High_Alarm[0] == 0:
+                                            update_sql("UPDATE `Water` SET High_Alarm = 1, High_Time= '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
 		elif 'SetPoint_TankTotal' in line:
 			if oldSetPoint_TankTotal != line:
 				oldSetPoint_TankTotal = line
@@ -791,18 +782,17 @@ def checkSerial():
 				update_sql("UPDATE `TankTotal` SET Low='" + TankTotalValue_Low + "', High='" + TankTotalValue_High + "', Status='" + TankTotal_Status + "'")
 				TankTotal_Low_Alarm = fetch_sql("SELECT Low_Alarm FROM TankTotal")
 				TankTotal_High_Alarm = fetch_sql("SELECT High_Alarm FROM TankTotal")
-				if TankTotal_Low_Alarm[0] == 1:
-                                        if tanktotalEmailAlert == 1:
-                                                if email_message_tls(login_address,email_password,to_address,"TankTotal Low",smtp_server, smtp_port) == 1:
-                                                        update_sql("UPDATE `TankTotal` SET Low_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if TankTotal_High_Alarm[0] == 1:
-                                        if tanktotalEmailAlert == 1:
-                                                if email_message_tls(login_address,email_password,to_address,"TankTotal High",smtp_server, smtp_port) == 1:
-                                                        update_sql("UPDATE `TankTotal` SET High_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if 'LOW' in TankTotal_Status and TankTotal_Low_Alarm[0] == 0:
-					update_sql("UPDATE `TankTotal` SET Low_Alarm = 1, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if 'HIGH' in TankTotal_Status and TankTotal_High_Alarm[0] == 0:
-					update_sql("UPDATE `TankTotal` SET High_Alarm = 1, High_Time= '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")							
+				if tanktotalEmailAlert == 1:
+                                    if TankTotal_Low_Alarm[0] == 1:
+                                            if email_message_tls(login_address,email_password,to_address,"TankTotal Low",smtp_server, smtp_port) == 1:
+                                                            update_sql("UPDATE `TankTotal` SET Low_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
+                                    if TankTotal_High_Alarm[0] == 1:
+                                            if email_message_tls(login_address,email_password,to_address,"TankTotal High",smtp_server, smtp_port) == 1:
+                                                            update_sql("UPDATE `TankTotal` SET High_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
+                                    if 'LOW' in TankTotal_Status and TankTotal_Low_Alarm[0] == 0:
+                                            update_sql("UPDATE `TankTotal` SET Low_Alarm = 1, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
+                                    if 'HIGH' in TankTotal_Status and TankTotal_High_Alarm[0] == 0:
+                                            update_sql("UPDATE `TankTotal` SET High_Alarm = 1, High_Time= '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")							
 		elif 'SetPoint_Tank1' in line:
 			if oldSetPoint_Tank1 != line:
 				oldSetPoint_Tank1 = line
@@ -816,18 +806,17 @@ def checkSerial():
 				update_sql("UPDATE `Tank1` SET Low = " + Tank1Value_Low + ", High = " + Tank1Value_High + ", Tank1Pump_ON = " + Tank1Pump_ON + ", Tank1Pump_OFF = " + Tank1Pump_OFF + ", Tank1MixPump_Enabled =" + Tank1MixPump_Enabled + ", Status ='" + Tank1_Status + "'")
 				Tank1_Low_Alarm = fetch_sql("SELECT Low_Alarm FROM Tank1")
 				Tank1_High_Alarm = fetch_sql("SELECT High_Alarm FROM Tank1")
-				if Tank1_Low_Alarm[0] == 1:
-                                        if tank1EmailAlert == 1:
-                                                if email_message_tls(login_address,email_password,to_address,"Tank1 Low",smtp_server, smtp_port) == 1:
-                                                        update_sql("UPDATE `Tank1` SET Low_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if Tank1_High_Alarm[0] == 1:
-                                        if tank1EmailAlert == 1:
-                                                if email_message_tls(login_address,email_password,to_address,"Tank1 High",smtp_server, smtp_port) == 1:
-                                                        update_sql("UPDATE `Tank1` SET High_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if 'LOW' in Tank1_Status and Tank1_Low_Alarm[0] == 0:
-					update_sql("UPDATE `Tank1` SET Low_Alarm = 1, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if 'HIGH' in Tank1_Status and Tank1_High_Alarm[0] == 0:
-					update_sql("UPDATE `Tank1` SET High_Alarm = 1, High_Time= '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")					
+				if tank1EmailAlert == 1:
+                                    if Tank1_Low_Alarm[0] == 1:
+                                            if email_message_tls(login_address,email_password,to_address,"Tank1 Low",smtp_server, smtp_port) == 1:
+                                                            update_sql("UPDATE `Tank1` SET Low_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
+                                    if Tank1_High_Alarm[0] == 1:
+                                            if email_message_tls(login_address,email_password,to_address,"Tank1 High",smtp_server, smtp_port) == 1:
+                                                            update_sql("UPDATE `Tank1` SET High_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
+                                    if 'LOW' in Tank1_Status and Tank1_Low_Alarm[0] == 0:
+                                            update_sql("UPDATE `Tank1` SET Low_Alarm = 1, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
+                                    if 'HIGH' in Tank1_Status and Tank1_High_Alarm[0] == 0:
+                                            update_sql("UPDATE `Tank1` SET High_Alarm = 1, High_Time= '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")					
 		elif 'SetPoint_Tank2' in line:
 			if oldSetPoint_Tank2 != line:
 				oldSetPoint_Tank2 = line
@@ -841,18 +830,17 @@ def checkSerial():
 				update_sql("UPDATE `Tank2` SET Low = " + Tank2Value_Low + ", High = " + Tank2Value_High + ", Tank2Pump_ON = " + Tank2Pump_ON + ", Tank2Pump_OFF = " + Tank2Pump_OFF + ", Tank2MixPump_Enabled =" + Tank2MixPump_Enabled + ", Status ='" + Tank2_Status + "'")
 				Tank2_Low_Alarm = fetch_sql("SELECT Low_Alarm FROM Tank2")
 				Tank2_High_Alarm = fetch_sql("SELECT High_Alarm FROM Tank2")
-				if Tank2_Low_Alarm[0] == 1:
-                                        if tank2EmailAlert == 1:
-                                                if email_message_tls(login_address,email_password,to_address,"Tank2 Low",smtp_server, smtp_port) == 1:
-                                                        update_sql("UPDATE `Tank2` SET Low_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if Tank2_High_Alarm[0] == 1:
-                                        if tank2EmailAlert == 1:
-                                                if email_message_tls(login_address,email_password,to_address,"Tank2 High",smtp_server, smtp_port) == 1:
-                                                        update_sql("UPDATE `Tank2` SET High_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if 'LOW' in Tank2_Status and Tank2_Low_Alarm[0] == 0:
-					update_sql("UPDATE `Tank2` SET Low_Alarm = 1, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if 'HIGH' in Tank2_Status and Tank2_High_Alarm[0] == 0:
-					update_sql("UPDATE `Tank2` SET High_Alarm = 1, High_Time= '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")										
+				if tank2EmailAlert == 1:
+                                    if Tank2_Low_Alarm[0] == 1:
+                                            if email_message_tls(login_address,email_password,to_address,"Tank2 Low",smtp_server, smtp_port) == 1:
+                                                            update_sql("UPDATE `Tank2` SET Low_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
+                                    if Tank2_High_Alarm[0] == 1:
+                                            if email_message_tls(login_address,email_password,to_address,"Tank2 High",smtp_server, smtp_port) == 1:
+                                                            update_sql("UPDATE `Tank2` SET High_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
+                                    if 'LOW' in Tank2_Status and Tank2_Low_Alarm[0] == 0:
+                                            update_sql("UPDATE `Tank2` SET Low_Alarm = 1, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
+                                    if 'HIGH' in Tank2_Status and Tank2_High_Alarm[0] == 0:
+                                            update_sql("UPDATE `Tank2` SET High_Alarm = 1, High_Time= '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")										
 		elif 'SetPoint_Tank3' in line:
 			if oldSetPoint_Tank3 != line:
 				oldSetPoint_Tank3 = line
@@ -866,18 +854,17 @@ def checkSerial():
 				update_sql("UPDATE `Tank3` SET Low = " + Tank3Value_Low + ", High = " + Tank3Value_High + ", Tank3Pump_ON = " + Tank3Pump_ON + ", Tank3Pump_OFF = " + Tank3Pump_OFF + ", Tank3MixPump_Enabled =" + Tank3MixPump_Enabled + ", Status ='" + Tank3_Status + "'")
 				Tank3_Low_Alarm = fetch_sql("SELECT Low_Alarm FROM Tank3")
 				Tank3_High_Alarm = fetch_sql("SELECT High_Alarm FROM Tank3")
-				if Tank3_Low_Alarm[0] == 1:
-                                        if tank3EmailAlert == 1:
-                                                if email_message_tls(login_address,email_password,to_address,"Tank3 Low",smtp_server, smtp_port) == 1:
-                                                        update_sql("UPDATE `Tank3` SET Low_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if Tank3_High_Alarm[0] == 1:
-                                        if tank3EmailAlert == 1:
-                                                if email_message_tls(login_address,email_password,to_address,"Tank3 High",smtp_server, smtp_port) == 1:
-                                                        update_sql("UPDATE `Tank3` SET High_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if 'LOW' in Tank3_Status and Tank3_Low_Alarm[0] == 0:
-					update_sql("UPDATE `Tank3` SET Low_Alarm = 1, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if 'HIGH' in Tank3_Status and Tank3_High_Alarm[0] == 0:
-					update_sql("UPDATE `Tank3` SET High_Alarm = 1, High_Time= '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")		
+				if tank3EmailAlert == 1:
+                                    if Tank3_Low_Alarm[0] == 1:
+                                            if email_message_tls(login_address,email_password,to_address,"Tank3 Low",smtp_server, smtp_port) == 1:
+                                                            update_sql("UPDATE `Tank3` SET Low_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
+                                    if Tank3_High_Alarm[0] == 1:
+                                            if email_message_tls(login_address,email_password,to_address,"Tank3 High",smtp_server, smtp_port) == 1:
+                                                            update_sql("UPDATE `Tank3` SET High_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
+                                    if 'LOW' in Tank3_Status and Tank3_Low_Alarm[0] == 0:
+                                            update_sql("UPDATE `Tank3` SET Low_Alarm = 1, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
+                                    if 'HIGH' in Tank3_Status and Tank3_High_Alarm[0] == 0:
+                                            update_sql("UPDATE `Tank3` SET High_Alarm = 1, High_Time= '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")		
 		elif 'SetPoint_Tank4' in line:
 			if oldSetPoint_Tank4 != line:
 				oldSetPoint_Tank4 = line
@@ -891,18 +878,17 @@ def checkSerial():
 				update_sql("UPDATE `Tank4` SET Low = " + Tank4Value_Low + ", High = " + Tank4Value_High + ", Tank4Pump_ON = " + Tank4Pump_ON + ", Tank4Pump_OFF = " + Tank4Pump_OFF + ", Tank4MixPump_Enabled =" + Tank4MixPump_Enabled + ", Status ='" + Tank4_Status + "'")
 				Tank4_Low_Alarm = fetch_sql("SELECT Low_Alarm FROM Tank4")
 				Tank4_High_Alarm = fetch_sql("SELECT High_Alarm FROM Tank4")
-				if Tank4_Low_Alarm[0] == 1:
-                                        if tank4EmailAlert == 1:
-                                                if email_message_tls(login_address,email_password,to_address,"Tank4 Low",smtp_server, smtp_port) == 1:
-                                                        update_sql("UPDATE `Tank4` SET Low_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if Tank4_High_Alarm[0] == 1:
-                                        if tank4EmailAlert == 1:
-                                                if email_message_tls(login_address,email_password,to_address,"Tank4 High",smtp_server, smtp_port) == 1:
-                                                        update_sql("UPDATE `Tank4` SET High_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if 'LOW' in Tank4_Status and Tank4_Low_Alarm[0] == 0:
-					update_sql("UPDATE `Tank4` SET Low_Alarm = 1, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
-				if 'HIGH' in Tank4_Status and Tank4_High_Alarm[0] == 0:
-					update_sql("UPDATE `Tank4` SET High_Alarm = 1, High_Time= '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")		
+				if tank4EmailAlert == 1:
+                                    if Tank4_Low_Alarm[0] == 1:
+                                            if email_message_tls(login_address,email_password,to_address,"Tank4 Low",smtp_server, smtp_port) == 1:
+                                                            update_sql("UPDATE `Tank4` SET Low_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
+                                    if Tank4_High_Alarm[0] == 1:
+                                            if email_message_tls(login_address,email_password,to_address,"Tank4 High",smtp_server, smtp_port) == 1:
+                                                            update_sql("UPDATE `Tank4` SET High_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
+                                    if 'LOW' in Tank4_Status and Tank4_Low_Alarm[0] == 0:
+                                            update_sql("UPDATE `Tank4` SET Low_Alarm = 1, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
+                                    if 'HIGH' in Tank4_Status and Tank4_High_Alarm[0] == 0:
+                                            update_sql("UPDATE `Tank4` SET High_Alarm = 1, High_Time= '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")		
 					
 			ser.flushInput()
 		
