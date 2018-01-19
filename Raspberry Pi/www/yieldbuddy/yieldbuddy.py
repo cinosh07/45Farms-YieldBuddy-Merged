@@ -28,6 +28,14 @@ global tank2EmailAlert
 global tank3EmailAlert
 global tank4EmailAlert
 
+
+
+#pH1Value = 0.00
+#pH2Value = 0.00
+#airTempValue = 0.00
+#waterTemp1Value = 0.00
+#rhValue = 0.00
+
 #Define here emails alert to receive || 0 = disabled || 1 = enabled
 ph1EmailAlert = 1
 ph2EmailAlert = 0
@@ -295,7 +303,13 @@ def checkSerial():
 		global delta
 		global first_timesync
 		global Datapoint_count
-
+                
+                global pH1Value
+                global pH2Value
+                global airTempValue
+                global waterTemp1Value
+                global rhValue
+                
 		global now
 		now = datetime.now()
 		#Open up the 'Command' file to see if a command has been issued.		
@@ -477,7 +491,12 @@ def checkSerial():
 #                        print("######### End Sensor Line #########")
 			Sensors,pH1,pH2,Temp,RH,TDS1,TDS2,CO2,Light,Water,MagX,MagY,MagZ,TankTotal,Tank1,Tank2,Tank3,Tank4,WaterTempP1,WaterTempP2,WaterTempP3,WaterTempP4=line.split(",")
 			Sensors = Sensors.replace("Read fail", "")
-			Light = Light.rstrip()
+			pH1Value = pH1
+                        pH2Value = pH2
+                        airTempValue = Temp
+                        waterTemp1Value = WaterTempP1
+                        rhValue = RH
+                        Light = Light.rstrip()
 			elapsedTime = now-startTime
 			elapsedSeconds = (elapsedTime.microseconds+(elapsedTime.days*24*3600+elapsedTime.seconds)*10**6)/10**6
 			print("\033[10;0H\r")
@@ -564,10 +583,10 @@ def checkSerial():
 				pH1_High_Alarm = fetch_sql("SELECT High_Alarm FROM pH1")
 				if ph1EmailAlert == 1:
                                     if pH1_Low_Alarm[0] == 1:
-                                         if email_message_tls(login_address,email_password,to_address,"pH1 Low",smtp_server, smtp_port) == 1:
+                                         if email_message_tls(login_address,email_password,to_address,"pH1 Low: " + pH1Value,smtp_server, smtp_port) == 1:
                                                         update_sql("UPDATE `pH1` SET Low_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
                                     if pH1_High_Alarm[0] == 1:
-                                           if email_message_tls(login_address,email_password,to_address,"pH1 High",smtp_server, smtp_port) == 1:
+                                           if email_message_tls(login_address,email_password,to_address,"pH1 High: " + pH1Value,smtp_server, smtp_port) == 1:
                                                             update_sql("UPDATE `pH1` SET High_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
                                     if 'LOW' in pH1_Status and pH1_Low_Alarm[0] == 0:
                                             update_sql("UPDATE `pH1` SET Low_Alarm = 1, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
@@ -589,10 +608,10 @@ def checkSerial():
 				pH2_High_Alarm = fetch_sql("SELECT High_Alarm FROM pH2")
 				if ph2EmailAlert == 1:
                                     if pH2_Low_Alarm[0] == 1:
-                                        if email_message_tls(login_address,email_password,to_address,"pH2 Low",smtp_server, smtp_port) == 1:
+                                        if email_message_tls(login_address,email_password,to_address,"pH2 Low: " + pH2Value,smtp_server, smtp_port) == 1:
                                                         update_sql("UPDATE `pH2` SET Low_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
                                         if pH2_High_Alarm[0] == 1:
-                                                if email_message_tls(login_address,email_password,to_address,"pH2 High",smtp_server, smtp_port) == 1:
+                                                if email_message_tls(login_address,email_password,to_address,"pH2 High: " + pH2Value,smtp_server, smtp_port) == 1:
                                                                 update_sql("UPDATE `pH2` SET High_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
                                         if 'LOW' in pH2_Status and pH2_Low_Alarm[0] == 0:
                                                 update_sql("UPDATE `pH2` SET Low_Alarm = 1, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
@@ -616,10 +635,10 @@ def checkSerial():
 				Temp_High_Alarm = fetch_sql("SELECT High_Alarm FROM Temp")
 				if tempEmailAlert == 1:
                                     if Temp_Low_Alarm[0] == 1:
-                                            if email_message_tls(login_address,email_password,to_address,"Temp Low",smtp_server, smtp_port) == 1:
+                                            if email_message_tls(login_address,email_password,to_address,"Temp Low: " + tempValue,smtp_server, smtp_port) == 1:
                                                             update_sql("UPDATE `Temp` SET Low_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
                                             if Temp_High_Alarm[0] == 1:
-                                                    if email_message_tls(login_address,email_password,to_address,"Temp High",smtp_server, smtp_port) == 1:
+                                                    if email_message_tls(login_address,email_password,to_address,"Temp High: " + tempValue,smtp_server, smtp_port) == 1:
                                                                     update_sql("UPDATE `Temp` SET High_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
                                             if 'LOW' in Temp_Status and Temp_Low_Alarm[0] == 0:
                                                     update_sql("UPDATE `Temp` SET Low_Alarm = 1, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
@@ -640,10 +659,10 @@ def checkSerial():
 				RH_High_Alarm = fetch_sql("SELECT High_Alarm FROM RH")
 				if rhEmailAlert == 1:
                                     if RH_Low_Alarm[0] == 1:
-                                            if email_message_tls(login_address,email_password,to_address,"RH Low",smtp_server, smtp_port) == 1:
+                                            if email_message_tls(login_address,email_password,to_address,"RH Low: " + rhValue,smtp_server, smtp_port) == 1:
                                                             update_sql("UPDATE `RH` SET Low_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
                                     if RH_High_Alarm[0] == 1:
-                                            if email_message_tls(login_address,email_password,to_address,"RH High",smtp_server, smtp_port) == 1:
+                                            if email_message_tls(login_address,email_password,to_address,"RH High: " + rhValue,smtp_server, smtp_port) == 1:
                                                             update_sql("UPDATE `RH` SET High_Alarm = 2, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
                                     if 'LOW' in RH_Status and RH_Low_Alarm[0] == 0:
                                             update_sql("UPDATE `RH` SET Low_Alarm = 1, Low_Time = '" + now.strftime("%b %d %Y %I:%M:%S %p") + "'")
