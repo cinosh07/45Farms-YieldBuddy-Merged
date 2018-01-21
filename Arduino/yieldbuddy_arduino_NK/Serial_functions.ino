@@ -896,7 +896,7 @@ void serialEvent() {
       }
       if(Serial_inString.indexOf("calibratepH1") >=0) {
 
-        pH1Offset = -(pH1Value - 7.00);
+        pH1Offset = (pH1RawValue - 7.00) * -1.00;
 
         eepromWriteFloat(400, pH1Offset);
       }
@@ -938,7 +938,7 @@ void serialEvent() {
       }
       if(Serial_inString.indexOf("calibratepH2") >=0) {
 
-        pH2Offset = -(pH2Value - 7.00);
+        pH2Offset = (pH2Value - 7.00) * -1.00;
 
         eepromWriteFloat(410, pH2Offset);
       }

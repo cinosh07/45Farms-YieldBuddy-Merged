@@ -138,7 +138,9 @@ void updateSensorValues() {
   for(int i=2;i<8;i++)                      //take the average value of 6 center sample
     avgValue+=buf[i];
   pH1Value=(float)avgValue*5.0/1024/6; //convert the analog into millivolt
-  pH1Value=(3.5*pH1Value) + pH1Offset;
+  pH1Value=(3.5*pH1Value) - 1.20;
+  pH1RawValue=(float)avgValue*5.0/1024/6;
+  pH1RawValue=(3.5*pH1RawValue);
 #else
   pH1RawValue = 0;
   pH1Value = 0;
@@ -454,7 +456,7 @@ void updateSensorValues() {
   dht.readHumidity();  //The DHT11 Sensor works differently, but for 'good measure'.
   delay(15); //Wait for Pin to Change
   RHRawValue = dht.readHumidity();
-  RHValue = RHRawValue;
+  RHValue = RHRawValue + 6.00;
 #else
   RHRawValue = 0;
   RHValue = 0;

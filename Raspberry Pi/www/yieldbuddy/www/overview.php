@@ -671,7 +671,7 @@ e[d]=g}}e=new Gauge(e);k.getAttribute("data-value")&&e.setRawValue(parseFloat(k.
                                                         </div>
                                                         
                                                         <div width="150" height="150" style="display: inline-block" >
-                                                            <canvas id="an_gauge_4" data-title="Humidity" data-units="RH %" width="150" height="150"  data-major-ticks="0 10 20 30 40 50 60 70 80 90 100" data-type="canv-gauge" data-min-value="0" data-max-value="100" data-highlights="0 20 #f33, 20 30 #cc5, 30 60 #0BB950, 60 80 #cc5, 80 100 #f33" data-onready="setInterval( function() { Gauge.Collection.get('an_gauge_4').setValue(rhVal);}, 200);"></canvas>
+                                                            <canvas id="an_gauge_4" data-title="Humidity" data-units="RH %" width="150" height="150"  data-major-ticks="0 10 20 30 40 50 60 70 80 90 100" data-type="canv-gauge" data-min-value="0" data-max-value="100" data-highlights="0 30 #f33, 30 40 #cc5, 40 60 #0BB950, 60 80 #cc5, 80 100 #f33" data-onready="setInterval( function() { Gauge.Collection.get('an_gauge_4').setValue(rhVal);}, 200);"></canvas>
                                                         </div>
                                                         
                                                         <div width="150" height="150" style="display: inline-block">
@@ -679,7 +679,7 @@ e[d]=g}}e=new Gauge(e);k.getAttribute("data-value")&&e.setRawValue(parseFloat(k.
                                                         </div>
                                                         
                                                         <div width="150" height="150" style="display: inline-block">
-                                                            <canvas id="an_gauge_3" data-title="PH 1" width="150" height="150"  data-major-ticks="2 3 4 5 6 7 8 9 10" data-type="canv-gauge" data-min-value="2" data-max-value="10" data-highlights="2 4 #f33, 4 5.4 #cc5, 5.4 7 #0BB950, 7 8 #cc5, 8 10 #f33" data-onready="setInterval( function() { Gauge.Collection.get('an_gauge_3').setValue(ph1Val);}, 200);"></canvas>
+                                                            <canvas id="an_gauge_3" data-title="PH 1" width="150" height="150"  data-major-ticks="2 3 4 5 6 7 8 9 10" data-type="canv-gauge" data-min-value="2" data-max-value="10" data-highlights="2 5 #f33, 5 5.5 #cc5, 5.5 6.5 #0BB950, 6.5 7.5 #cc5, 7.5 10 #f33" data-onready="setInterval( function() { Gauge.Collection.get('an_gauge_3').setValue(ph1Val);}, 200);"></canvas>
                                                         </div>
                                                                                                                 
                                                         <div width="150" height="150" style="display: inline-block; max-height: 150px;vertical-align: top">
