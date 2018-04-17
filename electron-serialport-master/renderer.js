@@ -333,7 +333,7 @@ remote.getGlobal('sharedObj').serialSend = function (command) {
                 document.getElementById('relay1Auto').setAttribute('alt','Relay 1 Manual');
             } else {
                 remote.getGlobal('sharedObj').Relay1IsOn = 1;
-                document.getElementById('relay1Auto').setAttribute('src','img/relay_on.jpg');
+                document.getElementById('relay1Auto').setAttribute('src','img/auto.jpg');
                 document.getElementById('relay1Auto').setAttribute('title','Relay 1 Auto');
                 document.getElementById('relay1Auto').setAttribute('alt','Relay 1 Auto');
             }
@@ -344,7 +344,7 @@ remote.getGlobal('sharedObj').serialSend = function (command) {
                 document.getElementById('relay2Auto').setAttribute('alt','Relay 2 Manual');
             } else {
                 remote.getGlobal('sharedObj').Relay2IsOn = 1;
-                document.getElementById('relay2Auto').setAttribute('src','img/relay_on.jpg');
+                document.getElementById('relay2Auto').setAttribute('src','img/auto.jpg');
                 document.getElementById('relay2Auto').setAttribute('title','Relay 2 Auto');
                 document.getElementById('relay2Auto').setAttribute('alt','Relay 2 Auto');
             }
@@ -356,7 +356,7 @@ remote.getGlobal('sharedObj').serialSend = function (command) {
                 document.getElementById('relay3Auto').setAttribute('alt','Relay 3 Manual');
             } else {
                 remote.getGlobal('sharedObj').Relay3IsOn = 1;
-                document.getElementById('relay3Auto').setAttribute('src','img/relay_on.jpg');
+                document.getElementById('relay3Auto').setAttribute('src','img/auto.jpg');
                 document.getElementById('relay3Auto').setAttribute('title','Relay 3 Auto');
                 document.getElementById('relay3Auto').setAttribute('alt','Relay 3 Auto');
             }
@@ -367,7 +367,7 @@ remote.getGlobal('sharedObj').serialSend = function (command) {
                 document.getElementById('relay4Auto').setAttribute('alt','Relay 4 Manual');
             } else {
                 remote.getGlobal('sharedObj').Relay4IsOn = 1;
-                document.getElementById('relay4Auto').setAttribute('src','img/relay_on.jpg');
+                document.getElementById('relay4Auto').setAttribute('src','img/auto.jpg');
                 document.getElementById('relay4Auto').setAttribute('title','Relay 4 Auto');
                 document.getElementById('relay4Auto').setAttribute('alt','Relay 4 Auto');
             }
@@ -378,7 +378,7 @@ remote.getGlobal('sharedObj').serialSend = function (command) {
                 document.getElementById('relay5Auto').setAttribute('alt','Relay 5 Manual');
             } else {
                 remote.getGlobal('sharedObj').Relay5IsOn = 1;
-                document.getElementById('relay5Auto').setAttribute('src','img/relay_on.jpg');
+                document.getElementById('relay5Auto').setAttribute('src','img/auto.jpg');
                 document.getElementById('relay5Auto').setAttribute('title','Relay 5 Auto');
                 document.getElementById('relay5Auto').setAttribute('alt','Relay 5 Auto');
             }
@@ -389,7 +389,7 @@ remote.getGlobal('sharedObj').serialSend = function (command) {
                 document.getElementById('relay6Auto').setAttribute('alt','Relay 6 Manual');
             } else {
                 remote.getGlobal('sharedObj').Relay6IsOn = 1;
-                document.getElementById('relay6Auto').setAttribute('src','img/relay_on.jpg');
+                document.getElementById('relay6Auto').setAttribute('src','img/auto.jpg');
                 document.getElementById('relay6Auto').setAttribute('title','Relay 6 Auto');
                 document.getElementById('relay6Auto').setAttribute('alt','Relay 6 Auto');
             }
@@ -400,7 +400,7 @@ remote.getGlobal('sharedObj').serialSend = function (command) {
                 document.getElementById('relay7Auto').setAttribute('alt','Relay 7 Manual');
             } else {
                 remote.getGlobal('sharedObj').Relay7IsOn = 1;
-                document.getElementById('relay7Auto').setAttribute('src','img/relay_on.jpg');
+                document.getElementById('relay7Auto').setAttribute('src','img/auto.jpg');
                 document.getElementById('relay7Auto').setAttribute('title','Relay 7 Auto');
                 document.getElementById('relay7Auto').setAttribute('alt','Relay 7 Auto');
             }
@@ -411,7 +411,7 @@ remote.getGlobal('sharedObj').serialSend = function (command) {
                 document.getElementById('relay8Auto').setAttribute('alt','Relay 8 Manual');
             } else {
                 remote.getGlobal('sharedObj').Relay8IsOn = 1;
-                document.getElementById('relay8Auto').setAttribute('src','img/relay_on.jpg');
+                document.getElementById('relay8Auto').setAttribute('src','img/auto.jpg');
                 document.getElementById('relay8Auto').setAttribute('title','Relay 8 Auto');
                 document.getElementById('relay8Auto').setAttribute('alt','Relay 8 Auto');
             }
