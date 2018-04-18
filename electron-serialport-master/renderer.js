@@ -111,41 +111,25 @@ const serialport = require('serialport');
 const createTable = require('data-table');
 var localPorts;
 var yieldPort;
+var combo = document.getElementById("combo");
+var remote = require('electron').remote;
+
 
 document.getElementById('sendCommand').addEventListener('click', sendCommand);
-
-serialport.list((err, ports) => {
-    localPorts = ports;
-    console.log('ports', ports);
-    if (err) {
-        document.getElementById('error').textContent = err.message;
-        return;
-    } else {
-        document.getElementById('error').textContent = '';
-    }
-
-    if (ports.length === 0) {
-        document.getElementById('error').textContent = 'No ports discovered';
-    }
-
-    const headers = Object.keys(ports[0]);
-    const table = createTable(headers);
-    tableHTML = '';
-    table.on('data', data => tableHTML += data);
-    table.on('end', () => document.getElementById('ports').innerHTML = tableHTML);
-    ports.forEach(port => table.write(port));
-    table.end();
-
-    console.log('Ports : ' + localPorts);
-    yieldPort = new serialport(localPorts[1].comName, {
+remote.getGlobal('sharedObj').connect = function () {
+    
+    
+    var serialPort = combo.options[combo.selectedIndex].text;
+    
+    yieldPort = new serialport(serialPort, {
         baudRate: 115200,
-        parser: serialport.parsers.readline("\n"),
+        parser: serialport.parsers.readline("\n")
 //        dataBits: 8, // this is the default for Arduino serial communication
 //        parity: 'none', // this is the default for Arduino serial communication
 //        stopBits: 1, // this is the default for Arduino serial communication
 //        flowControl: false
     });
-    
+
 
 
 // Open errors will be emitted as an error event
@@ -180,271 +164,332 @@ serialport.list((err, ports) => {
 //    waterSchedule:['setwateringschedule',7,15,1,2,15,15,11],
 //    time:['Apr 16',' 2018 01:21:24 PM',4,16,2018,13,21,24]
 //    };
-var remote = require('electron').remote;
-remote.getGlobal('sharedObj').serialSend = function (command) {
 
-    console.log('Command Sent : ' + command);
 
-    for(var i=0; i<command.length; i++){
-        yieldPort.write(new Buffer(command[i], 'ascii'), function(err, results) {
-            // console.log('Error: ' + err);
-            // console.log('Results ' + results);
+    remote.getGlobal('sharedObj').serialSend = function (command) {
+
+        console.log('Command Sent : ' + command);
+
+        for (var i = 0; i < command.length; i++) {
+            yieldPort.write(new Buffer(command[i], 'ascii'), function (err, results) {
+                // console.log('Error: ' + err);
+                // console.log('Results ' + results);
+            });
+        }
+        ;
+        yieldPort.write(new Buffer('\n', 'ascii'), function (err, results) {
+            // console.log('err ' + err);
+            // console.log('results ' + results);
         });
-    };
-    yieldPort.write(new Buffer('\n', 'ascii'), function(err, results) {
-        // console.log('err ' + err);
-        // console.log('results ' + results);
-    });
 
-};
+    };
     yieldPort.on('data', function (data) {
-        
+
         var message = '';
         message = data;
         var dataSplited = [];
         dataSplited = message.split(',');
         if (dataSplited[0] === 'Sensors') {
-            
-            document.getElementById('ph').innerHTML = 'PH: ' + dataSplited[1];
-            document.getElementById('airtemp').innerHTML = 'Air Temp: ' + dataSplited[3];
-            document.getElementById('humidity').innerHTML = 'Humidity: ' + dataSplited[4];
-            document.getElementById('watertemp').innerHTML = 'Water Temp: ' + dataSplited[18];
-            
+
+//            document.getElementById('ph').innerHTML = 'PH: ' + dataSplited[1];
+//            document.getElementById('airtemp').innerHTML = 'Air Temp: ' + dataSplited[3];
+//            document.getElementById('humidity').innerHTML = 'Humidity: ' + dataSplited[4];
+//            document.getElementById('watertemp').innerHTML = 'Water Temp: ' + dataSplited[18];
+
             remote.getGlobal('sharedObj').ph1Val = parseFloat(dataSplited[1]);
             remote.getGlobal('sharedObj').airTempVal = parseFloat(dataSplited[3]);
             if (parseFloat(dataSplited[18]) > -45.0) {
                 remote.getGlobal('sharedObj').waterTemp1Val = parseFloat(dataSplited[18]);
             }
-            
+
             remote.getGlobal('sharedObj').rhVal = parseFloat(dataSplited[4]);
 
-            
-            
-            
-            
+
+
+
+
         } else if (dataSplited[0] === 'Time') {
-            document.getElementById('time').innerHTML = 'Time: ' + dataSplited;
             
+            document.getElementById('ArduinoClockTime').innerHTML = dataSplited[1] + ' ' + dataSplited[2];
+
         } else if (dataSplited[0] === 'Watering_Schedule') {
+            
             document.getElementById('watering').innerHTML = 'Watering: ' + dataSplited;
-            
+
         } else if (dataSplited[0] === 'Light_Schedule') {
+            var startHour = parseInt(dataSplited[1]);
+            var stopHour = parseInt(dataSplited[3]);
+            if (stopHour - startHour === 12) {
+                
+                document.getElementById("buttonBloom").classList.add('ButtonClassSelected');
+                document.getElementById("buttonBloom").classList.remove('ButtonClass');
+                document.getElementById("buttonBloom").disabled = true;
+                
+                document.getElementById("buttonGrow").classList.add('ButtonClass');
+                document.getElementById("buttonGrow").classList.remove('ButtonClassSelected');
+                document.getElementById("buttonGrow").disabled = false;
+                
+            } else if (stopHour - startHour > 12) {
+                document.getElementById("buttonGrow").classList.add('ButtonClassSelected');
+                document.getElementById("buttonGrow").classList.remove('ButtonClass');
+                document.getElementById("buttonGrow").disabled = true;
+                
+                document.getElementById("buttonBloom").classList.add('ButtonClass');
+                document.getElementById("buttonBloom").classList.remove('ButtonClassSelected');
+                document.getElementById("buttonBloom").disabled = false;
+                
+            }
             document.getElementById('light').innerHTML = 'Light: ' + dataSplited;
-            
-        } else if (dataSplited[0] === 'Relays'){
-            
+
+        } else if (dataSplited[0] === 'Relays') {
+
             if (dataSplited[1] === '0') {
                 remote.getGlobal('sharedObj').Relay1 = 0;
-                document.getElementById('relay1').setAttribute('src','img/relay_off.jpg');
-                document.getElementById('relay1').setAttribute('title','Relay 1 OFF');
-                document.getElementById('relay1').setAttribute('alt','Relay 1 OFF');
+                document.getElementById('relay1').setAttribute('src', 'img/relay_off.jpg');
+                document.getElementById('relay1').setAttribute('title', 'Relay 1 OFF');
+                document.getElementById('relay1').setAttribute('alt', 'Relay 1 OFF');
             } else {
                 remote.getGlobal('sharedObj').Relay1 = 1;
-                document.getElementById('relay1').setAttribute('src','img/relay_on.jpg');
-                document.getElementById('relay1').setAttribute('title','Relay 1 ON');
-                document.getElementById('relay1').setAttribute('alt','Relay 1 ON');
+                document.getElementById('relay1').setAttribute('src', 'img/relay_on.jpg');
+                document.getElementById('relay1').setAttribute('title', 'Relay 1 ON');
+                document.getElementById('relay1').setAttribute('alt', 'Relay 1 ON');
             }
             if (dataSplited[2] === '0') {
                 remote.getGlobal('sharedObj').Relay2 = 0;
-                document.getElementById('relay2').setAttribute('src','img/relay_off.jpg');
-                document.getElementById('relay2').setAttribute('title','Relay 2 OFF');
-                document.getElementById('relay2').setAttribute('alt','Relay 2 OFF');
+                document.getElementById('relay2').setAttribute('src', 'img/relay_off.jpg');
+                document.getElementById('relay2').setAttribute('title', 'Relay 2 OFF');
+                document.getElementById('relay2').setAttribute('alt', 'Relay 2 OFF');
             } else {
                 remote.getGlobal('sharedObj').Relay2 = 1;
-                document.getElementById('relay2').setAttribute('src','img/relay_on.jpg');
-                document.getElementById('relay2').setAttribute('title','Relay 2 ON');
-                document.getElementById('relay2').setAttribute('alt','Relay 2 ON');
+                document.getElementById('relay2').setAttribute('src', 'img/relay_on.jpg');
+                document.getElementById('relay2').setAttribute('title', 'Relay 2 ON');
+                document.getElementById('relay2').setAttribute('alt', 'Relay 2 ON');
             }
-            
+
             if (dataSplited[3] === '0') {
                 remote.getGlobal('sharedObj').Relay3 = 0;
-                document.getElementById('relay3').setAttribute('src','img/relay_off.jpg');
-                document.getElementById('relay3').setAttribute('title','Relay 3 OFF');
-                document.getElementById('relay3').setAttribute('alt','Relay 3 OFF');
+                document.getElementById('relay3').setAttribute('src', 'img/relay_off.jpg');
+                document.getElementById('relay3').setAttribute('title', 'Relay 3 OFF');
+                document.getElementById('relay3').setAttribute('alt', 'Relay 3 OFF');
             } else {
                 remote.getGlobal('sharedObj').Relay3 = 1;
-                document.getElementById('relay3').setAttribute('src','img/relay_on.jpg');
-                document.getElementById('relay3').setAttribute('title','Relay 3 ON');
-                document.getElementById('relay3').setAttribute('alt','Relay 3 ON');
+                document.getElementById('relay3').setAttribute('src', 'img/relay_on.jpg');
+                document.getElementById('relay3').setAttribute('title', 'Relay 3 ON');
+                document.getElementById('relay3').setAttribute('alt', 'Relay 3 ON');
             }
             if (dataSplited[4] === '0') {
                 remote.getGlobal('sharedObj').Relay4 = 0;
-                document.getElementById('relay4').setAttribute('src','img/relay_off.jpg');
-                document.getElementById('relay4').setAttribute('title','Relay 4 OFF');
-                document.getElementById('relay4').setAttribute('alt','Relay 4 OFF');
+                document.getElementById('relay4').setAttribute('src', 'img/relay_off.jpg');
+                document.getElementById('relay4').setAttribute('title', 'Relay 4 OFF');
+                document.getElementById('relay4').setAttribute('alt', 'Relay 4 OFF');
             } else {
                 remote.getGlobal('sharedObj').Relay4 = 1;
-                document.getElementById('relay4').setAttribute('src','img/relay_on.jpg');
-                document.getElementById('relay4').setAttribute('title','Relay 4 ON');
-                document.getElementById('relay4').setAttribute('alt','Relay 4 ON');
+                document.getElementById('relay4').setAttribute('src', 'img/relay_on.jpg');
+                document.getElementById('relay4').setAttribute('title', 'Relay 4 ON');
+                document.getElementById('relay4').setAttribute('alt', 'Relay 4 ON');
             }
             if (dataSplited[5] === '0') {
                 remote.getGlobal('sharedObj').Relay5 = 0;
-                document.getElementById('relay5').setAttribute('src','img/relay_off.jpg');
-                document.getElementById('relay5').setAttribute('title','Relay 5 OFF');
-                document.getElementById('relay5').setAttribute('alt','Relay 5 OFF');
+                document.getElementById('relay5').setAttribute('src', 'img/relay_off.jpg');
+                document.getElementById('relay5').setAttribute('title', 'Relay 5 OFF');
+                document.getElementById('relay5').setAttribute('alt', 'Relay 5 OFF');
             } else {
                 remote.getGlobal('sharedObj').Relay5 = 1;
-                document.getElementById('relay5').setAttribute('src','img/relay_on.jpg');
-                document.getElementById('relay5').setAttribute('title','Relay 5 ON');
-                document.getElementById('relay5').setAttribute('alt','Relay 5 ON');
+                document.getElementById('relay5').setAttribute('src', 'img/relay_on.jpg');
+                document.getElementById('relay5').setAttribute('title', 'Relay 5 ON');
+                document.getElementById('relay5').setAttribute('alt', 'Relay 5 ON');
             }
             if (dataSplited[6] === '0') {
                 remote.getGlobal('sharedObj').Relay6 = 0;
-                document.getElementById('relay6').setAttribute('src','img/relay_off.jpg');
-                document.getElementById('relay6').setAttribute('title','Relay 6 OFF');
-                document.getElementById('relay6').setAttribute('alt','Relay 6 OFF');
+                document.getElementById('relay6').setAttribute('src', 'img/relay_off.jpg');
+                document.getElementById('relay6').setAttribute('title', 'Relay 6 OFF');
+                document.getElementById('relay6').setAttribute('alt', 'Relay 6 OFF');
             } else {
                 remote.getGlobal('sharedObj').Relay6 = 1;
-                document.getElementById('relay6').setAttribute('src','img/relay_on.jpg');
-                document.getElementById('relay6').setAttribute('title','Relay 6 ON');
-                document.getElementById('relay6').setAttribute('alt','Relay 6 ON');
+                document.getElementById('relay6').setAttribute('src', 'img/relay_on.jpg');
+                document.getElementById('relay6').setAttribute('title', 'Relay 6 ON');
+                document.getElementById('relay6').setAttribute('alt', 'Relay 6 ON');
             }
             if (dataSplited[7] === '0') {
                 remote.getGlobal('sharedObj').Relay7 = 0;
-                document.getElementById('relay7').setAttribute('src','img/relay_off.jpg');
-                document.getElementById('relay7').setAttribute('title','Relay 7 OFF');
-                document.getElementById('relay7').setAttribute('alt','Relay 7 OFF');
+                document.getElementById('relay7').setAttribute('src', 'img/relay_off.jpg');
+                document.getElementById('relay7').setAttribute('title', 'Relay 7 OFF');
+                document.getElementById('relay7').setAttribute('alt', 'Relay 7 OFF');
             } else {
                 remote.getGlobal('sharedObj').Relay7 = 1;
-                document.getElementById('relay7').setAttribute('src','img/relay_on.jpg');
-                document.getElementById('relay7').setAttribute('title','Relay 7 ON');
-                document.getElementById('relay7').setAttribute('alt','Relay 7 ON');
+                document.getElementById('relay7').setAttribute('src', 'img/relay_on.jpg');
+                document.getElementById('relay7').setAttribute('title', 'Relay 7 ON');
+                document.getElementById('relay7').setAttribute('alt', 'Relay 7 ON');
             }
             if (dataSplited[8] === '0') {
                 remote.getGlobal('sharedObj').Relay8 = 0;
-                document.getElementById('relay8').setAttribute('src','img/relay_off.jpg');
-                document.getElementById('relay8').setAttribute('title','Relay 8 OFF');
-                document.getElementById('relay8').setAttribute('alt','Relay 8 OFF');
+                document.getElementById('relay8').setAttribute('src', 'img/relay_off.jpg');
+                document.getElementById('relay8').setAttribute('title', 'Relay 8 OFF');
+                document.getElementById('relay8').setAttribute('alt', 'Relay 8 OFF');
             } else {
                 remote.getGlobal('sharedObj').Relay8 = 1;
-                document.getElementById('relay8').setAttribute('src','img/relay_on.jpg');
-                document.getElementById('relay8').setAttribute('title','Relay 8 ON');
-                document.getElementById('relay8').setAttribute('alt','Relay 8 ON');
+                document.getElementById('relay8').setAttribute('src', 'img/relay_on.jpg');
+                document.getElementById('relay8').setAttribute('title', 'Relay 8 ON');
+                document.getElementById('relay8').setAttribute('alt', 'Relay 8 ON');
             }
-            
-            document.getElementById('relays').innerHTML = 'Relays: ' + dataSplited;
-            
+
+//            document.getElementById('relays').innerHTML = 'Relays: ' + dataSplited;
+
         } else if (dataSplited[0] === 'Relay_isAuto') {
             if (dataSplited[1] === '0') {
                 remote.getGlobal('sharedObj').Relay1IsOn = 0;
-                document.getElementById('relay1Auto').setAttribute('src','img/relay_off.jpg');
-                document.getElementById('relay1Auto').setAttribute('title','Relay 1 Manual');
-                document.getElementById('relay1Auto').setAttribute('alt','Relay 1 Manual');
+                document.getElementById('relay1Auto').setAttribute('src', 'img/relay_off.jpg');
+                document.getElementById('relay1Auto').setAttribute('title', 'Relay 1 Manual');
+                document.getElementById('relay1Auto').setAttribute('alt', 'Relay 1 Manual');
             } else {
                 remote.getGlobal('sharedObj').Relay1IsOn = 1;
-                document.getElementById('relay1Auto').setAttribute('src','img/auto.jpg');
-                document.getElementById('relay1Auto').setAttribute('title','Relay 1 Auto');
-                document.getElementById('relay1Auto').setAttribute('alt','Relay 1 Auto');
+                document.getElementById('relay1Auto').setAttribute('src', 'img/auto.jpg');
+                document.getElementById('relay1Auto').setAttribute('title', 'Relay 1 Auto');
+                document.getElementById('relay1Auto').setAttribute('alt', 'Relay 1 Auto');
             }
             if (dataSplited[2] === '0') {
                 remote.getGlobal('sharedObj').Relay2IsOn = 0;
-                document.getElementById('relay2Auto').setAttribute('src','img/relay_off.jpg');
-                document.getElementById('relay2Auto').setAttribute('title','Relay 2 Manual');
-                document.getElementById('relay2Auto').setAttribute('alt','Relay 2 Manual');
+                document.getElementById('relay2Auto').setAttribute('src', 'img/relay_off.jpg');
+                document.getElementById('relay2Auto').setAttribute('title', 'Relay 2 Manual');
+                document.getElementById('relay2Auto').setAttribute('alt', 'Relay 2 Manual');
             } else {
                 remote.getGlobal('sharedObj').Relay2IsOn = 1;
-                document.getElementById('relay2Auto').setAttribute('src','img/auto.jpg');
-                document.getElementById('relay2Auto').setAttribute('title','Relay 2 Auto');
-                document.getElementById('relay2Auto').setAttribute('alt','Relay 2 Auto');
+                document.getElementById('relay2Auto').setAttribute('src', 'img/auto.jpg');
+                document.getElementById('relay2Auto').setAttribute('title', 'Relay 2 Auto');
+                document.getElementById('relay2Auto').setAttribute('alt', 'Relay 2 Auto');
             }
-            
+
             if (dataSplited[3] === '0') {
                 remote.getGlobal('sharedObj').Relay3IsOn = 0;
-                document.getElementById('relay3Auto').setAttribute('src','img/relay_off.jpg');
-                document.getElementById('relay3Auto').setAttribute('title','Relay 3 Manual');
-                document.getElementById('relay3Auto').setAttribute('alt','Relay 3 Manual');
+                document.getElementById('relay3Auto').setAttribute('src', 'img/relay_off.jpg');
+                document.getElementById('relay3Auto').setAttribute('title', 'Relay 3 Manual');
+                document.getElementById('relay3Auto').setAttribute('alt', 'Relay 3 Manual');
             } else {
                 remote.getGlobal('sharedObj').Relay3IsOn = 1;
-                document.getElementById('relay3Auto').setAttribute('src','img/auto.jpg');
-                document.getElementById('relay3Auto').setAttribute('title','Relay 3 Auto');
-                document.getElementById('relay3Auto').setAttribute('alt','Relay 3 Auto');
+                document.getElementById('relay3Auto').setAttribute('src', 'img/auto.jpg');
+                document.getElementById('relay3Auto').setAttribute('title', 'Relay 3 Auto');
+                document.getElementById('relay3Auto').setAttribute('alt', 'Relay 3 Auto');
             }
             if (dataSplited[4] === '0') {
                 remote.getGlobal('sharedObj').Relay4IsOn = 0;
-                document.getElementById('relay4Auto').setAttribute('src','img/relay_off.jpg');
-                document.getElementById('relay4Auto').setAttribute('title','Relay 4 Manual');
-                document.getElementById('relay4Auto').setAttribute('alt','Relay 4 Manual');
+                document.getElementById('relay4Auto').setAttribute('src', 'img/relay_off.jpg');
+                document.getElementById('relay4Auto').setAttribute('title', 'Relay 4 Manual');
+                document.getElementById('relay4Auto').setAttribute('alt', 'Relay 4 Manual');
             } else {
                 remote.getGlobal('sharedObj').Relay4IsOn = 1;
-                document.getElementById('relay4Auto').setAttribute('src','img/auto.jpg');
-                document.getElementById('relay4Auto').setAttribute('title','Relay 4 Auto');
-                document.getElementById('relay4Auto').setAttribute('alt','Relay 4 Auto');
+                document.getElementById('relay4Auto').setAttribute('src', 'img/auto.jpg');
+                document.getElementById('relay4Auto').setAttribute('title', 'Relay 4 Auto');
+                document.getElementById('relay4Auto').setAttribute('alt', 'Relay 4 Auto');
             }
             if (dataSplited[5] === '0') {
                 remote.getGlobal('sharedObj').Relay5IsOn = 0;
-                document.getElementById('relay5Auto').setAttribute('src','img/relay_off.jpg');
-                document.getElementById('relay5Auto').setAttribute('title','Relay 5 Manual');
-                document.getElementById('relay5Auto').setAttribute('alt','Relay 5 Manual');
+                document.getElementById('relay5Auto').setAttribute('src', 'img/relay_off.jpg');
+                document.getElementById('relay5Auto').setAttribute('title', 'Relay 5 Manual');
+                document.getElementById('relay5Auto').setAttribute('alt', 'Relay 5 Manual');
             } else {
                 remote.getGlobal('sharedObj').Relay5IsOn = 1;
-                document.getElementById('relay5Auto').setAttribute('src','img/auto.jpg');
-                document.getElementById('relay5Auto').setAttribute('title','Relay 5 Auto');
-                document.getElementById('relay5Auto').setAttribute('alt','Relay 5 Auto');
+                document.getElementById('relay5Auto').setAttribute('src', 'img/auto.jpg');
+                document.getElementById('relay5Auto').setAttribute('title', 'Relay 5 Auto');
+                document.getElementById('relay5Auto').setAttribute('alt', 'Relay 5 Auto');
             }
             if (dataSplited[6] === '0') {
                 remote.getGlobal('sharedObj').Relay6IsOn = 0;
-                document.getElementById('relay6Auto').setAttribute('src','img/relay_off.jpg');
-                document.getElementById('relay6Auto').setAttribute('title','Relay 6 Manual');
-                document.getElementById('relay6Auto').setAttribute('alt','Relay 6 Manual');
+                document.getElementById('relay6Auto').setAttribute('src', 'img/relay_off.jpg');
+                document.getElementById('relay6Auto').setAttribute('title', 'Relay 6 Manual');
+                document.getElementById('relay6Auto').setAttribute('alt', 'Relay 6 Manual');
             } else {
                 remote.getGlobal('sharedObj').Relay6IsOn = 1;
-                document.getElementById('relay6Auto').setAttribute('src','img/auto.jpg');
-                document.getElementById('relay6Auto').setAttribute('title','Relay 6 Auto');
-                document.getElementById('relay6Auto').setAttribute('alt','Relay 6 Auto');
+                document.getElementById('relay6Auto').setAttribute('src', 'img/auto.jpg');
+                document.getElementById('relay6Auto').setAttribute('title', 'Relay 6 Auto');
+                document.getElementById('relay6Auto').setAttribute('alt', 'Relay 6 Auto');
             }
             if (dataSplited[7] === '0') {
                 remote.getGlobal('sharedObj').Relay7IsOn = 0;
-                document.getElementById('relay7Auto').setAttribute('src','img/relay_off.jpg');
-                document.getElementById('relay7Auto').setAttribute('title','Relay 7 Manual');
-                document.getElementById('relay7Auto').setAttribute('alt','Relay 7 Manual');
+                document.getElementById('relay7Auto').setAttribute('src', 'img/relay_off.jpg');
+                document.getElementById('relay7Auto').setAttribute('title', 'Relay 7 Manual');
+                document.getElementById('relay7Auto').setAttribute('alt', 'Relay 7 Manual');
             } else {
                 remote.getGlobal('sharedObj').Relay7IsOn = 1;
-                document.getElementById('relay7Auto').setAttribute('src','img/auto.jpg');
-                document.getElementById('relay7Auto').setAttribute('title','Relay 7 Auto');
-                document.getElementById('relay7Auto').setAttribute('alt','Relay 7 Auto');
+                document.getElementById('relay7Auto').setAttribute('src', 'img/auto.jpg');
+                document.getElementById('relay7Auto').setAttribute('title', 'Relay 7 Auto');
+                document.getElementById('relay7Auto').setAttribute('alt', 'Relay 7 Auto');
             }
             if (dataSplited[8] === '0') {
                 remote.getGlobal('sharedObj').Relay8IsOn = 0;
-                document.getElementById('relay8Auto').setAttribute('src','img/relay_off.jpg');
-                document.getElementById('relay8Auto').setAttribute('title','Relay 8 Manual');
-                document.getElementById('relay8Auto').setAttribute('alt','Relay 8 Manual');
+                document.getElementById('relay8Auto').setAttribute('src', 'img/relay_off.jpg');
+                document.getElementById('relay8Auto').setAttribute('title', 'Relay 8 Manual');
+                document.getElementById('relay8Auto').setAttribute('alt', 'Relay 8 Manual');
             } else {
                 remote.getGlobal('sharedObj').Relay8IsOn = 1;
-                document.getElementById('relay8Auto').setAttribute('src','img/auto.jpg');
-                document.getElementById('relay8Auto').setAttribute('title','Relay 8 Auto');
-                document.getElementById('relay8Auto').setAttribute('alt','Relay 8 Auto');
+                document.getElementById('relay8Auto').setAttribute('src', 'img/auto.jpg');
+                document.getElementById('relay8Auto').setAttribute('title', 'Relay 8 Auto');
+                document.getElementById('relay8Auto').setAttribute('alt', 'Relay 8 Auto');
             }
-            document.getElementById('relaysauto').innerHTML = 'Relays is auto: ' + dataSplited;
-            
+//            document.getElementById('relaysauto').innerHTML = 'Relays is auto: ' + dataSplited;
+
         } else if (dataSplited[0] === 'SetPoint_Tank1') {
-            
+
             var value = 0; //dataSplited[6]
             var valueString = '';
             valueString = dataSplited[6];
-            
+
             if (valueString.indexOf('OK') > -1) {
                 value = 1;
             }
-             remote.getGlobal('sharedObj').Tank1Status = value;
-             document.getElementById('tank1Gauge').onclick();
-            
+            remote.getGlobal('sharedObj').Tank1Status = value;
+            document.getElementById('tank1Gauge').onclick();
+
         } else if (dataSplited[0] === 'SetPoint_Tank2') {
             var value = 0; //dataSplited[6]
             var valueString = '';
             valueString = dataSplited[6];
-            
+
             if (valueString.indexOf('OK') > -1) {
                 value = 1;
             }
-          
+
             remote.getGlobal('sharedObj').Tank2Status = value;
             document.getElementById('tank2Gauge').onclick();
-            
+
         }
         console.log('Data:', data);
     });
-   
+
+};
+serialport.list((err, ports) => {
+    localPorts = ports;
+    console.log('ports', ports);
+    if (err) {
+        document.getElementById('error').textContent = err.message;
+        return;
+    } else {
+        document.getElementById('error').textContent = '';
+    }
+
+    if (ports.length === 0) {
+        document.getElementById('error').textContent = 'No ports discovered';
+    }
+
+    //const headers = Object.keys(ports[0]);
+    //const table = createTable(headers);
+    //tableHTML = '';
+    //table.on('data', data => tableHTML += data);
+    //table.on('end', () => document.getElementById('ports').innerHTML = tableHTML);
+    localPorts.forEach(port => {
+        var option = document.createElement("option");
+        option.text = port.comName;
+        option.value = port.comName;
+        try {
+            combo.add(option, null); //Standard 
+        } catch (error) {
+            combo.add(option); // IE only
+        }
+    }
+    );
+    //table.end();
+
+    console.log('Ports : ' + localPorts);
+
 
 });
 
@@ -454,18 +499,20 @@ function sendCommand() {
 
     console.log('Command Sent : ' + command);
 
-    for(var i=0; i<command.length; i++){
-        yieldPort.write(new Buffer(command[i], 'ascii'), function(err, results) {
+    for (var i = 0; i < command.length; i++) {
+        yieldPort.write(new Buffer(command[i], 'ascii'), function (err, results) {
             // console.log('Error: ' + err);
             // console.log('Results ' + results);
         });
-    };
-    yieldPort.write(new Buffer('\n', 'ascii'), function(err, results) {
+    }
+    ;
+    yieldPort.write(new Buffer('\n', 'ascii'), function (err, results) {
         // console.log('err ' + err);
         // console.log('results ' + results);
     });
 
-};
+}
+;
 
 
 

@@ -38,12 +38,13 @@ global.sharedObj = {
     lightSchedule: ['setlightschedule',5,30,23,30],
     waterSchedule:['setwateringschedule',7,15,1,2,15,15,11],
     time:['Apr 16',' 2018 01:21:24 PM',4,16,2018,13,21,24],
-    serialSend: null
+    serialSend: null,
+    connect: null
     };
 
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 1200, height: 600})
+  mainWindow = new BrowserWindow({frame: true,width: 1400, height: 850})
 
   // and load the index.html of the app.
   mainWindow.loadURL(url.format({
@@ -53,7 +54,7 @@ function createWindow () {
   }))
 
   // Open the DevTools.
-  mainWindow.webContents.openDevTools()
+  //mainWindow.webContents.openDevTools()
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function () {
