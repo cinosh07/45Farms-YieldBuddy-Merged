@@ -44,7 +44,7 @@ global.sharedObj = {
 
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({frame: false,width: 1400, height: 850})
+  mainWindow = new BrowserWindow({frame: false,width: 1400, height: 850,icon: path.join(__dirname, 'assets/icons/64x64.png')})
 
   // and load the index.html of the app.
   mainWindow.loadURL(url.format({

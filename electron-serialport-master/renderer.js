@@ -1,4 +1,14 @@
-////Blooming Light Schedule
+//electron-packager . yieldbuddyv3 --overwrite --asar=true --platform=win32 --arch=x64 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName="YieldBuddy V3.0"
+//https://www.christianengvall.se/electron-app-icons/
+//https://iconverticons.com/online/
+//https://www.christianengvall.se/electron-windows-installer/
+//https://www.npmjs.com/package/electron-installer-windows
+//https://www.christianengvall.se/electron-packager-tutorial/
+//https://iconsflow.com/editor
+//
+//
+//
+//////Blooming Light Schedule
 //Light_Schedule,11,30,23,30
 //setlightschedule,11,30,23,30
 //
