@@ -1,0 +1,110 @@
+//Blooming Light Schedule
+Light_Schedule,11,30,23,30
+setlightschedule,11,30,23,30
+
+//Grow Light Schedule
+Light_Schedule,5,30,23,30
+setlightschedule,5,30,23,30
+
+//GROW and Blooming Watering
+Watering_Schedule,7,15,1,2,15,15,11
+setwateringschedule,7,15,1,2,15,15,11
+
+//Sensors Definition
+Sensors,4.48,0.00,17.00,50.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,17.37,0.00,0.00,0.00
+Time,Apr 16, 2018 01:21:24 PM,4,16,2018,13,21,24
+
+	//Time
+	"0" => "Sensors_Time",
+
+	//Sensors
+	"1" => "Sensors_pH1",
+	"2" => "Sensors_pH2",
+	"3" => "Sensors_Temp",
+	"4" => "Sensors_RH",
+	"5" => "Sensors_TDS1",
+	"6" => "Sensors_TDS2",
+	"7" => "Sensors_CO2",
+	"8" => "Sensors_Light",
+	"9" => "Sensors_Water",
+	"10" => "Sensors_MagX",
+	"11" => "Sensors_MagY",
+	"12" => "Sensors_MagZ",
+	"13" => "Sensors_TankTotal",
+	"14" => "Sensors_Tank1",
+	"15" => "Sensors_Tank2",
+	"16" => "Sensors_Tank3",
+	"17" => "Sensors_Tank4",   
+	"18" => "Sensors_WaterTempP1",
+	"19" => "Sensors_WaterTempP2",
+	"20" => "Sensors_WaterTempP3",
+	"21" => "Sensors_WaterTempP4",
+
+
+//Relays Commands
+Relays,0,1,0,1,1,0,1,1
+Relay_isAuto,1,1,1,1,0,0,0,1
+
+Relay 1 (Water Pump 1)
+Relay1 isAuto 0
+Relay1 isAuto 1
+Relay1 off
+Relay1 on
+
+Relay 2 (Water Supply 1)
+Relay2 isAuto 0
+Relay2 isAuto 1
+Relay2 off
+Relay2 on
+
+Relay 3 (pH UP)
+Relay3 isAuto 0
+Relay3 isAuto 1
+Relay3 off
+Relay3 on
+
+Relay 4 (Tap Water Solenoid)
+Relay4 isAuto 0
+Relay4 isAuto 1
+Relay4 off
+Relay4 on
+
+Relay 5 (Exhaust Fan)
+Relay5 isAuto 0
+Relay5 isAuto 1
+Relay5 off
+Relay5 on
+
+Relay 6 (Humidifier)
+Relay6 isAuto 0
+Relay6 isAuto 1
+Relay6 off
+Relay6 on
+
+Relay 7 (A/C - Intake Fan)
+Relay7 isAuto 0
+Relay7 isAuto 1
+Relay7 off
+Relay7 on
+
+Relay 8 (Light/Ballast)
+Relay8 isAuto 0
+Relay8 isAuto 1
+Relay8 off
+Relay8 on
+
+
+
+//Commands
+setlightschedule,$Light_ON_hour,$Light_ON_min,$Light_OFF_hour,$Light_OFF_min
+setwateringschedule,$Pump_start_hour,$Pump_start_min,$Pump_every_hours,$Pump_every_mins,$Pump_for,$Pump_times
+setpH1,$pH1Value_Low,$pH1Value_High
+setRH,$RHValue_Low,$RHValue_High,$Humidifier_ON,$Humidifier_OFF,$Dehumidifier_ON,$Dehumidifier_OFF
+setdate,$Arduino_month,$Arduino_day,$Arduino_year,$Arduino_hour,$Arduino_min,$Arduino_sec
+
+
+
+SetPoint_Tank1,50.00,200.00,200.00,190.00,0,LOW
+SetPoint_Tank2,50.00,200.00,200.00,190.00,0,OK
+
+
